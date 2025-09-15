@@ -1,0 +1,32 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\etoc@startlocaltoc {2}
+\contentsline {section}{\numberline {1.1}Morbi ipsum ipsum}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Organization of the Document}{4}{section.1.2}%
+\contentsline {chapter}{\numberline {2}This is the Second Chapter}{5}{chapter.2}%
+\etoc@startlocaltoc {3}
+\contentsline {section}{\numberline {2.1}Traditional Streaming Technologies}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Cras lobortis tempor velit}{6}{section.2.2}%
+\contentsline {chapter}{\numberline {3}This is the Third Chapter}{9}{chapter.3}%
+\etoc@startlocaltoc {4}
+\contentsline {section}{\numberline {3.1}Architecture Design}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Architecture Design Requirements}{12}{section.3.2}%
+\contentsline {chapter}{\numberline {4}This is the Fourth Chapter}{13}{chapter.4}%
+\etoc@startlocaltoc {5}
+\contentsline {section}{\numberline {4.1}Development Process}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Development Environment}{14}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Client Application}{15}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}User Interface}{16}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Vivamus luctus elit sit amet mi}{16}{subsection.4.3.2}%
+\contentsline {chapter}{\numberline {5}This is the Fifth Chapter}{19}{chapter.5}%
+\etoc@startlocaltoc {6}
+\contentsline {section}{\numberline {5.1}Maecenas vitae nulla consequat}{19}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Proin ornare dignissim lacus}{21}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclusion}{23}{chapter.6}%
+\etoc@startlocaltoc {7}
+\contentsline {section}{\numberline {6.1}Conclusions}{23}{section.6.1}%
+\contentsline {section}{\numberline {6.2}System Limitations and Future Work}{24}{section.6.2}%
+\contentsline {chapter}{Bibliography}{25}{section.6.2}%
+\contentsline {chapter}{\numberline {A}Code of Project}{29}{appendix.A}%
+\contentsline {chapter}{\numberline {B}A Large Table}{35}{appendix.B}%
