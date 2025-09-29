@@ -1162,9 +1162,6 @@ INPUT Chapters\Thesis-Chapter_6.tex
 INPUT .\main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
-INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
-INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
-INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT .\Chapters\AppendixA.tex
 INPUT .\Chapters\AppendixA.tex
 INPUT Chapters\AppendixA.tex
@@ -1220,6 +1217,7 @@ INPUT tables_and_code\table_example.tex
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
+INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
 OUTPUT main.soc
 OUTPUT main.loc
 OUTPUT main.maf
@@ -1273,6 +1271,8 @@ INPUT .\main.mlf1
 INPUT .\main.mlf1
 INPUT .\main.mlt1
 INPUT .\main.mlt1
+INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
+INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out
