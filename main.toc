@@ -2,34 +2,38 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \etoc@startlocaltoc {2}
-\contentsline {section}{\numberline {1.1}Problem/Motivation}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Objectives}{2}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Gaps in prior work}{2}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Proposed Solution}{2}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Organization of the Document}{2}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}%
+\contentsline {section}{\numberline {1.1}Problem/Motivation}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Gaps in prior work}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Proposed Solution}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Document Organization}{1}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Related Work}{3}{chapter.2}%
 \etoc@startlocaltoc {3}
-\contentsline {section}{\numberline {2.1}Traditional Streaming Technologies}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Cras lobortis tempor velit}{4}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Related Work}{7}{chapter.3}%
+\contentsline {section}{\numberline {2.1}Serverless Computing}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Platforms}{4}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Use Cases}{4}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Limitations}{4}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Workflow Execution}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Relevant Related Systems}{4}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Serverless Workflow Scheduling}{4}{subsection.2.3.1}%
+\contentsline {section}{\numberline {2.4}Discussion/Analysis}{4}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Architecture}{5}{chapter.3}%
 \etoc@startlocaltoc {4}
-\contentsline {section}{\numberline {3.1}Architecture Design}{7}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Architecture Design Requirements}{10}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Architecture}{11}{chapter.4}%
+\contentsline {section}{\numberline {3.1}Workflow Definition Language}{6}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Overview}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Metadata Management}{6}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Static Workflow Planning}{6}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Simulation Layer}{6}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Planners}{6}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Optimizations}{6}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Decentralized Scheduling}{6}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Evaluation}{9}{chapter.4}%
 \etoc@startlocaltoc {5}
-\contentsline {section}{\numberline {4.1}Development Process}{11}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Development Environment}{12}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Client Application}{13}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}User Interface}{14}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Vivamus luctus elit sit amet mi}{14}{subsection.4.3.2}%
-\contentsline {chapter}{\numberline {5}Evaluation}{17}{chapter.5}%
+\contentsline {section}{\numberline {4.1}Maecenas vitae nulla consequat}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Proin ornare dignissim lacus}{11}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{13}{chapter.5}%
 \etoc@startlocaltoc {6}
-\contentsline {section}{\numberline {5.1}Maecenas vitae nulla consequat}{17}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Proin ornare dignissim lacus}{19}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Conclusion}{21}{chapter.6}%
-\etoc@startlocaltoc {7}
-\contentsline {section}{\numberline {6.1}Conclusions}{21}{section.6.1}%
-\contentsline {section}{\numberline {6.2}System Limitations and Future Work}{22}{section.6.2}%
-\contentsline {chapter}{Bibliography}{23}{section.6.2}%
-\contentsline {chapter}{\numberline {A}Code of Project}{27}{appendix.A}%
-\contentsline {chapter}{\numberline {B}A Large Table}{33}{appendix.B}%
+\contentsline {section}{\numberline {5.1}Conclusions}{13}{section.5.1}%
+\contentsline {section}{\numberline {5.2}System Limitations and Future Work}{14}{section.5.2}%
+\contentsline {chapter}{Bibliography}{15}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Code of Project}{19}{appendix.A}%
+\contentsline {chapter}{\numberline {B}A Large Table}{25}{appendix.B}%

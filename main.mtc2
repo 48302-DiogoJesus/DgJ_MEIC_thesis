@@ -1,2 +1,8 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Traditional Streaming Technologies}{\reset@font\mtcSfont 3}{section.2.1}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Cras lobortis tempor velit}{\reset@font\mtcSfont 4}{section.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.1}Serverless Computing}{\reset@font\mtcSfont 4}{section.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.1}Platforms}{\reset@font\mtcSSfont 4}{subsection.2.1.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.2}Use Cases}{\reset@font\mtcSSfont 4}{subsection.2.1.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.1.3}Limitations}{\reset@font\mtcSSfont 4}{subsection.2.1.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.2}Workflow Execution}{\reset@font\mtcSfont 4}{section.2.2}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Relevant Related Systems}{\reset@font\mtcSfont 4}{section.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.3.1}Serverless Workflow Scheduling}{\reset@font\mtcSSfont 4}{subsection.2.3.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.4}Discussion/Analysis}{\reset@font\mtcSfont 4}{section.2.4}}

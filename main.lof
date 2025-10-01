@@ -2,25 +2,18 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Introduction}{1}{chapter.1}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Background}{3}{chapter.2}%
+\contentsline {xchapter}{Related Work}{3}{chapter.2}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Related Work}{7}{chapter.3}%
-\contentsline {figure}{\numberline {3.1}{\ignorespaces System Processes}}{8}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Network Diagram}}{9}{figure.caption.17}%
+\contentsline {xchapter}{Architecture}{5}{chapter.3}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Architecture}{11}{chapter.4}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Complete User Interface}}{15}{figure.caption.32}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Media Loading Window}}}{15}{figure.caption.32}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Play-out Session UI}}}{15}{figure.caption.32}%
+\contentsline {xchapter}{Evaluation}{9}{chapter.4}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Test Environment}}{10}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Adaptation System Behavior Test}}{12}{figure.caption.15}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Adaptation System Test 4}}}{12}{figure.caption.15}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Adaptation System Test 5}}}{12}{figure.caption.15}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Evaluation}{17}{chapter.5}%
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Test Environment}}{18}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Adaptation System Behavior Test}}{20}{figure.caption.37}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Adaptation System Test 4}}}{20}{figure.caption.37}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Adaptation System Test 5}}}{20}{figure.caption.37}%
+\contentsline {xchapter}{Conclusion}{13}{chapter.5}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusion}{21}{chapter.6}%
+\contentsline {xchapter}{Code of Project}{19}{appendix.A}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Code of Project}{27}{appendix.A}%
-\addvspace {10\p@ }
-\contentsline {xchapter}{A Large Table}{33}{appendix.B}%
+\contentsline {xchapter}{A Large Table}{25}{appendix.B}%

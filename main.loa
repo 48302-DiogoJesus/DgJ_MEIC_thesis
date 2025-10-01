@@ -1,9 +1,2 @@
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {algocf}{\numberline {4.1}{\ignorespaces Time Control Strategy}}{13}{algocf.4.1}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {algorithm}{\numberline {1}{\ignorespaces Worker Assignment Algorithm}}{7}{algorithm.1}%
+\contentsline {algorithm}{\numberline {2}{\ignorespaces Resource Downgrading Algorithm}}{8}{algorithm.2}%

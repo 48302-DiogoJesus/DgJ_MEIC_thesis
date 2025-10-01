@@ -140,7 +140,7 @@ or if you have a Figure, insert the label after the caption:
     \label{fig:cashed}
 \end{figure}
 
-In the text you can then invoke the item with the command \Cref{fig:cashed}, in the case of the Figure or \Cref{sec:one} in the case of a Section, etc..
+In the text you can then invoke the item with the command \ref{fig:cashed}, in the case of the Figure or \ref{sec:one} in the case of a Section, etc..
 There are examples in the template for you to see how it is done.
 
 =====================================================================================

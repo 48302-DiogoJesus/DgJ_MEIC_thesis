@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  1 OCT 2025 17:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  1 OCT 2025 18:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -622,69 +622,46 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: subfigure package is loaded.
-) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/algorithm2e\algorithm2e.sty
-Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count328
-\algocf@hangindent=\skip78
- (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
-Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count329
-) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+\@float@every@algorithm=\toks52
+\c@algorithm=\count328
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
+Package: algpseudocode 
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count329
+\c@ALG@rem=\count330
+\c@ALG@nested=\count331
+\ALG@tlm=\skip78
+\ALG@thistlm=\skip79
+\c@ALG@Lnr=\count332
+\c@ALG@blocknr=\count333
+\c@ALG@storecount=\count334
+\c@ALG@tmpcounter=\count335
+\ALG@tmplength=\skip80
 )
-\skiptotal=\skip79
-\skiplinenumber=\skip80
-\skiprule=\skip81
-\skiphlne=\skip82
-\skiptext=\skip83
-\skiplength=\skip84
-\algomargin=\skip85
-\skipalgocfslide=\skip86
-\algowidth=\dimen312
-\inoutsize=\dimen313
-\inoutindent=\dimen314
-\interspacetitleruled=\dimen315
-\interspacealgoruled=\dimen316
-\interspacetitleboxruled=\dimen317
-\algocf@ruledwidth=\skip87
-\algocf@inoutbox=\box76
-\algocf@inputbox=\box77
-\AlCapSkip=\skip88
-\AlCapHSkip=\skip89
-\algoskipindent=\skip90
-\algocf@nlbox=\box78
-\algocf@hangingbox=\box79
-\algocf@untilbox=\box80
-\algocf@skipuntil=\skip91
-\algocf@capbox=\box81
-\algocf@lcaptionbox=\skip92
-\algoheightruledefault=\skip93
-\algoheightrule=\skip94
-\algotitleheightruledefault=\skip95
-\algotitleheightrule=\skip96
-\c@algocfline=\count330
-\c@algocfproc=\count331
-\c@algocf=\count332
-\algocf@algoframe=\box82
-\algocf@algobox=\box83
+Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count333
-\lst@gtempboxa=\box84
-\lst@token=\toks52
-\lst@length=\count334
-\lst@currlwidth=\dimen318
-\lst@column=\count335
-\lst@pos=\count336
-\lst@lostspace=\dimen319
-\lst@width=\dimen320
-\lst@newlines=\count337
-\lst@lineno=\count338
-\lst@maxwidth=\dimen321
+\lst@mode=\count336
+\lst@gtempboxa=\box76
+\lst@token=\toks53
+\lst@length=\count337
+\lst@currlwidth=\dimen312
+\lst@column=\count338
+\lst@pos=\count339
+\lst@lostspace=\dimen313
+\lst@width=\dimen314
+\lst@newlines=\count340
+\lst@lineno=\count341
+\lst@maxwidth=\dimen315
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count339
-\lst@skipnumbers=\count340
-\lst@framebox=\box85
+\c@lstnumber=\count342
+\lst@skipnumbers=\count343
+\lst@framebox=\box77
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
@@ -698,15 +675,15 @@ Package: mcode 2014/03/06 2.5
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count341
+\etb@tempcnta=\count344
 )
-\csq@reset=\count342
-\csq@gtype=\count343
-\csq@glevel=\count344
-\csq@qlevel=\count345
-\csq@maxlvl=\count346
-\csq@tshold=\count347
-\csq@ltx@everypar=\toks53
+\csq@reset=\count345
+\csq@gtype=\count346
+\csq@glevel=\count347
+\csq@qlevel=\count348
+\csq@maxlvl=\count349
+\csq@tshold=\count350
+\csq@ltx@everypar=\toks54
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
 )
@@ -720,13 +697,13 @@ Package: todonotes 2024/01/05
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks54
-\XKV@tempa@toks=\toks55
+\XKV@toks=\toks55
+\XKV@tempa@toks=\toks56
 )
-\XKV@depth=\count348
+\XKV@depth=\count351
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\c@@todonotes@numberoftodonotes=\count349
+\c@@todonotes@numberoftodonotes=\count352
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/changes\changes.sty
 Package: changes 2021/07/15 v4.2.1 changes package
 
@@ -738,40 +715,40 @@ changes-option 'authormarkuptext=id'
 changes-option 'markup=underlined'
 ulem-option 'ULforem,normalbf', passed to package ulem
 (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
-\UL@box=\box86
-\UL@hyphenbox=\box87
-\UL@skip=\skip97
-\UL@hook=\toks56
-\UL@height=\dimen322
-\UL@pe=\count350
-\UL@pixel=\dimen323
-\ULC@box=\box88
+\UL@box=\box78
+\UL@hyphenbox=\box79
+\UL@skip=\skip81
+\UL@hook=\toks57
+\UL@height=\dimen316
+\UL@pe=\count353
+\UL@pixel=\dimen317
+\ULC@box=\box80
 Package: ulem 2019/11/18
-\ULdepth=\dimen324
+\ULdepth=\dimen318
 )
-\c@Changes@AuthorCount=\count351
-\c@Changes@Author=\count352
-\c@Changes@addedCount=\count353
-\c@Changes@deletedCount=\count354
-\c@Changes@replacedCount=\count355
-\c@Changes@highlightCount=\count356
-\c@Changes@commentCount=\count357
-\c@authorcommentcount=\count358
+\c@Changes@AuthorCount=\count354
+\c@Changes@Author=\count355
+\c@Changes@addedCount=\count356
+\c@Changes@deletedCount=\count357
+\c@Changes@replacedCount=\count358
+\c@Changes@highlightCount=\count359
+\c@Changes@commentCount=\count360
+\c@authorcommentcount=\count361
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/truncate\truncate.sty
 Package: truncate 2001/08/20  ver 3.6
-\@Trunc@RestHyph=\toks57
+\@Trunc@RestHyph=\toks58
 )
-\Changestruncatewidth=\skip98
-\Changes@summary@width=\skip99
+\Changestruncatewidth=\skip82
+\Changes@summary@width=\skip83
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/paralist\paralist.sty
 Package: paralist 2017/01/22 v2.7 Extended list environments
-\pltopsep=\skip100
-\plpartopsep=\skip101
-\plitemsep=\skip102
-\plparsep=\skip103
-\pl@lab=\toks58
+\pltopsep=\skip84
+\plpartopsep=\skip85
+\plitemsep=\skip86
+\plparsep=\skip87
+\pl@lab=\toks59
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/cite\cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
@@ -781,7 +758,7 @@ Package: acronym 2025/01/17 v1.50 Support for acronyms (Tobias Oetiker)
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/bigfoot\suffix.sty
 Package: suffix 2006/07/15 1.5a Variant command support
 )
-\AC@clearlist=\toks59
+\AC@clearlist=\toks60
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
@@ -805,11 +782,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count359
+\c@section@level=\count362
 )
-\@linkdim=\dimen325
-\Hy@linkcounter=\count360
-\Hy@pagecounter=\count361
+\@linkdim=\dimen319
+\Hy@linkcounter=\count363
+\Hy@pagecounter=\count364
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -817,7 +794,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count362
+\Hy@SavedSpaceFactor=\count365
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -830,21 +807,21 @@ Package hyperref Info: Plain pages OFF on input line 4196.
 Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4448.
-\c@Hy@tempcnt=\count363
+\c@Hy@tempcnt=\count366
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4786.
-\XeTeXLinkMargin=\dimen326
+\XeTeXLinkMargin=\dimen320
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count364
-\Field@Width=\dimen327
-\Fld@charsize=\dimen328
+\Fld@menulength=\count367
+\Field@Width=\dimen321
+\Fld@charsize=\dimen322
 Package hyperref Info: Hyper figures OFF on input line 6065.
 Package hyperref Info: Link nesting OFF on input line 6070.
 Package hyperref Info: Hyper index ON on input line 6073.
@@ -856,9 +833,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6095.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count365
-\c@Item=\count366
-\c@Hfootnote=\count367
+\Hy@abspage=\count368
+\c@Item=\count369
+\c@Hfootnote=\count370
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -867,8 +844,8 @@ File: hpdftex.def 2023-11-26 v7.01g Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count368
-\c@bookmark@seq@number=\count369
+\Fld@listcount=\count371
+\c@bookmark@seq@number=\count372
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
@@ -876,12 +853,12 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
 )
-\Hy@SectionHShift=\skip104
+\Hy@SectionHShift=\skip88
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 210.
-Package hyperref Info: Option `breaklinks' set `true' on input line 210.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 210.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 210.
+Package hyperref Info: Option `colorlinks' set `true' on input line 212.
+Package hyperref Info: Option `breaklinks' set `true' on input line 212.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 212.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 212.
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/cleveref\cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
@@ -896,22 +873,22 @@ LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: `algorithmicx' support loaded on input line 3120.
 Package cleveref Info: `listings' support loaded on input line 3131.
-Package cleveref Info: `algorithm2e' support loaded on input line 3147.
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip105
-\enit@outerparindent=\dimen329
-\enit@toks=\toks60
-\enit@inbox=\box89
-\enit@count@id=\count370
-\enitdp@description=\count371
+\labelindent=\skip89
+\enit@outerparindent=\dimen323
+\enit@toks=\toks61
+\enit@inbox=\box81
+\enit@count@id=\count373
+\enitdp@description=\count374
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/base\glossaries.sty
 Package: glossaries 2025/08/11 v4.8 (NLCT)
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/mfirstuc\mfirstuc.sty
 Package: mfirstuc 2025/04/03 v2.09 (NLCT)
-\@glsmfirst=\toks61
-\@glsmrest=\toks62
+\@glsmfirst=\toks62
+\@glsmrest=\toks63
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/xfor\xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/tracklang\tracklang.sty
@@ -932,37 +909,37 @@ Package: datatool-base 2025/04/25 v3.4.1 (NLCT)
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-l3fp.def
 File: datatool-l3fp.def 2025/04/25 v3.4.1 (NLCT)
 )
-\@dtl@toks=\toks63
-\@dtl@tmpcount=\count372
-\dtl@tmplength=\skip106
-\l__datatool_measure_box=\box90
-\dtl@sortresult=\count373
+\@dtl@toks=\toks64
+\@dtl@tmpcount=\count375
+\dtl@tmplength=\skip90
+\l__datatool_measure_box=\box82
+\dtl@sortresult=\count376
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-utf8.ldf
 File: datatool-utf8.ldf 2025/04/25 v3.4.1 (NLCT)
 )
-\@dtl@datatype=\count374
-\l__datatool_tmpa_int=\count375
-\l__datatool_tmpb_int=\count376
-\l__datatool_tmpc_int=\count377
-\l__datatool_tmpd_int=\count378
-\l__datatool_count_int=\count379
-\l__datatool_tmp_datatype_int=\count380
-\l__datatool_tmpa_dim=\dimen330
-\l__datatool_tmpb_dim=\dimen331
-\c_datatool_unknown_int=\count381
-\l__datatool_year_int=\count382
-\l__datatool_month_int=\count383
-\l__datatool_day_int=\count384
-\l__datatool_hour_int=\count385
-\l__datatool_minute_int=\count386
-\l__datatool_second_int=\count387
-\l__datatool_tzhour_int=\count388
-\l__datatool_tzminute_int=\count389
-\l__datatool_julian_int=\count390
-\l__datatool_local_julian_int=\count391
-\l__datatool_prefix_int=\count392
-\l__datatool_suffix_int=\count393
-\@dtl@foreach@level=\count394
+\@dtl@datatype=\count377
+\l__datatool_tmpa_int=\count378
+\l__datatool_tmpb_int=\count379
+\l__datatool_tmpc_int=\count380
+\l__datatool_tmpd_int=\count381
+\l__datatool_count_int=\count382
+\l__datatool_tmp_datatype_int=\count383
+\l__datatool_tmpa_dim=\dimen324
+\l__datatool_tmpb_dim=\dimen325
+\c_datatool_unknown_int=\count384
+\l__datatool_year_int=\count385
+\l__datatool_month_int=\count386
+\l__datatool_day_int=\count387
+\l__datatool_hour_int=\count388
+\l__datatool_minute_int=\count389
+\l__datatool_second_int=\count390
+\l__datatool_tzhour_int=\count391
+\l__datatool_tzminute_int=\count392
+\l__datatool_julian_int=\count393
+\l__datatool_local_julian_int=\count394
+\l__datatool_prefix_int=\count395
+\l__datatool_suffix_int=\count396
+\@dtl@foreach@level=\count397
 
 
 Package tracklang Warning: No `datatool' support for dialect `english'  on input line 9908.
@@ -970,109 +947,117 @@ Package tracklang Warning: No `datatool' support for dialect `english'  on input
 
 Package tracklang Warning: No `datatool' support for dialect `portuguese'  on input line 9908.
 
-\dtl@codeA=\count395
-\dtl@codeB=\count396
+\dtl@codeA=\count398
+\dtl@codeB=\count399
 )
-\gls@level=\count397
-\@gls@tmpb=\toks64
-\gls@tmplen=\skip107
-\l__glossaries_tmpa_dim=\dimen332
-\l__glossaries_tmpb_dim=\dimen333
-\glskeylisttok=\toks65
-\glslabeltok=\toks66
-\glsshorttok=\toks67
-\glslongtok=\toks68
+\gls@level=\count400
+\@gls@tmpb=\toks65
+\gls@tmplen=\skip91
+\l__glossaries_tmpa_dim=\dimen326
+\l__glossaries_tmpb_dim=\dimen327
+\glskeylisttok=\toks66
+\glslabeltok=\toks67
+\glsshorttok=\toks68
+\glslongtok=\toks69
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-hypernav.sty
 Package: glossary-hypernav 2025/08/11 v4.8 (NLCT)
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-list.sty
 Package: glossary-list 2025/08/11 v4.8 (NLCT)
-\glslistdottedwidth=\skip108
+\glslistdottedwidth=\skip92
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-long.sty
 Package: glossary-long 2025/08/11 v4.8 (NLCT)
-\glsdescwidth=\skip109
-\glspagelistwidth=\skip110
+\glsdescwidth=\skip93
+\glspagelistwidth=\skip94
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-super.sty
 Package: glossary-super 2025/08/11 v4.8 (NLCT)
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/supertabular\supertabular.sty
 Package: supertabular 2024/07/20 v4.2c the supertabular environment
-\c@tracingst=\count398
-\ST@wd=\dimen334
-\ST@rightskip=\skip111
-\ST@leftskip=\skip112
-\ST@parfillskip=\skip113
-\ST@pageleft=\dimen335
-\ST@headht=\dimen336
-\ST@tailht=\dimen337
-\ST@pagesofar=\dimen338
-\ST@pboxht=\dimen339
-\ST@rowht=\dimen340
-\ST@prevht=\dimen341
-\ST@toadd=\dimen342
-\ST@dimen=\dimen343
-\ST@pbox=\box91
+\c@tracingst=\count401
+\ST@wd=\dimen328
+\ST@rightskip=\skip95
+\ST@leftskip=\skip96
+\ST@parfillskip=\skip97
+\ST@pageleft=\dimen329
+\ST@headht=\dimen330
+\ST@tailht=\dimen331
+\ST@pagesofar=\dimen332
+\ST@pboxht=\dimen333
+\ST@rowht=\dimen334
+\ST@prevht=\dimen335
+\ST@toadd=\dimen336
+\ST@dimen=\dimen337
+\ST@pbox=\box83
 )) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-tree.sty
 Package: glossary-tree 2025/08/11 v4.8 (NLCT)
-\l__glossaries_tree_max_known_level_int=\count399
-\l__glossaries_tree_offset_dim=\dimen344
-\l__glossaries_tree_namewidth_dim=\dimen345
-\l__glossaries_tree_symbolwidth_dim=\dimen346
-\l__glossaries_tree_prenamesym_width_dim=\dimen347
-\l__glossaries_tree_presubnamesym_width_dim=\dimen348
-\l__glossaries_tree_namewidth_padding_dim=\dimen349
-\l__glossaries_tree_symbolwidth_padding_dim=\dimen350
-\l__glossaries_tree_namesymbolwidth_dim=\dimen351
-\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen352
-\l__glossaries_tree_level_int=\count400
-\glstreeindent=\skip114
+\l__glossaries_tree_max_known_level_int=\count402
+\l__glossaries_tree_offset_dim=\dimen338
+\l__glossaries_tree_namewidth_dim=\dimen339
+\l__glossaries_tree_symbolwidth_dim=\dimen340
+\l__glossaries_tree_prenamesym_width_dim=\dimen341
+\l__glossaries_tree_presubnamesym_width_dim=\dimen342
+\l__glossaries_tree_namewidth_padding_dim=\dimen343
+\l__glossaries_tree_symbolwidth_padding_dim=\dimen344
+\l__glossaries_tree_namesymbolwidth_dim=\dimen345
+\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen346
+\l__glossaries_tree_level_int=\count403
+\glstreeindent=\skip98
 ))
 \glswrite=\write4
 \glo@main@file=\write5
 \openout5 = `main.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 261.
+Package glossaries Info: Writing glossary file main.glo on input line 263.
  (Chapters/Glossary.tex) (cover-titlepage.sty) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-\f@nch@headwidth=\skip115
-\f@nch@offset@elh=\skip116
-\f@nch@offset@erh=\skip117
-\f@nch@offset@olh=\skip118
-\f@nch@offset@orh=\skip119
-\f@nch@offset@elf=\skip120
-\f@nch@offset@erf=\skip121
-\f@nch@offset@olf=\skip122
-\f@nch@offset@orf=\skip123
-\f@nch@height=\skip124
-\f@nch@footalignment=\skip125
-\f@nch@widthL=\skip126
-\f@nch@widthC=\skip127
-\f@nch@widthR=\skip128
-\@temptokenb=\toks69
+\f@nch@headwidth=\skip99
+\f@nch@offset@elh=\skip100
+\f@nch@offset@erh=\skip101
+\f@nch@offset@olh=\skip102
+\f@nch@offset@orh=\skip103
+\f@nch@offset@elf=\skip104
+\f@nch@offset@erf=\skip105
+\f@nch@offset@olf=\skip106
+\f@nch@offset@orf=\skip107
+\f@nch@height=\skip108
+\f@nch@footalignment=\skip109
+\f@nch@widthL=\skip110
+\f@nch@widthC=\skip111
+\f@nch@widthR=\skip112
+\@temptokenb=\toks70
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/etoc\etoc.sty
 Package: etoc 2023/10/29 v1.2d Completely customisable TOCs (JFB)
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count401
-\mult@box=\box92
-\multicol@leftmargin=\dimen353
-\c@unbalance=\count402
-\c@collectmore=\count403
-\doublecol@number=\count404
-\multicoltolerance=\count405
-\multicolpretolerance=\count406
-\full@width=\dimen354
-\page@free=\dimen355
-\premulticols=\dimen356
-\postmulticols=\dimen357
-\multicolsep=\skip129
-\multicolbaselineskip=\skip130
-\partial@page=\box93
-\last@line=\box94
-\mc@boxedresult=\box95
-\maxbalancingoverflow=\dimen358
-\mult@rightbox=\box96
-\mult@grightbox=\box97
-\mult@firstbox=\box98
-\mult@gfirstbox=\box99
+\c@tracingmulticols=\count404
+\mult@box=\box84
+\multicol@leftmargin=\dimen347
+\c@unbalance=\count405
+\c@collectmore=\count406
+\doublecol@number=\count407
+\multicoltolerance=\count408
+\multicolpretolerance=\count409
+\full@width=\dimen348
+\page@free=\dimen349
+\premulticols=\dimen350
+\postmulticols=\dimen351
+\multicolsep=\skip113
+\multicolbaselineskip=\skip114
+\partial@page=\box85
+\last@line=\box86
+\mc@boxedresult=\box87
+\maxbalancingoverflow=\dimen352
+\mult@rightbox=\box88
+\mult@grightbox=\box89
+\mult@firstbox=\box90
+\mult@gfirstbox=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
 \@tempa=\box100
 \@tempa=\box101
 \@tempa=\box102
@@ -1101,28 +1086,20 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box125
 \@tempa=\box126
 \@tempa=\box127
-\@tempa=\box128
-\@tempa=\box129
-\@tempa=\box130
-\@tempa=\box131
-\@tempa=\box132
-\@tempa=\box133
-\@tempa=\box134
-\@tempa=\box135
-\c@minrows=\count407
-\c@columnbadness=\count408
-\c@finalcolumnbadness=\count409
-\last@try=\dimen359
-\multicolovershoot=\dimen360
-\multicolundershoot=\dimen361
-\mult@nat@firstbox=\box136
-\colbreak@box=\box137
-\mc@col@check@num=\count410
+\c@minrows=\count410
+\c@columnbadness=\count411
+\c@finalcolumnbadness=\count412
+\last@try=\dimen353
+\multicolovershoot=\dimen354
+\multicolundershoot=\dimen355
+\mult@nat@firstbox=\box128
+\colbreak@box=\box129
+\mc@col@check@num=\count413
 )
-\Etoc@toctoks=\toks70
-\c@etoc@tocid=\count411
-\etoc@framed@titlebox=\box138
-\etoc@framed@contentsbox=\box139
+\Etoc@toctoks=\toks71
+\c@etoc@tocid=\count414
+\etoc@framed@titlebox=\box130
+\etoc@framed@contentsbox=\box131
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/minitoc\minitoc.sty
 Package: minitoc 2018/07/12 v62 Package minitoc
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/minitoc\mtcmess.sty
@@ -1131,17 +1108,17 @@ Package: mtcmess 2006/03/14
 Package minitoc Info: I0001
 (minitoc)             *** minitoc package, version 62 ***.
 \tf@mtc=\write6
-\mtcindent=\skip131
-\mtcskipamount=\skip132
+\mtcindent=\skip115
+\mtcskipamount=\skip116
 Package minitoc Info: I0005
 (minitoc)             compatible with hyperref.
 Package minitoc Info: I0023
 (minitoc)             part level macros available.
 Package minitoc Info: I0003
 (minitoc)             chapter level macros available.
-\mtc@toks=\toks71
-\mtc@strutbox=\box140
-\mtc@hstrutbox=\box141
+\mtc@toks=\toks72
+\mtc@strutbox=\box132
+\mtc@hstrutbox=\box133
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 \openout6 = `main.mtc0'.
@@ -1158,11 +1135,11 @@ Package minitoc Info: I0031
 
 \openout6 = `main.mtc0'.
 
-\c@mtc=\count412
-\c@minitocdepth=\count413
-\c@ptc=\count414
-\c@parttocdepth=\count415
-\ptcindent=\skip133
+\c@mtc=\count415
+\c@minitocdepth=\count416
+\c@ptc=\count417
+\c@parttocdepth=\count418
+\ptcindent=\skip117
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
 (minitoc)              on input line 4910.
@@ -1173,7 +1150,7 @@ File: english.mld 2006/01/13
 ))
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
-(minitoc)              on input line 352.
+(minitoc)              on input line 354.
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/minitoc\english.mld
 File: english.mld 2006/01/13
 ))
@@ -1183,64 +1160,9 @@ Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count416
-\l__pdf_internal_box=\box142
-) (main.aux
-
-LaTeX Warning: Label `a' multiply defined.
-
-
-LaTeX Warning: Label `a@cref' multiply defined.
-
-
-LaTeX Warning: Label `a' multiply defined.
-
-
-LaTeX Warning: Label `a@cref' multiply defined.
-
-
-LaTeX Warning: Label `a' multiply defined.
-
-
-LaTeX Warning: Label `a@cref' multiply defined.
-
-
-LaTeX Warning: Label `a' multiply defined.
-
-
-LaTeX Warning: Label `a@cref' multiply defined.
-
-
-LaTeX Warning: Label `a' multiply defined.
-
-
-LaTeX Warning: Label `a@cref' multiply defined.
-
-
-LaTeX Warning: Label `a' multiply defined.
-
-
-LaTeX Warning: Label `a@cref' multiply defined.
-
-
-LaTeX Warning: Label `a' multiply defined.
-
-
-LaTeX Warning: Label `a@cref' multiply defined.
-
-
-LaTeX Warning: Label `a' multiply defined.
-
-
-LaTeX Warning: Label `a@cref' multiply defined.
-
-
-LaTeX Warning: Label `a' multiply defined.
-
-
-LaTeX Warning: Label `a@cref' multiply defined.
-
-)
+\l__color_backend_stack_int=\count419
+\l__pdf_internal_box=\box134
+) (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -1263,17 +1185,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count417
-\scratchdimen=\dimen362
-\scratchbox=\box143
-\nofMPsegments=\count418
-\nofMParguments=\count419
-\everyMPshowfont=\toks72
-\MPscratchCnt=\count420
-\MPscratchDim=\dimen363
-\MPnumerator=\count421
-\makeMPintoPDFobject=\count422
-\everyMPtoPDFconversion=\toks73
+\scratchcounter=\count420
+\scratchdimen=\dimen356
+\scratchbox=\box135
+\nofMPsegments=\count421
+\nofMParguments=\count422
+\everyMPshowfont=\toks73
+\MPscratchCnt=\count423
+\MPscratchDim=\dimen357
+\MPnumerator=\count424
+\makeMPintoPDFobject=\count425
+\everyMPtoPDFconversion=\toks74
 ) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1287,41 +1209,41 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count423
+\c@lstlisting=\count426
 Package hyperref Info: Link coloring ON on input line 44.
  (main.out) (main.out)
 \@outlinefile=\write7
 \openout7 = `main.out'.
 
 \Etoc@tf=\read5
-\c@minilofdepth=\count424
-\c@minilotdepth=\count425
-\c@partlofdepth=\count426
-\c@partlotdepth=\count427
-\c@sectlofdepth=\count428
-\c@sectlotdepth=\count429
+\c@minilofdepth=\count427
+\c@minilotdepth=\count428
+\c@partlofdepth=\count429
+\c@partlotdepth=\count430
+\c@sectlofdepth=\count431
+\c@sectlotdepth=\count432
 Package minitoc(hints) Info: I0049
 (minitoc(hints))             ==> You requested the hints option. 
 (minitoc(hints))             Some hints are eventually given below.
  (Front_Cover.tex
-\c@Changes@addedCountMN=\count430
-\c@Changes@deletedCountMN=\count431
-\c@Changes@replacedCountMN=\count432
-\c@Changes@highlightCountMN=\count433
-\c@Changes@commentCountMN=\count434
-\c@Changes@addedCountJO=\count435
-\c@Changes@deletedCountJO=\count436
-\c@Changes@replacedCountJO=\count437
-\c@Changes@highlightCountJO=\count438
-\c@Changes@commentCountJO=\count439
-\c@Changes@addedCountPT=\count440
-\c@Changes@deletedCountPT=\count441
-\c@Changes@replacedCountPT=\count442
-\c@Changes@highlightCountPT=\count443
-\c@Changes@commentCountPT=\count444
+\c@Changes@addedCountMN=\count433
+\c@Changes@deletedCountMN=\count434
+\c@Changes@replacedCountMN=\count435
+\c@Changes@highlightCountMN=\count436
+\c@Changes@commentCountMN=\count437
+\c@Changes@addedCountJO=\count438
+\c@Changes@deletedCountJO=\count439
+\c@Changes@replacedCountJO=\count440
+\c@Changes@highlightCountJO=\count441
+\c@Changes@commentCountJO=\count442
+\c@Changes@addedCountPT=\count443
+\c@Changes@deletedCountPT=\count444
+\c@Changes@replacedCountPT=\count445
+\c@Changes@highlightCountPT=\count446
+\c@Changes@commentCountPT=\count447
 )
 TextBlockOrigin set to -5mm x 0mm
-<./Images/IST_A_RGB_POS.png, id=157, 509.905pt x 198.7425pt>
+<./Images/IST_A_RGB_POS.png, id=177, 509.905pt x 198.7425pt>
 File: ./Images/IST_A_RGB_POS.png Graphic file (type png)
 <use ./Images/IST_A_RGB_POS.png>
 Package pdftex.def Info: ./Images/IST_A_RGB_POS.png  used on input line 50.
@@ -1385,10 +1307,6 @@ Package minitoc Info: I0033
 (minitoc)             Writing main.mtc8.
 \openout6 = `main.mtc8'.
 
-Package minitoc Info: I0033
-(minitoc)             Writing main.mtc9.
-\openout6 = `main.mtc9'.
-
 Package minitoc Info: I0034
 (minitoc)             PREPARING MINILOFS FROM main.lof on input line 99.
 Package minitoc Info: I0033
@@ -1419,10 +1337,6 @@ Package minitoc Info: I0033
 (minitoc)             Writing main.mlf7.
 \openout6 = `main.mlf7'.
 
-Package minitoc Info: I0033
-(minitoc)             Writing main.mlf8.
-\openout6 = `main.mlf8'.
-
 Package minitoc Info: I0037
 (minitoc)             PREPARING MINILOTS FROM main.lot on input line 102.
 Package minitoc Info: I0033
@@ -1452,10 +1366,6 @@ Package minitoc Info: I0033
 Package minitoc Info: I0033
 (minitoc)             Writing main.mlt7.
 \openout6 = `main.mlt7'.
-
-Package minitoc Info: I0033
-(minitoc)             Writing main.mlt8.
-\openout6 = `main.mlt8'.
 
 \tf@toc=\write8
 \openout8 = `main.toc'.
@@ -1496,7 +1406,7 @@ Package cleveref Info: loaded `english' language definitions on input line 1.
  [13] [14
 
 ] (main.lol
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 4.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 2.
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ))
@@ -1505,68 +1415,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 
  [15] [16
 
-] (Chapters/Acronyms.tex
-
-LaTeX Warning: Hyper reference `acro:CC' on page xvii undefined on input line 15.
-
-
-LaTeX Warning: Hyper reference `acro:CC' on page xvii undefined on input line 15.
-
-
-LaTeX Warning: Hyper reference `acro:CDN' on page xvii undefined on input line 16.
-
-
-LaTeX Warning: Hyper reference `acro:CDN' on page xvii undefined on input line 16.
-
-
-LaTeX Warning: Hyper reference `acro:DASH' on page xvii undefined on input line 18.
-
-
-LaTeX Warning: Hyper reference `acro:DASH' on page xvii undefined on input line 18.
-
-
-LaTeX Warning: Hyper reference `acro:GPRS' on page xvii undefined on input line 23.
-
-
-LaTeX Warning: Hyper reference `acro:GPRS' on page xvii undefined on input line 23.
-
-
-LaTeX Warning: Hyper reference `acro:HTTP' on page xvii undefined on input line 30.
-
-
-LaTeX Warning: Hyper reference `acro:HTTP' on page xvii undefined on input line 30.
-
-
-LaTeX Warning: Hyper reference `acro:LAN' on page xvii undefined on input line 41.
-
-
-LaTeX Warning: Hyper reference `acro:LAN' on page xvii undefined on input line 41.
-
-
-LaTeX Warning: Hyper reference `acro:LTE' on page xvii undefined on input line 42.
-
-
-LaTeX Warning: Hyper reference `acro:LTE' on page xvii undefined on input line 42.
-
-
-LaTeX Warning: Hyper reference `acro:SVC' on page xvii undefined on input line 72.
-
-
-LaTeX Warning: Hyper reference `acro:SVC' on page xvii undefined on input line 72.
-
-
-LaTeX Warning: Hyper reference `acro:UI' on page xvii undefined on input line 77.
-
-
-LaTeX Warning: Hyper reference `acro:UI' on page xvii undefined on input line 77.
-
-
-LaTeX Warning: Hyper reference `acro:UMTS' on page xvii undefined on input line 78.
-
-
-LaTeX Warning: Hyper reference `acro:UMTS' on page xvii undefined on input line 78.
-
-) [17]
+] (Chapters/Acronyms.tex) [17]
 No file main.gls.
 [18
 
@@ -1581,15 +1430,7 @@ LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <10> not available
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <130> not available
 (Font)              Font shape `T1/pbk/db/n' tried instead on input line 6.
 Package cleveref Info: loaded `english' language definitions on input line 10.
-
-
-LaTeX Warning: cref reference format for label type `etoc@tocid' undefined on input line 22.
-
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 22.
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1602,147 +1443,243 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has b
 <to be read again> 
                    \relax 
 l.171 \cleardoublepage
-                       [2] (Chapters/2-Background.tex
+                       [2
+
+] (Chapters/2-RelatedWork.tex
 Chapter 2.
 Package cleveref Info: loaded `english' language definitions on input line 10.
-
-LaTeX Warning: Citation `MacAulay:2005fk' on page 3 undefined on input line 14.
-
-
-LaTeX Warning: Citation `Schwarz:2007lr' on page 3 undefined on input line 14.
-
-[3
-
-
-]
-
-LaTeX Warning: Citation `RFC-VP8' on page 4 undefined on input line 53.
-
-
-LaTeX Warning: Citation `Chiang:2011fk' on page 4 undefined on input line 53.
-
-
-LaTeX Warning: Citation `Moscoso:2011fk' on page 4 undefined on input line 69.
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 69.
-(C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+ [3
 
-) [4] [5] [6
-
-] (Chapters/3-RelatedWork.tex
+] [4] (Chapters/3-Architecture.tex
 Chapter 3.
 Package cleveref Info: loaded `english' language definitions on input line 10.
-<./Images/Flowchart_from_draw-io.pdf, id=387, 548.0475pt x 472.76625pt>
-File: ./Images/Flowchart_from_draw-io.pdf Graphic file (type pdf)
-<use ./Images/Flowchart_from_draw-io.pdf>
-Package pdftex.def Info: ./Images/Flowchart_from_draw-io.pdf  used on input line 18.
-(pdftex.def)             Requested size: 455.24408pt x 392.7205pt.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 33.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 48.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Float too large for page by 96.10777pt on input line 113.
 
-[7
-
-]
-<./Images/Network_from_draw-io.pdf, id=395, 1147.28625pt x 569.12625pt>
-File: ./Images/Network_from_draw-io.pdf Graphic file (type pdf)
-<use ./Images/Network_from_draw-io.pdf>
-Package pdftex.def Info: ./Images/Network_from_draw-io.pdf  used on input line 29.
-(pdftex.def)             Requested size: 455.24408pt x 225.82278pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Package acronym Info: Label `acro:HTTP' newly defined as it shall be overridden
-although it is yet undefined on input line 38.
-Package acronym Info: Label `acro:CDN' newly defined as it shall be overridden
-although it is yet undefined on input line 40.
-Package acronym Info: Label `acro:CC' newly defined as it shall be overridden
-although it is yet undefined on input line 40.
-[8 <./Images/Flowchart_from_draw-io.pdf
-
-pdfTeX warning: pdflatex (file ./Images/Flowchart_from_draw-io.pdf): PDF inclusion: invalid other resource which is no dict (key 'ProcSets', type <array>); ignored.
->]
-Package acronym Info: Label `acro:DASH' newly defined as it shall be overridden
-although it is yet undefined on input line 42.
-
-
-LaTeX Warning: Citation `ISO/IEC:2012fk' on page 9 undefined on input line 42.
-
-Package acronym Info: Label `acro:SVC' newly defined as it shall be overridden
-although it is yet undefined on input line 44.
-
-Overfull \hbox (2.24121pt too wide) in paragraph at lines 44--45
-[]\T1/phv/m/n/10 The sys-tem should sup-port on-demand stream-ing of scal-
- []
-
-Package acronym Info: Label `acro:LAN' newly defined as it shall be overridden
-although it is yet undefined on input line 48.
-Package acronym Info: Label `acro:GPRS' newly defined as it shall be overridden
-although it is yet undefined on input line 48.
-Package acronym Info: Label `acro:UMTS' newly defined as it shall be overridden
-although it is yet undefined on input line 48.
-Package acronym Info: Label `acro:LTE' newly defined as it shall be overridden
-although it is yet undefined on input line 48.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9 <./Images/Network_from_draw-io.pdf>] (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 59.
-) [10] (Chapters/4-Architecture.tex
+ [5
+
+
+]) (Chapters/4-Evaluation.tex [6] [7] [8
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.20}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.21}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.24}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.26}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.28}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.29}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.30}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.31}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.32}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.33}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.34}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.35}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.36}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.37}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.38}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.39}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.40}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.5 \chapter
+            {Evaluation}]
 Chapter 4.
-Package cleveref Info: loaded `english' language definitions on input line 10.
-[11
-
-
-]
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 17.
- (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
-File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-) [12] (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-)
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 77.
-
-Overfull \hbox (15.0pt too wide) in paragraph at lines 73--119
-[]$[]$ 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13] [14]
-<./Images/ui_loading.png, id=516, 642.4pt x 1140.26pt>
-File: ./Images/ui_loading.png Graphic file (type png)
-<use ./Images/ui_loading.png>
-Package pdftex.def Info: ./Images/ui_loading.png  used on input line 136.
-(pdftex.def)             Requested size: 136.5746pt x 242.41948pt.
-<./Images/ui_playout.png, id=517, 642.4pt x 1140.26pt>
-File: ./Images/ui_playout.png Graphic file (type png)
-<use ./Images/ui_playout.png>
-Package pdftex.def Info: ./Images/ui_playout.png  used on input line 138.
-(pdftex.def)             Requested size: 136.5746pt x 242.41948pt.
-Package acronym Info: Label `acro:UI' newly defined as it shall be overridden
-although it is yet undefined on input line 143.
-) (Chapters/5-Evaluation.tex [15 <./Images/ui_loading.png> <./Images/ui_playout.png (PNG copy)>] [16
-
-]
-Chapter 5.
 Package cleveref Info: loaded `english' language definitions on input line 9.
-[17]
-<./Images/test_env.jpg, id=541, 771.88374pt x 504.88625pt>
+[9
+
+]
+<./Images/test_env.jpg, id=465, 771.88374pt x 504.88625pt>
 File: ./Images/test_env.jpg Graphic file (type jpg)
 <use ./Images/test_env.jpg>
 Package pdftex.def Info: ./Images/test_env.jpg  used on input line 17.
@@ -1750,13 +1687,16 @@ Package pdftex.def Info: ./Images/test_env.jpg  used on input line 17.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18 <./Images/test_env.jpg>]
-<./Images/tx_layer_4.pdf, id=550, 934.63657pt x 635.94908pt>
+ [10 <./Images/test_env.jpg>]
+
+LaTeX Warning: Reference `fig:tx_layer_4,fig:tx_layer_5' on page 11 undefined on input line 67.
+
+<./Images/tx_layer_4.pdf, id=472, 934.63657pt x 635.94908pt>
 File: ./Images/tx_layer_4.pdf Graphic file (type pdf)
 <use ./Images/tx_layer_4.pdf>
 Package pdftex.def Info: ./Images/tx_layer_4.pdf  used on input line 71.
 (pdftex.def)             Requested size: 227.62204pt x 154.87247pt.
-<./Images/tx_layer_5.pdf, id=551, 934.63681pt x 635.94914pt>
+<./Images/tx_layer_5.pdf, id=473, 934.63681pt x 635.94914pt>
 File: ./Images/tx_layer_5.pdf Graphic file (type pdf)
 <use ./Images/tx_layer_5.pdf>
 Package pdftex.def Info: ./Images/tx_layer_5.pdf  used on input line 73.
@@ -1769,26 +1709,37 @@ Overfull \hbox (2.11998pt too wide) in paragraph at lines 71--74
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [19] [20 <./Images/tx_layer_4.pdf> <./Images/tx_layer_5.pdf>] (Chapters/6-Conclusion.tex
-Chapter 6.
+) [11] [12 <./Images/tx_layer_4.pdf> <./Images/tx_layer_5.pdf>] (Chapters/5-Conclusion.tex
+Chapter 5.
 Package cleveref Info: loaded `english' language definitions on input line 10.
-[21
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 11.
+[13
 
 
-]) (main.bbl [22] [23] [24
+]) (main.bbl [14] [15] [16
 
 ]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 24.
 
-) (Chapters/AppendixA.tex [25] [26
+) (Chapters/AppendixA.tex [17] [18
 
 ]
 Appendix A.
-[27]
+(C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 10.
+ [19]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 39.
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 39.
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 45.
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
@@ -1797,21 +1748,21 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 LaTeX Info: Symbol \texttildelow not provided by
             font family ptm in TS1 encoding.
             Default family used instead on input line 45.
- [28] (tables_and_code/function.m) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+ [20] (tables_and_code/function.m) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 66.
- [29]
+ [21]
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 99.
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30] (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+ [22] (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [31]) [32] (Chapters/AppendixB.tex
+) [23]) [24] (Chapters/AppendixB.tex
 Appendix B.
 (tables_and_code/table_example.tex
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
@@ -1823,12 +1774,12 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
 )
 Underfull \vbox (badness 3482) has occurred while \output is active []
 
- [33
+ [25
 
 
 ]
 
-LaTeX Warning: Reference `tab:lon_table' on page 1 undefined on input line 19.
+LaTeX Warning: Reference `tab:lon_table' on page 26 undefined on input line 19.
 
 )
 \Changes@OutFile=\write13
@@ -1868,8 +1819,8 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the main.log file.
 
-[34] (main.aux
-Package cleveref Info: loaded `english' language definitions on input line 17.
+[26] (main.aux
+Package cleveref Info: loaded `english' language definitions on input line 16.
 )
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -1879,24 +1830,21 @@ L3 programming layer <2024-01-04>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BA076D777F68EC1B61F16022814E8F7C;5688.
+(rerunfilecheck)             Checksum: 3D0EFEA91302505AAF6CAA7E28B27019;6349.
  ) 
 Here is how much of TeX's memory you used:
- 46653 strings out of 474486
- 900138 string characters out of 5743755
- 2092542 words of memory out of 5000000
- 67751 multiletter control sequences out of 15000+600000
- 635683 words of font info for 125 fonts, out of 8000000 for 9000
+ 45711 strings out of 474486
+ 884029 string characters out of 5743755
+ 2090542 words of memory out of 5000000
+ 66833 multiletter control sequences out of 15000+600000
+ 655180 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,18n,119p,2565b,2718s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0900.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0900.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (54 pages, 1126935 bytes).
+ 90i,18n,119p,2565b,2719s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit0900.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0900.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (46 pages, 654918 bytes).
 PDF statistics:
- 1621 PDF objects out of 1728 (max. 8388607)
- 323 named destinations out of 1000 (max. 500000)
- 357 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1534 PDF objects out of 1728 (max. 8388607)
+ 311 named destinations out of 1000 (max. 500000)
+ 377 words of extra memory for PDF output out of 10000 (max. 10000000)
 

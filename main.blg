@@ -4,18 +4,13 @@ The top-level auxiliary file: main.aux
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: IEEEtran.bst
 Reallocating 'name_of_file' (item size: 1) to 15 items.
+I found no \citation commands---while reading file main.aux
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: ./Bibliography.bib
-Warning--I didn't find a database entry for "MacAulay:2005fk"
-Warning--I didn't find a database entry for "Schwarz:2007lr"
-Warning--I didn't find a database entry for "RFC-VP8"
-Warning--I didn't find a database entry for "Chiang:2011fk"
-Warning--I didn't find a database entry for "Moscoso:2011fk"
-Warning--I didn't find a database entry for "ISO/IEC:2012fk"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -23,7 +18,7 @@ Warning--I didn't find a database entry for "ISO/IEC:2012fk"
 Done.
 You've used 0 entries,
             4087 wiz_defined-function locations,
-            833 strings with 7445 characters,
+            821 strings with 7291 characters,
 and the built_in function-call counts, 104 in all, are:
 = -- 0
 > -- 0
@@ -62,4 +57,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 22
-(There were 6 warnings)
+(There was 1 error message)
