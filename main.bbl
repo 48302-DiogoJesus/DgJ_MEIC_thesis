@@ -117,12 +117,11 @@ Y.~Tang and J.~Yang, ``Lambdata: Optimizing serverless computing by making data
 Apache openwhisk. [Online]. Available: \url{https://openwhisk.apache.org/}
 \BIBentrySTDinterwordspacing
 
-\bibitem{boxer}
-\BIBentryALTinterwordspacing
-M.~Wawrzoniak, R.~Bruno, A.~Klimovic, and G.~Alonso, ``Boxer: Faast ephemeral
-  elasticity for off-the-shelf cloud applications,'' 2024. [Online]. Available:
-  \url{https://arxiv.org/abs/2407.00832}
-\BIBentrySTDinterwordspacing
+\bibitem{hole_punching_solution}
+D.~Moyer and D.~S. Nikolopoulos, ``Punching holes in the cloud: Direct
+  communication between serverless functions,'' in \emph{Serverless Computing:
+  Principles and Paradigms}.\hskip 1em plus 0.5em minus 0.4em\relax Springer,
+  2023, pp. 15--41.
 
 \bibitem{pheromone}
 M.~Yu, T.~Cao, W.~Wang, and R.~Chen, ``Pheromone: Restructuring serverless
@@ -199,5 +198,80 @@ S.~Fouladi, R.~S. Wahby, B.~Shacklett, K.~V. Balasubramaniam, W.~Zeng,
 Y.~Li, Y.~Lin, Y.~Wang, K.~Ye, and C.~Xu, ``Serverless computing:
   State-of-the-art, challenges and opportunities,'' \emph{IEEE Transactions on
   Services Computing}, vol.~16, no.~2, pp. 1522--1539, 2023.
+
+\bibitem{pocket}
+\BIBentryALTinterwordspacing
+A.~Klimovic, Y.~Wang, P.~Stuedi, A.~Trivedi, J.~Pfefferle, and C.~Kozyrakis,
+  ``Pocket: Elastic ephemeral storage for serverless analytics,'' in \emph{13th
+  USENIX Symposium on Operating Systems Design and Implementation (OSDI
+  18)}.\hskip 1em plus 0.5em minus 0.4em\relax Carlsbad, CA: USENIX
+  Association, Oct. 2018, pp. 427--444. [Online]. Available:
+  \url{https://www.usenix.org/conference/osdi18/presentation/klimovic}
+\BIBentrySTDinterwordspacing
+
+\bibitem{apache_airflow}
+\BIBentryALTinterwordspacing
+Apache airflow. [Online]. Available: \url{https://airflow.apache.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{dask_python}
+\BIBentryALTinterwordspacing
+Dask - python parallel computing framework. [Online]. Available:
+  \url{https://www.dask.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{dagman}
+\BIBentryALTinterwordspacing
+Dagman. [Online]. Available:
+  \url{https://htcondor.readthedocs.io/en/latest/automated-workflows/dagman-introduction.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{htcondor}
+\BIBentryALTinterwordspacing
+Htcondor. [Online]. Available: \url{https://htcondor.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{yawl}
+W.~M. Van Der~Aalst and A.~H. Ter~Hofstede, ``Yawl: yet another workflow
+  language,'' \emph{Information systems}, vol.~30, no.~4, pp. 245--275, 2005.
+
+\bibitem{petri_nets}
+\BIBentryALTinterwordspacing
+Petri nets. [Online]. Available: \url{https://en.wikipedia.org/wiki/Petri_net}
+\BIBentrySTDinterwordspacing
+
+\bibitem{apache_spark}
+\BIBentryALTinterwordspacing
+Apache spark. [Online]. Available: \url{https://spark.apache.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{apache_flink}
+\BIBentryALTinterwordspacing
+Apache flink. [Online]. Available: \url{https://flink.apache.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{apache_hadoop}
+\BIBentryALTinterwordspacing
+Apache hadoop. [Online]. Available: \url{https://hadoop.apache.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{apache_oozie}
+\BIBentryALTinterwordspacing
+Apache oozie. [Online]. Available: \url{https://oozie.apache.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{mapreduce}
+\BIBentryALTinterwordspacing
+J.~Dean and S.~Ghemawat, ``Mapreduce: simplified data processing on large
+  clusters,'' vol.~51, no.~1.\hskip 1em plus 0.5em minus 0.4em\relax New York,
+  NY, USA: Association for Computing Machinery, Jan. 2008, pp. 107--113.
+  [Online]. Available: \url{https://doi.org/10.1145/1327452.1327492}
+\BIBentrySTDinterwordspacing
+
+\bibitem{yarn}
+\BIBentryALTinterwordspacing
+Hadoop yarn. [Online]. Available:
+  \url{https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

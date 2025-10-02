@@ -12,12 +12,12 @@
 \contentsline {subsection}{\numberline {2.1.1}Advantages}{6}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Limitations}{7}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Research Efforts}{8}{subsection.2.1.3}%
-\contentsline {paragraph}{\numberline {A~--}Faa\$T Caching}{10}{paragraph.2.1.3.0.1}%
-\contentsline {paragraph}{\numberline {B~--}Lambdata}{10}{paragraph.2.1.3.0.2}%
-\contentsline {section}{\numberline {2.2}Workflows}{12}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Relevant Related Systems}{12}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Serverless Workflow Scheduling}{12}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}Discussion/Analysis}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.2}Workflows}{10}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Workflow Definition Languages}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Traditional Workflow Scheduling}{11}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Serverless Workflow Scheduling}{12}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Serverless Workflow Scheduling}{12}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Discussion/Analysis}{12}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Architecture}{13}{chapter.3}%
 \etoc@startlocaltoc {4}
 \contentsline {section}{\numberline {3.1}Workflow Definition Language}{14}{section.3.1}%
