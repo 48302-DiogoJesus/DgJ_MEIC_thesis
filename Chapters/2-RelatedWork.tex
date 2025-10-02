@@ -13,12 +13,14 @@ In this section, we explore the serverless computing landscape, starting by expo
 % #############################################################################
 \section{Serverless Computing}
 
-Serverless computing represents a paradigm shift in how applications are developed and deployed. At its core, it allows developers to focus on business logic without caring about the underlying infrastructure. This cloud computing model encompasses a range of cloud offerings that \textit{abstract away infrastructure management}. At the storage and database layer, services such as serverless databases and object stores automatically scale with demand and charge based on actual usage. At the application level, \textbf{Backend-as-a-Service} (BaaS) platforms provide ready-to-use components like authentication, messaging, or data synchronization. Finally, at the compute layer, \textbf{Function-as-a-Service} (FaaS) represents the most flexible and fine-grained model, allowing developers to deploy individual functions that are executed on demand in response to events. In this document, we focus specifically on FaaS, as it is the model most relevant to our work.
+Traditionally, cloud applications have been deployed on virtual machines, such as Amazon EC2~\footnote{\url{https://aws.amazon.com/pt/ec2/}}, which provide full control over the operating system and runtime environment. This model allows predictable performance, flexible resource allocation, direct communication via local network interfaces between VMs, and the ability to run long-lived services, but it comes with significant operational overhead: developers must manage provisioning (which can take several minutes), scaling, patching, and fault tolerance. 
+
+Serverless computing addresses these challenges by abstracting away infrastructure management, enabling developers to focus solely on application logic. At the storage and database layer, serverless databases and object stores automatically scale with demand and charge based on actual usage. At the application level, \textbf{Backend-as-a-Service} (BaaS) platforms offer ready-to-use components like authentication and messaging. Finally, at the compute layer, \textbf{Function-as-a-Service} (FaaS) provides the most flexible and fine-grained model, allowing developers to deploy individual functions that execute on demand in response to events. In this document, we focus specifically on FaaS, as it is the model most relevant to our work.
 
 The Function-as-a-Service (FaaS) model is now offered by major cloud providers, including Amazon (Lambda\cite{aws_lambda}), Google (Cloud Run Functions\cite{google_cloud_run_functions}), Microsoft (Azure Functions\cite{azure_functions}), and Cloudflare (Workers~\cite{cloudflare_workers}). In addition to these commercial offerings, several open-source runtimes such as OpenWhisk\cite{open_whisk}, OpenFaaS\cite{openfaas}, and Knative\cite{knative} provide developers with alternatives for deploying FaaS in self-managed or hybrid environments.
 
 \subsection{Advantages}
-Recent industry reports~\footnote{https://www.grandviewresearch.com/industry-analysis/serverless-computing-market-report} show that serverless computing has seen rapid adoption over the last few years. For example, in 2024 the global serverless computing market was estimated at USD 24.51 billion, and it is projected to more than double to USD 52.13 billion by 2030, with a compound annual growth rate (CAGR) of about 14.1\%. Function-as-a-Service (FaaS) constitutes the majority service model, representing over 60\% of serverless market share in 2024. This rapid growth highlights the increasing appeal of serverless architectures, which can be attributed to the following key benefits:
+Recent industry reports~\footnote{\url{https://www.grandviewresearch.com/industry-analysis/serverless-computing-market-report}} show that serverless computing has seen rapid adoption over the last few years. For example, in 2024 the global serverless computing market was estimated at USD 24.51 billion, and it is projected to more than double to USD 52.13 billion by 2030, with a compound annual growth rate (CAGR) of about 14.1\%. Function-as-a-Service (FaaS) constitutes the majority service model, representing over 60\% of serverless market share in 2024. This rapid growth highlights the increasing appeal of serverless architectures, which can be attributed to the following key benefits:
 
 \begin{itemize}
     \item{\textbf{Operational Simplicity} means that developers are abstracted away from the underlying infrastructure management, without worrying about server maintenance, scaling, or provisioning. This enables faster development and deployment cycles;}
@@ -28,11 +30,11 @@ Recent industry reports~\footnote{https://www.grandviewresearch.com/industry-ana
 
 Given these advantages, the serverless model is particularly attractive for applications with \textit{highly variable} or \textit{unpredictable} workloads, such as web services, event-driven pipelines, and real-time data processing. It also suits applications that benefit from rapid iteration and deployment, including microservices, and APIs, where minimizing operational overhead is crucial. Furthermore, serverless can be advantageous in cost-sensitive contexts, where pay-per-use pricing reduces expenses for workloads that do not require continuous execution.
 
+These benefits make serverless computing attractive not only for simple, event-driven applications but also for more complex workflows. Serverless workflows are a composition of multiple computational tasks that are chained together to execute applications by orchestrating individual serverless functions into a coordinated sequence. Some workflows have been successfully experimented with on FaaS. Notable examples include ExCamera~\cite{excamera}, a highly parallel video encoding system; Montage~\cite{montage_astronomy}, an astronomical image mosaic generator; and CyberShake~\cite{cybershake_workflow}, a seismic hazard modeling framework.
+
 \subsection{Limitations}
 % limitations and when do they show (for which type of apps)
-% mention palette, faast, lambdata
-% mention works that attack cold starts (orion, jolteon)
-Li et al. ~\cite{serverless_computing_survey_rw1} surveys the serverless computing landscape, highlighting its benefits, challenges and research opportunities. The challenges mentioned include: 
+While these advantages make serverless computing highly appealing for a wide range of applications, the model is not without its limitations. As adoption has grown, both practitioners and researchers have identified several technical and architectural challenges that hinder its broader applicability and performance. A number of studies have systematically analyzed these issues, among which Li et al.~\cite{serverless_computing_survey_rw1} provides a comprehensive overview of the benefits, challenges, and open research opportunities in the serverless landscape. The challenges mentioned include:
 
 \begin{itemize}
     \item \textbf{Startup Latencies}: It's the time it takes for a function to start executing user code. Cold starts (explained further) can be critical, especially for functions with short execution times;
@@ -44,12 +46,63 @@ Li et al. ~\cite{serverless_computing_survey_rw1} surveys the serverless computi
 
 Hellerstein et al. \cite{serverless_computing_drawbacks_survey_rw1} portrays FaaS as a \textit{"Data-Shipping Architecture"}, where data is intensively moved to code, through external storage services like databases, bucket storage or queues, to circumvent the limitation of inter-function direct communication. This can greatly degrade performance, while also incurring extra costs.
 
-To overcome these limitations and explore the opportunities of serverless computing, \textit{``Serverless Computing: State-of-the-Art, Challenges and Opportunities``} (Li et al.) gathered research being carried out on several fronts. Applying \textit{machine learning} to resource management aims to optimize resource allocation and predict application needs, reducing costs and latencies. Although promising, the latency requirements and complexity of the settings of the machine learning approaches are not yet satisfactory. Integration with edge computing offers the opportunity to leverage the computing power of thousands of edge devices to provide low-latency services, making it a promising direction for serverless computing.
+These limitations notably impact workflows—complex applications composed of multiple functions orchestrated into a Directed Acyclic Graph (DAG), where each function's output serves as input for subsequent functions. Such workflows are prevalent in scientific computing, data processing, and machine learning pipelines. 
+
+\subsection{Research Efforts}
+% Arch changes => ??openwhisk?? (event-driven model), triggerflow
+% Arch changes (improve data locality) => palette, faast, lambdata, pheromone (see PIC.pdf)
+% On-Top changes (force reduced cold starts, predictive stuff) => mention works that attack cold starts (orion, jolteon)
+
+To overcome some of the inherent limitations of traditional Function-as-a-Service (FaaS) platforms, several research initiatives have proposed architectural innovations aimed at improving performance, scalability, and orchestration. Apache OpenWhisk~\cite{open_whisk} adopts a fully event-driven, trigger-based architecture, in which functions are invoked automatically in response to events, allowing for more responsive execution and efficient resource utilization. Its design supports complex workflows and fine-grained control over function composition, making it suitable for latency-sensitive and distributed applications. 
+
+Building on similar principles, TriggerFlow~\cite{triggerflow} extends the trigger-based approach by implementing an \textit{event-condition-action} paradigm, enabling efficient orchestration of complex workflows such as state machines and DAGs. This allows high-volume event processing, dynamic scaling, and improved fault tolerance, making it well-suited for long-running scientific and data-intensive workflows. 
+
+Another notable platform, OpenFaaS~\cite{openfaas}, fights \textit{vendor lock-in} by emphasizing simplicity and portability, allowing developers to deploy serverless functions on a wide range of infrastructures while maintaining an event-driven execution model. Collectively, these platforms show how architectural innovations—particularly in event handling and workflow orchestration—can mitigate many of the performance and scalability limitations found in conventional FaaS systems.
+
+%%%%%%
+While solutions such as OpenWhisk and TriggerFlow propose completely novel serverless architectures, others such as Palette Load Balancing~\cite{palette_load_balancing}, Faa\$T~\cite{faast_caching}, and Lambdata~\cite{lambdata_intents} propose extending either the FaaS runtime or the workflow definition language to address one of the most pressing limitation of the serverless paradigm: data management inneficiencies.
+
+Palette~\cite{palette_load_balancing} is a FaaS runtime extension that improves data locality by introducing the concept of \textbf{``colors``} as \textbf{locality hints}. These colors are parameters attached to function invocations, enabling the invoker to express the desired affinity between invocations without directly managing instances. Palette then uses these hints to route invocations with the same color to the same instance \textit{if possible}, allowing for data produced by one invocation to be readily available to subsequent invocations, reducing the need for expensive data transfers, as it would be required in a typical FaaS runtime. This extra control that Palette provides can be used by workflow schedulers, which have insights on the data dependencies between tasks, to try co-locating tasks which share data dependencies, for example, leading to greater performance while also reducing resource utilization.
+
+\paragraph{Faa\$T Caching}
+Faa\$T (Function-as-a-Service Transparent Auto-scaling Cache) (Romero et al.\cite{faast_caching}) is a serverless \textbf{caching layer} where each application has its own dedicated in-memory cache, called a \textit{``cachelet``}. This \textit{cachelet} stores data accessed during function executions, making it readily available for subsequent related calls, and thus, minimizing the need for expensive data transfers from remote storage.\
+
+Faa\$T operates \textit{transparently}, requiring \textit{no modifications to the application code}. It integrates seamlessly with the FaaS runtime, \textit{intercepting data requests} and checking the cache before accessing remote storage. This transparency makes Faa\$T \textit{easy to use and deploy}, preserving the simplicity of the serverless paradigm.\
+
+The \textit{cachelets} collaborate to form a \textit{cooperative distributed cache}, enabling efficient data sharing and reuse across multiple application instances. Using \textit{consistent hashing}, they identify cached object ``owners`` and communicate \textit{directly} to exchange cached data. These \textit{cachelets} scale dynamically with the application's infrastructure, meaning they also \textit{scale down to zero} when the application is not accessed.
+
+Faa\$T core mechanisms are the following:
+\begin{itemize}
+\item \textbf{Pre-warming:} When an application is reloaded into memory, Faa\$T predicts and pre-fetches \textit{frequently accessed objects based on historical metadata}. With this statistical approach, the \textit{``pre-warming``} process can greatly reduce latency;
+\item \textbf{Auto-Scaling:} Faa\$T scales its cache size and bandwidth dynamically based on the application's \textit{data access patterns} and \textit{object sizes}. This auto-scaling of \textit{compute}, \textit{cache size}, and \textit{bandwidth} ensures that the cache effectively adapts to changing workloads and data requirements;
+\item \textbf{Consistent Hashing:} Faa\$T uses \textit{consistent hashing} to distribute cached objects across multiple \textit{cachelets}, ensuring efficient data finding and minimizing the overhead of metadata management.
+\end{itemize}
+
+While both Palette and Faa\$T focus on improving data locality in serverless computing, they differ in their approaches. Palette utilizes \textbf{locality hints provided by the user}, allowing for a flexible and customizable way to express data affinity between function invocations. Faa\$T takes a more \textbf{automated and transparent approach}, providing a dedicated, auto-scaling cache for each application. It does not require user intervention to specify locality. Instead, it automatically manages data placement and retrieval based on observed access patterns.
+
+\paragraph{Lambdata}
+Similarly to Palette, Lambdata (Tang et al.\cite{lambdata_intents}) focuses on optimizing data locality by leveraging user-provided information. In Lambdata this information is called ``data intents``, where users specify \textit{exactly} what data objects a function will \textit{read and/or write}.
+
+Here's a closer look at how Lambdata enhances data locality:
+
+\begin{itemize}
+\item \textbf{Data Intent Declarations:} Function invokers annotate their functions with \textit{``get\_data``} and \textit{``put\_data``} parameters, explicitly listing the data objects required for input and output, respectively. These annotations provide the \textit{Lambdata Controller} with insights into the data access patterns of each function. For instance, a thumbnail-generating function would declare its intent to read a specific image file (``pic/1.jpg``) and write the resulting thumbnail to another location (``thumb/1.jpg``);
+\item \textbf{Local Caching:} Each \textit{Lambdata Invoker}, responsible for executing functions, maintains a local object cache. When a function is invoked, Lambdata checks the local cache for the required data objects specified in the ``get\_data`` intent. If the data is present locally, the function directly reads it from the cache, avoiding the latency of retrieving it from remote storage;
+\item \textbf{Data-Aware Scheduling:} The \textit{Lambdata Controller} utilizes the declared data intents to make \textit{informed scheduling decisions}. When multiple functions require access to the same data, Lambdata tries to schedule them on the same \textit{Invoker}. This colocation allows the functions to \textit{reuse the cached data}, minimizing data transfer overheads.
+\end{itemize}
+
+In essence, Lambdata optimizes data locality by intelligently scheduling functions and leveraging local caching within a single instance. It relies on user-provided data intent declarations to guide its decisions, promoting data reuse and reducing reliance on remote data transfers.\
+Compared to Faa\$T, which manages a distributed cache and proactively fetches data from other instances, Lambdata adopts an approach that simplifies deployment/integration and usage. While it might not offer the same level of fault tolerance or data availability as a distributed cache, it simplifies implementation and reduces the overhead associated with inter-instance communication.\
+Similar to Palette, Lambdata seeks to reduce data transfer overhead by scheduling related functions together. However, rather than using \textit{``color`` hints}, Lambdata depends on \textit{explicit data intent declarations}, which can restrict the flexibility of applications built on it.\\
+
+Table \ref{tab:faas_extensions} sums-up the core differences between these FaaS extensions regarding their data locality, level of user interaction/application modification required, complexity, and caching approach. We consider Faa\$T to be the most transparent solution, meaning that the developer doesn't need to perform modifications to its application to benefit from Faa\$T's advantages. As Lambdata requires the user to specify the exact objects a function manipulates, we believe it is easier for the developer when compared to choosing \textit{``colors``} (Palette). We also classify Faa\$T as being the most complex solution, since it's a distributed caching layer that requires changes to the scheduling made by serverless platforms.
+
 
 % #############################################################################
-\section{Workflow Execution}
-% what are workflows, historic background on them: apache flink, spark, oozie
-    % contrast the difficulties against serverless
+\section{Workflows}
+% workflow definition languages
+% apache flink, spark, oozie (contrast the difficulties against serverless)
+% aws step functions and others (cloudflare too)
 % then more modern ones: argo, prefect, dagster, airflow, see paper.pdf
 
 \section{Relevant Related Systems}

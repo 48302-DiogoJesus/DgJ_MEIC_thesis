@@ -188,6 +188,13 @@ Openfaas. [Online]. Available: \url{https://www.openfaas.com/}
 Knative. [Online]. Available: \url{https://knative.dev/docs/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{excamera}
+S.~Fouladi, R.~S. Wahby, B.~Shacklett, K.~V. Balasubramaniam, W.~Zeng,
+  R.~Bhalerao, A.~Sivaraman, G.~Porter, and K.~Winstein, ``Encoding, fast and
+  slow:$\{$Low-Latency$\}$ video processing using thousands of tiny threads,''
+  in \emph{14th USENIX Symposium on Networked Systems Design and Implementation
+  (NSDI 17)}, 2017, pp. 363--376.
+
 \bibitem{serverless_computing_survey_rw1}
 Y.~Li, Y.~Lin, Y.~Wang, K.~Ye, and C.~Xu, ``Serverless computing:
   State-of-the-art, challenges and opportunities,'' \emph{IEEE Transactions on
