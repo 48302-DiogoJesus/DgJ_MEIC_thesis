@@ -21,6 +21,23 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{aws_lambda}
+\BIBentryALTinterwordspacing
+Aws lambda. [Online]. Available: \url{https://aws.amazon.com/pt/lambda/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{azure_functions}
+\BIBentryALTinterwordspacing
+Azure functions. [Online]. Available:
+  \url{https://azure.microsoft.com/en-us/products/functions}
+\BIBentrySTDinterwordspacing
+
+\bibitem{google_cloud_run_functions}
+\BIBentryALTinterwordspacing
+Google cloud run functions. [Online]. Available:
+  \url{https://cloud.google.com/functions}
+\BIBentrySTDinterwordspacing
+
 \bibitem{cybershake_workflow}
 \BIBentryALTinterwordspacing
 R.~Graves, T.~H. Jordan, S.~Callaghan, E.~Deelman, E.~Field, G.~Juve,
@@ -52,6 +69,24 @@ J.~M. Hellerstein, J.~Faleiro, J.~E. Gonzalez, J.~Schleier-Smith, V.~Sreekanti,
   A.~Tumanov, and C.~Wu, ``Serverless computing: One step forward, two steps
   back,'' \emph{arXiv preprint arXiv:1812.03651}, 2018.
 
+\bibitem{aws_step_functions}
+\BIBentryALTinterwordspacing
+Aws step functions. [Online]. Available:
+  \url{https://aws.amazon.com/en/step-functions/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{azure_durable_functions}
+\BIBentryALTinterwordspacing
+Azure durable functions. [Online]. Available:
+  \url{https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview}
+\BIBentrySTDinterwordspacing
+
+\bibitem{google_cloud_workflows}
+\BIBentryALTinterwordspacing
+Google cloud workflows. [Online]. Available:
+  \url{https://cloud.google.com/workflows}
+\BIBentrySTDinterwordspacing
+
 \bibitem{faast_caching}
 \BIBentryALTinterwordspacing
 F.~Romero, G.~I. Chaudhry, I.~n. Goiri, P.~Gopa, P.~Batum, N.~J. Yadwadkar,
@@ -82,6 +117,44 @@ Y.~Tang and J.~Yang, ``Lambdata: Optimizing serverless computing by making data
 Apache openwhisk. [Online]. Available: \url{https://openwhisk.apache.org/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{boxer}
+\BIBentryALTinterwordspacing
+M.~Wawrzoniak, R.~Bruno, A.~Klimovic, and G.~Alonso, ``Boxer: Faast ephemeral
+  elasticity for off-the-shelf cloud applications,'' 2024. [Online]. Available:
+  \url{https://arxiv.org/abs/2407.00832}
+\BIBentrySTDinterwordspacing
+
+\bibitem{pheromone}
+M.~Yu, T.~Cao, W.~Wang, and R.~Chen, ``Pheromone: Restructuring serverless
+  computing with data-centric function orchestration,'' \emph{IEEE Transactions
+  on Networking}, vol.~33, no.~1, pp. 226--240, 2025.
+
+\bibitem{triggerflow}
+\BIBentryALTinterwordspacing
+P.~G. L\'{o}pez, A.~Arjona, J.~Samp\'{e}, A.~Slominski, and L.~Villard,
+  ``Triggerflow: trigger-based orchestration of serverless workflows,'' in
+  \emph{Proceedings of the 14th ACM International Conference on Distributed and
+  Event-Based Systems}, ser. DEBS '20.\hskip 1em plus 0.5em minus 0.4em\relax
+  New York, NY, USA: Association for Computing Machinery, 2020, pp. 3--14.
+  [Online]. Available: \url{https://doi.org/10.1145/3401025.3401731}
+\BIBentrySTDinterwordspacing
+
+\bibitem{fado}
+C.~P. Smith, A.~Jindal, M.~Chadha, M.~Gerndt, and S.~Benedict, ``Fado: Faas
+  functions and data orchestrator for multiple serverless edge-cloud
+  clusters,'' in \emph{2022 IEEE 6th International Conference on Fog and Edge
+  Computing (ICFEC)}, 2022, pp. 17--25.
+
+\bibitem{fmi}
+\BIBentryALTinterwordspacing
+M.~Copik, R.~B\"{o}hringer, A.~Calotoiu, and T.~Hoefler, ``Fmi: Fast and cheap
+  message passing for serverless functions,'' in \emph{Proceedings of the 37th
+  ACM International Conference on Supercomputing}, ser. ICS '23.\hskip 1em plus
+  0.5em minus 0.4em\relax New York, NY, USA: Association for Computing
+  Machinery, 2023, p. 373–385. [Online]. Available:
+  \url{https://doi.org/10.1145/3577193.3593718}
+\BIBentrySTDinterwordspacing
+
 \bibitem{wukong_2}
 B.~Carver, J.~Zhang, A.~Wang, A.~Anwar, P.~Wu, and Y.~Cheng, ``Wukong: A
   scalable and locality-enhanced framework for serverless parallel computing,''
@@ -99,5 +172,25 @@ Q.~Jiang, Y.~C. Lee, and A.~Y. Zomaya, ``Serverless execution of scientific
   workflows,'' in \emph{International Conference on Service-Oriented
   Computing}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2017, pp.
   706--721.
+
+\bibitem{cloudflare_workers}
+\BIBentryALTinterwordspacing
+Cloudflare workers. [Online]. Available: \url{https://workers.cloudflare.com/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{openfaas}
+\BIBentryALTinterwordspacing
+Openfaas. [Online]. Available: \url{https://www.openfaas.com/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{knative}
+\BIBentryALTinterwordspacing
+Knative. [Online]. Available: \url{https://knative.dev/docs/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{serverless_computing_survey_rw1}
+Y.~Li, Y.~Lin, Y.~Wang, K.~Ye, and C.~Xu, ``Serverless computing:
+  State-of-the-art, challenges and opportunities,'' \emph{IEEE Transactions on
+  Services Computing}, vol.~16, no.~2, pp. 1522--1539, 2023.
 
 \end{thebibliography}

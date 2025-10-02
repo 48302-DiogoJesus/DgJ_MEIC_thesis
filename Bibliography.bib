@@ -180,6 +180,72 @@ URL = {https://doi.org/10.1177/1094342017704893}
 
 
 %% PAPERS
+@inproceedings{triggerflow,
+author = {L\'{o}pez, Pedro Garc\'{\i}a and Arjona, Aitor and Samp\'{e}, Josep and Slominski, Aleksander and Villard, Lionel},
+title = {Triggerflow: trigger-based orchestration of serverless workflows},
+year = {2020},
+isbn = {9781450380287},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3401025.3401731},
+doi = {10.1145/3401025.3401731},
+abstract = {As more applications are being moved to the Cloud thanks to serverless computing, it is increasingly necessary to support native life cycle execution of those applications in the data center.But existing systems either focus on short-running workflows (like IBM Composer or Amazon Express Workflows) or impose considerable overheads for synchronizing massively parallel jobs (Azure Durable Functions, Amazon Step Functions, Google Cloud Composer). None of them are open systems enabling extensible interception and optimization of custom workflows.We present Triggerflow: an extensible Trigger-based Orchestration architecture for serverless workflows built on top of Knative Eventing and Kubernetes technologies. We demonstrate that Triggerflow is a novel serverless building block capable of constructing different reactive schedulers (State Machines, Directed Acyclic Graphs, Workflow as code). We also validate that it can support high-volume event processing workloads, auto-scale on demand and transparently optimize scientific workflows.},
+booktitle = {Proceedings of the 14th ACM International Conference on Distributed and Event-Based Systems},
+pages = {3-14},
+numpages = {12},
+keywords = {serverless, orchestration, event-based},
+location = {Montreal, Quebec, Canada},
+series = {DEBS '20}
+}
+@article{pheromone,
+  author={Yu, Minchen and Cao, Tingjia and Wang, Wei and Chen, Ruichuan},
+  journal={IEEE Transactions on Networking}, 
+  title={Pheromone: Restructuring Serverless Computing With Data-Centric Function Orchestration}, 
+  year={2025},
+  volume={33},
+  number={1},
+  pages={226-240},
+  keywords={Serverless computing;Usability;Low latency communication;Delays;Costs;Logic;Synchronization;Schedules;Scalability;Runtime;Serverless computing;function workflow;data sharing},
+  doi={10.1109/TNET.2024.3480031}}
+
+@misc{boxer,
+      title={Boxer: FaaSt Ephemeral Elasticity for Off-the-Shelf Cloud Applications}, 
+      author={Michael Wawrzoniak and Rodrigo Bruno and Ana Klimovic and Gustavo Alonso},
+      year={2024},
+      eprint={2407.00832},
+      archivePrefix={arXiv},
+      primaryClass={cs.DC},
+      url={https://arxiv.org/abs/2407.00832}, 
+}
+@inproceedings{fado,
+  author={Smith, Christopher Peter and Jindal, Anshul and Chadha, Mohak and Gerndt, Michael and Benedict, Shajulin},
+  booktitle={2022 IEEE 6th International Conference on Fog and Edge Computing (ICFEC)}, 
+  title={FaDO: FaaS Functions and Data Orchestrator for Multiple Serverless Edge-Cloud Clusters}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={17-25},
+  keywords={Measurement;Cloud computing;Processor scheduling;FAA;Streaming media;Load management;Scheduling;serverless;function-as-a-service;data-aware;multi-cloud;orchestration;edge-computing},
+  doi={10.1109/ICFEC54809.2022.00010}}
+
+@inproceedings{fmi,
+author = {Copik, Marcin and B\"{o}hringer, Roman and Calotoiu, Alexandru and Hoefler, Torsten},
+title = {FMI: Fast and Cheap Message Passing for Serverless Functions},
+year = {2023},
+isbn = {9798400700569},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3577193.3593718},
+doi = {10.1145/3577193.3593718},
+abstract = {Serverless functions provide elastic scaling and a fine-grained billing model, making Function-as-a-Service (FaaS) an attractive programming model. However, for distributed jobs that benefit from large-scale and dynamic parallelism, the lack of fast and cheap communication is a major limitation. Individual functions cannot communicate directly, group operations do not exist, and users resort to manual implementations of storage-based communication. This results in communication times multiple orders of magnitude slower than those found in HPC systems. We overcome this limitation and present the FaaS Message Interface (FMI). FMI is an easy-to-use, high-performance framework for general-purpose point-to-point and collective communication in FaaS applications. We support different communication channels and offer a model-driven channel selection according to performance and cost expectations. We model the interface after MPI and show that message passing can be integrated into serverless applications with minor changes, providing portable communication closer to that offered by high-performance systems. In our experiments, FMI can speed up communication for a distributed machine learning FaaS application by up to 162x, while simultaneously reducing cost by up to 397 times.},
+booktitle = {Proceedings of the 37th ACM International Conference on Supercomputing},
+pages = {373–385},
+numpages = {13},
+keywords = {high-performance computing, I/O, serverless, function-as-a-service, faas},
+location = {Orlando, FL, USA},
+series = {ICS '23}
+}
+
 @inproceedings{mapreduce,
 title = {MapReduce: simplified data processing on large clusters},
 author = {Dean, Jeffrey and Ghemawat, Sanjay},
@@ -338,6 +404,14 @@ series = {SoCC '21}
   title        = {AWS Lambda},
   year         = {},
   url          = {https://aws.amazon.com/pt/lambda/},
+  urldate      = {2024-11-24}
+}
+
+@online{cloudflare_workflows,
+  author       = {},
+  title        = {Cloudflare Workflows},
+  year         = {},
+  url          = {https://www.cloudflare.com/developer-platform/products/workflows/},
   urldate      = {2024-11-24}
 }
 

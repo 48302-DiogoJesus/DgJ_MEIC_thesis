@@ -5,23 +5,46 @@
 % Change the Name of the Chapter i the following line
 \chapter{Related Work}
 \chaptoc
-% The following line allows to ref this chapter
 \label{chap:rw}
+\bigskip
+
+In this section, we explore the serverless computing landscape, starting by exposing the architecture of a typical serverless computing platform, referencing the use cases for this new cloud computing model, and presenting both commercial and open-source offerings. We also delve into workflows, showing how they can be represented, how they are run and managed, and contrasting traditional frameworks for workflow management with more recent solutions that explore cloud technologies, including serverless. Then, we write about three extension proposals to the current serverless platforms design, aiming to improve data locality. We finish this section by presenting relevant workflow orchestrators and schedulers (serverful, serverless, and hybrid) for executing tasks, highlighting their advantages but also some of their limitations and inefficiencies.
 
 % #############################################################################
 \section{Serverless Computing}
 
-\subsection{Platforms}
-% open source and commercial
-% different serverless offerings: storage, queues, faas, etc..
+Serverless computing represents a paradigm shift in how applications are developed and deployed. At its core, it allows developers to focus on business logic without caring about the underlying infrastructure. This cloud computing model encompasses a range of cloud offerings that \textit{abstract away infrastructure management}. At the storage and database layer, services such as serverless databases and object stores automatically scale with demand and charge based on actual usage. At the application level, \textbf{Backend-as-a-Service} (BaaS) platforms provide ready-to-use components like authentication, messaging, or data synchronization. Finally, at the compute layer, \textbf{Function-as-a-Service} (FaaS) represents the most flexible and fine-grained model, allowing developers to deploy individual functions that are executed on demand in response to events. In this document, we focus specifically on FaaS, as it is the model most relevant to our work.
 
-\subsection{Use Cases}
-% what types of apps benefit from it (see pic (i think paper doesn't have it))
+The Function-as-a-Service (FaaS) model is now offered by major cloud providers, including Amazon (Lambda\cite{aws_lambda}), Google (Cloud Run Functions\cite{google_cloud_run_functions}), Microsoft (Azure Functions\cite{azure_functions}), and Cloudflare (Workers~\cite{cloudflare_workers}). In addition to these commercial offerings, several open-source runtimes such as OpenWhisk\cite{open_whisk}, OpenFaaS\cite{openfaas}, and Knative\cite{knative} provide developers with alternatives for deploying FaaS in self-managed or hybrid environments.
+
+\subsection{Advantages}
+Recent industry reports~\footnote{https://www.grandviewresearch.com/industry-analysis/serverless-computing-market-report} show that serverless computing has seen rapid adoption over the last few years. For example, in 2024 the global serverless computing market was estimated at USD 24.51 billion, and it is projected to more than double to USD 52.13 billion by 2030, with a compound annual growth rate (CAGR) of about 14.1\%. Function-as-a-Service (FaaS) constitutes the majority service model, representing over 60\% of serverless market share in 2024. This rapid growth highlights the increasing appeal of serverless architectures, which can be attributed to the following key benefits:
+
+\begin{itemize}
+    \item{\textbf{Operational Simplicity} means that developers are abstracted away from the underlying infrastructure management, without worrying about server maintenance, scaling, or provisioning. This enables faster development and deployment cycles;}
+    \item{\textbf{Scalability} means the FaaS runtime handles increasing workloads by automatically provisioning additional computational capacity as demand grows, ensuring that applications remain responsive and performant. This makes the FaaS model ideal for applications with \textit{highly variable} or \textit{unpredictable} usage patterns, where we don't know \textit{how many} or \textit{when} requests will arrive;}
+    \item{\textbf{Pay-per-use}: FaaS provides a pricing model where users are only charged for the resources used during the actual execution time over the memory used by their functions, rather than for pre-allocated resources (as in Infrastructure-as-a-Service).}
+\end{itemize}
+
+Given these advantages, the serverless model is particularly attractive for applications with \textit{highly variable} or \textit{unpredictable} workloads, such as web services, event-driven pipelines, and real-time data processing. It also suits applications that benefit from rapid iteration and deployment, including microservices, and APIs, where minimizing operational overhead is crucial. Furthermore, serverless can be advantageous in cost-sensitive contexts, where pay-per-use pricing reduces expenses for workloads that do not require continuous execution.
 
 \subsection{Limitations}
 % limitations and when do they show (for which type of apps)
 % mention palette, faast, lambdata
 % mention works that attack cold starts (orion, jolteon)
+Li et al. ~\cite{serverless_computing_survey_rw1} surveys the serverless computing landscape, highlighting its benefits, challenges and research opportunities. The challenges mentioned include: 
+
+\begin{itemize}
+    \item \textbf{Startup Latencies}: It's the time it takes for a function to start executing user code. Cold starts (explained further) can be critical, especially for functions with short execution times;
+    \item \textbf{Isolation}: In serverless, multiple users share the same computational resources (often the same Kernel). This makes it crucial to properly isolate execution environments of multiple users;
+    \item \textbf{Scheduling Policies}: Traditional cloud computing policies were not designed to operate in dynamic and ephemeral environments, such as FaaS's;
+    \item \textbf{Resource Management}: Particularly storage and networking, needs to be optimized (by service providers) to handle the low latency and scalability requirements of serverless computing. The lack of direct inter-function networking is an example of a limitation that narrows down the variety of applications that can currently run on FaaS, as some may not support the overhead of using intermediaries (external storage) for data exchange;
+    \item \textbf{Fault-Tolerance}: Cloud platforms impose restrictions on developers by encouraging the development of \textit{idempotent functions}. This makes it easier for providers to implement fault-tolerance by retrying failed function executions.
+\end{itemize}
+
+Hellerstein et al. \cite{serverless_computing_drawbacks_survey_rw1} portrays FaaS as a \textit{"Data-Shipping Architecture"}, where data is intensively moved to code, through external storage services like databases, bucket storage or queues, to circumvent the limitation of inter-function direct communication. This can greatly degrade performance, while also incurring extra costs.
+
+To overcome these limitations and explore the opportunities of serverless computing, \textit{``Serverless Computing: State-of-the-Art, Challenges and Opportunities``} (Li et al.) gathered research being carried out on several fronts. Applying \textit{machine learning} to resource management aims to optimize resource allocation and predict application needs, reducing costs and latencies. Although promising, the latency requirements and complexity of the settings of the machine learning approaches are not yet satisfactory. Integration with edge computing offers the opportunity to leverage the computing power of thousands of edge devices to provide low-latency services, making it a promising direction for serverless computing.
 
 % #############################################################################
 \section{Workflow Execution}
