@@ -1,0 +1,1 @@
+- inter-function communication reference in FaaS limitations, next to palette:  
