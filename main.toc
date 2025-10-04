@@ -27,21 +27,21 @@
 \contentsline {section}{\numberline {2.3}Discussion/Analysis}{18}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Architecture}{21}{chapter.3}%
 \etoc@startlocaltoc {4}
-\contentsline {section}{\numberline {3.1}Workflow Definition Language}{22}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Overview}{22}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Metadata Management}{22}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Static Workflow Planning}{22}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Simulation Layer}{22}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Planners}{22}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Optimizations}{22}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Decentralized Scheduling}{22}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Evaluation}{25}{chapter.4}%
+\contentsline {section}{\numberline {3.1}Workflow Definition Language}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Overview}{23}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Metadata Management}{25}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Static Workflow Planning}{26}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Simulation Layer}{26}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Planning Algorithms}{26}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Optimizations}{30}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Decentralized Scheduling}{32}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Evaluation}{37}{chapter.4}%
 \etoc@startlocaltoc {5}
-\contentsline {section}{\numberline {4.1}Maecenas vitae nulla consequat}{25}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Conclusion}{27}{chapter.5}%
+\contentsline {section}{\numberline {4.1}Maecenas vitae nulla consequat}{37}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Conclusion}{39}{chapter.5}%
 \etoc@startlocaltoc {6}
-\contentsline {section}{\numberline {5.1}Conclusions}{27}{section.5.1}%
-\contentsline {section}{\numberline {5.2}System Limitations and Future Work}{27}{section.5.2}%
-\contentsline {chapter}{Bibliography}{27}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Code of Project}{33}{appendix.A}%
-\contentsline {chapter}{\numberline {B}A Large Table}{35}{appendix.B}%
+\contentsline {section}{\numberline {5.1}Conclusions}{39}{section.5.1}%
+\contentsline {section}{\numberline {5.2}System Limitations and Future Work}{39}{section.5.2}%
+\contentsline {chapter}{Bibliography}{39}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Code of Project}{45}{appendix.A}%
+\contentsline {chapter}{\numberline {B}A Large Table}{47}{appendix.B}%

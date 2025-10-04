@@ -427,7 +427,6 @@ It is also worth noting that the planner assigned \texttt{Task 6} to \texttt{Wor
 
 Regarding \textbf{optimizations}, we can see \texttt{Task 1} \texttt{pre-warming} \texttt{Worker 3}, by making  a dummy invocation to the FaaS gateway, in an attempt to make it available before \texttt{Task 3} needs it. The \texttt{pre-load} optimization is used in \texttt{Task 5}, where the planner decided that \texttt{Worker 2} should start downloading the external dependencies for \texttt{Task 6} (\texttt{Task 3} and \texttt{Task 4}) as soon as they are available. This \texttt{pre-loading} can begin as soon as \texttt{Task 6}'s dependencies are ready in storage, potentially overlapping with \texttt{Task 2}'s execution instead of \texttt{Task 5}, as shown in the figure.
 
-
 \subsection{Decentralized Scheduling}
 
 Since our target execution platform is FaaS, the worker logic is implemented as a FaaS handler. Due to the decentralized nature of our solution, workers will be responsible for performing both task execution and scheduling in a choreographed manner. 
