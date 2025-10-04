@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex _paper"] 1759595974.49573 "_paper.aux" "_paper.bbl" "_paper" 1759595974.80705 2
+["bibtex _paper"] 0 "_paper.aux" "_paper.bbl" "_paper" 0 -1
   "C:/Users/dijes/AppData/Local/Programs/MiKTeX/bibtex/bib/feupphdteses/references.bib" 1366811700 2206 985e03fb36d872d306e76cfacc160693 ""
   "C:/Users/dijes/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "_paper.aux" 1759595966 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "_paper.aux" 1759606802 6278 02b1f1e4da53e3cface93954ab5825d4 "pdflatex"
   (generated)
   "_paper.bbl"
   "_paper.blg"
   (rewritten before read)
-["pdflatex"] 1759595971.01633 "c:/Users/dijes/Desktop/Current/PG/Tecnico/_A2/TESE/DgJ_MEIC_thesis/_ref/_paper.tex" "_paper.pdf" "_paper" 1759595973.84167 2
+["pdflatex"] 1759606801.60394 "c:/Users/dijes/Desktop/Current/PG/Tecnico/_A2/TESE/DgJ_MEIC_thesis/_ref/_paper.tex" "_paper.pdf" "_paper" 1759606803.8954 2
   "C:/Users/dijes/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1759398184 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/dijes/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757504112 24225046 38d4591ba2ff146cd60fb2b4577dd929 ""
   "C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -109,10 +109,10 @@
   "C:/Users/dijes/AppData/Local/Programs/MiKTeX/tex/latex/psnfss/ts1ptm.fd" 1585253778 653 96f56dc5d1ef1fe1121f1cfeec70ee0c ""
   "C:/Users/dijes/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/dijes/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "_paper.aux" 1759595966 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "_paper.aux" 1759606802 6278 02b1f1e4da53e3cface93954ab5825d4 "pdflatex"
   "_paper.bbl" 1759595974 0 d41d8cd98f00b204e9800998ecf8427e "bibtex _paper"
-  "_paper.tex" 1759595965 64271 664ec3d18dffc2415c47ca23cc86d034 ""
-  "c:/Users/dijes/Desktop/Current/PG/Tecnico/_A2/TESE/DgJ_MEIC_thesis/_ref/_paper.tex" 1759595965 64271 664ec3d18dffc2415c47ca23cc86d034 ""
+  "_paper.tex" 1759606800 64412 2149f8f80ddf298a863b6133a4734420 ""
+  "c:/Users/dijes/Desktop/Current/PG/Tecnico/_A2/TESE/DgJ_MEIC_thesis/_ref/_paper.tex" 1759606800 64412 2149f8f80ddf298a863b6133a4734420 ""
   "figures/choreographed_execution_example.png" 0 -1 0 ""
   "figures/dag_lang_example.png" 0 -1 0 ""
   "figures/solution_distributedarchintegrated.png" 0 -1 0 ""

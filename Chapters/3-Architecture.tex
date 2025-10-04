@@ -73,7 +73,7 @@ One limitation of this DAG definition language is that it doesn't support "dynam
 
 Apache AirFlow~\footnote{https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/dynamic-task-mapping.html} supports this feature through an extension to their DAG language, allowing a variable number of tasks to be created at run-time depending on the number of results produced by a previous task. Implementing similar functionality is possible, but it would reduce the accuracy of predictions. This is because we would also need to predict the expected fan-out size, and any errors in that prediction could amplify inaccuracies in the predictions for the rest of the workflow.
 
-We will now present the architecture, highlighting the core layers of our solution.
+We will now present our solution architecture overview, highlighting the core layers of our decentralized serverless workflow execution engine.
 
 % #############################################################################
 \section{Overview}
@@ -104,7 +104,6 @@ There are 3 distinct computational entities involved in this system:
     \item \textbf{Storage}: Consists of an \textit{Intermediate Storage} for intermediate outputs which may be needed for subsequent tasks and a \textit{Metadata Storage} for information crucial to workflow execution (e.g., notifications about task readiness and completion).
 \end{itemize}
 
-Next, we will explain how the user defines and submits workflows for execution.
 % #############################################################################
 \section{Metadata Management}
 \label{ss:metadata_management}

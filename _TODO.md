@@ -3,4 +3,4 @@
     - for WUKONG, to showcase choreographed scheduling
 
 - Solution
-    - go deeper on how predictions are made (maybe pseudocode?)
+    - go deeper on each section of the architecture section
