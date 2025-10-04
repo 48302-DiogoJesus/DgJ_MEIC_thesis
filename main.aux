@@ -71,17 +71,17 @@
 \citation{openfaas}
 \citation{knative}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Serverless Computing}{6}{section.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Advantages}{6}{subsection.2.1.1}\protected@file@percent }
 \citation{excamera}
 \citation{montage_astronomy}
 \citation{cybershake_workflow}
 \citation{serverless_computing_survey_rw1}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Limitations}{7}{subsection.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}Advantages}{7}{subsection.2.1.1}\protected@file@percent }
 \citation{serverless_computing_drawbacks_survey_rw1}
 \citation{open_whisk}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}Limitations}{8}{subsection.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}Research Efforts}{8}{subsection.2.1.3}\protected@file@percent }
 \citation{triggerflow}
 \citation{openfaas}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}Research Efforts}{8}{subsection.2.1.3}\protected@file@percent }
 \citation{palette_load_balancing}
 \citation{faast_caching}
 \citation{pocket}
@@ -106,54 +106,79 @@
 \citation{mapreduce}
 \citation{yarn}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Traditional Workflow Scheduling}{11}{subsection.2.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Serverless Workflow Scheduling}{12}{subsection.2.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Serverless Workflow Scheduling}{12}{subsection.2.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Discussion/Analysis}{12}{section.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Architecture}{13}{chapter.3}\protected@file@percent }
+\citation{dask_python}
+\citation{dask_python_distributed}
+\citation{prefect}
+\citation{dagster}
+\citation{apache_airflow}
+\citation{argo_workflows}
+\citation{kubernetes}
+\citation{google_dataflow}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Modern Workflow Scheduling}{12}{subsection.2.2.3}\protected@file@percent }
+\citation{aws_step_functions}
+\citation{google_cloud_workflows}
+\citation{azure_durable_functions}
+\citation{cloudflare_workflows}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3.A}Stateful Serverless Functions}{13}{subsubsection.2.2.3.1}\protected@file@percent }
+\citation{paxos}
+\citation{raft}
+\citation{zookeeper}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Serverless Workflow Scheduling}{14}{subsection.2.2.4}\protected@file@percent }
+\citation{dewe_v3}
+\citation{montage_astronomy}
+\citation{pywren}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.A}DEWE v3}{15}{subsubsection.2.2.4.1}\protected@file@percent }
+\citation{unum_decentralized_orchestrator}
+\citation{wukong_2}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.B}PyWren}{16}{subsubsection.2.2.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.C}Unum}{16}{subsubsection.2.2.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.4.D}WUKONG}{17}{subsubsection.2.2.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Discussion/Analysis}{18}{section.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Architecture}{19}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Architecture}{13}{chapter.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {xchapter}{Architecture}{13}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {xchapter}{Architecture}{19}{chapter.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {xchapter}{Architecture}{19}{chapter.3}\protected@file@percent }
 \@writefile{toc}{\etoc@startlocaltoc{4}}
-\newlabel{chap:arch}{{4}{13}{Architecture}{etoc@tocid.4}{}}
-\newlabel{chap:arch@cref}{{[etoc@tocid][4][]4}{[1][13][]13}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Workflow Definition Language}{14}{section.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Overview}{14}{section.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Metadata Management}{14}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Static Workflow Planning}{14}{section.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Simulation Layer}{14}{subsection.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Planners}{14}{subsection.3.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Optimizations}{14}{subsection.3.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Decentralized Scheduling}{14}{section.3.5}\protected@file@percent }
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Worker Assignment Algorithm}}{15}{algorithm.1}\protected@file@percent }
+\newlabel{chap:arch}{{4}{19}{Architecture}{etoc@tocid.4}{}}
+\newlabel{chap:arch@cref}{{[etoc@tocid][4][]4}{[1][19][]19}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Workflow Definition Language}{20}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Overview}{20}{section.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Metadata Management}{20}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Static Workflow Planning}{20}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Simulation Layer}{20}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Planners}{20}{subsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Optimizations}{20}{subsection.3.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Decentralized Scheduling}{20}{section.3.5}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Worker Assignment Algorithm}}{21}{algorithm.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{alg:worker_assignment}{{1}{15}{Worker Assignment Algorithm}{algorithm.1}{}}
-\newlabel{alg:worker_assignment@cref}{{[algorithm][1][]1}{[1][13][]15}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Resource Downgrading Algorithm}}{16}{algorithm.2}\protected@file@percent }
-\newlabel{alg:resource_downgrading}{{2}{16}{Resource Downgrading Algorithm}{algorithm.2}{}}
-\newlabel{alg:resource_downgrading@cref}{{[algorithm][2][]2}{[1][14][]16}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Evaluation}{17}{chapter.4}\protected@file@percent }
+\newlabel{alg:worker_assignment}{{1}{21}{Worker Assignment Algorithm}{algorithm.1}{}}
+\newlabel{alg:worker_assignment@cref}{{[algorithm][1][]1}{[1][19][]21}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Resource Downgrading Algorithm}}{22}{algorithm.2}\protected@file@percent }
+\newlabel{alg:resource_downgrading}{{2}{22}{Resource Downgrading Algorithm}{algorithm.2}{}}
+\newlabel{alg:resource_downgrading@cref}{{[algorithm][2][]2}{[1][20][]22}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Evaluation}{23}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Evaluation}{17}{chapter.4}\protected@file@percent }
-\@writefile{lot}{\contentsline {xchapter}{Evaluation}{17}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {xchapter}{Evaluation}{23}{chapter.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {xchapter}{Evaluation}{23}{chapter.4}\protected@file@percent }
 \@writefile{toc}{\etoc@startlocaltoc{5}}
-\newlabel{chap:evaluation}{{5}{17}{Evaluation}{etoc@tocid.5}{}}
-\newlabel{chap:evaluation@cref}{{[etoc@tocid][5][]5}{[1][17][]17}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Maecenas vitae nulla consequat}{17}{section.4.1}\protected@file@percent }
+\newlabel{chap:evaluation}{{5}{23}{Evaluation}{etoc@tocid.5}{}}
+\newlabel{chap:evaluation@cref}{{[etoc@tocid][5][]5}{[1][23][]23}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Maecenas vitae nulla consequat}{23}{section.4.1}\protected@file@percent }
 \bibstyle{IEEEtran}
 \bibdata{./Bibliography}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{19}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{25}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Conclusion}{19}{chapter.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {xchapter}{Conclusion}{19}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {xchapter}{Conclusion}{25}{chapter.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {xchapter}{Conclusion}{25}{chapter.5}\protected@file@percent }
 \@writefile{toc}{\etoc@startlocaltoc{6}}
-\newlabel{chap:conclusion}{{6}{19}{Conclusion}{etoc@tocid.6}{}}
-\newlabel{chap:conclusion@cref}{{[etoc@tocid][6][]6}{[1][19][]19}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Conclusions}{19}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}System Limitations and Future Work}{19}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{19}{section.5.2}\protected@file@percent }
+\newlabel{chap:conclusion}{{6}{25}{Conclusion}{etoc@tocid.6}{}}
+\newlabel{chap:conclusion@cref}{{[etoc@tocid][6][]6}{[1][25][]25}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Conclusions}{25}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}System Limitations and Future Work}{25}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{25}{section.5.2}\protected@file@percent }
 \bibcite{aws_lambda}{1}
 \bibcite{azure_functions}{2}
 \bibcite{google_cloud_run_functions}{3}
@@ -195,23 +220,34 @@
 \bibcite{apache_oozie}{38}
 \bibcite{mapreduce}{39}
 \bibcite{yarn}{40}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Code of Project}{25}{appendix.A}\protected@file@percent }
+\bibcite{dask_python_distributed}{41}
+\bibcite{prefect}{42}
+\bibcite{dagster}{43}
+\bibcite{argo_workflows}{44}
+\bibcite{kubernetes}{45}
+\bibcite{google_dataflow}{46}
+\bibcite{cloudflare_workflows}{47}
+\bibcite{paxos}{48}
+\bibcite{raft}{49}
+\bibcite{zookeeper}{50}
+\bibcite{pywren}{51}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Code of Project}{31}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{Code of Project}{25}{appendix.A}\protected@file@percent }
-\@writefile{lot}{\contentsline {xchapter}{Code of Project}{25}{appendix.A}\protected@file@percent }
-\newlabel{chapter:appendixA}{{A}{25}{Code of Project}{appendix.A}{}}
-\newlabel{chapter:appendixA@cref}{{[appendix][1][2147483647]A}{[1][25][]25}}
+\@writefile{lof}{\contentsline {xchapter}{Code of Project}{31}{appendix.A}\protected@file@percent }
+\@writefile{lot}{\contentsline {xchapter}{Code of Project}{31}{appendix.A}\protected@file@percent }
+\newlabel{chapter:appendixA}{{A}{31}{Code of Project}{appendix.A}{}}
+\newlabel{chapter:appendixA@cref}{{[appendix][1][2147483647]A}{[1][31][]31}}
 \global\mtcsecondpartfalse
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}A Large Table}{27}{appendix.B}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}A Large Table}{33}{appendix.B}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lof}{\contentsline {xchapter}{A Large Table}{27}{appendix.B}\protected@file@percent }
-\@writefile{lot}{\contentsline {xchapter}{A Large Table}{27}{appendix.B}\protected@file@percent }
-\newlabel{chapter:appendixB}{{B}{27}{A Large Table}{appendix.B}{}}
-\newlabel{chapter:appendixB@cref}{{[appendix][2][2147483647]B}{[1][27][]27}}
+\@writefile{lof}{\contentsline {xchapter}{A Large Table}{33}{appendix.B}\protected@file@percent }
+\@writefile{lot}{\contentsline {xchapter}{A Large Table}{33}{appendix.B}\protected@file@percent }
+\newlabel{chapter:appendixB}{{B}{33}{A Large Table}{appendix.B}{}}
+\newlabel{chapter:appendixB@cref}{{[appendix][2][2147483647]B}{[1][33][]33}}
 \providecommand\@xdylanguage[2]{}
 \@xdylanguage{main}{english}
 \providecommand\@gls@codepage[2]{}
 \@gls@codepage{main}{utf8}
-\gdef \@abspage@last{45}
+\gdef \@abspage@last{51}

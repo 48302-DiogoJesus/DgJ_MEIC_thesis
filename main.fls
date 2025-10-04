@@ -1065,6 +1065,7 @@ INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1phv.fd
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1phv.fd
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8c.tfm
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8c.vf
+INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1000.tfm
 INPUT .\Chapters\3-Architecture.tex
 INPUT .\Chapters\3-Architecture.tex
 INPUT Chapters\3-Architecture.tex
@@ -1158,6 +1159,8 @@ INPUT .\main.mlt1
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out
+INPUT C:\Users\dijes\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
+INPUT C:\Users\dijes\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk
 INPUT C:\Users\dijes\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
 INPUT C:\Users\dijes\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0800.pk
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb

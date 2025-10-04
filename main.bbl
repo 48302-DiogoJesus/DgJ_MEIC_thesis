@@ -274,4 +274,63 @@ Hadoop yarn. [Online]. Available:
   \url{https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html}
 \BIBentrySTDinterwordspacing
 
+\bibitem{dask_python_distributed}
+\BIBentryALTinterwordspacing
+Dask distributed. [Online]. Available:
+  \url{https://distributed.dask.org/en/stable/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{prefect}
+\BIBentryALTinterwordspacing
+Prefect. [Online]. Available: \url{https://www.prefect.io/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{dagster}
+\BIBentryALTinterwordspacing
+Dagster. [Online]. Available: \url{https://dagster.io/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{argo_workflows}
+\BIBentryALTinterwordspacing
+Argo workflows. [Online]. Available:
+  \url{https://argoproj.github.io/workflows/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{kubernetes}
+\BIBentryALTinterwordspacing
+Kubernetes. [Online]. Available: \url{https://kubernetes.io/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{google_dataflow}
+\BIBentryALTinterwordspacing
+Google dataflow. [Online]. Available:
+  \url{https://cloud.google.com/products/dataflow?hl=en}
+\BIBentrySTDinterwordspacing
+
+\bibitem{cloudflare_workflows}
+\BIBentryALTinterwordspacing
+Cloudflare workflows. [Online]. Available:
+  \url{https://www.cloudflare.com/developer-platform/products/workflows/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{paxos}
+L.~Lamport, ``Paxos made simple,'' \emph{ACM SIGACT News (Distributed Computing
+  Column) 32, 4 (Whole Number 121, December 2001)}, pp. 51--58, 2001.
+
+\bibitem{raft}
+D.~Ongaro and J.~Ousterhout, ``In search of an understandable consensus
+  algorithm,'' in \emph{Proceedings of the 2014 USENIX Conference on USENIX
+  Annual Technical Conference}, ser. USENIX ATC'14.\hskip 1em plus 0.5em minus
+  0.4em\relax USA: USENIX Association, 2014, p. 305–320.
+
+\bibitem{zookeeper}
+P.~Hunt, M.~Konar, F.~P. Junqueira, and B.~Reed, ``$\{$ZooKeeper$\}$: Wait-free
+  coordination for internet-scale systems,'' in \emph{2010 USENIX Annual
+  Technical Conference (USENIX ATC 10)}, 2010.
+
+\bibitem{pywren}
+E.~Jonas, Q.~Pu, S.~Venkataraman, I.~Stoica, and B.~Recht, ``Occupy the cloud:
+  Distributed computing for the 99\%,'' in \emph{Proceedings of the 2017
+  symposium on cloud computing}, 2017, pp. 445--451.
+
 \end{thebibliography}

@@ -2,3 +2,4 @@ FaaS
 serverful
 DAGs
 deprovisioning
+snapshotting

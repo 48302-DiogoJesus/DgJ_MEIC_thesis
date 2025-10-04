@@ -180,6 +180,33 @@ URL = {https://doi.org/10.1177/1094342017704893}
 
 
 %% PAPERS
+@inproceedings{zookeeper,
+  title={$\{$ZooKeeper$\}$: Wait-free coordination for internet-scale systems},
+  author={Hunt, Patrick and Konar, Mahadev and Junqueira, Flavio P and Reed, Benjamin},
+  booktitle={2010 USENIX Annual Technical Conference (USENIX ATC 10)},
+  year={2010}
+}
+@inproceedings{raft,
+author = {Ongaro, Diego and Ousterhout, John},
+title = {In search of an understandable consensus algorithm},
+year = {2014},
+isbn = {9781931971102},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Raft is a consensus algorithm for managing a replicated log. It produces a result equivalent to (multi-)Paxos, and it is as efficient as Paxos, but its structure is different from Paxos; this makes Raft more understandable than Paxos and also provides a better foundation for building practical systems. In order to enhance understandability, Raft separates the key elements of consensus, such as leader election, log replication, and safety, and it enforces a stronger degree of coherency to reduce the number of states that must be considered. Results from a user study demonstrate that Raft is easier for students to learn than Paxos. Raft also includes a new mechanism for changing the cluster membership, which uses overlapping majorities to guarantee safety.},
+booktitle = {Proceedings of the 2014 USENIX Conference on USENIX Annual Technical Conference},
+pages = {305–320},
+numpages = {16},
+location = {Philadelphia, PA},
+series = {USENIX ATC'14}
+}
+@article{paxos,
+  title={Paxos made simple},
+  author={Lamport, Leslie},
+  journal={ACM SIGACT News (Distributed Computing Column) 32, 4 (Whole Number 121, December 2001)},
+  pages={51--58},
+  year={2001}
+}
 @inproceedings {pocket,
 author = {Ana Klimovic and Yawen Wang and Patrick Stuedi and Animesh Trivedi and Jonas Pfefferle and Christos Kozyrakis},
 title = {Pocket: Elastic Ephemeral Storage for Serverless Analytics},
@@ -608,6 +635,30 @@ series = {SoCC '21}
   year         = {},
   url          = {https://aws.amazon.com/en/step-functions/},
   urldate      = {2024-12-2}
+}
+
+@online{prefect,
+  author       = {},
+  title        = {Prefect},
+  year         = {},
+  url          = {https://www.prefect.io/},
+  urldate      = {2025-10-04}
+}
+
+@online{dagster,
+  author       = {},
+  title        = {Dagster},
+  year         = {},
+  url          = {https://dagster.io/},
+  urldate      = {2025-10-04}
+}
+
+@online{argo_workflows,
+  author       = {},
+  title        = {Argo Workflows},
+  year         = {},
+  url          = {https://argoproj.github.io/workflows/},
+  urldate      = {2025-10-04}
 }
 
 @online{google_cloud_workflows,
