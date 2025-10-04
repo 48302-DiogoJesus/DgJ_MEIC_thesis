@@ -8,8 +8,10 @@
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.3}Modern Workflow Scheduling}{\reset@font\mtcSSfont 12}{subsection.2.2.3}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.3.A}Stateful Serverless Functions}{\reset@font\mtcSSSfont 13}{subsubsection.2.2.3.1}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {2.2.4}Serverless Workflow Scheduling}{\reset@font\mtcSSfont 14}{subsection.2.2.4}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.4.A}DEWE v3}{\reset@font\mtcSSSfont 15}{subsubsection.2.2.4.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.4.B}PyWren}{\reset@font\mtcSSSfont 16}{subsubsection.2.2.4.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.4.C}Unum}{\reset@font\mtcSSSfont 16}{subsubsection.2.2.4.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.4.D}WUKONG}{\reset@font\mtcSSSfont 17}{subsubsection.2.2.4.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.4.A}Workflow Scheduling Approaches}{\reset@font\mtcSSSfont 14}{subsubsection.2.2.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.4.B}Relevant Workflow Schedulers}{\reset@font\mtcSSSfont 15}{subsubsection.2.2.4.2}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \numberline {A~--}DEWE v3}{\reset@font\mtcPfont 15}{paragraph.2.2.4.2.1}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \numberline {B~--}PyWren}{\reset@font\mtcPfont 16}{paragraph.2.2.4.2.2}}
+{\reset@font\mtcPfont\mtc@string\contentsline{paragraph}{\noexpand \leavevmode \numberline {C~--}Unum}{\reset@font\mtcPfont 16}{paragraph.2.2.4.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {2.2.4.C}WUKONG}{\reset@font\mtcSSSfont 17}{subsubsection.2.2.4.3}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {2.3}Discussion/Analysis}{\reset@font\mtcSfont 18}{section.2.3}}
