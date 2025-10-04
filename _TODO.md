@@ -2,7 +2,5 @@
     - for serverless scheduling approaches
     - for WUKONG, to showcase choreographed scheduling
 
-- RW
-    - Finish related work
 - Solution
-    - 
+    - go deeper on how predictions are made (maybe pseudocode?)

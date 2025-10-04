@@ -148,14 +148,16 @@ After filtering samples we use an algorithm that selects a limited number of the
 % #############################################################################
 \section{Static Workflow Planning}
 
-\subsection{Simulation Layer}
-% TODO: Metrics collected, how predictions are done/cached to be faster
-
-\subsection{Planning Algorithms}
-
 This layer executes on the user side, and it receives the workflow representation and a workflow planning algorithm chosen by the user (as shown in Listing \ref{lst:setup_and_launch_workflow_execution}). Its job is to execute the planning algorithm, providing it access to the predictions exposed by the Metadata Management layer (Section \ref{ss:metadata_management}).
 
-Planners can run \textit{workflow simulations} based on the predictions, allowing them to experiment with different resource configurations for different tasks and different task co-location strategies. Additionally, they can apply different user-selected optimizations. The accuracy of these simulations depends on the accuracy of the predictions exposed by the \textit{Predictions API}.
+\subsection{Workflow Simulation}
+The availability of predicting task execution time, data transfer latency, function I/O, and worker startup cost, exposed through the Metadata Management layer (Section \ref{ss:metadata_management}), makes it possible to simulate the execution of an entire workflow instance.
+
+To this end, we implemented a dedicated simulation module. The module accepts a workflow representation in which tasks are annotated with worker IDs, resource configurations, and optimizations. For each task, the simulator estimates lots of metrics, such as whether the worker should be cold or warm, both the earliest feasible start time and the corresponding completion time, allowing it to derive the expected overall \textit{makespan} of the workflow as well as the critical path.
+
+This simulation capability significantly facilitates the work of planning components. Planners can experiment with alternative resource configurations, task placement policies, and co-location strategies without executing the workflow in a live environment. The fidelity of the simulation results, however, is directly dependent on the accuracy of the predictive models exposed through the \textit{Predictions API}.
+
+\subsection{Planning Algorithms}
 
 For each task, the planner assigns both a \texttt{worker\_id} and a resource configuration (vCPUs and memory). The \texttt{worker\_id} specifies the worker instance that must execute the task—analogous to the “colors” in Palette Load Balancing~\cite{palette_load_balancing}, but in our case this assignment is mandatory rather than advisory, giving strict control over execution locality. Two tasks assigned the same \texttt{worker\_id} should be executed on the same worker instance. If \texttt{worker\_id} is not specified, workers will, at run-time, have to decide whether to execute or delegate those tasks, similar to WUKONG's ~\cite{wukong_2} scheduling. We refer to these workers as \textit{"flexible workers"}.
 
