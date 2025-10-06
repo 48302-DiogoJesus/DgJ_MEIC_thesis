@@ -28,13 +28,13 @@
 \contentsline {chapter}{\numberline {3}Architecture}{21}{chapter.3}%
 \etoc@startlocaltoc {4}
 \contentsline {section}{\numberline {3.1}Workflow Definition Language}{21}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Overview}{23}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Overview}{24}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Metadata Management}{25}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Static Workflow Planning}{26}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Workflow Simulation}{26}{subsection.3.4.1}%
+\contentsline {section}{\numberline {3.4}Static Workflow Planning}{27}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Workflow Simulation}{27}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Planning Algorithms}{27}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Optimizations}{29}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Decentralized Scheduling}{32}{section.3.5}%
+\contentsline {subsection}{\numberline {3.4.3}Optimizations}{28}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Decentralized Scheduling}{33}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Evaluation}{37}{chapter.4}%
 \etoc@startlocaltoc {5}
 \contentsline {section}{\numberline {4.1}Maecenas vitae nulla consequat}{37}{section.4.1}%

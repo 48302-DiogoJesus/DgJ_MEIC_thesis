@@ -12,7 +12,7 @@
 \section{Workflow Definition Language}
 \label{ss:workflow_definition_language}
 
-We will now present our DAG-based workflow engine that transforms ordinary Python functions into parallelizable tasks, automatically managing dependencies and execution through an intuitive decorator-based API. It is inspired by WUKONG, Dask and Airflow's way of expressing workflows: the user can create workflows by composing individual Python functions, as shown in Listing \ref{lst:dag_lang_example}. In this example, we define two tasks, \texttt{task\_a} and \texttt{task\_b}, and then compose them into a DAG by passing their results as arguments to the next task. The resulting workflow structure is illustrated in Figure \ref{fig:dag_lang_example}.
+We will now present our DAG-based workflow engine that transforms ordinary Python functions into parallelizable tasks, automatically managing dependencies and execution through an intuitive decorator-based API. It is inspired by WUKONG, Dask and Airflow's way of expressing workflows: the user can create workflows by composing individual Python functions, as shown in Listing \ref{lst:dag_lang_example}. In this example, we define two tasks, \texttt{task\_a} and \texttt{task\_b}, and then compose them into a DAG by passing their results as arguments to the next task. The resulting workflow structure is illustrated in Figure \ref{fig:dag_lang_example}. Python's simplicity, readability, and widespread popularity, especially among data scientists and researchers, also motivated us to choose this language for defining workflows, lowering the barrier to entry while enabling powerful parallel execution.
 
 \begin{figure}[h]
 \centering
@@ -46,7 +46,11 @@ a4 = task_a(b1)
     \label{fig:dag_lang_example}
 \end{figure}
 
-When \texttt{task\_a(10)} is invoked, it doesn't actually run the user code. It instead creates a representation of the task, which can be passed as argument to other tasks. The workflow planning and execution only happens once \texttt{.compute()} is called on the last/sink task (\texttt{a4}), as shown in Listing~\ref{lst:setup_and_launch_workflow_execution}. When \texttt{compute()} is called, we can create a representation of the entire workflow structure by backtracking the task dependencies.
+When \texttt{task\_a(a1)} is invoked, it doesn't actually run the user code. It instead creates a representation of the task, which can be passed as argument to other tasks. The workflow planning and execution only happens once \texttt{.compute()} is called on the last/sink task (\texttt{a4}), as shown in Listing~\ref{lst:setup_and_launch_workflow_execution}. When \texttt{compute()} is called, we can create a representation of the entire workflow structure by backtracking the task dependencies.
+
+Calling \texttt{task\_a(10)} generates a corresponding task representation, \texttt{DAGTaskNode}, which captures essential information about the task. This includes a unique task identifier, the task's dependencies, which may be other tasks or “hardcoded” data. Hardcoded data refers to values that are known prior to workflow execution; in this example, the value \texttt{10} is hardcoded. In a text processing workflow, for instance, the bytes of a file to be analyzed would be considered hardcoded as long as they are available before the workflow starts and are passed as arguments to a task. If a task function argument is itself an instance of \texttt{DAGTaskNode}, as \texttt{a1} is in \texttt{task\_a(a1)}, it is treated as a dependency of \texttt{task\_a}. Once a \texttt{DAGTaskNode} is created, its upstream tasks and dependencies are automatically discovered. This enables constructing a representation of the entire workflow prior to its execution by backtracking the task dependencies, starting from the \textit{sink node}.
+
+Furthermore, the task function code is also embedded within the task representation, as a Python \texttt{Callable}. Later, the \texttt{DAGTaskNode} is serialized, using \texttt{cloudpickle}~\footnote{\url{https://github.com/cloudpipe/cloudpickle}}, allowing it to be transmitted to storage, and retrieved by workers for execution.
 
 \begin{figure}[h]
 \centering
@@ -59,8 +63,8 @@ result = a4.compute(
         metrics_storage_config=(ip, port, password),
         planner_config=UniformPlanner.Config(
             sla=sla,
-            worker_resource_configuration=TaskWorkerResourceConfiguration(cpus=3, memory_mb=512),
-            optimizations=[PreLoadOptimization, TaskDupOptimization]
+            worker_resource_configuration=TaskWorkerResourceConfiguration(memory_mb=1024),
+            optimizations=[PreLoadOptimization, TaskDupOptimization, PreWarmOptimization]
         )
     )
 )
@@ -109,9 +113,9 @@ There are 3 distinct computational entities involved in this system:
 \label{ss:metadata_management}
 The goal of the \textbf{Metadata Management} layer is to provide the most accurate task-wise predictions to help the planner algorithm chosen by the user to make better decisions. To achieve this, while the workflow is running we collect metrics about each task's execution. These metrics are stored in \textit{Metadata Storage}: task execution time, data transfer size and time, task input and output sizes, and worker startup time. 
 
-Storing these metrics enables us to provide a prediction API, shown in Listing~\ref{lst:task_predictions_api}. To improve accuracy, metrics are kept separate for each workflow. As a result, even if two workflows use the same function or task code, their metrics are stored independently. This design choice reflects our assumption that different workflows may follow different execution patterns. To avoid introducing runtime overhead, metrics are batched and uploaded when the worker shuts down.
+Storing these metrics powers a prediction API, shown in Listing~\ref{lst:task_predictions_api}. To improve accuracy, metrics are kept separate for each workflow. As a result, even if two workflows use the same function or task code, their metrics are stored independently. This design choice reflects our assumption that different workflows may follow different execution patterns. To avoid introducing runtime overhead, metrics are batched and uploaded when the worker shuts down.
 
-The prediction methods take an additional parameter, \texttt{SLA} (Service-level Agreement), which is specified by the user and influences the selection of prediction samples. For example, \texttt{SLA="median"} will use the median of the historical samples, whereas \texttt{SLA=Percentile(80)} will return a more conservative estimate. By allowing the user to control this parameter, the API can provide predictions that are tailored to different performance requirements.
+The prediction methods take an additional parameter, \texttt{SLA} (Service-level Agreement), which is specified by the user and influences the selection of prediction samples. For example, \texttt{SLA="average"} will use the average of the historical samples, whereas \texttt{SLA=Percentile(80)} will return a more conservative estimate, where the 80th percentile of the historical samples is used, providing a higher estimate. This parameter is provided by the user, and is used by the \texttt{PredictionsProvider API} to provide estimates based on historical data.
 
 \begin{figure}[h]
 \centering
@@ -119,30 +123,21 @@ The prediction methods take an additional parameter, \texttt{SLA} (Service-level
 class PredictionsProvider:
   def predict_output_size(function_name, input_size, sla) -> int
 
-  def predict_worker_startup_time(resource_config, state: 'cold' | 'warm', sla) -> float
+  def predict_worker_startup_time(state: 'cold' | 'warm', resource_config, sla) -> float
 
-  def predict_data_transfer_time(
-        type: 'upload' | 'download',
-        data_size_bytes,
-        resource_config,
-        sla
-    ) -> float
+  def predict_data_transfer_time(data_size_bytes, resource_config, sla) -> float
 
-  def predict_execution_time(
-        task_name,
-        input_size,
-        resource_config,
-        sla: SLA
-    ) -> float
+  def predict_execution_time(task_name, input_size, resource_config, sla) -> float
 \end{lstlisting}
 \caption{Task Predictions API}
 \label{lst:task_predictions_api}
 \end{figure}
 
-In addition, metrics such as worker startup time, data transfer time, and task execution time are tied to the specific worker resource configuration. To account for this, our prediction method follows two paths. If we have enough historical samples for the same resource configuration, we use only those. Otherwise, when there are not enough samples with the same resource configuration, we fall back to a normalization strategy: we adjust samples from other memory configurations to a baseline, use those to estimate execution time, and then rescale the result back to the target configuration. 
+When collecting metrics such as worker startup time, data transfer time, and task execution time, we associate them with the worker resource configuration used to execute the task (e.g., memory and CPU). To improve prediction accuracy, our method follows two strategies. If there are enough historical samples for the exact resource configuration being predicted, we use only those samples. Otherwise, when samples for the target configuration are insufficient, we apply a normalization approach: we adjust samples from other memory configurations to a baseline, use these normalized values to estimate execution time, and then rescale the result to the target configuration.
 
-After filtering samples we use an algorithm that selects a limited number of the most relevant samples for each prediction. This algorithm works by gradually widening a tolerance window around the reference value until it finds enough nearby samples. Within each window, it balances samples that are smaller, larger, or exactly equal to the reference, giving preference to the closest ones. If there still aren't enough candidates, it falls back to simply picking the nearest available samples overall. This way, the algorithm adapts to the data while keeping the selection both relevant and limited in size.
+After filtering samples, we use an algorithm that selects a limited number of the most relevant samples for each prediction. Given a reference input, the method computes a baseline from all available samples, either as the average or a user-specified percentile depending on the user-chosen SLA. It then iteratively considers increasing thresholds of similarity/proximity to the value to predict, starting from 5\% of the baseline up to 100\%, and collects samples whose associated input values fall within each threshold. Priority is given to samples that are closest to the reference value, with a balance between samples slightly below and slightly above the reference. If the number of samples meeting the threshold is sufficient, the method selects up to a maximum number of samples, favoring those nearest to the reference. If no threshold yields enough samples, it falls back to selecting the closest available samples. 
 
+This procedure ensures that the prediction leverages historical samples most similar to the target input, which tends to be very accurate when a workflow is executed multiple times with the same or similar workloads, allowing the estimates to become accurate without requiring many previous workflow instances.
 
 % #############################################################################
 \section{Static Workflow Planning}
