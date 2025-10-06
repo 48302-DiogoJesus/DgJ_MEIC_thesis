@@ -199,6 +199,10 @@ Y.~Li, Y.~Lin, Y.~Wang, K.~Ye, and C.~Xu, ``Serverless computing:
   State-of-the-art, challenges and opportunities,'' \emph{IEEE Transactions on
   Services Computing}, vol.~16, no.~2, pp. 1522--1539, 2023.
 
+\bibitem{aws_lambda_power_tuning}
+A.~Casalboni, ``{AWS Lambda Power Tuning},''
+  \url{https://github.com/alexcasalboni/aws-lambda-power-tuning}, 2024.
+
 \bibitem{pocket}
 \BIBentryALTinterwordspacing
 A.~Klimovic, Y.~Wang, P.~Stuedi, A.~Trivedi, J.~Pfefferle, and C.~Kozyrakis,

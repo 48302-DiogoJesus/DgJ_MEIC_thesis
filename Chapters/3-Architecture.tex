@@ -135,14 +135,75 @@ class PredictionsProvider:
 
 When collecting metrics such as worker startup time, data transfer time, and task execution time, we associate them with the worker resource configuration used to execute the task (e.g., memory and CPU). To improve prediction accuracy, our method follows two strategies. If there are enough historical samples for the exact resource configuration being predicted, we use only those samples. Otherwise, when samples for the target configuration are insufficient, we apply a normalization approach: we adjust samples from other memory configurations to a baseline, use these normalized values to estimate execution time, and then rescale the result to the target configuration.
 
-After filtering samples, we use an algorithm that selects a limited number of the most relevant samples for each prediction. Given a reference input, the method computes a baseline from all available samples, either as the average or a user-specified percentile depending on the user-chosen SLA. It then iteratively considers increasing thresholds of similarity/proximity to the value to predict, starting from 5\% of the baseline up to 100\%, and collects samples whose associated input values fall within each threshold. Priority is given to samples that are closest to the reference value, with a balance between samples slightly below and slightly above the reference. If the number of samples meeting the threshold is sufficient, the method selects up to a maximum number of samples, favoring those nearest to the reference. If no threshold yields enough samples, it falls back to selecting the closest available samples. 
+After filtering samples, we use an algorithm (Algorithm \ref{alg:select_related_samples_percentile}) that selects a limited number of the most relevant samples for each prediction. Given a reference input, the method computes a baseline from all available samples, either as the average or a user-specified percentile depending on the user-chosen SLA. It then iteratively considers increasing thresholds of similarity/proximity to the value to predict, starting from 5\% of the baseline up to 100\%, and collects samples whose associated input values fall within each threshold. Priority is given to samples that are closest to the reference value, with a balance between samples slightly below and slightly above the reference. If the number of samples meeting the threshold is sufficient, the method selects up to a maximum number of samples, favoring those nearest to the reference. If no threshold yields enough samples, it falls back to selecting the closest available samples. 
 
 This procedure ensures that the prediction leverages historical samples most similar to the target input, which tends to be very accurate when a workflow is executed multiple times with the same or similar workloads, allowing the estimates to become accurate without requiring many previous workflow instances.
 
+\begin{algorithm}
+    \caption{Select Relevant Samples for Predictions}
+    \label{alg:select_related_samples_percentile}
+    \small
+    \begin{algorithmic}[1]
+    \Require $reference\_value$, $all\_samples$, $SLA$, $max\_samples$, $min\_samples$
+    \Ensure Set of values from samples closest to $reference\_value$
+    
+    \State \Comment{Compute baseline based on SLA percentile}
+    \State $baseline \gets \textsc{Percentile}(\{comparable_to_ref \mid (value, comparable_to_ref) \in all\_samples\}, SLA)$
+    
+    \State \Comment{Try increasing thresholds to find enough samples}
+    \For{$threshold\_pct \gets 5$ \textbf{to} $100$ \textbf{step} $5$}
+        \State $distance\_threshold \gets baseline \times (threshold\_pct / 100)$
+        \State $below\_samples \gets \emptyset$, $above\_samples \gets \emptyset$, $exact\_samples \gets \emptyset$
+        
+        \State \Comment{Categorize samples by their position relative to reference}
+        \ForAll{$(value, comparable_to_ref) \in all\_samples$}
+            \State $signed\_dist \gets comparable_to_ref - reference\_value$
+            \If{$|signed\_dist| \leq distance\_threshold$}
+                \If{$signed\_dist < 0$}
+                    \State $below\_samples.\textsc{Add}((|signed\_dist|, value))$
+                \ElsIf{$signed\_dist > 0$}
+                    \State $above\_samples.\textsc{Add}((|signed\_dist|, value))$
+                \Else
+                    \State $exact\_samples.\textsc{Add}(value)$
+                \EndIf
+            \EndIf
+        \EndFor
+        
+        \State $total\_found \gets |below\_samples| + |above\_samples| + |exact\_samples|$
+        
+        \If{$total\_found \geq min\_samples$}
+            \State \Comment{Sort by distance and select balanced samples}
+            \State $below\_samples.\textsc{SortByDistance}()$
+            \State $above\_samples.\textsc{SortByDistance}()$
+            
+            \State $remaining \gets max\_samples - |exact\_samples|$
+            \State $per\_side \gets \lfloor remaining / 2 \rfloor$
+            
+            \State \Comment{Select closest samples from each side}
+            \State $selected \gets exact\_samples$
+            \State $selected \gets selected \cup below\_samples[0:\min(per\_side, |below\_samples|)]$
+            \State $selected \gets selected \cup above\_samples[0:\min(per\_side, |above\_samples|)]$
+            
+            \State \Comment{Fill remaining budget from available samples}
+            \If{$|selected| < max\_samples$}
+                \State \textsc{FillRemaining}($selected$, $below\_samples$, $above\_samples$, $max\_samples$)
+            \EndIf
+            
+            \State \Return $\{value \mid value \in selected\}$
+        \EndIf
+    \EndFor
+    
+    \State \Comment{Fallback: not enough samples even at 100\% threshold}
+    \State $samples\_with\_dist \gets \{(|comparable_to_ref - reference\_value|, value) \mid (value, comparable_to_ref) \in all\_samples\}$
+    \State $samples\_with\_dist.\textsc{SortByDistance}()$
+    \State \Return $\{value \mid (dist, value) \in samples\_with\_dist[0:min\_samples]\}$
+    
+\end{algorithmic}
+\end{algorithm}
+
 % #############################################################################
 \section{Static Workflow Planning}
-
-This layer executes on the user side, and it receives the workflow representation and a workflow planning algorithm chosen by the user (as shown in Listing \ref{lst:setup_and_launch_workflow_execution}). Its job is to execute the planning algorithm, providing it access to the predictions exposed by the Metadata Management layer (Section \ref{ss:metadata_management}).
+This layer executes on the user side, and it receives the workflow representation and a workflow planning algorithm chosen and parametrized by the user (as shown in Listing \ref{lst:setup_and_launch_workflow_execution}). Its job is to execute the planning algorithm, providing it access to the predictions exposed by the Metadata Management layer (Section \ref{ss:metadata_management}).
 
 \subsection{Workflow Simulation}
 The availability of predicting task execution time, data transfer latency, function I/O, and worker startup cost, exposed through the Metadata Management layer (Section \ref{ss:metadata_management}), makes it possible to simulate the execution of an entire workflow instance.
@@ -248,7 +309,6 @@ Both the \textbf{Uniform} and \textbf{Non-Uniform} planners follow a two-phase a
 \end{algorithmic}
 \end{algorithm}
 
-
 After this, the \textbf{Non-Uniform} planner runs an additional algorithm, shown in Algorithm \ref{alg:resource_downgrading}, that attempts to downgrade resources of workers \textit{outside the critical path} as much as possible without introducing a new critical path, by iteratively simulating the effect of downgrading resources of workers \textit{outside the critical path} with different configurations.
 
 \begin{algorithm}
@@ -315,8 +375,12 @@ After this, the \textbf{Non-Uniform} planner runs an additional algorithm, shown
 \end{algorithmic}
 \end{algorithm}
 
-
 With the information they have access to, planners can estimate whether it is worthwhile to offload a task to a more powerful worker. This involves weighing the overhead of uploading the input data, waiting for the worker to be provisioned, and then executing the task, against the alternative of simply executing the task on the current, less powerful worker.
+
+% TODO: mention fixed worker_ids and justify?
+To facilitate the implementation of new planners, the Python class \texttt{AbstractDAGPlanner}, from which all planners must inherit, provides a set of utility methods: a method to perform a topological sort of the DAG nodes, ensuring that we don't iterate on a node without first iterating on its upstream nodes; a method to estimate the input size of a task by summing the sizes of its hardcoded inputs and the predicted outputs of its upstream tasks; a method to simulate the execution of an entire workflow, returning predicted metrics for all tasks; and a method to compute the critical path of the workflow using the results of the simulation.
+
+One of these validations ensures that \textit{all tasks assigned to the same worker form a continuous, uninterrupted branch} within the workflow graph. In other words, a worker cannot be assigned to a group of tasks, skipped for intermediate ones along the dependency chain, and later reassigned to a downstream task. This rule introduces structural predictability, ensuring that task assignments for a given worker remain contiguous in the DAG. As a result, when delegating tasks, the system can determine whether a worker is already running and can simply receive a \texttt{TASK\_READY} event (as described in Section~\ref{s:decentralized_scheduling}), or whether a new worker launch is required. This constraint implicitly encourages planners to allocate tasks in ways that minimize worker idle time.
 
 \subsection{Optimizations}
 
@@ -509,6 +573,7 @@ Regarding \textbf{optimizations}, we can see \texttt{Task 1} \texttt{pre-warming
 % #############################################################################
 
 \section{Decentralized Scheduling}
+\label{s:decentralized_scheduling}
 
 Since our target execution platform is FaaS, the worker logic is implemented as a FaaS handler. Due to the decentralized nature of our solution, workers will be responsible for performing both task execution and scheduling in a choreographed manner. 
 

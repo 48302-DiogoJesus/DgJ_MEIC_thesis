@@ -2,7 +2,6 @@
     - for serverless scheduling approaches
     - for WUKONG, to showcase choreographed scheduling
 
-- Related work: mention https://github.com/alexcasalboni/aws-lambda-power-tuning
-
 - Solution
+    - mention fixed worker_ids and justify
     - go deeper on each section of the architecture section

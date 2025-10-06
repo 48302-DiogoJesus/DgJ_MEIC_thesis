@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  6 OCT 2025 13:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  6 OCT 2025 16:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1484,10 +1484,13 @@ Overfull \hbox (5.67078pt too wide) in paragraph at lines 64--65
 []\T1/phv/m/n/10 Faa$T (Function-as-a-Service Trans-par-ent Auto-scaling Cache) [[][]11[][]] tack-les the same is-sue as Palette,
  []
 
+[9] [10] [11]
+Underfull \vbox (badness 4981) has occurred while \output is active []
 
-Underfull \vbox (badness 1668) has occurred while \output is active []
+ [12] [13] [14] [15] [16] [17]
+Underfull \vbox (badness 4492) has occurred while \output is active []
 
- [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]) [19] [20
+ [18]) [19] [20
 
 ] (Chapters/3-Architecture.tex
 Chapter 3.
@@ -1497,7 +1500,7 @@ Package cleveref Info: loaded `english' language definitions on input line 9.
 ] (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-<Images/mine/dag_lang_example.png, id=640, 596.2275pt x 131.49126pt>
+<Images/mine/dag_lang_example.png, id=644, 596.2275pt x 131.49126pt>
 File: Images/mine/dag_lang_example.png Graphic file (type png)
 <use Images/mine/dag_lang_example.png>
 Package pdftex.def Info: Images/mine/dag_lang_example.png  used on input line 44.
@@ -1506,7 +1509,7 @@ Package pdftex.def Info: Images/mine/dag_lang_example.png  used on input line 44
 Underfull \vbox (badness 1748) has occurred while \output is active []
 
  [23]
-<Images/mine/solution_distributedarchintegrated.png, id=691, 802.49812pt x 600.74437pt>
+<Images/mine/solution_distributedarchintegrated.png, id=695, 802.49812pt x 600.74437pt>
 File: Images/mine/solution_distributedarchintegrated.png Graphic file (type png)
 <use Images/mine/solution_distributedarchintegrated.png>
 Package pdftex.def Info: Images/mine/solution_distributedarchintegrated.png  used on input line 92.
@@ -1515,754 +1518,976 @@ Package pdftex.def Info: Images/mine/solution_distributedarchintegrated.png  use
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 126.
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [26] [27]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 169.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 184.
+)
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 143.
 
+Underfull \hbox (badness 1584) in paragraph at lines 197--198
+[]$\OML/cmm/m/it/9 samples[]with[]dist \OMS/cmsy/m/n/9   f\OT1/cmr/m/n/9 (\OMS/cmsy/m/n/9 j\OML/cmm/m/it/9 comparable[]o[]ef \OMS/cmsy/m/n/9 ^^@ \OML/cmm/m/it/9 reference[]value\OMS/cmsy/m/n/9 j\OML/cmm/m/it/9 ; value\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 j \OT1/cmr/m/n/9 (\OML/cmm/m/it/9 value; comparable[]o[]ef\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 2
+ []
 
-LaTeX Warning: Float too large for page by 96.10777pt on input line 249.
-
-[28] [29] [30
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.20}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.21}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.24}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.26}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.28}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.29}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.30}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.31}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.32}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.33}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.34}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.35}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.36}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.37}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.38}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.39}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.40}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.329   \item \textit
-                     {Assignment Logic}: For the nodes whose workers are exp...] [31]
-<Images/mine/solution_workflowinstanceexample.png, id=819, 1017.8025pt x 548.80031pt>
-File: Images/mine/solution_workflowinstanceexample.png Graphic file (type png)
-<use Images/mine/solution_workflowinstanceexample.png>
-Package pdftex.def Info: Images/mine/solution_workflowinstanceexample.png  used on input line 350.
-(pdftex.def)             Requested size: 455.24408pt x 245.46727pt.
- [32 <./Images/mine/solution_workflowinstanceexample.png>]
+[26] [27] [28]
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.367     \State
+l.235     \State
                  $assigned \gets \emptyset$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.370     \ForAll
+l.238     \ForAll
                  {$n \in nodes$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.371         \If
+l.239         \If
                  {$n \in assigned$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.372             \State
+l.240             \State
                          \textbf{continue}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.373         \EndIf
+l.241         \EndIf
                     
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.375         \If
+l.243         \If
                  {$n.upstream = \emptyset$} \Comment{root nodes}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.376             \State
+l.244             \State
                          $roots \gets \{r \in nodes \mid r.upstream = \empty...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.377             \State
+l.245             \State
                          \Call{AssignGroup}{$\textit{null}$, $roots$}
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 245.
+
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.378         \ElsIf
+l.246         \ElsIf
                     {$|n.upstream| = 1$} \Comment{1$\to$1 or 1$\to$N}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.379             \State
+l.247             \State
                          $u \gets n.upstream[0]$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.380             \If
+l.248             \If
                      {$|u.downstream| = 1$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.381                 \State
+l.249                 \State
                              \Call{AssignWorker}{$[n]$, $u.worker$} \Comment...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.382             \Else
+l.250             \Else
                         \Comment{1$\to$N}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.383                 \State
+l.251                 \State
                              $fanout \gets \{d \in u.downstream \mid d \noti...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.384                 \State
+l.252                 \State
                              \Call{AssignGroup}{$u.worker$, $fanout$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.385             \EndIf
+l.253             \EndIf
                         
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.386         \Else
+l.254         \Else
                     \Comment{N$\to$1}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.387             \State
+l.255             \State
                          $outputs \gets \{u.worker: predictions.output\_size...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.388             \State
+l.256             \State
                          $best \gets \arg\max_{w \in outputs} outputs[w]$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.20}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.389             \State
+l.257             \State
                          \Call{AssignWorker}{$[n]$, $best$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.390         \EndIf
+l.258         \EndIf
                     
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.391     \EndFor
+l.259     \EndFor
                  
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.395     \Function
+l.263     \Function
                    {AssignGroup}{$up\_worker$, $tasks$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.24}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.396         \If
+l.264         \If
                  {$tasks = \emptyset$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.398         \EndIf
+l.266         \EndIf
                     
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.26}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.400         \State
+l.268         \State
                      $exec\_t \gets \{t: predictions.exec\_time(t) \mid t \i...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.401         \State
+l.269         \State
                      $out\_sz \gets \{t: predictions.output\_size(t) \mid t ...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.28}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.402         \State
+l.270         \State
                      $median \gets \textsc{Median}(exec\_t.values())$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.29}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.403         \State
+l.271         \State
                      $longs \gets \{t \in tasks \mid exec\_t[t] > median\}$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.30}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.404         \State
+l.272         \State
                      $shorts \gets \textsc{SortLargerOutputFirst}(\{t \in ta...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.31}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.407         \State
+l.275         \State
                      \Comment{1) cluster short tasks with bigger outputs on ...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.32}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.408         \If
+l.276         \If
                  {$up\_worker \neq \textit{null} \land shorts \neq \emptyset$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.33}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.409             \State
+l.277             \State
                          $cluster \gets shorts[0:MAX\_CLUSTERING]$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.34}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.410             \State
+l.278             \State
                          \Call{AssignWorker}{$cluster$, $up\_worker$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.35}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.411             \State
+l.279             \State
                          $shorts \gets shorts[MAX\_CLUSTERING:]$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.36}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.412         \EndIf
+l.280         \EndIf
                     
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.37}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.415         \State
+l.283         \State
                      \Comment{2) pair long tasks with remaining short tasks ...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.38}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.416         \While
+l.284         \While
                     {$longs \neq \emptyset \land shorts \neq \emptyset$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.39}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.417             \State
+l.285             \State
                          $cluster \gets [longs[0]] + shorts[0:MAX\_CLUSTERIN...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.40}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.418             \State
+l.286             \State
                          $worker\_id \gets$ \Call{NewWorkerId}{}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.419             \State
+l.287             \State
                          \Call{AssignWorker}{$cluster$, $worker\_id$}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.42}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.420             \State
-                         $longs \gets longs[1:]$
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.43}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.421             \State
-                         $shorts \gets shorts[MAX\_CLUSTERING-1:]$
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.44}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.422         \EndWhile
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.45}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.425         \State
-                     \Comment{3) group remaining short tasks}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.46}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.426         \While
-                    {$shorts \neq \emptyset$}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.47}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.427             \State
-                         $worker\_id \gets$ \Call{NewWorkerId}{}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.48}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.428             \State
-                         \Call{AssignWorker}{$shorts[0:MAX\_CLUSTERING]$, $w...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.49}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.429             \State
-                         $shorts \gets shorts[MAX\_CLUSTERING:]$
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.50}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.430         \EndWhile
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.51}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.433         \State
-                     \Comment{4) group remaining longs (half-size)}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.52}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.434         \State
-                     $half \gets \max(1, \lfloor MAX\_CLUSTERING / 2 \rfloor)$
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.53}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.435         \While
-                    {$longs \neq \emptyset$}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.54}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.436             \State
-                         $worker\_id \gets$ \Call{NewWorkerId}{}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.55}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.437             \State
-                         \Call{AssignWorker}{$longs[0:half]$, $worker\_id$}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.56}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.438             \State
-                         $longs \gets longs[half:]$
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.57}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.439         \EndWhile
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.58}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.440     \EndFunction
-                      
 
-LaTeX Warning: Float too large for page by 96.10777pt on input line 442.
+LaTeX Warning: Float too large for page by 96.10777pt on input line 310.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.450     \State
+l.320     \State
                  $workers\_outside \gets \emptyset$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.453     \State
+l.323     \State
                  \Comment{1) Identify workers outside the critical path}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.454     \ForAll
+l.324     \ForAll
                  {$n \in nodes$} \Comment{nodes are topologically sorted}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.455         \State
+l.325         \State
                      $wid \gets n.worker\_id$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.456         \If
+l.326         \If
                  {$n.id \notin critical\_path\_ids \land \forall cp \in dag....
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.457             \State
+l.327             \State
                          $workers\_outside \gets workers\_outside \cup \{wid\}$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.458         \EndIf
+l.328         \EndIf
                     
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.459     \EndFor
+l.329     \EndFor
                  
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.461     \State
+l.331     \State
                  $nodes\_outside\_cp \gets \{n \in nodes \mid n.id \notin cr...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.464     \State
+l.334     \State
                  \Comment{2) Attempt downgrade for each worker outside criti...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.465     \ForAll
+l.335     \ForAll
                  {$wid \in workers\_outside$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.466         \State
+l.336         \State
                      $last\_good_\_rc \gets \{n.id: n.config \mid n \in node...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.469         \State
+l.339         \State
                      \Comment{Iterate through weaker configurations (skip st...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.470         \For
+l.340         \For
                   {$i \gets 1$ \textbf{to} $|configs| - 1$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.471             \State
+l.341             \State
                          $trial \gets configs[i].\textsc{Clone}(wid)$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.474             \State
+l.344             \State
                          \Comment{Apply trial configuration to all nodes of ...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.475             \ForAll
+l.345             \ForAll
                          {$n \in nodes\_outside\_cp$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.476                 \If
+l.346                 \If
                          {$n.worker\_id = wid$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.477                     \State
+l.347                     \State
                                  $n.config \gets trial$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.20}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.478                 \EndIf
+l.348                 \EndIf
                             
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.479             \EndFor
+l.349             \EndFor
                          
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.482             \State
+l.352             \State
                          \Comment{Recompute workflow timing with predictions}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.483             \State
+l.353             \State
                          $cp\_time \gets$ \Call{SimulateCriticalPathTime}{$d...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.24}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.486             \If
+l.356             \If
                      {$cp\_time = original\_cp\_time$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.487                 \State
+l.357                 \State
                              \Comment{Downgrade acceptable, record as last g...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.26}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.488                 \ForAll
+l.358                 \ForAll
                              {$n \in nodes\_outside\_cp$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.489                     \If
+l.359                     \If
                              {$n.worker\_id = wid$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.28}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.490                         \State
+l.360                         \State
                                      $last\_good\_rc[n.id] \gets n.config$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.29}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.491                     \EndIf
+l.361                     \EndIf
                                 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.30}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.492                 \EndFor
+l.362                 \EndFor
                              
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.31}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.493             \Else
+l.363             \Else
                        
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.32}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.494                 \State
+l.364                 \State
                              \Comment{Downgrade increases critical path, rev...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.33}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.495                 \ForAll
+l.365                 \ForAll
                              {$n \in nodes\_outside\_cp$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.34}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.496                     \If
+l.366                     \If
                              {$n.worker\_id = wid$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.35}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.497                         \State
+l.367                         \State
                                      $n.config \gets last\_good\_rc[n.id]$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.36}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.498                     \EndIf
+l.368                     \EndIf
                                 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.37}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.499                 \EndFor
+l.369                 \EndFor
                              
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.38}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.500                 \State
+l.370                 \State
                              \textbf{break} \Comment{move to next worker}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.39}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.501             \EndIf
+l.371             \EndIf
                         
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.40}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.502         \EndFor
+l.372         \EndFor
                      
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.503     \EndFor
+l.373     \EndFor
+                  [29] [30] [31] [32]
+<Images/mine/solution_workflowinstanceexample.png, id=828, 1017.8025pt x 548.80031pt>
+File: Images/mine/solution_workflowinstanceexample.png Graphic file (type png)
+<use Images/mine/solution_workflowinstanceexample.png>
+Package pdftex.def Info: Images/mine/solution_workflowinstanceexample.png  used on input line 414.
+(pdftex.def)             Requested size: 455.24408pt x 245.46727pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[33]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.431     \State
+                 $assigned \gets \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.434     \ForAll
+                 {$n \in nodes$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.435         \If
+                 {$n \in assigned$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.436             \State
+                         \textbf{continue}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.437         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.439         \If
+                 {$n.upstream = \emptyset$} \Comment{root nodes}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.440             \State
+                         $roots \gets \{r \in nodes \mid r.upstream = \empty...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.441             \State
+                         \Call{AssignGroup}{$\textit{null}$, $roots$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.442         \ElsIf
+                    {$|n.upstream| = 1$} \Comment{1$\to$1 or 1$\to$N}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.443             \State
+                         $u \gets n.upstream[0]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.444             \If
+                     {$|u.downstream| = 1$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.445                 \State
+                             \Call{AssignWorker}{$[n]$, $u.worker$} \Comment...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.446             \Else
+                        \Comment{1$\to$N}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.447                 \State
+                             $fanout \gets \{d \in u.downstream \mid d \noti...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.448                 \State
+                             \Call{AssignGroup}{$u.worker$, $fanout$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.449             \EndIf
+                        
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.450         \Else
+                    \Comment{N$\to$1}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.451             \State
+                         $outputs \gets \{u.worker: predictions.output\_size...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.452             \State
+                         $best \gets \arg\max_{w \in outputs} outputs[w]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.20}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.453             \State
+                         \Call{AssignWorker}{$[n]$, $best$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.454         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.455     \EndFor
                  
-Overfull \hbox (78.05087pt too wide) in paragraph at lines 522--523
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.459     \Function
+                   {AssignGroup}{$up\_worker$, $tasks$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.24}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.460         \If
+                 {$tasks = \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.462         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.26}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.464         \State
+                     $exec\_t \gets \{t: predictions.exec\_time(t) \mid t \i...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.465         \State
+                     $out\_sz \gets \{t: predictions.output\_size(t) \mid t ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.28}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.466         \State
+                     $median \gets \textsc{Median}(exec\_t.values())$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.29}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.467         \State
+                     $longs \gets \{t \in tasks \mid exec\_t[t] > median\}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.30}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.468         \State
+                     $shorts \gets \textsc{SortLargerOutputFirst}(\{t \in ta...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.31}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.471         \State
+                     \Comment{1) cluster short tasks with bigger outputs on ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.32}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.472         \If
+                 {$up\_worker \neq \textit{null} \land shorts \neq \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.33}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.473             \State
+                         $cluster \gets shorts[0:MAX\_CLUSTERING]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.34}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.474             \State
+                         \Call{AssignWorker}{$cluster$, $up\_worker$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.35}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.475             \State
+                         $shorts \gets shorts[MAX\_CLUSTERING:]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.36}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.476         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.37}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.479         \State
+                     \Comment{2) pair long tasks with remaining short tasks ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.38}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.480         \While
+                    {$longs \neq \emptyset \land shorts \neq \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.39}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.481             \State
+                         $cluster \gets [longs[0]] + shorts[0:MAX\_CLUSTERIN...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.40}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.482             \State
+                         $worker\_id \gets$ \Call{NewWorkerId}{}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.483             \State
+                         \Call{AssignWorker}{$cluster$, $worker\_id$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.42}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.484             \State
+                         $longs \gets longs[1:]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.43}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.485             \State
+                         $shorts \gets shorts[MAX\_CLUSTERING-1:]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.44}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.486         \EndWhile
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.45}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.489         \State
+                     \Comment{3) group remaining short tasks}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.46}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.490         \While
+                    {$shorts \neq \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.47}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.491             \State
+                         $worker\_id \gets$ \Call{NewWorkerId}{}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.48}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.492             \State
+                         \Call{AssignWorker}{$shorts[0:MAX\_CLUSTERING]$, $w...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.49}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.493             \State
+                         $shorts \gets shorts[MAX\_CLUSTERING:]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.50}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.494         \EndWhile
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.51}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.497         \State
+                     \Comment{4) group remaining longs (half-size)}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.52}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.498         \State
+                     $half \gets \max(1, \lfloor MAX\_CLUSTERING / 2 \rfloor)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.53}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.499         \While
+                    {$longs \neq \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.54}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.500             \State
+                         $worker\_id \gets$ \Call{NewWorkerId}{}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.55}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.501             \State
+                         \Call{AssignWorker}{$longs[0:half]$, $worker\_id$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.56}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.502             \State
+                         $longs \gets longs[half:]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.57}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.503         \EndWhile
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.58}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.504     \EndFunction
+                      
+
+LaTeX Warning: Float too large for page by 96.10777pt on input line 506.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.514     \State
+                 $workers\_outside \gets \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.517     \State
+                 \Comment{1) Identify workers outside the critical path}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.518     \ForAll
+                 {$n \in nodes$} \Comment{nodes are topologically sorted}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.519         \State
+                     $wid \gets n.worker\_id$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.520         \If
+                 {$n.id \notin critical\_path\_ids \land \forall cp \in dag....
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.521             \State
+                         $workers\_outside \gets workers\_outside \cup \{wid\}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.522         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.523     \EndFor
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.525     \State
+                 $nodes\_outside\_cp \gets \{n \in nodes \mid n.id \notin cr...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.528     \State
+                 \Comment{2) Attempt downgrade for each worker outside criti...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.529     \ForAll
+                 {$wid \in workers\_outside$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.530         \State
+                     $last\_good_\_rc \gets \{n.id: n.config \mid n \in node...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.533         \State
+                     \Comment{Iterate through weaker configurations (skip st...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.534         \For
+                  {$i \gets 1$ \textbf{to} $|configs| - 1$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.535             \State
+                         $trial \gets configs[i].\textsc{Clone}(wid)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.538             \State
+                         \Comment{Apply trial configuration to all nodes of ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.539             \ForAll
+                         {$n \in nodes\_outside\_cp$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.540                 \If
+                         {$n.worker\_id = wid$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.541                     \State
+                                 $n.config \gets trial$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.20}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.542                 \EndIf
+                            
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.543             \EndFor
+                         
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.546             \State
+                         \Comment{Recompute workflow timing with predictions}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.547             \State
+                         $cp\_time \gets$ \Call{SimulateCriticalPathTime}{$d...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.24}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.550             \If
+                     {$cp\_time = original\_cp\_time$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.551                 \State
+                             \Comment{Downgrade acceptable, record as last g...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.26}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.552                 \ForAll
+                             {$n \in nodes\_outside\_cp$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.553                     \If
+                             {$n.worker\_id = wid$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.28}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.554                         \State
+                                     $last\_good\_rc[n.id] \gets n.config$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.29}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.555                     \EndIf
+                                
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.30}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.556                 \EndFor
+                             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.31}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.557             \Else
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.32}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.558                 \State
+                             \Comment{Downgrade increases critical path, rev...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.33}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.559                 \ForAll
+                             {$n \in nodes\_outside\_cp$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.34}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.560                     \If
+                             {$n.worker\_id = wid$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.35}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.561                         \State
+                                     $n.config \gets last\_good\_rc[n.id]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.36}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.562                     \EndIf
+                                
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.37}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.563                 \EndFor
+                             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.38}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.564                 \State
+                             \textbf{break} \Comment{move to next worker}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.39}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.565             \EndIf
+                        
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.40}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.566         \EndFor
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.567     \EndFor
+                  [34 <./Images/mine/solution_workflowinstanceexample.png>] [35] [36]
+Overfull \hbox (78.05087pt too wide) in paragraph at lines 587--588
 []\T1/phv/b/n/10 Delegating Down-stream Tasks\T1/phv/m/n/10 : For each down-stream task, the worker per-forms an \T1/cmtt/m/n/10 atomic_increment_and_get()
  []
 
-[33] [34] [35]
-<Images/mine/choreographed_execution_example.png, id=846, 892.83563pt x 442.65375pt>
+<Images/mine/choreographed_execution_example.png, id=851, 892.83563pt x 442.65375pt>
 File: Images/mine/choreographed_execution_example.png Graphic file (type png)
 <use Images/mine/choreographed_execution_example.png>
-Package pdftex.def Info: Images/mine/choreographed_execution_example.png  used on input line 529.
+Package pdftex.def Info: Images/mine/choreographed_execution_example.png  used on input line 594.
 (pdftex.def)             Requested size: 227.62204pt x 112.85156pt.
-) (Chapters/4-Evaluation.tex [36 <./Images/mine/choreographed_execution_example.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[37]) (Chapters/4-Evaluation.tex [38 <./Images/mine/choreographed_execution_example.png>]
 Chapter 4.
 Package cleveref Info: loaded `english' language definitions on input line 8.
-) [37
+) [39
 
-] [38
+] [40
 
 ] (Chapters/5-Conclusion.tex
 Chapter 5.
 Package cleveref Info: loaded `english' language definitions on input line 9.
-) (main.bbl [39
+) (main.bbl [41
 
-] [40
+] [42
 
-] [41] [42] [43]) (Chapters/AppendixA.tex [44]
+] [43] [44]
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
+[]\T1/phv/m/n/10 A. Casal-boni, ``AWS Lambda Power Tun-ing,'' [][]$https : / / github . com / alexcasalboni /
+ []
+
+[45]) (Chapters/AppendixA.tex [46]
 Appendix A.
-) [45
+) [47
 
-] [46
+] [48
 
 ] (Chapters/AppendixB.tex
 Appendix B.
@@ -2307,7 +2532,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the main.log file.
 
-[47
+[49
 
 ] (main.aux
 Package cleveref Info: loaded `english' language definitions on input line 16.
@@ -2324,17 +2549,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E1778CF25D49688187A43DBBE1FDD2C7;7966.
  ) 
 Here is how much of TeX's memory you used:
- 44731 strings out of 474486
- 871376 string characters out of 5743755
+ 44740 strings out of 474486
+ 871598 string characters out of 5743755
  1997542 words of memory out of 5000000
- 65882 multiletter control sequences out of 15000+600000
+ 65887 multiletter control sequences out of 15000+600000
  641700 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,12n,96p,2565b,1640s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0800.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (65 pages, 827715 bytes).
+Output written on main.pdf (67 pages, 836219 bytes).
 PDF statistics:
- 1178 PDF objects out of 1200 (max. 8388607)
- 315 named destinations out of 1000 (max. 500000)
+ 1196 PDF objects out of 1200 (max. 8388607)
+ 319 named destinations out of 1000 (max. 500000)
  438 words of extra memory for PDF output out of 10000 (max. 10000000)
 
