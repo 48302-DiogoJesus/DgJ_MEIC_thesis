@@ -8,15 +8,17 @@
 \label{chap:arch}
 \bigskip
 
+In this chapter, we will present the architecture, as well as some implementation details of our decentralized serverless workflow execution engine. Here we will describe how a workflow is defined and configured, we will then present an architecture overview of the solution, followed by a more in-depth description of the main layers and components. We will go over how workflow plans are created, optimizations they can apply, and how they are executed in a choreographed manner by FaaS workers.
+
 % #############################################################################
 \section{Workflow Definition Language}
 \label{ss:workflow_definition_language}
 
-We will now present our DAG-based workflow engine that transforms ordinary Python functions into parallelizable tasks, automatically managing dependencies and execution through an intuitive decorator-based API. It is inspired by WUKONG, Dask and Airflow's way of expressing workflows: the user can create workflows by composing individual Python functions, as shown in Listing \ref{lst:dag_lang_example}. In this example, we define two tasks, \texttt{task\_a} and \texttt{task\_b}, and then compose them into a DAG by passing their results as arguments to the next task. The resulting workflow structure is illustrated in Figure \ref{fig:dag_lang_example}. Python's simplicity, readability, and widespread popularity, especially among data scientists and researchers, also motivated us to choose this language for defining workflows, lowering the barrier to entry while enabling powerful parallel execution.
+We will now present the \textit{workflow language} with which users can create tasks and compose them into workflows. It is heavily inspired by WUKONG and Dask's: the user can create workflows by composing individual Python functions, as shown in Listing \ref{lst:dag_lang_example}. In this example, we define two tasks, \texttt{task\_a} and \texttt{task\_b}, and then compose them into a DAG by passing their results as arguments to the next task. The resulting workflow structure is illustrated in Figure \ref{fig:dag_lang_example}. Python's simplicity, readability, and widespread popularity, especially among data scientists and researchers, also motivated us to choose this language for defining workflows, lowering the barrier to entry while enabling powerful parallel execution.
 
-\begin{figure}[h]
-\centering
-\begin{lstlisting}[language=Python, basicstyle=\ttfamily\footnotesize, columns=fullflexible, breaklines=true]
+In Dask and WUKONG, tasks are also created by decorating~\footnote{\url{https://www.geeksforgeeks.org/python/decorators-in-python/}} Python functions with a special decorator, named \texttt{@delayed} (equivalent to our \texttt{@DAGTask}), and then composed into a DAG by calling these decorated functions, similarly to our approach. The workflow execution is also triggered by calling \texttt{compute()} on the last/sink task, as shown in Listing \ref{lst:setup_and_launch_workflow_execution}. 
+
+\begin{lstlisting}[language=Python, basicstyle=\ttfamily\footnotesize, columns=fullflexible, breaklines=true, caption=DAG definition example, label=lst:dag_lang_example]
 # 1) Task definition
 @DAGTask
 def task_a(a: int) -> int:
@@ -35,9 +37,6 @@ a3 = task_a(a1)
 b1 = task_b(a2, a3)
 a4 = task_a(b1)
 \end{lstlisting}
-\caption{DAG definition example}
-\label{lst:dag_lang_example}
-\end{figure}
 
 \begin{figure}[h]
     \centering
@@ -52,9 +51,8 @@ Calling \texttt{task\_a(10)} generates a corresponding task representation, \tex
 
 Furthermore, the task function code is also embedded within the task representation, as a Python \texttt{Callable}. Later, the \texttt{DAGTaskNode} is serialized, using \texttt{cloudpickle}~\footnote{\url{https://github.com/cloudpipe/cloudpickle}}, allowing it to be transmitted to storage, and retrieved by workers for execution.
 
-\begin{figure}[h]
-\centering
-\begin{lstlisting}[language=Python, basicstyle=\ttfamily\footnotesize, columns=fullflexible, breaklines=true]
+
+\begin{lstlisting}[language=Python, basicstyle=\ttfamily\footnotesize, columns=fullflexible, breaklines=true, caption=Setting up and launching workflow execution, label=lst:setup_and_launch_workflow_execution]
 result = a4.compute(
     dag_name="simpledag", 
     config=Worker.Config(
@@ -69,10 +67,6 @@ result = a4.compute(
     )
 )
 \end{lstlisting}
-\caption{Setting up and launching workflow execution}
-\label{lst:setup_and_launch_workflow_execution}
-\end{figure}
-
 One limitation of this DAG definition language is that it doesn't support "dynamic fan-outs" (e.g., creating a variable number of tasks depending on the result of another task) on a single workflow. This is a powerful and expressive feature, but that is seldom supported in other DAG definition languages (e.g., Dask, WUKONG, Unum, Oozie~\cite{apache_oozie} do not support it). These languages require the user to split the workflow into multiple workflows, one for each \textit{dynamic fan-out}: one workflow runs up to the task that generates a list of results, while a second workflow starts with a number of tasks that depends on the size or contents of that list. 
 
 Apache AirFlow~\footnote{https://airflow.apache.org/docs/apache-airflow/stable/authoring-and-scheduling/dynamic-task-mapping.html} supports this feature through an extension to their DAG language, allowing a variable number of tasks to be created at run-time depending on the number of results produced by a previous task. Implementing similar functionality is possible, but it would reduce the accuracy of predictions. This is because we would also need to predict the expected fan-out size, and any errors in that prediction could amplify inaccuracies in the predictions for the rest of the workflow.
@@ -80,7 +74,7 @@ Apache AirFlow~\footnote{https://airflow.apache.org/docs/apache-airflow/stable/a
 We will now present our solution architecture overview, highlighting the core layers of our decentralized serverless workflow execution engine.
 
 % #############################################################################
-\section{Overview}
+\section{Architecture}
 The overall architecture and logical flow of our decentralized serverless workflow execution engine is organized into 3 high-level layers. Figure~\ref{fig:solution_architecture} provides an overview of this architecture. The upper part represents the components that run on the user's machine, while the lower part represents the components that run outside the user's machine. 
 
 The user writes its workflows in Python (demonstrated in Section \ref{ss:workflow_definition_language}). First, a planning algorithm, chosen by the user, will run locally to generate a static workflow plan. This plan defines a task-to-worker mapping and other task-level optimization hints for FaaS workers. Once the plan is done, the client launches the initial workers for the root tasks, kicking off workflow execution. The user program then waits for a storage notification indicating workflow completion and then retrieves the final result from storage.
@@ -117,9 +111,7 @@ Storing these metrics powers a prediction API, shown in Listing~\ref{lst:task_pr
 
 The prediction methods take an additional parameter, \texttt{SLA} (Service-level Agreement), which is specified by the user and influences the selection of prediction samples. For example, \texttt{SLA="average"} will use the average of the historical samples, whereas \texttt{SLA=Percentile(80)} will return a more conservative estimate, where the 80th percentile of the historical samples is used, providing a higher estimate. This parameter is provided by the user, and is used by the \texttt{PredictionsProvider API} to provide estimates based on historical data.
 
-\begin{figure}[h]
-\centering
-\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, columns=fullflexible, breaklines=true]
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, columns=fullflexible, breaklines=true, caption=Task Predictions API, label=lst:task_predictions_api]
 class PredictionsProvider:
   def predict_output_size(function_name, input_size, sla) -> int
 
@@ -129,9 +121,6 @@ class PredictionsProvider:
 
   def predict_execution_time(task_name, input_size, resource_config, sla) -> float
 \end{lstlisting}
-\caption{Task Predictions API}
-\label{lst:task_predictions_api}
-\end{figure}
 
 When collecting metrics such as worker startup time, data transfer time, and task execution time, we associate them with the worker resource configuration used to execute the task (e.g., memory and CPU). To improve prediction accuracy, our method follows two strategies. If there are enough historical samples for the exact resource configuration being predicted, we use only those samples. Otherwise, when samples for the target configuration are insufficient, we apply a normalization approach: we adjust samples from other memory configurations to a baseline, use these normalized values to estimate execution time, and then rescale the result to the target configuration.
 
@@ -208,7 +197,7 @@ This layer executes on the user side, and it receives the workflow representatio
 \subsection{Workflow Simulation}
 The availability of predicting task execution time, data transfer latency, function I/O, and worker startup cost, exposed through the Metadata Management layer (Section \ref{ss:metadata_management}), makes it possible to simulate the execution of an entire workflow instance.
 
-To this end, we implemented a dedicated simulation module. The module accepts a workflow representation in which tasks are annotated with worker IDs, resource configurations, and optimizations. For each task, the simulator estimates lots of metrics, such as whether the worker should be cold or warm, both the earliest feasible start time and the corresponding completion time, allowing it to derive the expected overall \textit{makespan} of the workflow as well as the critical path.
+To this end, we implemented a dedicated simulation module. The module accepts a workflow representation in which tasks are annotated with worker IDs, resource configurations, and optimizations. For each task, the simulator estimates a number of metrics, such as whether the worker should be cold or warm, the input and output sizes, execution time, time to download dependencies, time to upload output, and both the earliest start time and the corresponding completion time, allowing it to derive the expected overall \textit{makespan} of the workflow as well as the critical path.
 
 This simulation capability significantly facilitates the work of planning components. Planners can experiment with alternative resource configurations, task placement policies, and co-location strategies without executing the workflow in a live environment. The fidelity of the simulation results, however, is directly dependent on the accuracy of the predictive models exposed through the \textit{Predictions API}.
 
@@ -221,7 +210,7 @@ In our planners and implementation, we primarily focus on fixed \texttt{worker\_
 Users can select from three provided planners or implement their own planner by implementing an interface. All planners have access to the predictions API as well as the workflow simulation. The planners the user can choose from are the following:
 
 \begin{enumerate}
-    \item \textbf{WUKONG}: All tasks will use the same worker configuration (specified by the user) and won't be assigned a \texttt{worker\_id}, meaning they will be executed by \textit{"flexible workers"}. This is a more dynamic scheduling approach where tasks aren't tied to specific workers that try to reproduce WUKONG's scheduling behavior;
+    \item \textbf{WUKONG}: All tasks will use the same worker configuration (specified by the user) and won't be assigned a \texttt{worker\_id}, meaning they will be executed by \textit{"flexible workers"}. This is a more dynamic scheduling approach, which tries to reproduce WUKONG's behavior, where tasks aren't tied to specific workers;
     \item \textbf{Uniform}: Tasks share a common worker configuration specified by the user, with each task assigned a \texttt{worker\_id} to allow for co-location of tasks.
     \item \textbf{Non-Uniform}: Tasks can use different worker configurations (list of available resources is specified by the user). Each task is assigned a \texttt{worker\_id}. This algorithm starts by assigning the best available resources to all tasks. Then it runs a resource downgrading algorithm that attempts to downgrade resources of workers \textit{outside the critical path} as much as possible without introducing a new critical path.
 \end{enumerate}
@@ -422,154 +411,6 @@ To illustrate this execution model, Figure~\ref{fig:planned_workflow_execution_e
 It is also worth noting that the planner assigned \texttt{Task 6} to \texttt{Worker 2}. This decision might be due to \texttt{Worker 2} being more powerful than \texttt{Worker 1}, and because the output of \texttt{Task 5} is larger than that of \texttt{Tasks 4} and \texttt{5}. Therefore, even if the task were executed on a more powerful worker (such as \texttt{Worker 3}, which handled \texttt{Task 3}), the potential performance gain would not offset the additional time or resources required. This is an example of a planner deciding to co-locate \texttt{Tasks 5 and 6} on the same worker to reduce data movement.
 
 Regarding \textbf{optimizations}, we can see \texttt{Task 1} \texttt{pre-warming} \texttt{Worker 3}, by making  a dummy invocation to the FaaS gateway, in an attempt to make it available before \texttt{Task 3} needs it. The \texttt{pre-load} optimization is used in \texttt{Task 5}, where the planner decided that \texttt{Worker 2} should start downloading the external dependencies for \texttt{Task 6} (\texttt{Task 3} and \texttt{Task 4}) as soon as they are available. This \texttt{pre-loading} can begin as soon as \texttt{Task 6}'s dependencies are ready in storage, potentially overlapping with \texttt{Task 2}'s execution instead of \texttt{Task 5}, as shown in the figure.
-
-\begin{algorithm}
-    \caption{Worker Assignment Algorithm}
-    \label{alg:worker_assignment}
-    \small
-    \begin{algorithmic}[1]
-    \Require $nodes$, $predictions$, $base\_rc$, $SLA$, $MAX\_CLUSTERING$
-    \State $assigned \gets \emptyset$
-    
-    \Comment{nodes are topologically sorted}
-    \ForAll{$n \in nodes$}
-        \If{$n \in assigned$}
-            \State \textbf{continue}
-        \EndIf
-        
-        \If{$n.upstream = \emptyset$} \Comment{root nodes}
-            \State $roots \gets \{r \in nodes \mid r.upstream = \emptyset \land r \notin assigned\}$
-            \State \Call{AssignGroup}{$\textit{null}$, $roots$}
-        \ElsIf{$|n.upstream| = 1$} \Comment{1$\to$1 or 1$\to$N}
-            \State $u \gets n.upstream[0]$
-            \If{$|u.downstream| = 1$}
-                \State \Call{AssignWorker}{$[n]$, $u.worker$} \Comment{reuse worker}
-            \Else \Comment{1$\to$N}
-                \State $fanout \gets \{d \in u.downstream \mid d \notin assigned\}$
-                \State \Call{AssignGroup}{$u.worker$, $fanout$}
-            \EndIf
-        \Else \Comment{N$\to$1}
-            \State $outputs \gets \{u.worker: predictions.output\_size(u) \mid u \in n.upstream\}$
-            \State $best \gets \arg\max_{w \in outputs} outputs[w]$
-            \State \Call{AssignWorker}{$[n]$, $best$}
-        \EndIf
-    \EndFor
-    
-    \Statex
-    
-    \Function{AssignGroup}{$up\_worker$, $tasks$}
-        \If{$tasks = \emptyset$}
-            \Return
-        \EndIf
-        
-        \State $exec\_t \gets \{t: predictions.exec\_time(t) \mid t \in tasks\}$
-        \State $out\_sz \gets \{t: predictions.output\_size(t) \mid t \in tasks\}$
-        \State $median \gets \textsc{Median}(exec\_t.values())$
-        \State $longs \gets \{t \in tasks \mid exec\_t[t] > median\}$
-        \State $shorts \gets \textsc{SortLargerOutputFirst}(\{t \in tasks \mid exec\_t[t] \leq median\})$
-        
-        \Statex
-        \State \Comment{1) cluster short tasks with bigger outputs on upstream worker}
-        \If{$up\_worker \neq \textit{null} \land shorts \neq \emptyset$}
-            \State $cluster \gets shorts[0:MAX\_CLUSTERING]$
-            \State \Call{AssignWorker}{$cluster$, $up\_worker$}
-            \State $shorts \gets shorts[MAX\_CLUSTERING:]$
-        \EndIf
-        
-        \Statex
-        \State \Comment{2) pair long tasks with remaining short tasks (1 long per group)}
-        \While{$longs \neq \emptyset \land shorts \neq \emptyset$}
-            \State $cluster \gets [longs[0]] + shorts[0:MAX\_CLUSTERING-1]$
-            \State $worker\_id \gets$ \Call{NewWorkerId}{}
-            \State \Call{AssignWorker}{$cluster$, $worker\_id$}
-            \State $longs \gets longs[1:]$
-            \State $shorts \gets shorts[MAX\_CLUSTERING-1:]$
-        \EndWhile
-        
-        \Statex
-        \State \Comment{3) group remaining short tasks}
-        \While{$shorts \neq \emptyset$}
-            \State $worker\_id \gets$ \Call{NewWorkerId}{}
-            \State \Call{AssignWorker}{$shorts[0:MAX\_CLUSTERING]$, $worker\_id$}
-            \State $shorts \gets shorts[MAX\_CLUSTERING:]$
-        \EndWhile
-        
-        \Statex
-        \State \Comment{4) group remaining longs (half-size)}
-        \State $half \gets \max(1, \lfloor MAX\_CLUSTERING / 2 \rfloor)$
-        \While{$longs \neq \emptyset$}
-            \State $worker\_id \gets$ \Call{NewWorkerId}{}
-            \State \Call{AssignWorker}{$longs[0:half]$, $worker\_id$}
-            \State $longs \gets longs[half:]$
-        \EndWhile
-    \EndFunction
-\end{algorithmic}
-\end{algorithm}
-
-\begin{algorithm}
-    \caption{Resource Downgrading Algorithm}
-    \label{alg:resource_downgrading}
-    \small
-    \begin{algorithmic}[1]
-    \Require $dag$, $nodes$, $critical\_path\_ids$, $original\_cp\_time$, $configs$, $predictions$
-    \State $workers\_outside \gets \emptyset$
-    
-    \Statex
-    \State \Comment{1) Identify workers outside the critical path}
-    \ForAll{$n \in nodes$} \Comment{nodes are topologically sorted}
-        \State $wid \gets n.worker\_id$
-        \If{$n.id \notin critical\_path\_ids \land \forall cp \in dag.critical\_path\_nodes: wid \neq cp.worker\_id$}
-            \State $workers\_outside \gets workers\_outside \cup \{wid\}$
-        \EndIf
-    \EndFor
-    
-    \State $nodes\_outside\_cp \gets \{n \in nodes \mid n.id \notin critical\_path\_ids\}$
-    
-    \Statex
-    \State \Comment{2) Attempt downgrade for each worker outside critical path}
-    \ForAll{$wid \in workers\_outside$}
-        \State $last\_good_\_rc \gets \{n.id: n.config \mid n \in nodes\_outside\_cp \land n.worker\_id = wid\}$
-        
-        \Statex
-        \State \Comment{Iterate through weaker configurations (skip strongest at index 0)}
-        \For{$i \gets 1$ \textbf{to} $|configs| - 1$}
-            \State $trial \gets configs[i].\textsc{Clone}(wid)$
-            
-            \Statex
-            \State \Comment{Apply trial configuration to all nodes of this worker}
-            \ForAll{$n \in nodes\_outside\_cp$}
-                \If{$n.worker\_id = wid$}
-                    \State $n.config \gets trial$
-                \EndIf
-            \EndFor
-            
-            \Statex
-            \State \Comment{Recompute workflow timing with predictions}
-            \State $cp\_time \gets$ \Call{SimulateCriticalPathTime}{$dag$}
-            
-            \Statex
-            \If{$cp\_time = original\_cp\_time$}
-                \State \Comment{Downgrade acceptable, record as last good state}
-                \ForAll{$n \in nodes\_outside\_cp$}
-                    \If{$n.worker\_id = wid$}
-                        \State $last\_good\_rc[n.id] \gets n.config$
-                    \EndIf
-                \EndFor
-            \Else
-                \State \Comment{Downgrade increases critical path, revert and move on to the next worker}
-                \ForAll{$n \in nodes\_outside\_cp$}
-                    \If{$n.worker\_id = wid$}
-                        \State $n.config \gets last\_good\_rc[n.id]$
-                    \EndIf
-                \EndFor
-                \State \textbf{break} \Comment{move to next worker}
-            \EndIf
-        \EndFor
-    \EndFor
-    
-\end{algorithmic}
-\end{algorithm}
-
 
 % #############################################################################
 

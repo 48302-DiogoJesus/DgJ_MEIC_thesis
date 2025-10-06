@@ -1073,8 +1073,8 @@ INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.s
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
-INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
+INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT .\Images\mine\dag_lang_example.png
 INPUT .\Images\mine\dag_lang_example.png
 INPUT .\Images\mine\dag_lang_example.png
@@ -1082,8 +1082,6 @@ INPUT .\Images\mine\dag_lang_example.png
 INPUT .\Images\mine\dag_lang_example.png
 INPUT .\Images\mine\dag_lang_example.png
 INPUT .\Images\mine\dag_lang_example.png
-INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
-INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
@@ -1097,6 +1095,8 @@ INPUT .\Images\mine\solution_distributedarchintegrated.png
 INPUT .\Images\mine\solution_distributedarchintegrated.png
 INPUT .\Images\mine\solution_distributedarchintegrated.png
 INPUT .\Images\mine\solution_distributedarchintegrated.png
+INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
+INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmtt.fd
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmtt.fd
 INPUT C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1cmtt.fd

@@ -5,13 +5,10 @@
 \contentsline {xchapter}{Related Work}{5}{chapter.2}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Architecture}{21}{chapter.3}%
-\contentsline {figure}{\numberline {3.1}{\ignorespaces DAG definition example}}{22}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Simple DAG example}}{22}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Setting up and launching workflow execution}}{23}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Solution Architecture}}{24}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Task Predictions API}}{26}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Planned Workflow Execution Example}}{34}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Choreographed Scheduling Example}}{38}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Simple DAG example}}{23}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Solution Architecture}}{25}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Planned Workflow Execution Example}}{34}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Choreographed Scheduling Example}}{36}{figure.caption.14}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Evaluation}{39}{chapter.4}%
 \addvspace {10\p@ }
