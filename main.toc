@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {3.4.1}Workflow Simulation}{29}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Planning Algorithms}{29}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Optimizations}{34}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Decentralized Scheduling}{38}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Decentralized Workers}{38}{section.3.5}%
 \contentsline {chapter}{\numberline {4}Evaluation}{41}{chapter.4}%
 \etoc@startlocaltoc {5}
 \contentsline {section}{\numberline {4.1}Maecenas vitae nulla consequat}{41}{section.4.1}%
