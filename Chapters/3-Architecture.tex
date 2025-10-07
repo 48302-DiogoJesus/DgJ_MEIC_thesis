@@ -209,6 +209,7 @@ To this end, we implemented a dedicated simulation module. The module accepts a 
 This simulation capability significantly facilitates the work of planning components. Planners can experiment with alternative resource configurations, task placement policies, and co-location strategies without executing the workflow in a live environment. The fidelity of the simulation results, however, is directly dependent on the accuracy of the predictive models exposed through the \textit{Predictions API}.
 
 \subsection{Planning Algorithms}
+\label{ss:planning_algorithms}
 
 For each task, the planner assigns both a \texttt{worker\_id} and a resource configuration (vCPUs and memory). The \texttt{worker\_id} specifies the worker instance that must execute the task—analogous to the “colors” in Palette Load Balancing~\cite{palette_load_balancing}, but in our case this assignment is mandatory rather than advisory, giving strict control over execution locality. Two tasks assigned the same \texttt{worker\_id} should be executed on the same worker instance. If \texttt{worker\_id} is not specified, workers will, at run-time, have to decide whether to execute or delegate those tasks, similar to WUKONG's ~\cite{wukong_2} scheduling. We refer to these workers as \textit{"flexible workers"}. 
 
@@ -443,7 +444,7 @@ Regarding \textbf{optimizations}, we can see \texttt{Task 1} \texttt{pre-warming
 
 Optimizations are implemented by re-defining worker execution logic at certain stages. The methods that a planner can implement in order to override default worker execution logic are shown in Listing~\ref{lst:optimization_methods}: \texttt{wel\_on\_worker\_ready} method is called once the worker starts executing, and the provided optimizations use it to subscribe to \texttt{TASK\_READY} and \texttt{TASK\_COMPLETED} events for specific tasks, and schedule \textit{pre-warm} coroutines; \texttt{wel\_before\_task\_handling} is called before task's dependencies are downloaded; \texttt{wel\_override\_handle\_inputs} is called after discovering which tasks dependencies are not yet present locally and need fetching; \texttt{wel\_before\_task\_execution} is called after all dependencies have been gathered and right before task's execution. \texttt{wel\_override\_should\_upload\_output} is called before task's execution and its output determines whether the task output should be uploaded to storage (e.g., tasks that are \textit{"dupped"} don't upload their output, it remains local for other tasks of the same worker); \texttt{wel\_update\_dependency\_counters} is called after a task's output is handled and the default behavior updates the \textit{Dependency Counters} (explained in the next Section~\ref{s:decentralized_workers}) of the downstream tasks. The \texttt{task-dup}, for example, overrides this method to prevent updating dependency counters when duplicating tasks. This is necessary because duplicated tasks do not upload their outputs to storage; therefore, incrementing the dependency counters would incorrectly signal to other workers that dependent tasks are ready to execute, even though some of their required inputs are still missing; lastly, \texttt{wel\_override\_handle\_downstream} is called, and the objective of the default implementation is to decide which of the downstream tasks that became ready should this worker execute, and which tasks should be delegated to other workers.
 
-\begin{lstlisting}[language=Python, caption={Overridable worker execution logic stages}, label=lst:optimization_methods]
+\begin{lstlisting}[language=Python, basicstyle=\ttfamily\footnotesize, caption={Overridable worker execution logic stages}, label=lst:optimization_methods]
     async def wel_on_worker_ready(planner, storage, dag, this_worker)
     
     async def wel_before_task_handling(planner, storage, dag, this_worker, current_task)
@@ -454,16 +455,34 @@ Optimizations are implemented by re-defining worker execution logic at certain s
     
     async def wel_before_task_execution(planner, storage, dag, this_worker, current_task)
     
-    async def wel_override_should_upload_output(planner, storage, dag, this_worker, current_task) -> bool | None
+    async def wel_override_should_upload_output(
+        planner, storage, dag, this_worker, current_task
+    ) -> bool | None
     
-    async def wel_update_dependency_counters(planner, storage, dag, this_worker, current_task) -> list | None
+    async def wel_update_dependency_counters(
+        planner, storage, dag, this_worker, current_task
+    ) -> list | None
 
-    async def wel_override_handle_downstream(planner, storage, dag, this_worker, current_task, downstream_tasks_ready) -> list | None
+    async def wel_override_handle_downstream(
+        planner, storage, dag, this_worker, current_task, downstream_tasks_ready
+    ) -> list | None
 \end{lstlisting}
 
 After a plan is created and validated, the workflow representation is serialized using \textit{cloudpickle} (as mentioned before) and uploaded to storage. The plan is embedded directly within this representation, allowing each worker to identify both the tasks it is responsible for executing and the ones it must delegate to other workers. In the following section, we describe in detail how workers operate, including how they follow the plan, handle task dependencies, and coordinate through event-based communication to achieve decentralized workflow execution.
 
 % #############################################################################
+
+\section{Client}
+\label{s:client}
+TODO: otimizar DAG structure para ficar mais pequeno\\
+TODO: hardcoded inputs: grandes e pequenos\\
+TODO: executar planner\\
+TODO: esperar pela notificação que está completo + fazer download do resultado\\
+TODO: gerar uma imagem do workflow sem o executar (semelhante ao Dask e WUKONG)\\
+TODO: gerar uma imagem do plano também\\
+TODO: submeter o worklfow (compute())\\
+TODO: um dashboard com uma visualização simples do DAG, onde dá para perceber a progressão do workflow\\
+TODO: transição p/ workers section\\
 
 \section{Decentralized Workers}
 \label{s:decentralized_workers}
@@ -472,25 +491,32 @@ Since our target execution platform is FaaS, each worker is implemented as a Faa
 
 In this initial stage, the worker calls the \texttt{wel\_on\_worker\_ready} method on all optimizations. Then, it subscribes to \texttt{TASK\_READY} events for all tasks assigned to it that depend on tasks assigned to other workers. To begin executing tasks, the worker launches a Python \textit{asyncio}~\footnote{\url{https://docs.python.org/3/library/asyncio.html}} \textit{coroutine} for each branch, starting from the provided \textbf{immediate task identifiers}. From this point, the main \textit{coroutine} simply waits for all assigned tasks to complete, and then runs the cleanup logic, which deletes intermediate data from storage, flushes metrics and metadata to \textit{Metadata Storage}, and closes storage connections.
 
-Each branch of task handling runs concurrently in its own coroutine, following these sequential phases:
+Each branch of task handling runs concurrently in its own \textit{coroutine}, and follows these sequential phases when running without optimizations:
 \begin{enumerate}
-    \item \textbf{Gathering Dependencies}: Check which dependencies are missing (not downloaded yet) and download them from storage;
-    \item \textbf{Executing Task}: Execute the task. Tasks' code is stored in a serialized/pickled format (using cloudpickle\footnote{https://github.com/cloudpipe/cloudpickle}) and deserialized and executed by the workers. This enables the worker to remain generic, capable of receiving and executing arbitrary task code;
-    \item \textbf{Handling Output}: This phase is responsible for evaluating whether it's necessary to upload the task's output to storage and emitting a \texttt{TASK\_COMPLETED} event;
-    \item \textbf{Delegating Downstream Tasks}: For each downstream task, the worker performs an \texttt{atomic\_increment\_and\_get()} operation on a \textit{"Dependency Counter"} (inspired by WUKONG~\cite{wukong_2}) stored in \textit{Metadata Storage}, which tracks how many dependencies of a task have been satisfied. When the counter indicates that all dependencies for a downstream task have been satisfied, the worker emits a \texttt{TASK\_READY} event for that task. The worker then consults the execution plan to determine how to proceed for each downstream task unlocked: if the unlocked task is assigned to another worker, a \texttt{TASK\_READY} event is emitted; if the unlocked task is assigned to the same worker and has no remaining dependencies, the worker immediately continues the cycle by executing it.
+    \item \textbf{Gathering Dependencies}: Check which dependencies are missing (not downloaded yet) and download them from storage. Some dependencies might be present in the local representation of the DAG if \texttt{task-dup} or \texttt{pre-load} were applied, if the same worker executed some of the upstream tasks, or if the worker already downloaded large hardcoded data (explained previously in Section~\ref{s:client}) because previous tasks needed it;
+    \item \textbf{Executing Task}: After gathering all task dependencies (upstream task outputs and hardcoded data), it executes the task's code. Its function code is embedded within the workflow representation so it can be easily executed by the workers, similarly to WUKONG. This enables the worker to remain generic, capable of receiving and executing arbitrary task code (excluding async functions, since \textit{cloudpickle} can't serialize them). Tasks' code execute on a separate thread, to avoid slowing down or even blocking (e.g., if the task code calls \texttt{time.sleep()}) the main thread, where the other coroutines are running: both task branch execution and other internal coroutines (i.e., Redis pub/sub listener, and delayed \texttt{pre-warm} requests);
+    \item \textbf{Handling Output}: This phase is responsible for evaluating whether it's necessary to upload the task's output to storage and emitting a \texttt{TASK\_COMPLETED} event. A tasks' output is uploaded if there is at least one downstream task assigned to a different worker, or if it's the sink/last task of the workflow;
+    \item \textbf{Updating Dependency Counters}: For each downstream task, the worker performs an \textit{atomic increment and get} operation on a \textit{"Dependency Counter"} (inspired by WUKONG~\cite{wukong_2}) stored in \textit{Metadata Storage}, which tracks how many dependencies of a task have been satisfied. If the counter sees that the value returned is the same as the number of dependencies for a downstream task, the worker emits a \texttt{TASK\_READY} event for that task, signaling other workers or workers that aren't active yet that the task became ready to execute;
+    \item \textbf{Delegating Downstream Tasks}: After updating dependency counters, the worker knows which tasks became \textit{ready}. The worker then consults the execution plan to determine how to proceed for each of those tasks: for tasks assigned to the same worker and has no remaining unfulfilled dependencies, the worker will execute it (one \textit{coroutine} for each task); for tasks assigned to another worker \textbf{that is already active}, a \texttt{TASK\_READY} event is emitted; for tasks assigned to another worker \textbf{that is not active}, this worker launches the target worker, indicating the branches (\textit{immediate task identifiers}) it should execute. Because of the planner validation mentioned in Section ~\ref{ss:planning_algorithms}, it is possible for a worker to know, at any point in time, whether another worker is already active or not just by looking at the workflow representation and respective plan.
 \end{enumerate}
 
-To illustrate how workers handle downstream tasks, Figure~\ref{fig:choreographed_scheduling_example} presents an example of choreographed decentralized scheduling with three workers (A, B, and C) and seven tasks (T1-T7). In this example, once Task T1 completes on Worker B, the worker inspects the dependency counters for tasks T3, T4, and T5. It determines that T3 and T4 are ready to run, while T5 is still pending because Task T2 has not yet completed. Worker B then launches a new worker (C) to execute T3 and proceeds to execute T4 itself. Later, when T2 finishes on Worker A, all dependencies of T5 are satisfied, prompting Worker A to execute it directly.
+For exchanging events among workers, we use Redis's Pub/Sub~\footnote{\url{https://redis.io/glossary/pub-sub/}}. Both \textit{Intermediate Storage} and \textit{Metadata Storage} are also implemented in Redis for deployment simplicity. These events are \texttt{TASK\_READY} and \texttt{TASK\_COMPLETED}, and are implemented as Pub/Sub channels, where the channel name is a composition of \texttt{"notification-task-ready-"} and the unique Task ID. Since the same worker can subscribe to the same event multiple times, we assign unique subscription identifiers that are local to each worker. This allows the worker to unsubscribe from individual event subscriptions safely, without inadvertently removing other listeners that might depend on the same event. 
+
+We will now go over a practical example of how we use these events are used to coordinate decentralized scheduling. Figure~\ref{fig:choreographed_scheduling_example} presents an example of a workflow with three workers (A, B, and C) and seven tasks (T1-T7). Note that this workflow is not valid, as it has more than a single sink node (T6 and T7). 
+
+In this example, tasks complete in the following order: T1, T2, T3, T4, T5, T6, and T7. When T1 finishes, its worker will increment the dependency counter of T5 because it knows, by looking at the workflow representation, that T5 depends on other tasks from another worker. This storage operation returns "1", but T5 has 2 dependencies (T1 and T2) and as such, it isn't READY to execute. Then T1's worker sees T4 and since it's assigned to it, and it doesn't have any other dependencies, it schedules it for execution locally. Lastly T1 will see that T3 doesn't depend on any other tasks, meaning it is also ready for execution and, since it is assigned to another worker (Worker C), it sends a request to the FaaS gateway to launch Worker C, providing the branches it should execute.
+
+Then, when T3 finishes execution, its worker will see that T7 depends on external tasks, so it updates the dependency counter of T7 and remains idle waiting for the \texttt{TASK\_READY} event for T7. Later, T4 finishes, realizes that T7 is meant to execute on another worker, increments its dependency counter, realizes all dependencies are met, and emits a \texttt{TASK\_READY} event for T7, to which Worker C will react to by start executing T7. Lastly, T5 finishes execution, realizes that T6 depends on external tasks, increments its dependency counter, realizes all dependencies are met, and since it's assigned to itself, it schedules it for execution locally.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{Images/mine/choreographed_execution_example.png}
+    \includegraphics[width=\textwidth]{Images/mine/choreographed_execution_example.png}
     \caption{Choreographed Scheduling Example}
     \label{fig:choreographed_scheduling_example}
 \end{figure}
 
-A workflow is considered complete once the output of the final (sink) task is available in storage. The worker that uploads this final result is also responsible for cleaning up all intermediate results before shutting down. Meanwhile, after submitting the workflow, the user's machine subscribes to the \texttt{TASK\_COMPLETED} event for the sink task; upon receiving this notification, it retrieves the final result from \textit{Intermediate Storage}.
-
 By delegating downstream tasks to workers, our approach eliminates the need for a central scheduler, a common component in many existing FaaS-based workflow engines. This decentralization increases flexibility and scalability, as workers can dynamically invoke additional workers as needed, following a choreographed decentralized execution model.
+
+A workflow is considered complete once the output of the final (sink) task is available in storage. The worker that uploads this final result is also responsible for cleaning up all intermediate results before shutting down. This worker emits a \texttt{TASK\_COMPLETED} event for the sink task, triggering the client to retrieve the final result from \textit{Intermediate Storage}.
 
 Having described the design and implementation of the system, we now turn to its evaluation. The next section presents the experimental setup, results, and analysis used to assess the strengths and weaknesses of our approach.

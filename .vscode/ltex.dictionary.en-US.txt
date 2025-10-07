@@ -5,3 +5,5 @@ deprovisioning
 snapshotting
 makespan
 coroutines
+coroutine
+Redis
