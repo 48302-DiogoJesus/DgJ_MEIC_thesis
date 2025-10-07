@@ -201,6 +201,7 @@ This procedure ensures that the prediction leverages historical samples most sim
 This layer executes on the user side, and it receives the workflow representation and a workflow planning algorithm chosen and parametrized by the user (as shown in Listing \ref{lst:setup_and_launch_workflow_execution}). Its job is to execute the planning algorithm, providing it access to the predictions exposed by the Metadata Management layer (Section \ref{ss:metadata_management}).
 
 \subsection{Workflow Simulation}
+\label{ss:workflow_simulation}
 The availability of predicting task execution time, data transfer latency, function I/O, and worker startup cost, exposed through the Metadata Management layer (Section \ref{ss:metadata_management}), makes it possible to simulate the execution of an entire workflow instance.
 
 To this end, we implemented a dedicated simulation module. The module accepts a workflow representation in which tasks are annotated with worker IDs, resource configurations, and optimizations. For each task, the simulator estimates a number of metrics, such as whether the worker should be cold or warm, the input and output sizes, execution time, time to download dependencies, time to upload output, and both the earliest start time and the corresponding completion time, allowing it to derive the expected overall \textit{makespan} of the workflow as well as the critical path.
@@ -325,6 +326,10 @@ The function proceeds in four stages:
 
 After this, the \textbf{Non-Uniform} planner runs an additional algorithm, shown in Algorithm \ref{alg:resource_downgrading}, that attempts to downgrade resources of workers \textit{outside the critical path} as much as possible without introducing a new critical path, by iteratively simulating the effect of downgrading resources of workers \textit{outside the critical path} with different configurations.
 
+The algorithm begins by identifying workers whose tasks are outside the critical path (lines 3-9). Then, for each of those workers, we attempt to downgrade its resources by iterating through the list of use-provided resource configurations, simulating progressively weaker configurations (lines 11-41). 
+
+After a configuration is added to all tasks of the target worker (lines 17-21), the simulation layer (explained in Subsection~\ref{ss:workflow_simulation}) is used to simulate the critical path duration (line 23). If the downgrade does not increase the critical path time, it is accepted. This process repeats for each worker until no more configurations are available to experiment or the critical path time is exceeded, in which case it reverts to the previous \textit{acceptable} resource configuration (line 35).
+
 \begin{algorithm}
     \caption{Resource Downgrading Algorithm}
     \label{alg:resource_downgrading}
@@ -347,7 +352,7 @@ After this, the \textbf{Non-Uniform} planner runs an additional algorithm, shown
     \Statex
     \State \Comment{2) Attempt downgrade for each worker outside critical path}
     \ForAll{$wid \in workers\_outside$}
-        \State $last\_good_\_rc \gets \{n.id: n.config \mid n \in nodes\_outside\_cp \land n.worker\_id = wid\}$
+        \State $last\_acceptable_\_rc \gets \{n.id: n.config \mid n \in nodes\_outside\_cp \land n.worker\_id = wid\}$
         
         \Statex
         \State \Comment{Iterate through weaker configurations (skip strongest at index 0)}
@@ -368,17 +373,17 @@ After this, the \textbf{Non-Uniform} planner runs an additional algorithm, shown
             
             \Statex
             \If{$cp\_time = original\_cp\_time$}
-                \State \Comment{Downgrade acceptable, record as last good state}
+                \State \Comment{Downgrade acceptable, record as last acceptable state}
                 \ForAll{$n \in nodes\_outside\_cp$}
                     \If{$n.worker\_id = wid$}
-                        \State $last\_good\_rc[n.id] \gets n.config$
+                        \State $last\_acceptable\_rc[n.id] \gets n.config$
                     \EndIf
                 \EndFor
             \Else
                 \State \Comment{Downgrade increases critical path, revert and move on to the next worker}
                 \ForAll{$n \in nodes\_outside\_cp$}
                     \If{$n.worker\_id = wid$}
-                        \State $n.config \gets last\_good\_rc[n.id]$
+                        \State $n.config \gets last\_acceptable\_rc[n.id]$
                     \EndIf
                 \EndFor
                 \State \textbf{break} \Comment{move to next worker}
