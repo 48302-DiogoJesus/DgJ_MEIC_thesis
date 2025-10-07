@@ -31,7 +31,7 @@
 \contentsline {section}{\numberline {3.2}Architecture}{24}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Metadata Management}{26}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Static Workflow Planning}{27}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Workflow Simulation}{27}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.1}Workflow Simulation}{29}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Planning Algorithms}{29}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Optimizations}{33}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}Decentralized Scheduling}{35}{section.3.5}%
