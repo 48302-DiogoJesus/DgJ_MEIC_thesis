@@ -402,27 +402,28 @@ One of these validations ensures that \textit{all tasks assigned to the same wor
 
 \subsection{Optimizations}
 
-Aside from their \texttt{worker\_id} and resource assignments, planners can also apply different \textbf{optimizations} to further improve the workflow execution. The optimizations to be used are selected by the user, as shown in Listing \ref{lst:setup_and_launch_workflow_execution}. Similarly to planners, we provide three optimizations: \textbf{pre-warm}, \textbf{pre-load} and \textbf{task-dup}, but it is also possible to create new optimizations and define how workers should react to them. Now, we will describe the three base optimizations and how they are assigned to tasks:
+Aside from \texttt{worker\_id} and resource assignments, planners can also apply different \textbf{optimizations} to further improve the workflow execution. The optimizations a planner can use are selected by the user, as shown in Listing \ref{lst:setup_and_launch_workflow_execution}. We provide three optimizations: \textbf{pre-warm}, \textbf{pre-load} and \textbf{task-dup}, but it is also possible to create new optimizations and define how workers should react to them. Now, we will describe the three base optimizations and how they are assigned to tasks:
 
 \begin{enumerate}
-\item\textbf{pre-warm}(worker\_config) [Pre-warming Workers]:
+\item\textbf{pre-warm}(worker\_config, delay\_s) [Pre-warming Workers]:
 \begin{itemize}
   \item \textit{Interpretation}: Tasks/Nodes with this optimization should perform a special invocation to the FaaS gateway that forces it to launch a new worker with the specified resource configuration \texttt{worker\_config}. This can be used to warm up workers ahead of time and mask cold start latencies;
-  \item \textit{Assignment Logic}: For the nodes whose workers are expected to have cold starts, find the "optimal" node to perform the pre-warming by searching for nodes/tasks whose activity timing falls within a window (goal: avoid the pre-warmed worker from going cold before needed, while also not being warm too late). The optimization will be added to the "optimal" node, which will be responsible for doing the special "empty invocation" to the FaaS gateway.
+  \item \textit{Assignment Logic}: For workers expected to experience cold starts, we identify an \textbf{optimal worker} to perform \textit{pre-warming}. The goal is to increase the probability that a container will be ready for our \textit{target worker} when it is needed. The algorithm searches for tasks whose execution window (starting at earliest predicted start) align with a \textit{pre-warming interval}, balancing two objectives: the pre-warmed worker should neither go cold before it is required nor be warmed too late. Once identified, the pre-warming optimization is attached to this node, which performs a special “empty invocation” to the FaaS gateway to initialize the worker. The optimization includes a \textit{delay}, specifying the offset from the \textit{optimal worker's} start time to when the pre-warm request should be triggered. As soon as the optimal worker starts, it launches Python coroutines that wait for \texttt{delay\_s} seconds before executing the pre-warm request.
 \end{itemize}
 
 \item\textbf{pre-load} [Pre-Loading Dependencies]:
 \begin{itemize}
   \item \textit{Interpretation}: Workers assigned to tasks or nodes with this optimization should begin downloading the task's dependencies as early as possible. This prevents scenarios where a worker must fetch all dependencies at once. The optimization is effective only if the worker is active before executing the task, allowing it to download dependencies in parallel with other ongoing tasks. This is implemented by having the worker receive completion notifications from the \textit{Metadata Storage} for all tasks upstream of the optimized task;
-  \item \textit{Assignment Logic}: First, all tasks with more than a configurable threshold of dependencies/upstream tasks are assigned the optimization. Then, an iterative process is used to optimize the workflow along its critical path using this optimization. First, the algorithm identifies the critical path and assigns the optimization to eligible nodes on it. The critical path is then recalculated: if the total execution time increases, the optimization is removed; if the execution time decreases but the critical path changes, the algorithm restarts with the new path. This process repeats until no further improvements are possible, or the algorithm hits a fixed iteration limit.
+  \item \textit{Assignment Logic}: It is an iterative process of assigning the optimization to nodes that have more than a configurable number of upstream dependencies assigned to another worker. After assigning each \texttt{pre-load} optimization, the workflow simulation is re-run: if the predicted makespan increases, the optimization is removed; if the makespan decreases but the critical path changes, the algorithm restarts with the new path. This process repeats until no further improvements are possible, or the algorithm hits a fixed iteration limit.
 \end{itemize}
 
 \item\textbf{task-dup} [Task Duplication]:
 \begin{itemize}
-  \item \textit{Interpretation}: Tasks or nodes with this optimization can be executed by other workers if doing so helps unlock dependent tasks more quickly. The task could be "duplicated" by workers that depend on its output. It is a trade-off between performance and resource utilization, allowing potentially faster execution at the cost of using additional compute resources;
-  \item \textit{Assignment Logic}: Assigned to all nodes whose execution time and input size do not exceed predefined thresholds. Whether duplication actually occurs is decided at run-time. The optimization targets fast tasks with small inputs, as these are inexpensive to duplicate in terms of both downloading dependencies and execution. This way, even if duplication turns out to be unnecessary, the impact on performance and resource usage remains minimal.
+  \item \textit{Interpretation}: Tasks or nodes with this optimization can be executed by other workers if doing so helps unlock dependent tasks more quickly. The task could be "duplicated" by workers that depend on its output. It is a trade-off between performance and resource utilization, allowing potentially faster execution at the cost of using additional compute resources. It is similar to the \texttt{pre-load} optimization, but more aggressive/costly, as instead of downloading dependencies as soon as they're ready, \texttt{task-dup} can execute the tasks that produce those dependencies locally;
+  \item \textit{Assignment Logic}: This optimization is assigned to tasks that have at least one downstream dependency scheduled on a different worker. The actual duplication decision is made dynamically at run time, based on a time-saving prediction: a task will only be duplicated if executing it locally (including downloading dependencies of the duppable task) is expected to complete earlier than waiting for its original execution and data transfer. When a \textit{duppable} task (i.e., one marked with this optimization) begins execution on its assigned worker, it records a start timestamp in shared storage. Downstream tasks use this information to evaluate whether duplication would still save time or if it is faster to wait for the original execution to complete and download the output once ready on storage. When \textit{"dupping"} a task, its worker won't upload the output to storage nor emit \texttt{TASK\_READY} or \texttt{TASK\_COMPLETED} events. The output is only kept local to the worker to avoid the need for extra synchronization with the original worker assigned to the dupped task and other tasks dependent on it. Furthermore, emitting \texttt{TASK\_READY} or \texttt{TASK\_COMPLETED} events for duplicated tasks would also be misleading, as other workers might assume that the task's output is already available in storage, only to later discover that it is not.
 \end{itemize}
 \end{enumerate}
+
 Because planners may sometimes lack sufficient information to make optimal decisions about optimization assignments, it is important to not only allow the user to select optimizations at the workflow-level, but also allow them the flexibility to specify optimizations at the \textit{task-level}. An example of this feature is shown in Listing~\ref{lst:dag_lang_example}, where the user requests that \texttt{task\_b} attempt to use the \textit{pre-load} optimization.
 
 Once these optimizations are assigned, workflow planning is complete, and workers can begin execution. Because planning occurs on the user's machine (i.e., the machine launching the workflow), it is responsible for initiating the workflow by starting the initial workers. From that point onward, workers dynamically invoke additional workers as needed, following a choreographed, decentralized execution model.
@@ -440,10 +441,33 @@ It is also worth noting that the planner assigned \texttt{Task 6} to \texttt{Wor
 
 Regarding \textbf{optimizations}, we can see \texttt{Task 1} \texttt{pre-warming} \texttt{Worker 3}, by making  a dummy invocation to the FaaS gateway, in an attempt to make it available before \texttt{Task 3} needs it. The \texttt{pre-load} optimization is used in \texttt{Task 5}, where the planner decided that \texttt{Worker 2} should start downloading the external dependencies for \texttt{Task 6} (\texttt{Task 3} and \texttt{Task 4}) as soon as they are available. This \texttt{pre-loading} can begin as soon as \texttt{Task 6}'s dependencies are ready in storage, potentially overlapping with \texttt{Task 2}'s execution instead of \texttt{Task 5}, as shown in the figure.
 
+Optimizations are implemented by re-defining worker execution logic at certain stages. The methods that a planner can implement in order to override default worker execution logic are shown in Listing~\ref{lst:optimization_methods}: \texttt{wel\_on\_worker\_ready} method is called once the worker starts executing, and the provided optimizations use it to subscribe to \texttt{TASK\_READY} and \texttt{TASK\_COMPLETED} events for specific tasks, and schedule \textit{pre-warm} coroutines; \texttt{wel\_before\_task\_handling} is called before task's dependencies are downloaded; \texttt{wel\_override\_handle\_inputs} is called after discovering which tasks dependencies are not yet present locally and need fetching; \texttt{wel\_before\_task\_execution} is called after all dependencies have been gathered and right before task's execution. \texttt{wel\_override\_should\_upload\_output} is called before task's execution and its output determines whether the task output should be uploaded to storage (e.g., tasks that are \textit{"dupped"} don't upload their output, it remains local for other tasks of the same worker); \texttt{wel\_update\_dependency\_counters} is called after a task's output is handled and the default behavior updates the \textit{Dependency Counters} (explained in the next Section~\ref{s:decentralized_scheduling}) of the downstream tasks. The \texttt{task-dup}, for example, overrides this method to prevent updating dependency counters when duplicating tasks. This is necessary because duplicated tasks do not upload their outputs to storage; therefore, incrementing the dependency counters would incorrectly signal to other workers that dependent tasks are ready to execute, even though some of their required inputs are still missing; lastly, \texttt{wel\_override\_handle\_downstream} is called, and the objective of the default implementation is to decide which of the downstream tasks that became ready should this worker execute, and which tasks should be delegated to other workers.
+
+\begin{lstlisting}[language=Python, caption={Overridable worker execution logic stages}, label=lst:optimization_methods]
+    async def wel_on_worker_ready(planner, storage, dag, this_worker)
+    
+    async def wel_before_task_handling(planner, storage, dag, this_worker, current_task)
+
+    async def wel_override_handle_inputs(
+        planner, storage, dag, this_worker, current_task, upstream_tasks_without_cached_results, worker_resource_config, task_dependencies: dict
+    ) -> tuple[list, list[str], CoroutineType | None] | None
+    
+    async def wel_before_task_execution(planner, storage, dag, this_worker, current_task)
+    
+    async def wel_override_should_upload_output(planner, storage, dag, this_worker, current_task) -> bool | None
+    
+    async def wel_update_dependency_counters(planner, storage, dag, this_worker, current_task) -> list | None
+
+    async def wel_override_handle_downstream(planner, storage, dag, this_worker, current_task, downstream_tasks_ready) -> list | None
+\end{lstlisting}
+
+%TODO: say that they must implement `planning_assignment_logic' which is called by the planners for each optimization chosen by the user
+
 % #############################################################################
 
 \section{Decentralized Scheduling}
 \label{s:decentralized_scheduling}
+% todo: go through the default worker execution logic
 
 Since our target execution platform is FaaS, the worker logic is implemented as a FaaS handler. Due to the decentralized nature of our solution, workers will be responsible for performing both task execution and scheduling in a choreographed manner. 
 
