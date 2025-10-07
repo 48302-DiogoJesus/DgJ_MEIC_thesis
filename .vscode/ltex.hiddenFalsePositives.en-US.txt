@@ -1,0 +1,2 @@
+{"rule":"ONE_PLURAL","sentence":"^\\QFor simple linear dependencies (1→1 relationships), the downstream task inherits the same worker as its upstream task, allowing direct data reuse without intermediate storage (lines 9-12).\\E$"}
+{"rule":"ONE_PLURAL","sentence":"^\\QFor simple linear dependencies (1→1 relationships), the downstream task inherits the same worker as its upstream task, allowing direct data reuse without intermediate storage (lines 9-12).\\E$"}
