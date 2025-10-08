@@ -21,6 +21,12 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{wukong_2}
+B.~Carver, J.~Zhang, A.~Wang, A.~Anwar, P.~Wu, and Y.~Cheng, ``Wukong: A
+  scalable and locality-enhanced framework for serverless parallel computing,''
+  in \emph{Proceedings of the 11th ACM symposium on cloud computing}, 2020, pp.
+  1--15.
+
 \bibitem{aws_lambda}
 \BIBentryALTinterwordspacing
 Aws lambda. [Online]. Available: \url{https://aws.amazon.com/pt/lambda/}
@@ -153,12 +159,6 @@ M.~Copik, R.~B\"{o}hringer, A.~Calotoiu, and T.~Hoefler, ``Fmi: Fast and cheap
   Machinery, 2023, p. 373–385. [Online]. Available:
   \url{https://doi.org/10.1145/3577193.3593718}
 \BIBentrySTDinterwordspacing
-
-\bibitem{wukong_2}
-B.~Carver, J.~Zhang, A.~Wang, A.~Anwar, P.~Wu, and Y.~Cheng, ``Wukong: A
-  scalable and locality-enhanced framework for serverless parallel computing,''
-  in \emph{Proceedings of the 11th ACM symposium on cloud computing}, 2020, pp.
-  1--15.
 
 \bibitem{unum_decentralized_orchestrator}
 D.~H. Liu, A.~Levy, S.~Noghabi, and S.~Burckhardt, ``Doing more with less:

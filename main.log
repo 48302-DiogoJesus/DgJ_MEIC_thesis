@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  8 OCT 2025 18:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  8 OCT 2025 19:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1460,35 +1460,42 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 16
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [6]
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 26.
+<images/mine/serverless_arch.png, id=520, 885.90974pt x 585.387pt>
+File: images/mine/serverless_arch.png Graphic file (type png)
+<use images/mine/serverless_arch.png>
+Package pdftex.def Info: images/mine/serverless_arch.png  used on input line 24.
+(pdftex.def)             Requested size: 364.19664pt x 240.64441pt.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 35.
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
-)
-Underfull \vbox (badness 1867) has occurred while \output is active []
-
- [7] [8]
-Overfull \hbox (5.67078pt too wide) in paragraph at lines 64--65
-[]\T1/phv/m/n/10 Faa$T (Function-as-a-Service Trans-par-ent Auto-scaling Cache) [[][]11[][]] tack-les the same is-sue as Palette,
+) [7 <./images/mine/serverless_arch.png>] [8] [9]
+Overfull \hbox (5.67078pt too wide) in paragraph at lines 73--74
+[]\T1/phv/m/n/10 Faa$T (Function-as-a-Service Trans-par-ent Auto-scaling Cache) [[][]12[][]] tack-les the same is-sue as Palette,
  []
 
-[9] [10] [11]
-Underfull \vbox (badness 4981) has occurred while \output is active []
 
- [12] [13] [14] [15] [16] [17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]) [19] [20
+ [10] [11] [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] (Chapters/3-Architecture.tex
+ [13] [14] [15] [16] [17]
+<images/mine/wukong2.0.png, id=676, 463.7325pt x 472.76625pt>
+File: images/mine/wukong2.0.png Graphic file (type png)
+<use images/mine/wukong2.0.png>
+Package pdftex.def Info: images/mine/wukong2.0.png  used on input line 158.
+(pdftex.def)             Requested size: 227.62204pt x 232.06146pt.
+ [18 <./images/mine/wukong2.0.png>] [19]) [20] (Chapters/3-Architecture.tex
 Chapter 3.
 Package cleveref Info: loaded `english' language definitions on input line 9.
 [21
+
 
 ] (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 21.
-<Images/mine/dag_lang_example.png, id=696, 596.2275pt x 131.49126pt>
+<Images/mine/dag_lang_example.png, id=713, 596.2275pt x 131.49126pt>
 File: Images/mine/dag_lang_example.png Graphic file (type png)
 <use Images/mine/dag_lang_example.png>
 Package pdftex.def Info: Images/mine/dag_lang_example.png  used on input line 43.
@@ -1498,7 +1505,7 @@ Package pdftex.def Info: Images/mine/dag_lang_example.png  used on input line 43
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [22] [23 <./Images/mine/dag_lang_example.png>]
-<Images/mine/solution_distributedarchintegrated.png, id=745, 802.49812pt x 600.74437pt>
+<Images/mine/solution_distributedarchintegrated.png, id=762, 802.49812pt x 600.74437pt>
 File: Images/mine/solution_distributedarchintegrated.png Graphic file (type png)
 <use Images/mine/solution_distributedarchintegrated.png>
 Package pdftex.def Info: Images/mine/solution_distributedarchintegrated.png  used on input line 86.
@@ -1949,23 +1956,40 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) 
                    \relax 
 l.395     \EndFor
                   [31] [32] [33] [34] [35]
-<Images/mine/solution_workflowinstanceexample.png, id=898, 1017.8025pt x 548.80031pt>
+<Images/mine/solution_workflowinstanceexample.png, id=915, 1017.8025pt x 548.80031pt>
 File: Images/mine/solution_workflowinstanceexample.png Graphic file (type png)
 <use Images/mine/solution_workflowinstanceexample.png>
 Package pdftex.def Info: Images/mine/solution_workflowinstanceexample.png  used on input line 436.
 (pdftex.def)             Requested size: 455.24408pt x 245.46727pt.
  [36 <./Images/mine/solution_workflowinstanceexample.png>] [37] [38]
-Underfull \vbox (badness 5637) has occurred while \output is active []
+<images/mine/dag_image_text_analysis.png, id=956, 2474.24374pt x 926.46124pt>
+File: images/mine/dag_image_text_analysis.png Graphic file (type png)
+<use images/mine/dag_image_text_analysis.png>
+Package pdftex.def Info: images/mine/dag_image_text_analysis.png  used on input line 488.
+(pdftex.def)             Requested size: 478.00766pt x 178.98402pt.
 
- [39] [40] [41]
-<Images/mine/choreographed_execution_example.png, id=968, 1263.97218pt x 372.64218pt>
+Overfull \hbox (22.76358pt too wide) in paragraph at lines 488--489
+ [][] 
+ []
+
+[39 <./images/mine/dag_image_text_analysis.png>]
+<images/mine/realtime dashboard.png, id=965, 1750.54pt x 662.475pt>
+File: images/mine/realtime dashboard.png Graphic file (type png)
+<use images/mine/realtime dashboard.png>
+Package pdftex.def Info: images/mine/realtime dashboard.png  used on input line 505.
+(pdftex.def)             Requested size: 500.77126pt x 189.50482pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 505--506
+ [][] 
+ []
+
+[40 <./images/mine/realtime dashboard.png>] [41] [42]
+<Images/mine/choreographed_execution_example.png, id=995, 1263.97218pt x 372.64218pt>
 File: Images/mine/choreographed_execution_example.png Graphic file (type png)
 <use Images/mine/choreographed_execution_example.png>
-Package pdftex.def Info: Images/mine/choreographed_execution_example.png  used on input line 522.
+Package pdftex.def Info: Images/mine/choreographed_execution_example.png  used on input line 540.
 (pdftex.def)             Requested size: 455.24408pt x 134.21362pt.
- [42 <./Images/mine/choreographed_execution_example.png>]) (Chapters/4-Evaluation.tex [43] [44
-
-]
+ [43 <./Images/mine/choreographed_execution_example.png>]) (Chapters/4-Evaluation.tex [44]
 Chapter 4.
 Package cleveref Info: loaded `english' language definitions on input line 8.
 
@@ -1973,18 +1997,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-[45]
+[45
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 15--17
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--23
-
- []
-
 [46])
-Underfull \hbox (badness 10000) in paragraph at lines 42--188
+Underfull \hbox (badness 10000) in paragraph at lines 43--188
 
  []
 
@@ -2064,17 +2085,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 0983F29A6B30074F537F2CB1639E9B01;9452.
  ) 
 Here is how much of TeX's memory you used:
- 44827 strings out of 474486
- 873029 string characters out of 5743755
+ 44867 strings out of 474486
+ 874444 string characters out of 5743755
  2037542 words of memory out of 5000000
- 65929 multiletter control sequences out of 15000+600000
+ 65965 multiletter control sequences out of 15000+600000
  646812 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,12n,96p,2565b,1514s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0800.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (75 pages, 897156 bytes).
+Output written on main.pdf (75 pages, 1415957 bytes).
 PDF statistics:
- 1348 PDF objects out of 1440 (max. 8388607)
- 362 named destinations out of 1000 (max. 500000)
- 518 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1371 PDF objects out of 1440 (max. 8388607)
+ 366 named destinations out of 1000 (max. 500000)
+ 538 words of extra memory for PDF output out of 10000 (max. 10000000)
 

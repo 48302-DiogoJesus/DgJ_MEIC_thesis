@@ -479,7 +479,16 @@ After a plan is created and validated, the workflow representation is serialized
 
 In this section we will cover the role of the client application, which is where the workflow tasks are created and composed, as well as where the workflow execution is parametrized and initiated. 
 
-The \texttt{.compute(configuration)} method, which can be called on any \texttt{DAGTaskNode} reference, receives the configuration object, which contains information on how to connect to both \textit{Intermediate Storage} and \textit{Metadata Storage}, as well as the planner to be used, along with its configuration. The planner configuration includes the \textbf{SLA}, which will be used for the predictions made by the \texttt{Predictions API} (described in Section ~\ref{s:metadata_management}), the \textbf{resource configurations} that the planner is allowed to assign workers, and the list of \textbf{optimizations} that the planner should try to apply. Before the client calls \texttt{compute()}, it can first generate a visualization of the DAG structure. This capability allows users to inspect and verify the workflow's dependencies and overall structure in advance, before submitting it for execution.
+The \texttt{.compute(configuration)} method, which can be called on any \texttt{DAGTaskNode} reference, receives the configuration object, which contains information on how to connect to both \textit{Intermediate Storage} and \textit{Metadata Storage}, as well as the planner to be used, along with its configuration. The planner configuration includes the \textbf{SLA}, which will be used for the predictions made by the \texttt{Predictions API} (described in Section ~\ref{s:metadata_management}), the \textbf{resource configurations} that the planner is allowed to assign workers, and the list of \textbf{optimizations} that the planner should try to apply. 
+
+Before the client calls \texttt{compute()}, it can first generate a visualization of the DAG structure. Figure~\ref{fig:dag_image_text_analysis} shows an example of what this visualization looks like for a Text Analysis workflow. Nodes in the graph are connected to its dependencies and each node contains the task name and its hardcoded arguments. This feature allows users to inspect and verify the workflow's dependencies and overall structure in advance, before submitting it for execution.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.05\textwidth]{images/mine/dag_image_text_analysis.png}
+    \caption{DAG Visualization Feature for a Text Analysis Workflow}
+    \label{fig:dag_image_text_analysis}
+\end{figure}
 
 When the client calls \texttt{compute()}, there are a couple of steps before the initial serverless workers are invoked. First, since \texttt{compute} is called on the sink node of the workflow, we discover the entire workflow by backtracking until we find the root nodes. Then, some basic validation happens to check if there are no other nodes without downstream nodes, ensuring there's only one sink node. At this stage, a few optimizations are made in order to reduce the size of the workflow representation. This is important because if the workflow representation is below a threshold we can send it in the invocation to FaaS workers without having to rely on storage, saving on both performance and storage costs. 
 
@@ -489,7 +498,16 @@ Before uploading hardcoded data, the client first loads all relevant metrics req
 
 After a plan is created and embedded in the DAG representation, the client invokes the workers assigned to the root nodes. It provides each worker with the corresponding task identifiers, enabling them to begin executing their respective branches of the workflow. Afterward, the client uses Pub/Sub to subscribe to the \texttt{TASK\_COMPLETED} event associated with the workflow's final task. Once this event is received, the client retrieves the result from \textit{Intermediate Storage} and returns it to the user. From the user's perspective, invoking \texttt{compute()} behaves like calling a regular function, returning the expected result, while the actual execution is transparently handled by serverless workers.
 
-During workflow execution, the client can monitor the workflow's progress through a simple web dashboard implemented with Streamlit~\footnote{\url{https://streamlit.io/}}. The dashboard visualizes the workflow graph, indicating which tasks have been completed and which remain pending. In the following section, we describe in detail how workers operate, including how they follow the plan, handle task dependencies, and coordinate through event-based communication to achieve decentralized workflow execution.
+During workflow execution, the client can monitor the workflow's progress through a simple web dashboard, showcased in Figure~\ref{fig:workflow_realtime_dashboard}, implemented with Streamlit~\footnote{\url{https://streamlit.io/}}. This dashboard can be used to visualize the workflow graph in real-time, as it indicates which tasks have been completed (in green) and which remain pending (in gray).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.1\textwidth]{images/mine/realtime dashboard.png}
+    \caption{Workflow Real-time Dashboard}
+    \label{fig:workflow_realtime_dashboard}
+\end{figure}
+
+In the following section, we describe in detail how workers operate, including how they follow the plan, handle task dependencies, and coordinate through event-based communication to achieve decentralized workflow execution.
 
 \section{Decentralized Workers}
 \label{s:decentralized_workers}

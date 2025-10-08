@@ -3,12 +3,16 @@
 \contentsline {xchapter}{Introduction}{1}{chapter.1}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Related Work}{5}{chapter.2}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Serverless Computing}}{7}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces WUKONG Architecture (source: WUKONG paper~\cite {wukong_2})}}{18}{figure.caption.11}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Architecture}{21}{chapter.3}%
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Simple DAG example}}{23}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Solution Architecture}}{25}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Planned Workflow Execution Example}}{36}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Choreographed Scheduling Example}}{42}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Simple DAG example}}{23}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Solution Architecture}}{25}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Planned Workflow Execution Example}}{36}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces DAG Visualization Feature for a Text Analysis Workflow}}{39}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Workflow Real-time Dashboard}}{40}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Choreographed Scheduling Example}}{43}{figure.caption.18}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Evaluation}{45}{chapter.4}%
 \addvspace {10\p@ }
