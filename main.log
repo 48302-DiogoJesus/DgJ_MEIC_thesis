@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  8 OCT 2025 18:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  8 OCT 2025 18:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1741,7 +1741,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) 
 l.305             \State
                          \Call{AssignWorker}{$cluster$, $worker\_id$}
 
-LaTeX Warning: Float too large for page by 96.10777pt on input line 328.
+LaTeX Warning: Float too large for page by 96.16777pt on input line 328.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
@@ -1958,11 +1958,11 @@ Package pdftex.def Info: Images/mine/solution_workflowinstanceexample.png  used 
 Underfull \vbox (badness 5637) has occurred while \output is active []
 
  [39] [40] [41]
-<Images/mine/choreographed_execution_example.png, id=968, 1123.19624pt x 460.72125pt>
+<Images/mine/choreographed_execution_example.png, id=968, 1263.97218pt x 372.64218pt>
 File: Images/mine/choreographed_execution_example.png Graphic file (type png)
 <use Images/mine/choreographed_execution_example.png>
-Package pdftex.def Info: Images/mine/choreographed_execution_example.png  used on input line 520.
-(pdftex.def)             Requested size: 455.24408pt x 186.73167pt.
+Package pdftex.def Info: Images/mine/choreographed_execution_example.png  used on input line 522.
+(pdftex.def)             Requested size: 455.24408pt x 134.21362pt.
  [42 <./Images/mine/choreographed_execution_example.png>]) (Chapters/4-Evaluation.tex [43] [44
 
 ]
@@ -1974,11 +1974,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
  []
 
 [45]
-Overfull \hbox (5.42941pt too wide) in paragraph at lines 19--23
-\T1/phv/m/n/10 TODO: VM, cpus, mem-ory, docker and python in-stalled TODO: client, docker faas gate-way, and databases
+Underfull \hbox (badness 10000) in paragraph at lines 15--17
+
  []
 
-) [46] [47] [48
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
+
+ []
+
+[46])
+Underfull \hbox (badness 10000) in paragraph at lines 42--188
+
+ []
+
+[47] [48
 
 ] (Chapters/5-Conclusion.tex
 Chapter 5.
@@ -2062,7 +2072,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  90i,12n,96p,2565b,1514s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0800.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (75 pages, 892657 bytes).
+Output written on main.pdf (75 pages, 897041 bytes).
 PDF statistics:
  1348 PDF objects out of 1440 (max. 8388607)
  362 named destinations out of 1000 (max. 500000)
