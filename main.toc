@@ -38,11 +38,20 @@
 \contentsline {section}{\numberline {3.6}Decentralized Workers}{40}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Evaluation}{45}{chapter.4}%
 \etoc@startlocaltoc {5}
-\contentsline {section}{\numberline {4.1}Maecenas vitae nulla consequat}{45}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Conclusion}{47}{chapter.5}%
+\contentsline {section}{\numberline {4.1}Emulating FaaS environment}{45}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Research Questions}{46}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Experimental Setup}{46}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Results}{46}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Predictions Accuracy}{46}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}SLA Fulfillment}{46}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Planners}{46}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Optimizations}{46}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Resource Usage}{46}{subsection.4.4.5}%
+\contentsline {section}{\numberline {4.5}Discussion}{47}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Conclusion}{49}{chapter.5}%
 \etoc@startlocaltoc {6}
-\contentsline {section}{\numberline {5.1}Conclusions}{47}{section.5.1}%
-\contentsline {section}{\numberline {5.2}System Limitations and Future Work}{47}{section.5.2}%
-\contentsline {chapter}{Bibliography}{47}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Code of Project}{53}{appendix.A}%
-\contentsline {chapter}{\numberline {B}A Large Table}{55}{appendix.B}%
+\contentsline {section}{\numberline {5.1}Conclusions}{49}{section.5.1}%
+\contentsline {section}{\numberline {5.2}System Limitations and Future Work}{49}{section.5.2}%
+\contentsline {chapter}{Bibliography}{49}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Code of Project}{55}{appendix.A}%
+\contentsline {chapter}{\numberline {B}A Large Table}{57}{appendix.B}%
