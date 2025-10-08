@@ -30,19 +30,19 @@
 \contentsline {section}{\numberline {3.1}Workflow Definition Language}{22}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Architecture}{24}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Metadata Management}{26}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Static Workflow Planning}{27}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Static Workflow Planning}{29}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Workflow Simulation}{29}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Planning Algorithms}{29}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Optimizations}{34}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}Client}{38}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Decentralized Workers}{39}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Evaluation}{43}{chapter.4}%
+\contentsline {section}{\numberline {3.6}Decentralized Workers}{40}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Evaluation}{45}{chapter.4}%
 \etoc@startlocaltoc {5}
-\contentsline {section}{\numberline {4.1}Maecenas vitae nulla consequat}{43}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Conclusion}{45}{chapter.5}%
+\contentsline {section}{\numberline {4.1}Maecenas vitae nulla consequat}{45}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Conclusion}{47}{chapter.5}%
 \etoc@startlocaltoc {6}
-\contentsline {section}{\numberline {5.1}Conclusions}{45}{section.5.1}%
-\contentsline {section}{\numberline {5.2}System Limitations and Future Work}{45}{section.5.2}%
-\contentsline {chapter}{Bibliography}{45}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Code of Project}{51}{appendix.A}%
-\contentsline {chapter}{\numberline {B}A Large Table}{53}{appendix.B}%
+\contentsline {section}{\numberline {5.1}Conclusions}{47}{section.5.1}%
+\contentsline {section}{\numberline {5.2}System Limitations and Future Work}{47}{section.5.2}%
+\contentsline {chapter}{Bibliography}{47}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Code of Project}{53}{appendix.A}%
+\contentsline {chapter}{\numberline {B}A Large Table}{55}{appendix.B}%

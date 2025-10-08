@@ -104,7 +104,7 @@ There are 3 distinct computational entities involved in this system:
 
 % #############################################################################
 \section{Metadata Management}
-\label{ss:metadata_management}
+\label{s:metadata_management}
 The goal of the \textbf{Metadata Management} layer is to provide the most accurate task-wise predictions to help the planner algorithm chosen by the user to make better decisions. To achieve this, while the workflow is running we collect metrics about each task's execution. These metrics are stored in \textit{Metadata Storage}: task execution time, data transfer size and time, task input and output sizes, and worker startup time. 
 
 Storing these metrics powers a prediction API, shown in Listing~\ref{lst:task_predictions_api}. To improve accuracy, metrics are kept separate for each workflow. As a result, even if two workflows use the same function or task code, their metrics are stored independently. This design choice reflects our assumption that different workflows may follow different execution patterns. To avoid introducing runtime overhead, metrics are only uploaded before the worker shuts down.
@@ -131,6 +131,8 @@ Next, the algorithm progressively searches for samples whose associated input si
 Once enough samples are found within a given threshold (line 21), they are sorted by proximity to the reference value (lines 23-24). The algorithm then selects up to a maximum number of samples (\texttt{max\_samples}), prioritizing those closest to the reference and ensuring balance between samples above and below the target (lines 23-30). If the maximum capacity is not reached, the remaining slots are filled with the next-closest available samples (lines 32-34).
 
 If even after considering all thresholds (up to 100\% of the established baseline) no sufficient number of samples is found, the algorithm falls back to selecting the globally closest samples (lines 39-42). This guarantees that a prediction can always be made, even when the historical data is sparse, though it may not be as accurate.
+
+In addition to using this algorithm to select the most relevant samples for each prediction, we restrict the samples to the same workflow and planner. For instance, data collected while executing the \textit{Text Analysis} workflow with the \textit{Uniform} planner will not be used to predict the execution time of the same workflow under the \textit{Non-Uniform} planner. By limiting the sample set in this way, we ensure that the selected samples are directly comparable to the target scenario, reducing variability introduced by differing workflow behaviors or planner strategies.
 
 This procedure ensures that the prediction leverages historical samples most similar to the target input, which tends to be very accurate when a workflow is executed multiple times with the same or similar workloads, allowing the estimates to become accurate without requiring many previous workflow instances.
 
@@ -198,11 +200,11 @@ This procedure ensures that the prediction leverages historical samples most sim
 
 % #############################################################################
 \section{Static Workflow Planning}
-This layer executes on the user side, and it receives the workflow representation and a workflow planning algorithm chosen and parametrized by the user (as shown in Listing \ref{lst:setup_and_launch_workflow_execution}). Its job is to execute the planning algorithm, providing it access to the predictions exposed by the Metadata Management layer (Section \ref{ss:metadata_management}).
+This layer executes on the user side, and it receives the workflow representation and a workflow planning algorithm chosen and parametrized by the user (as shown in Listing \ref{lst:setup_and_launch_workflow_execution}). Its job is to execute the planning algorithm, providing it access to the predictions exposed by the Metadata Management layer (Section \ref{s:metadata_management}).
 
 \subsection{Workflow Simulation}
 \label{ss:workflow_simulation}
-The availability of predicting task execution time, data transfer latency, function I/O, and worker startup cost, exposed through the Metadata Management layer (Section \ref{ss:metadata_management}), makes it possible to simulate the execution of an entire workflow instance.
+The availability of predicting task execution time, data transfer latency, function I/O, and worker startup cost, exposed through the Metadata Management layer (Section \ref{s:metadata_management}), makes it possible to simulate the execution of an entire workflow instance.
 
 To this end, we implemented a dedicated simulation module. The module accepts a workflow representation in which tasks are annotated with worker IDs, resource configurations, and optimizations. For each task, the simulator estimates a number of metrics, such as whether the worker should be cold or warm, the input and output sizes, execution time, time to download dependencies, time to upload output, and both the earliest start time and the corresponding completion time, allowing it to derive the expected overall \textit{makespan} of the workflow as well as the critical path.
 
@@ -468,21 +470,26 @@ Optimizations are implemented by re-defining worker execution logic at certain s
     ) -> list | None
 \end{lstlisting}
 
-After a plan is created and validated, the workflow representation is serialized using \textit{cloudpickle} (as mentioned before) and uploaded to storage. The plan is embedded directly within this representation, allowing each worker to identify both the tasks it is responsible for executing and the ones it must delegate to other workers. In the following section, we describe in detail how workers operate, including how they follow the plan, handle task dependencies, and coordinate through event-based communication to achieve decentralized workflow execution.
+After a plan is created and validated, the workflow representation is serialized using \textit{cloudpickle} (as mentioned before) and uploaded to storage. The plan is embedded directly within this representation, allowing each worker to identify both the tasks it is responsible for executing and the ones it must delegate to other workers. Now, we will explain the process of submitting the workflow and initiating its execution.
 
 % #############################################################################
 
 \section{Client}
 \label{s:client}
-TODO: otimizar DAG structure para ficar mais pequeno\\
-TODO: hardcoded inputs: grandes e pequenos\\
-TODO: executar planner\\
-TODO: esperar pela notificação que está completo + fazer download do resultado\\
-TODO: gerar uma imagem do workflow sem o executar (semelhante ao Dask e WUKONG)\\
-TODO: gerar uma imagem do plano também\\
-TODO: submeter o worklfow (compute())\\
-TODO: um dashboard com uma visualização simples do DAG, onde dá para perceber a progressão do workflow\\
-TODO: transição p/ workers section\\
+
+In this section we will cover the role of the client application, which is where the workflow tasks are created and composed, as well as where the workflow execution is parametrized and initiated. 
+
+The \texttt{.compute(configuration)} method, which can be called on any \texttt{DAGTaskNode} reference, receives the configuration object, which contains information on how to connect to both \textit{Intermediate Storage} and \textit{Metadata Storage}, as well as the planner to be used, along with its configuration. The planner configuration includes the \textbf{SLA}, which will be used for the predictions made by the \texttt{Predictions API} (described in Section ~\ref{s:metadata_management}), the \textbf{resource configurations} that the planner is allowed to assign workers, and the list of \textbf{optimizations} that the planner should try to apply. Before the client calls \texttt{compute()}, it can first generate a visualization of the DAG structure. This capability allows users to inspect and verify the workflow's dependencies and overall structure in advance, before submitting it for execution. 
+
+When the client calls \texttt{compute()}, there are a couple of steps before the initial serverless workers are invoked. First, since \texttt{compute} is called on the sink node of the workflow, we discover the entire workflow by backtracking until we find the root nodes. Then, some basic validation happens to check if there are no other nodes without downstream nodes, ensuring there's only one sink node. At this stage, a few optimizations are made in order to reduce the size of the workflow representation. This is important because if the workflow representation is below a threshold we can send it in the invocation to FaaS workers without having to rely on storage, saving on both performance and storage costs. 
+
+One of these optimizations involves special handling of large hardcoded inputs. When a task receives a large input that is already known before workflow execution begins, this input would normally be embedded directly within the \texttt{DAGTaskNode} representation. However, because workers exchange this representation among themselves, embedding large inputs would lead to unnecessary data transfers and inefficiency. To address this, we detect all large hardcoded input objects and replace them with unique references. During execution, workers can use these references to retrieve the corresponding inputs from storage only when needed. The client is responsible for uploading these large input objects to \textit{Intermediate Storage} prior to workflow execution.
+
+Before uploading hardcoded data, the client first loads all relevant metrics required for workflow prediction and then invokes the selected planner algorithm. This process updates the workflow representation with worker assignment information and optimization details. As mentioned earlier, predictions are based on samples collected from the same type of workflow and planner to improve their accuracy. To determine which samples correspond to which workflow, we differentiate workflows by appending a \textit{hash} of their graph composition, defined by the task names and their dependency relationships, to the workflow's unique identifier. Workflow identifiers sharing the same hash are thus considered to represent the same workflow type. After a plan is created, an image of the predicted metrics, worker assignments and optimizations is generated and stored on the client machine, which can help the user to better understand the plan created by the planner.
+
+After a plan is created and embedded in the DAG representation, the client invokes the workers assigned to the root nodes. It provides each worker with the corresponding task identifiers, enabling them to begin executing their respective branches of the workflow. Afterward, the client uses Pub/Sub to subscribe to the \texttt{TASK\_COMPLETED} event associated with the workflow's final task. Once this event is received, the client retrieves the result from \textit{Intermediate Storage} and returns it to the user. From the user's perspective, invoking \texttt{compute()} behaves like calling a regular function, returning the expected result, while the actual execution is transparently handled by serverless workers.
+
+During workflow execution, the client can monitor the workflow's progress through a simple web dashboard implemented with Streamlit~\footnote{\url{https://streamlit.io/}}. The dashboard visualizes the workflow graph, indicating which tasks have been completed and which remain pending. In the following section, we describe in detail how workers operate, including how they follow the plan, handle task dependencies, and coordinate through event-based communication to achieve decentralized workflow execution.
 
 \section{Decentralized Workers}
 \label{s:decentralized_workers}
