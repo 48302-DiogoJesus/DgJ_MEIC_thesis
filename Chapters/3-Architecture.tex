@@ -470,7 +470,16 @@ Optimizations are implemented by re-defining worker execution logic at certain s
     ) -> list | None
 \end{lstlisting}
 
-After a plan is created and validated, the workflow representation is serialized using \textit{cloudpickle} (as mentioned before) and uploaded to storage. The plan is embedded directly within this representation, allowing each worker to identify both the tasks it is responsible for executing and the ones it must delegate to other workers. Now, we will explain the process of submitting the workflow and initiating its execution.
+After a plan is created and validated, the workflow representation is serialized using \textit{cloudpickle} (as mentioned before) and uploaded to storage. The plan is embedded directly within this representation, allowing each worker to identify both the tasks it is responsible for executing and the ones it must delegate to other workers. When a plan is created, visual plan data is stored on the client machine, as illustrated in Figure~\ref{fig:workflow_plan_viz}, to help the user interpret scheduling decisions and identify potential inefficiencies. In this example, the visualization highlights the critical path through tasks outlined in bold, along with worker assignments, resource configurations (color-coded), applied optimizations, and predictive metrics such as earliest start time, estimated completion time, and I/O characteristics. The visualization also indicates each worker's state (warm or cold), providing an intuitive overview of the planned execution, which was very useful while developing and testing the system.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.05\textwidth]{images/mine/text_analysis_NonUniformPlanner-opt.png}
+    \caption{Real Workflow Plan Visualization}
+    \label{fig:workflow_plan_viz}
+\end{figure}
+
+Now, we will explain the process of submitting the workflow and initiating its execution. 
 
 % #############################################################################
 
