@@ -9,7 +9,30 @@
 
 % #############################################################################
 \section{Emulating FaaS environment}
-TODO: mention docker containers and the gateway (http server), its capabilities (prewarm), warm time, max concurrent containers. internal container handling\\
+
+To develop, test and evaluate the proposed solution under realistic and controlled execution conditions, a simple and lightweight Function-as-a-Service (FaaS) platform was developed in ~320 LOC of Python. This setup reproduces the fundamental behavior of a typical serverless platform, such as AWS Lambda~\cite{aws_lambda} or OpenFaaS~\cite{openfaas}, while remaining simple and fully controllable for testing purposes. This emulation consists of two main components: a \textbf{gateway service} implemented as an HTTP server that receives invocations and manages containers, dynamically provisioning and reusing Docker containers with the requested resource configuration to execute arbitrary code, and the \textbf{worker code} itself, which is packaged into a docker image.
+
+The Dockerfile of the worker is packaged with the worker logic code, and it simply remains alive forever, running a simple bash script that prevents the container from exiting. The gateway is then able to launch containers with this image and invoke the worker code at any time to execute the desired tasks. Both the client and the workers can make requests to a \texttt{/job} endpoint to launch new workers, as shown in Listing~\ref{lst:gateway_invocation_example}, where the caller specifies the required resource configuration for the workers' container. If there are no idle containers with the desired resource configuration and the maximum amount of concurrent containers has been reached, this request will wait until there are conditions to run the worker code.
+
+\begin{lstlisting}[language=Python, basicstyle=\ttfamily\footnotesize, columns=fullflexible, breaklines=true, caption=Example of Delegating Tasks to Gateway, label=lst:gateway_invocation_example]
+async with await session.post(
+    gateway_address + "/job",
+    data=json.dumps({
+        "resource_configuration": ...,
+        "dag_id": ...,
+        "fulldag": optimized_dag if optimized_dag and fulldag_size_below_threshold else None,
+        "task_ids": [...],
+        "relevant_cached_results": {...},
+        "config": ...,
+    })
+)
+\end{lstlisting}
+
+To provide isolation and avoid resource contention, each Docker container can only run one instance of the worker code at a time. This is enforced using a file-based locking mechanism that prevents concurrent execution within the same container, ensuring exclusive access to container resources and maintaining predictable performance characteristics. However, since the Gateway keeps track of which containers exist, which are being used, and which are idle, it shouldn't invoke worker commands on a container that is already executing another command.
+
+The Gateway limits the maximum worker concurrency to 32, meaning there can only be 32 active workers at a time. This is because this FaaS platform emulator is designed to run on a single host. The Gateway also has a background job that removes containers that are idle for more than a configurable amount of time (we used 7 seconds in our experiments because it allowed to test \textit{pre-warming} without making workflows too long). A container is considered idle once no worker code is running on it.
+
+For simplicity, the Gateway also contains an HTTP endpoint for \textit{pre-warming} (\texttt{/warmup}), which receives a worker configuration list and creates one container for each resource configuration specified without executing any commands on it, leaving them available for future \texttt{/job} invocations to use. Similarly to other containers, these containers are also subject to the idle timeout and will be removed if they are idle for too long.
 
 \section{Research Questions}
 TODO: What do we want to prove/show/evaluate\\
@@ -19,7 +42,7 @@ TODO: what metrics allow that\\
 TODO: VM, cpus, memory, docker and python installed\\
 TODO: client, docker faas gateway, and databases running on it\\
 TODO: storage interactions have an artifical delay increment of 20ms, considering 10ms each direction (https://www.cloudping.co/ shows around 30 ms RTT across different regions and under 10ms RTT across same region)\\
-TODO: what types of metrics were collected\\
+TODO: what types of metrics were collected, worker warm/cold detection\\
 TODO: workflows to test (with images), slas, planners (including optimizations), how many instances each
 
 \section{Results}
