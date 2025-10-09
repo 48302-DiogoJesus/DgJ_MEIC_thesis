@@ -9,10 +9,10 @@
 
 % #############################################################################
 \section{Emulating FaaS environment}
+\label{s:faas_emulator}
+To develop, test and evaluate the proposed solution under realistic and controlled execution conditions, a simple and lightweight Function-as-a-Service (FaaS) platform was developed in \textasciitilde320 LOC of Python. This setup reproduces the fundamental behavior of a typical serverless platform, such as those mentioned in Chapter~\ref{chap:rw}, while remaining simple and fully controllable for testing purposes. This emulation consists of two main components: a \textbf{gateway service} implemented as an HTTP server that receives invocations and manages containers, dynamically provisioning and reusing Docker~\footnote{\url{https://www.docker.com/}} containers with the requested resource configuration to execute arbitrary code, and the \textbf{worker code} itself, which is packaged into a docker image.
 
-To develop, test and evaluate the proposed solution under realistic and controlled execution conditions, a simple and lightweight Function-as-a-Service (FaaS) platform was developed in ~320 LOC of Python. This setup reproduces the fundamental behavior of a typical serverless platform, such as AWS Lambda~\cite{aws_lambda} or OpenFaaS~\cite{openfaas}, while remaining simple and fully controllable for testing purposes. This emulation consists of two main components: a \textbf{gateway service} implemented as an HTTP server that receives invocations and manages containers, dynamically provisioning and reusing Docker containers with the requested resource configuration to execute arbitrary code, and the \textbf{worker code} itself, which is packaged into a docker image.
-
-The Dockerfile of the worker is packaged with the worker logic code, and it simply remains alive forever, running a simple bash script that prevents the container from exiting. The gateway is then able to launch containers with this image and invoke the worker code at any time to execute the desired tasks. Both the client and the workers can make requests to a \texttt{/job} endpoint to launch new workers, as shown in Listing~\ref{lst:gateway_invocation_example}, where the caller specifies the required resource configuration for the workers' container. If there are no idle containers with the desired resource configuration and the maximum amount of concurrent containers has been reached, this request will wait until there are conditions to run the worker code.
+The Dockerfile of the worker is packaged with the worker logic code, and it simply remains alive forever, running a simple bash script that prevents the container from exiting. The gateway is then able to launch containers with this image and invoke the worker code at any time to execute the desired tasks. Both the client and the workers can make requests to a \texttt{/job} endpoint to launch new workers, as shown in Listing~\ref{lst:gateway_invocation_example}, where the caller specifies the required resource configuration for the workers' container. If there are no idle containers with the desired resource configuration and the maximum amount of concurrent containers has been reached, this request will wait until there are conditions to run the worker code. To enforce resource configurations, we use Docker's built-in support for CPU and memory limits~\footnote{\url{https://docs.docker.com/engine/containers/resource_constraints/}}.
 
 \begin{lstlisting}[language=Python, basicstyle=\ttfamily\footnotesize, columns=fullflexible, breaklines=true, caption=Example of Delegating Tasks to Gateway, label=lst:gateway_invocation_example]
 async with await session.post(
@@ -34,16 +34,73 @@ The Gateway limits the maximum worker concurrency to 32, meaning there can only 
 
 For simplicity, the Gateway also contains an HTTP endpoint for \textit{pre-warming} (\texttt{/warmup}), which receives a worker configuration list and creates one container for each resource configuration specified without executing any commands on it, leaving them available for future \texttt{/job} invocations to use. Similarly to other containers, these containers are also subject to the idle timeout and will be removed if they are idle for too long.
 
+To improve observability and allow for easier debugging, the worker standard output and standard error are streamed to the Gateway process, where they are captured and logged in real time. This design enables detailed inspection of function execution without accessing the containers directly.
+
 \section{Research Questions}
-TODO: What do we want to prove/show/evaluate\\
-TODO: what metrics allow that\\
+
+With the evaluation of work, we aim to address the following research questions:
+
+\begin{itemize}
+\item \textbf{RQ1:} To what extent can historical metrics from previous workflow executions improve the accuracy of predicting serverless workflow behavior, specifically regarding execution time, container startup latency, data transfer performance, and function I/O characteristics?
+
+\item \textbf{RQ2:} What are the main advantages and limitations of applying prediction-based scheduling strategies in serverless workflow environments, compared to traditional reactive or static scheduling approaches? Can the proposed system achieve a lower \textit{makespan} and reduced overall resource consumption compared to WUKONG~\cite{wukong_2}, a decentralized serverless workflow engine that employs its own set of data-locality optimizations?
+
+\item \textbf{RQ3:} How effective are the proposed optimizations in practice? In particular, how much does \texttt{pre-load} contribute to hiding latency and enabling earlier task execution, and how beneficial is \texttt{pre-warming} in reducing cold-start delays and improving overall workflow performance?
+
+\item \textbf{RQ4:} How much performance improvement can be achieved by adopting a non-uniform worker resource allocation strategy, compared to a uniform scheduling approach that assigns identical resource configurations to all tasks? And what is the trade-off between the achieved performance gains and the additional resource consumption introduced by this adaptive allocation strategy?
+\end{itemize}
+
+To help answer these questions we had to collect a wide range of metrics:
+
+\begin{itemize}
+    \item For each \textbf{task}:
+    \begin{itemize}
+        \item Timestamp of when it started being handled (before executing its tasks);
+        \item Time to download all dependencies;
+        \item Size and time to download each of the dependencies;
+        \item Task execution time;
+        \item Size and time to upload output;
+        \item Optimization-specific metrics of all optimizations applied to a given task on a particular workflow instance.
+    \end{itemize}
+    \item For each \textbf{workflow instance}:
+    \begin{itemize}
+        \item Entire workflow plan, with worker resource and ID assignments, as well as optimizations;
+        \item Time at which user submitted the workflow;
+        \item Monitor Docker containers during the workflow, recording total run-time and memory allocation in GB-seconds, similar to AWS Lambda's cost calculation, which is based on memory (GB) * run-time (seconds).
+    \end{itemize}
+    \item For each \textbf{worker}:
+    \begin{itemize}
+        \item Resource Configuration (CPUs and Memory);
+        \item Time at which a worker invocation was made to the FaaS Gateway and time at which the worker script started executing (used to calculate worker startup latency);
+        \item Worker state, indicating whether the worker script was executed in a \textit{cold} or \textit{warm} environment. A cold start occurs when a new container must be created to run the worker, while a warm start reuses an existing, previously initialized container. The system determines this state using a file-based locking mechanism: during startup, the worker attempts an atomic \textit{“create-if-not-exists”} operation on the file \texttt{/tmp/worker\_startup.atomic}. If the file already exists, it implies that the container has been used before, and the current execution is therefore a warm start; otherwise, it is a cold start. When a container is \textit{pre-warmed}, this file is proactively created during initialization, even though the worker script itself is not yet executed.
+    \end{itemize}
+\end{itemize}
+
+In the following section, we describe the experimental setup used to evaluate the proposed system.
 
 \section{Experimental Setup}
-TODO: VM, cpus, memory, docker and python installed\\
-TODO: client, docker faas gateway, and databases running on it\\
-TODO: storage interactions have an artifical delay increment of 20ms, considering 10ms each direction (https://www.cloudping.co/ shows around 30 ms RTT across different regions and under 10ms RTT across same region)\\
-TODO: what types of metrics were collected, worker warm/cold detection\\
-TODO: workflows to test (with images), slas, planners (including optimizations), how many instances each
+
+To evaluate our proposed solution, we deployed the FaaS emulator described in Section~\ref{s:faas_emulator} on an AMD EPYC 7282 16-Core Processor with 125GiB of RAM, running Ubuntu 22.04.5 LTS. Both \textit{Metadata Storage} and \textit{Intermediate Storage} were deployed as Redis Docker containers. The client, responsible for submitting the workflow and uploading hardcoded dependencies, was also run on the same machine. We added some artificial delay in both storage and gateway interactions, to try simulating a more realistic environment. This delay is applied before requests are made and the value we used was 30ms of round-trip time. This value was chosen based of observations of median latency between AWS Europe data centers in the same region being around 8ms and around 15ms across different data centers~\footnote{\url{https://www.cloudping.co/}}.
+
+We tested four different workflows, SLAs, planners, and optimization strategies. To limit the number of experimental combinations, the optimizations were not evaluated in isolation; instead, both \texttt{pre-load} and \texttt{pre-warm} optimizations were applied together. The tested workflows were the following:
+
+\begin{itemize}
+    \item \textbf{Matrix Multiplication}:;
+
+    \item \textbf{Tree Reduction}:;
+
+    \item \textbf{Text Processing}:;
+
+    \item \textbf{Image Transformation}:.
+\end{itemize}
+
+%TODO: show dag structure and reference for all tested workflows (images are already here)
+
+TODO: small paragraph for slas
+TODO: itemize for planners + optimizations (all-in-one)
+
+TODO: script to automate running all possible combinations
+TODO: WUKONG implementations (w and w/o opts + explain the opts)
 
 \section{Results}
 % always analysing and comparing to wukong, trying to provide an explanation for the observed results
