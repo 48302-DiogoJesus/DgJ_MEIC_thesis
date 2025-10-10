@@ -1,7 +1,7 @@
 - Solution
-    - update semantics of preload (not just CP nodes)
     - remove taskdup? all mentions
-    - maybe explain preload logic in more detail (how the worker detects if preload is happening and waits for it to complete at the same time it downloads other dependencies)
+        or update cp to also describe "integration with task handling logic"
 
 - Evaluation
-    - start writing
+    - charts
+    - chart analysis
