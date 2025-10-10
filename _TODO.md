@@ -1,5 +1,5 @@
 - Solution
-    - remove taskdup? all mentions
+    - update taskdup
         or update cp to also describe "integration with task handling logic"
 
 - Evaluation
