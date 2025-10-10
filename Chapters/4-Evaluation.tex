@@ -10,7 +10,7 @@
 % #############################################################################
 \section{Emulating FaaS environment}
 \label{s:faas_emulator}
-To develop, test and evaluate the proposed solution under realistic and controlled execution conditions, a simple and lightweight Function-as-a-Service (FaaS) platform was developed in \textasciitilde320 LOC of Python. This setup reproduces the fundamental behavior of a typical serverless platform, such as those mentioned in Chapter~\ref{chap:rw}, while remaining simple and fully controllable for testing purposes. This emulation consists of two main components: a \textbf{gateway service} implemented as an HTTP server that receives invocations and manages containers, dynamically provisioning and reusing Docker~\footnote{\url{https://www.docker.com/}} containers with the requested resource configuration to execute arbitrary code, and the \textbf{worker code} itself, which is packaged into a docker image.
+To develop, test and evaluate the proposed solution under realistic and controlled execution conditions, a simple and lightweight Function-as-a-Service (FaaS) platform was developed in \textasciitilde300 LOC of Python. This setup reproduces the fundamental behavior of a typical serverless platform, such as those mentioned in Chapter~\ref{chap:rw}, while remaining simple and fully controllable for testing purposes. This emulation consists of two main components: a \textbf{gateway service} implemented as an HTTP server that receives invocations and manages containers, dynamically provisioning and reusing Docker~\footnote{\url{https://www.docker.com/}} containers with the requested resource configuration to execute arbitrary code, and the \textbf{worker code} itself, which is packaged into a docker image.
 
 The Dockerfile of the worker is packaged with the worker logic code, and it simply remains alive forever, running a simple bash script that prevents the container from exiting. The gateway is then able to launch containers with this image and invoke the worker code at any time to execute the desired tasks. Both the client and the workers can make requests to a \texttt{/job} endpoint to launch new workers, as shown in Listing~\ref{lst:gateway_invocation_example}, where the caller specifies the required resource configuration for the workers' container. If there are no idle containers with the desired resource configuration and the maximum amount of concurrent containers has been reached, this request will wait until there are conditions to run the worker code. To enforce resource configurations, we use Docker's built-in support for CPU and memory limits~\footnote{\url{https://docs.docker.com/engine/containers/resource_constraints/}}.
 
@@ -125,7 +125,6 @@ To assess our research questions, we implemented and evaluated three core planne
 
 %TODO: update this if it changes (more instances)
 The experimental process was automated with a script that iterated through every combination of planner variation, SLA, and workflow. Each unique configuration was executed five times to account for performance variability, resulting in 360 total experiments for analysis.
-
 
 \section{Results}
 % always analysing and comparing to wukong, trying to provide an explanation for the observed results
