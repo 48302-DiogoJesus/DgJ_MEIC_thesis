@@ -35,23 +35,22 @@
 \contentsline {subsection}{\numberline {3.4.2}Planning Algorithms}{29}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Optimizations}{34}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}Client}{40}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Decentralized Workers}{41}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Decentralized Workers}{42}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Evaluation}{47}{chapter.4}%
 \etoc@startlocaltoc {5}
 \contentsline {section}{\numberline {4.1}Emulating FaaS environment}{47}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Research Questions}{49}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Experimental Setup}{51}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Results}{57}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Predictions Accuracy}{57}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}SLA Fulfillment}{57}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Planners}{57}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Optimizations}{57}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Resource Usage}{57}{subsection.4.4.5}%
-\contentsline {section}{\numberline {4.5}Discussion}{57}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Conclusion}{59}{chapter.5}%
+\contentsline {section}{\numberline {4.4}Results}{52}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Predictions Accuracy}{52}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}SLA Fulfillment}{53}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Planners}{53}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Optimizations}{53}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Resource Usage}{53}{subsection.4.4.5}%
+\contentsline {section}{\numberline {4.5}Discussion}{53}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Conclusion}{55}{chapter.5}%
 \etoc@startlocaltoc {6}
-\contentsline {section}{\numberline {5.1}Conclusions}{59}{section.5.1}%
-\contentsline {section}{\numberline {5.2}System Limitations and Future Work}{59}{section.5.2}%
-\contentsline {chapter}{Bibliography}{59}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Code of Project}{65}{appendix.A}%
-\contentsline {chapter}{\numberline {B}A Large Table}{67}{appendix.B}%
+\contentsline {section}{\numberline {5.1}Conclusions}{55}{section.5.1}%
+\contentsline {section}{\numberline {5.2}System Limitations and Future Work}{55}{section.5.2}%
+\contentsline {chapter}{Bibliography}{55}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Structure of Workflows used for Evaluation}{61}{appendix.A}%

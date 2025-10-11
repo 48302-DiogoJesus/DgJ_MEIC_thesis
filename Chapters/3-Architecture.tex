@@ -492,7 +492,7 @@ The \texttt{.compute(configuration)} method, which can be called on any \texttt{
 
 Before the client calls \texttt{compute()}, it can first generate a visualization of the DAG structure. Figure~\ref{fig:dag_image_text_analysis} shows an example of what this visualization looks like for a Text Analysis workflow. Nodes in the graph are connected to its dependencies and each node contains the task name and its hardcoded arguments. This feature allows users to inspect and verify the workflow's dependencies and overall structure in advance, before submitting it for execution.
 
-\begin{figure*}[h]
+\begin{figure*}[H]
     \centering
     \includegraphics[width=1.05\textwidth]{images/mine/dag_image_text_analysis.png}
     \caption{DAG Visualization Feature for a Text Analysis Workflow}
@@ -509,7 +509,7 @@ After a plan is created and embedded in the DAG representation, the client invok
 
 During workflow execution, the client can monitor the workflow's progress through a simple web dashboard, showcased in Figure~\ref{fig:workflow_realtime_dashboard}, implemented with Streamlit~\footnote{\url{https://streamlit.io/}}. This dashboard can be used to visualize the workflow graph in real-time, as it indicates which tasks have been completed (in green) and which remain pending (in gray).
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{images/mine/realtime dashboard.png}
     \caption{Workflow Real-time Dashboard}

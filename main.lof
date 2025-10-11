@@ -11,18 +11,15 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Solution Architecture}}{25}{figure.caption.14}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Planned Workflow Execution Example}}{36}{figure.caption.15}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Real Workflow Plan Visualization}}{39}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Workflow Real-time Dashboard}}{41}{figure.caption.18}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Choreographed Scheduling Example}}{44}{figure.caption.19}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces DAG Visualization Feature for a Text Analysis Workflow}}{45}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Workflow Real-time Dashboard}}{46}{figure.caption.18}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Evaluation}{47}{chapter.4}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Matrix Multiplication Workflow}}{53}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Tree Reduction Workflow}}{54}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Text Analysis Workflow}}{55}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Image Transformation Workflow}}{56}{figure.caption.24}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusion}{59}{chapter.5}%
+\contentsline {xchapter}{Conclusion}{55}{chapter.5}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Code of Project}{65}{appendix.A}%
-\addvspace {10\p@ }
-\contentsline {xchapter}{A Large Table}{67}{appendix.B}%
+\contentsline {xchapter}{Structure of Workflows used for Evaluation}{61}{appendix.A}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Matrix Multiplication Workflow}}{62}{figure.caption.23}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Tree Reduction Workflow}}{63}{figure.caption.24}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Text Analysis Workflow}}{64}{figure.caption.25}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Image Transformation Workflow}}{65}{figure.caption.26}%

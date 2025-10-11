@@ -96,34 +96,9 @@ We tested four different workflows, SLAs, planners, and optimization strategies.
     \item \textbf{Image Transformation}: A complex, highly parallel workflow that applies multiple transformations to an input image, shown in Figure~\ref{fig:image_transformer}. The image is first divided into chunks, each processed independently through two parallel transformation branches of differing complexity: one performing color-based operations such as resizing, blurring, normalization, and sepia filtering, and another applying edge detection and sharpening. The results from both branches are then combined and merged back into a complete image. This workflow is bigger, composed of 130 tasks large fan-outs and heterogeneous task execution times, making it ideal for evaluating our solutions' efficiency. We also expect better performance compared to WUKONG, as our scheduling model requires fewer worker launches and thus less downstream coordination overhead.
 \end{itemize}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{images/mine/dag_image_gemm.png}
-    \caption{Matrix Multiplication Workflow}
-    \label{fig:matrix_multiplication}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{images/mine/dag_image_tree_reduction.png}
-    \caption{Tree Reduction Workflow}
-    \label{fig:tree_reduction}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{images/mine/dag_image_text_analysis.png}
-    \caption{Text Analysis Workflow}
-    \label{fig:text_analysis}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{images/mine/dag_image_image_transformer.png}
-    \caption{Image Transformation Workflow}
-    \label{fig:image_transformer}
-\end{figure}
-
 As mentioned in Section~\ref{s:metadata_management}, the client specifies an SLA which determines how conservative the predictions are. We ran our experiments with three different SLAs: median (50th percentile), 75th percentile, and 90th percentile. We will then analyze the fulfillment success rates of each SLA, the prediction's accuracy and whether different SLAs yield different performance and resource usage results.
 
-To assess our research questions, we implemented and evaluated three core planners: our proposed \textbf{Uniform} and \textbf{Non-Uniform} planners, and a planner replicating \textbf{WUKONGs'} scheduling model. To isolate the impact of our optimizations, we tested our two planners with and without them enabled. For a comprehensive comparison, we also implemented WUKONGs' native optimizations (\textit{Task Clustering for Fan-ins and Fan-outs} and \textit{Delayed I/O}, described in Section~\ref{prw:wukong}). In total, we evaluated six planner variations: \textit{Uniform}, \textit{Uniform w/ optimizations}, \textit{Non-Uniform}, \textit{Non-Uniform w/ optimizations}, \textit{WUKONG}, and \textit{WUKONG w/ optimizations}.
+To assess our research questions, we implemented and evaluated three core planners: our proposed \textbf{Uniform} and \textbf{Non-Uniform} planners, and a planner replicating \textbf{WUKONGs'} scheduling model. To isolate the impact of our optimizations, we tested our two planners with and without them enabled. For a comprehensive comparison, we also implemented WUKONGs' native optimizations (\textit{Task Clustering for Fan-ins and Fan-outs} and \textit{Delayed I/O}, described in Paragraph~\ref{prw:wukong}). In total, we evaluated six planner variations: \textit{Uniform}, \textit{Uniform w/ optimizations}, \textit{Non-Uniform}, \textit{Non-Uniform w/ optimizations}, \textit{WUKONG}, and \textit{WUKONG w/ optimizations}.
 
 %TODO: update this if it changes (more instances)
 The experimental process was automated with a script that iterated through every combination of planner variation, SLA, and workflow. Each unique configuration was executed five times to account for performance variability, resulting in 360 total experiments for analysis.
