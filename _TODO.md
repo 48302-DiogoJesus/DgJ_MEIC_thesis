@@ -1,5 +1,3 @@
-- Ensure good image and listing placement
-
 - Solution
 
 - Evaluation
