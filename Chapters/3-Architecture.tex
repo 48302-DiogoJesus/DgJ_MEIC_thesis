@@ -114,11 +114,8 @@ The prediction methods take an additional parameter, \texttt{SLA} (Service-level
 \begin{lstlisting}[basicstyle=\ttfamily\footnotesize, columns=fullflexible, breaklines=true, caption=Task Predictions API, label=lst:task_predictions_api]
 class PredictionsProvider:
   def predict_output_size(function_name, input_size, sla) -> int
-
   def predict_worker_startup_time(state: 'cold' | 'warm', resource_config, sla) -> float
-
   def predict_data_transfer_time(data_size_bytes, resource_config, sla) -> float
-
   def predict_execution_time(task_name, input_size, resource_config, sla) -> float
 \end{lstlisting}
 
@@ -547,7 +544,7 @@ Then, when T3 finishes execution, its worker will see that T7 depends on externa
 
 Finally, T6 finishes, increments the dependency counter of T8 (because it has other dependencies), but since it's still missing 1 dependency, it exits. Later, then T7 finishes, it increments the dependency counter of T8 and realizes all dependencies are met and that the worker assigned to T8 (Worker D) isn't active yet, so it makes a request to the FaaS gateway to invoke this worker. Once T8 finishes, it emits a \texttt{TASK\_COMPLETED} event which is received by the client, who then downloads the result from \textit{Intermediate Storage}.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Images/mine/choreographed_execution_example.png}
     \caption{Choreographed Scheduling Example}

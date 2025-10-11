@@ -1,6 +1,7 @@
+- Ensure good image and listing placement
+- Update tree reduction and text analysis workflow structures
+
 - Solution
-    - update taskdup
-        or update cp to also describe "integration with task handling logic"
 
 - Evaluation
     - charts

@@ -101,7 +101,14 @@
 % -----------------------------------------------------------------------------
 % These packages are required if you need to list code snippets.
 \usepackage{listings}
-\lstset{breaklines=true, basicstyle=\ttfamily}
+\lstset{
+	breaklines=true, 
+	basicstyle=\ttfamily
+  	xleftmargin=2em,       % add left margin inside the text area
+  	framexleftmargin=1.5em, % adjust frame (if any)
+  	numbers=left,
+  	numbersep=10pt
+}
 % Nicely syntax highlighted m-code in LaTeX documents with stylefile mcode.sty
 % http://www.mathworks.com/matlabcentral/fileexchange/8015-m-code-latex-package
 \usepackage[numbered]{mcode}

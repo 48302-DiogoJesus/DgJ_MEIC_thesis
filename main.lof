@@ -11,9 +11,9 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Solution Architecture}}{25}{figure.caption.14}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Planned Workflow Execution Example}}{36}{figure.caption.15}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Real Workflow Plan Visualization}}{39}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces DAG Visualization Feature for a Text Analysis Workflow}}{40}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Workflow Real-time Dashboard}}{42}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Choreographed Scheduling Example}}{45}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Choreographed Scheduling Example}}{44}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces DAG Visualization Feature for a Text Analysis Workflow}}{45}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Workflow Real-time Dashboard}}{46}{figure.caption.18}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Evaluation}{47}{chapter.4}%
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Matrix Multiplication Workflow}}{53}{figure.caption.21}%

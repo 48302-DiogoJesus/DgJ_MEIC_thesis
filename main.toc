@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {3.4.2}Planning Algorithms}{29}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Optimizations}{34}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}Client}{40}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Decentralized Workers}{42}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Decentralized Workers}{41}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Evaluation}{47}{chapter.4}%
 \etoc@startlocaltoc {5}
 \contentsline {section}{\numberline {4.1}Emulating FaaS environment}{47}{section.4.1}%
