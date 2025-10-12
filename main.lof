@@ -15,11 +15,15 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Choreographed Scheduling Example}}{44}{figure.caption.19}%
 \addvspace {10\p@ }
 \contentsline {xchapter}{Evaluation}{47}{chapter.4}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Predictions Accuracy across all planners and SLA fulfillment rates}}{53}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \textit {Makespan} distribution between planners}}{54}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \textit {Waiting for dependencies} distribution between planners}}{55}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces \textit {Worker startup time} distribution between planners}}{56}{figure.caption.24}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusion}{55}{chapter.5}%
+\contentsline {xchapter}{Conclusion}{57}{chapter.5}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Structure of Workflows used for Evaluation}{61}{appendix.A}%
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Matrix Multiplication Workflow}}{62}{figure.caption.23}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Tree Reduction Workflow}}{63}{figure.caption.24}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Text Analysis Workflow}}{64}{figure.caption.25}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Image Transformation Workflow}}{65}{figure.caption.26}%
+\contentsline {xchapter}{Structure of Workflows used for Evaluation}{63}{appendix.A}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Matrix Multiplication Workflow}}{64}{figure.caption.27}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Tree Reduction Workflow}}{65}{figure.caption.28}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Text Analysis Workflow}}{66}{figure.caption.29}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Image Transformation Workflow}}{67}{figure.caption.30}%

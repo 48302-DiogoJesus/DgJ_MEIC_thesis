@@ -1170,6 +1170,34 @@ INPUT .\Images\mine\choreographed_execution_example.png
 INPUT .\Chapters\4-Evaluation.tex
 INPUT .\Chapters\4-Evaluation.tex
 INPUT Chapters\4-Evaluation.tex
+INPUT .\images\mine\eval\1_predictions\prediction_accuracy_by_sla_and_fullfilment.png
+INPUT .\images\mine\eval\1_predictions\prediction_accuracy_by_sla_and_fullfilment.png
+INPUT .\images\mine\eval\1_predictions\prediction_accuracy_by_sla_and_fullfilment.png
+INPUT .\images\mine\eval\1_predictions\prediction_accuracy_by_sla_and_fullfilment.png
+INPUT .\images\mine\eval\1_predictions\prediction_accuracy_by_sla_and_fullfilment.png
+INPUT .\images\mine\eval\1_predictions\prediction_accuracy_by_sla_and_fullfilment.png
+INPUT .\images\mine\eval\1_predictions\prediction_accuracy_by_sla_and_fullfilment.png
+INPUT .\images\mine\eval\2_metrics\makespan dist.png
+INPUT .\images\mine\eval\2_metrics\makespan dist.png
+INPUT .\images\mine\eval\2_metrics\makespan dist.png
+INPUT .\images\mine\eval\2_metrics\makespan dist.png
+INPUT .\images\mine\eval\2_metrics\makespan dist.png
+INPUT .\images\mine\eval\2_metrics\makespan dist.png
+INPUT .\images\mine\eval\2_metrics\makespan dist.png
+INPUT .\images\mine\eval\2_metrics\waiting inputs dist.png
+INPUT .\images\mine\eval\2_metrics\waiting inputs dist.png
+INPUT .\images\mine\eval\2_metrics\waiting inputs dist.png
+INPUT .\images\mine\eval\2_metrics\waiting inputs dist.png
+INPUT .\images\mine\eval\2_metrics\waiting inputs dist.png
+INPUT .\images\mine\eval\2_metrics\waiting inputs dist.png
+INPUT .\images\mine\eval\2_metrics\waiting inputs dist.png
+INPUT .\images\mine\eval\2_metrics\worker stime dist.png
+INPUT .\images\mine\eval\2_metrics\worker stime dist.png
+INPUT .\images\mine\eval\2_metrics\worker stime dist.png
+INPUT .\images\mine\eval\2_metrics\worker stime dist.png
+INPUT .\images\mine\eval\2_metrics\worker stime dist.png
+INPUT .\images\mine\eval\2_metrics\worker stime dist.png
+INPUT .\images\mine\eval\2_metrics\worker stime dist.png
 INPUT .\Chapters\5-Conclusion.tex
 INPUT .\Chapters\5-Conclusion.tex
 INPUT Chapters\5-Conclusion.tex

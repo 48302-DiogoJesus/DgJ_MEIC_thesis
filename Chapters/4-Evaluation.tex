@@ -86,6 +86,8 @@ To evaluate our proposed solution, we deployed the FaaS emulator described in Se
 
 We tested four different workflows, SLAs, planners, and optimization strategies. To limit the number of experimental combinations, the optimizations were not evaluated in isolation; instead, both \texttt{pre-load} and \texttt{pre-warm} optimizations were applied together. The tested workflows were the following:
 
+% TODO: explain resource configurations used!
+
 \begin{itemize}
     \item \textbf{Matrix Multiplication}: A workflow with a straightforward structure, shown in Figure~\ref{fig:matrix_multiplication}, that performs distributed matrix multiplication. The input matrices are first divided into smaller chunks, and each pair of compatible chunks is multiplied independently in parallel. The resulting partial products are then aggregated by a final task, which reconstructs the full matrix from the computed blocks, producing the complete multiplication result. WUKONG's evaluation also includes a comparable workflow that follows the same computational pattern;
 
@@ -100,22 +102,64 @@ As mentioned in Section~\ref{s:metadata_management}, the client specifies an SLA
 
 To assess our research questions, we implemented and evaluated three core planners: our proposed \textbf{Uniform} and \textbf{Non-Uniform} planners, and a planner replicating \textbf{WUKONGs'} scheduling model. To isolate the impact of our optimizations, we tested our two planners with and without them enabled. For a comprehensive comparison, we also implemented WUKONGs' native optimizations (\textit{Task Clustering for Fan-ins and Fan-outs} and \textit{Delayed I/O}, described in Paragraph~\ref{prw:wukong}). In total, we evaluated six planner variations: \textit{Uniform}, \textit{Uniform w/ optimizations}, \textit{Non-Uniform}, \textit{Non-Uniform w/ optimizations}, \textit{WUKONG}, and \textit{WUKONG w/ optimizations}.
 
-%TODO: update this if it changes (more instances)
-The experimental process was automated with a script that iterated through every combination of planner variation, SLA, and workflow. Each unique configuration was executed five times to account for performance variability, resulting in 360 total experiments for analysis.
+The experimental process was automated with a script that iterated through every combination of planner variation, SLA, and workflow. Each unique configuration was executed ten times to account for performance variability, resulting in 720 total experiments for analysis. Before starting a new workflow instance, this script waits for all FaaS gateway containers to become idle and then removed, causing the workers of the root nodes of the next workflow to experience cold starts. This is done to ensure consistency in the experimental process.
 
 \section{Results}
-% always analysing and comparing to wukong, trying to provide an explanation for the observed results
-\subsection{Predictions Accuracy}
-TODO: 
+%TODO: intro text: explain what "-opt" means, what we will talk about
 
-\subsection{SLA Fulfillment}
-TODO: 
+\subsection{Predictions Accuracy and SLA fulfillment}
 
-\subsection{Planners}
-TODO: 
+The chart in Figure~\ref{fig:predictions_accuracy_by_sla_and_fullfilment} evaluates the model's predictive performance across various metrics for all tested workflows and all planners (excluding WUKONG, which doesn't use predictions). It displays two key indicators:
+
+\begin{itemize}
+    \item \textbf{Prediction Accuracy}: This measures the error, or deviation, between the model's predictions and the actual measured outcomes;
+    \item \textbf{SLA Fulfillment Rate}: This represents how consistent the workflow performance was with respect to the chosen SLA.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.05\textwidth]{images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png}
+    \caption{Predictions Accuracy across all planners and SLA fulfillment rates}
+    \label{fig:predictions_accuracy_by_sla_and_fullfilment}
+\end{figure}
+
+Regarding prediction accuracy, we observe that (except for execution and upload times) \textbf{higher SLAs lead to larger prediction errors}. This outcome is expected, as higher SLA levels adopt a more conservative approach, which tends to overestimate values. The \textbf{median relative error} for input and output sizes is \textbf{0\%}, since identical workloads were used throughout the experiments, making these metrics easier to predict. 
+
+Across all four workflows tested, \textbf{execution time predictions were the most accurate}, with median relative errors below \textbf{9.3\%}. In contrast, \textbf{data transfer times} (upload and download) were less precise, showing median relative errors of around \textbf{35\%}. 
+
+When examining \textbf{SLA fulfillment rates}, we find that they remained stable and aligned with expectations across all SLA levels. Specifically, \textbf{P50, P75, and P90 SLAs} achieved fulfillment rates in the ranges of \textbf{41.9--71.5\%}, \textbf{66.7--89.7\%}, and \textbf{86.9--100\%}, respectively.
+
+\subsection{Overall Performance}
+
+The box plot shown in Figure~\ref{fig:makespan_dist} compares the makespan distribution between planners. All versions of our planners performed slightly better than both versions of WUKONG's scheduling approach. We can see a clear improvement from the \textbf{Non-Uniform} to \textbf{Non-Uniform w/ optimizations}, but the same doesn't happen with the \textbf{Uniform} planner. This could be due to the Uniform planner using less resources per worker, leading to higher \textbf{resource contention} when \texttt{pre-loading} dependencies. This could also explain higher times waiting for dependencies, in the plot shown in Figure~\ref{fig:waiting_inputs_dist}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/mine/eval/2_metrics/makespan dist.png}
+    \caption{\textit{Makespan} distribution between planners}
+    \label{fig:makespan_dist}
+\end{figure}
+
+In Figure~\ref{fig:waiting_inputs_dist}, we can also observe that \textit{pre-loading} had a significant impact on the \textbf{Non-Uniform} planner, resulting in a difference of \textbf{1.34 seconds}. A notable contrast is also evident between \textbf{WUKONG} and \textbf{WUKONG w/ optimizations}, with the latter exhibiting a substantial reduction in waiting times for dependencies. This behavior is expected, as WUKONG's optimizations prioritize locality for large dependencies, consistently attempting to execute tasks where the required inputs are already available.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/mine/eval/2_metrics/waiting inputs dist.png}
+    \caption{\textit{Waiting for dependencies} distribution between planners}
+    \label{fig:waiting_inputs_dist}
+\end{figure}
+
+The chart in Figure~\ref{fig:worker_stime_dist} compares the worker startup time distribution across planners, clearly showing higher values for WUKONG. This is expected, as WUKONG's scheduling strategy launches more workers than our planners. For fan-outs of size \texttt{N}, WUKONG launches \texttt{N-1} workers (except in the optimized version, which attempts to avoid launching workers when the output is large). In our experiments, WUKONG launched a median of 32 workers (with optimizations, a median of 24), while our planners launched a median of only 13 workers.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/mine/eval/2_metrics/worker stime dist.png}
+    \caption{\textit{Worker startup time} distribution between planners}
+    \label{fig:worker_stime_dist}
+\end{figure}
 
 \subsection{Optimizations}
-TODO: 
+TODO: Time Breakdown Analysis + warm vs cold starts
 
 \subsection{Resource Usage}
 TODO: 

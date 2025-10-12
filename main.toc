@@ -41,16 +41,15 @@
 \contentsline {section}{\numberline {4.1}Emulating FaaS environment}{47}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Research Questions}{49}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Experimental Setup}{51}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Results}{52}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Predictions Accuracy}{52}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}SLA Fulfillment}{53}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Planners}{53}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Optimizations}{53}{subsection.4.4.4}%
-\contentsline {subsection}{\numberline {4.4.5}Resource Usage}{53}{subsection.4.4.5}%
-\contentsline {section}{\numberline {4.5}Discussion}{53}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Conclusion}{55}{chapter.5}%
+\contentsline {section}{\numberline {4.4}Results}{53}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Predictions Accuracy and SLA fulfillment}{53}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Overall Performance}{54}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Optimizations}{56}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Resource Usage}{56}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Discussion}{56}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Conclusion}{57}{chapter.5}%
 \etoc@startlocaltoc {6}
-\contentsline {section}{\numberline {5.1}Achievements}{55}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Limitations and Future Work}{55}{section.5.2}%
-\contentsline {chapter}{Bibliography}{56}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Structure of Workflows used for Evaluation}{61}{appendix.A}%
+\contentsline {section}{\numberline {5.1}Achievements}{57}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Limitations and Future Work}{57}{section.5.2}%
+\contentsline {chapter}{Bibliography}{58}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Structure of Workflows used for Evaluation}{63}{appendix.A}%
