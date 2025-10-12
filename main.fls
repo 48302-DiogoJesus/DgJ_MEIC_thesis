@@ -1005,10 +1005,6 @@ INPUT .\main.lof
 INPUT .\main.lof
 INPUT main.lof
 OUTPUT main.lof
-INPUT .\main.lot
-INPUT .\main.lot
-INPUT main.lot
-OUTPUT main.lot
 INPUT .\main.loa
 INPUT .\main.loa
 INPUT main.loa

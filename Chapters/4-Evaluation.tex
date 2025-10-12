@@ -40,7 +40,7 @@ The worker code packaged in the Docker image is designed to work specifically wi
 
 \section{Research Questions}
 
-With the evaluation of work, we aim to address the following research questions:
+With the evaluation of this work, we aim to address the following research questions:
 
 \begin{itemize}
 \item \textbf{RQ1:} To what extent can historical metrics from previous workflow executions improve the accuracy of predicting serverless workflow behavior, specifically regarding execution time, container startup latency, data transfer performance, and function I/O characteristics?
@@ -82,7 +82,7 @@ In the following section, we describe the experimental setup used to evaluate th
 
 \section{Experimental Setup}
 
-To evaluate our proposed solution, we deployed the FaaS emulator described in Section~\ref{s:faas_emulator} on an AMD EPYC 7282 16-Core (32 logical threads, via AMD SMT) processor with 125GiB of RAM, running Ubuntu 22.04.5 LTS. Both \textit{Metadata Storage} and \textit{Intermediate Storage} were deployed as Redis Docker containers. The client, responsible for submitting the workflow and uploading hardcoded dependencies, was also run on the same machine. We added some artificial delay in both storage and gateway interactions, to try simulating a more realistic environment. This delay is applied before requests are made and the value we used was 30ms of round-trip time. This value was chosen based of observations of median latency between AWS Europe data centers in the same region being around 8ms and around 15ms across different data centers~\footnote{\url{https://www.cloudping.co/}}.
+To evaluate our proposed solution, we deployed the FaaS emulator described in Section~\ref{s:faas_emulator} on an AMD EPYC 7282 16-Core (32 logical threads, via AMD SMT) processor with 125GiB of RAM, running Ubuntu 22.04.5 LTS. Both \textit{Metadata Storage} and \textit{Intermediate Storage} were deployed as Redis Docker containers. The client, responsible for submitting the workflow and uploading hardcoded dependencies, was also run on the same machine. We added some artificial delay in both storage and gateway interactions, to try simulating a more realistic environment. This delay is applied before requests are made and the value we used was 30ms of round-trip time. This value was chosen based on observations of median latency between AWS Europe data centers in the same region being around 8ms and around 15ms across different data centers~\footnote{\url{https://www.cloudping.co/}}.
 
 We tested four different workflows, three SLAs, six planners, and two optimization strategies. To limit the number of experimental combinations, the optimizations were not evaluated in isolation; instead, both \textit{pre-load} and \textit{pre-warm} optimizations were applied together. 
 

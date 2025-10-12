@@ -337,4 +337,9 @@ E.~Jonas, Q.~Pu, S.~Venkataraman, I.~Stoica, and B.~Recht, ``Occupy the cloud:
   Distributed computing for the 99\%,'' in \emph{Proceedings of the 2017
   symposium on cloud computing}, 2017, pp. 445--451.
 
+\bibitem{task_duplication_scheduling}
+F.~Yao, C.~Pu, and Z.~Zhang, ``Task duplication-based scheduling algorithm for
+  budget-constrained workflows in cloud computing,'' \emph{IEEE Access},
+  vol.~9, pp. 37\,262--37\,272, 2021.
+
 \end{thebibliography}

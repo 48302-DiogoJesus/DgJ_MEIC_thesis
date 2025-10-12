@@ -1,1 +1,2 @@
-- Conclusion
+- fill "Chairperson" and "Member of the comittee" fields
+- acknowledgments
