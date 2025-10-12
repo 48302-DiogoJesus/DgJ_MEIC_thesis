@@ -84,9 +84,11 @@ In the following section, we describe the experimental setup used to evaluate th
 
 To evaluate our proposed solution, we deployed the FaaS emulator described in Section~\ref{s:faas_emulator} on an AMD EPYC 7282 16-Core (32 logical threads, via AMD SMT) processor with 125GiB of RAM, running Ubuntu 22.04.5 LTS. Both \textit{Metadata Storage} and \textit{Intermediate Storage} were deployed as Redis Docker containers. The client, responsible for submitting the workflow and uploading hardcoded dependencies, was also run on the same machine. We added some artificial delay in both storage and gateway interactions, to try simulating a more realistic environment. This delay is applied before requests are made and the value we used was 30ms of round-trip time. This value was chosen based of observations of median latency between AWS Europe data centers in the same region being around 8ms and around 15ms across different data centers~\footnote{\url{https://www.cloudping.co/}}.
 
-We tested four different workflows, SLAs, planners, and optimization strategies. To limit the number of experimental combinations, the optimizations were not evaluated in isolation; instead, both \texttt{pre-load} and \texttt{pre-warm} optimizations were applied together. The tested workflows were the following:
+We tested four different workflows, three SLAs, six planners, and two optimization strategies. To limit the number of experimental combinations, the optimizations were not evaluated in isolation; instead, both \textit{pre-load} and \textit{pre-warm} optimizations were applied together. 
 
-% TODO: explain resource configurations used!
+The planners that used uniform worker resource configurations (\textit{Uniform}, \textit{Uniform w/ optimizations}, \textit{WUKONG}, and \textit{WUKONG w/ optimizations}) used 2GB memory and the vCPUs were calculated similarly to AWS Lambda, proportionally to the function's memory size~\footnote{\url{https://docs.aws.amazon.com/lambda/latest/dg/configuration-memory.html}} (\textit{1vCPU per 1,769 MB}).
+
+The workflows used for evaluating our solution were the following:
 
 \begin{itemize}
     \item \textbf{Matrix Multiplication}: A workflow with a straightforward structure, shown in Figure~\ref{fig:matrix_multiplication}, that performs distributed matrix multiplication. The input matrices are first divided into smaller chunks, and each pair of compatible chunks is multiplied independently in parallel. The resulting partial products are then aggregated by a final task, which reconstructs the full matrix from the computed blocks, producing the complete multiplication result. WUKONG's evaluation also includes a comparable workflow that follows the same computational pattern;
@@ -102,10 +104,10 @@ As mentioned in Section~\ref{s:metadata_management}, the client specifies an SLA
 
 To assess our research questions, we implemented and evaluated three core planners: our proposed \textbf{Uniform} and \textbf{Non-Uniform} planners, and a planner replicating \textbf{WUKONGs'} scheduling model. To isolate the impact of our optimizations, we tested our two planners with and without them enabled. For a comprehensive comparison, we also implemented WUKONGs' native optimizations (\textit{Task Clustering for Fan-ins and Fan-outs} and \textit{Delayed I/O}, described in Paragraph~\ref{prw:wukong}). In total, we evaluated six planner variations: \textit{Uniform}, \textit{Uniform w/ optimizations}, \textit{Non-Uniform}, \textit{Non-Uniform w/ optimizations}, \textit{WUKONG}, and \textit{WUKONG w/ optimizations}.
 
-The experimental process was automated with a script that iterated through every combination of planner variation, SLA, and workflow. Each unique configuration was executed ten times to account for performance variability, resulting in 720 total experiments for analysis. Before starting a new workflow instance, this script waits for all FaaS gateway containers to become idle and then removed, causing the workers of the root nodes of the next workflow to experience cold starts. This is done to ensure consistency in the experimental process.
+The experimental process was automated with a script that iterated through every combination of planner variation, SLA, and workflow. Each unique configuration was executed ten times to account for performance variability, resulting in 720 total experiments for analysis. Before starting a new workflow instance, this script waits for all FaaS gateway containers to become idle and then removed, causing the workers of the root nodes of the next workflow to experience cold starts. This ensures consistency in the experimental process.
 
 \section{Results}
-%TODO: intro text: explain what "-opt" means, what we will talk about
+This section presents the evaluation results of all proposed planners, including their \textit{optimized} (“-opt”) versions. We analyze prediction accuracy, SLA fulfillment rates, overall execution metrics, and resource efficiency, while also highlighting how the two proposed optimizations impact workflow execution and cost.
 
 \subsection{Predictions Accuracy and SLA fulfillment}
 
@@ -198,13 +200,27 @@ In contrast, the \textbf{Non-Uniform} planner shows a substantial improvement: t
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{images/mine/eval/4_res_usage/us vs wukong makespan res usage.png}
-    \caption{\textit{Makespan} vs Resource Usage comparison to WUKONG}
+    \caption{\textit{Makespan} vs Resource Usage comparison}
     \label{fig:makespan_resource_usage_tradeoff}
 \end{figure}
 
-Chart presented in Figure~\ref{fig:makespan_resource_usage_tradeoff} isolates the impact of the three baseline (non-optimized) algorithms, revealing a clear trade-off between execution speed and resource efficiency. A direct comparison between our planners shows that the \textbf{NonUniformPlanner} achieves the fastest makespan at 9.25s. However, this speed is costly; the \textbf{UniformPlanner}, while approximately 10\% slower with a makespan of 10.14s, presents a vastly more \textit{resource-frugal} profile. It consumes 18\% less CPU-seconds and an exceptional 290\% less GB-seconds than the NonUniformPlanner. When compared to the \textbf{WUKONGPlanner} baseline, our planners show significant advantages. WUKONG is the slowest by a considerable margin, with a makespan of 11.92s---nearly 29\% slower than the NonUniformPlanner. Furthermore, it is the most CPU-intensive, demanding approximately 69\% more CPU-seconds than the UniformPlanner. While WUKONG's memory usage is more moderate than that of the NonUniformPlanner, it is still over 108\% higher than the lean UniformPlanner, establishing the latter as the superior choice for balanced performance.
+Chart presented in Figure~\ref{fig:makespan_resource_usage_tradeoff} highlights the trade-off between workflow execution speed (makespan) and resource efficiency (GB-seconds) of the evaluated algorithms. Choosing the \textbf{Non-Uniform} planner over the \textbf{Uniform} planner yields an \textbf{8.8\%} performance gain (i.e., a shorter makespan), but this speed comes at a significant cost: a \textbf{290\%} increase in memory resource consumption (GB-seconds). Conversely, opting for the \textbf{Uniform} planner takes \textbf{9.6\%} longer, but reduces memory consumption by \textbf{74\%} compared to the \textbf{Non-Uniform}.
 
+The \textbf{WUKONG} planner represents a less favorable option in this comparison. It is \textbf{17.5\% slower} than the \textbf{Uniform} planner while also consuming \textbf{108\% more} memory resources, making the \textbf{Uniform} planner the most resource-efficient of the three.
 
-\section{Discussion}
-TODO: summary of results analysis\\
-TODO: wukong comparison\\
+The introduction of optimized planners dramatically alters the performance landscape. The optimized \textbf{Non-Uniform} planner emerges as the clear frontrunner in execution speed, achieving a median makespan of just 4.31s. This represents a \textbf{53\%} reduction in makespan and a \textbf{45\%} decrease in memory usage compared to its non-optimized version.
+
+A new trade-off becomes evident among the optimized planners. While the \textbf{Non-Uniform} planner is the fastest, the optimized \textbf{Uniform} planner is the most memory-efficient, consuming only 174.5 GB-seconds. To achieve its superior speed, the optimized \textbf{Non-Uniform} planner is 60\% faster than the optimized \textbf{Uniform} planner but requires 54\% more memory resources to do so.
+
+The optimization had mixed results for the other planners. The optimized \textbf{WUKONG} planner saw a modest \textbf{2.7\%} improvement in makespan and a significant \textbf{25\%} reduction in memory usage. However, it remains a less efficient choice, as it is both slower and more memory-intensive than the \textbf{Uniform} planner.
+
+\section{Analysis}
+In summary, our results demonstrate that the proposed planners achieve a balanced trade-off between performance and efficiency, with the optimizations significantly enhancing both aspects.
+
+The \textbf{Non-Uniform} planner consistently delivers the shortest \textit{makespan}, particularly in its optimized form, which achieves over \textbf{50\%} faster execution while reducing resource consumption by \textbf{45\%} compared to its base version. The \textbf{Uniform} planner, while slightly slower, remains the most resource-efficient, achieving the lowest median \textit{GB-seconds} usage among all tested approaches, while keeping workflow execution times lower than both \textbf{WUKONG} implementations (non-optimized and optimized).
+
+With its task assignment policy on fan-outs, \textbf{WUKONG}'s scheduling strategy reduces resource contention but suffers on worker startup times and worker synchronization, leading to higher resource consumption and making it less suitable for workflows with big fan-outs.
+
+Our optimizations, \textit{pre-loading} and \textit{pre-warming}, proved highly effective in reducing both \textit{makespan} and resource consumption, making them valuable additions to the proposed planners. Resource contention, however, remained a challenge for the \textbf{Uniform} planner, which can execute multiple tasks in parallel, often causing different tasks to compete for the same resources. Although the \textbf{Non-Uniform} planner follows a similar scheduling approach, its use of more powerful workers mitigated the effects of contention. In our experiments, we limited the number of fan-out tasks assigned to a single worker to \textbf{3}, though in practice a worker may execute more tasks from other branches simultaneously. Future work could include a deeper analysis of the impact of resource contention and potentially incorporating contention modeling into the simulation and prediction layers.
+
+Overall, the results validate the design goals of our proposed planners: \textbf{improving execution efficiency} through smarter task placement and resource utilization, while the introduced optimizations further enhance \textbf{performance} and \textbf{cost-effectiveness}.

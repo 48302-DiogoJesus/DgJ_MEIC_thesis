@@ -1,6 +1,3 @@
-- Evaluation
-    - charts
-    - chart analysis
 - Conclusion
 
 - QUESTIONS
