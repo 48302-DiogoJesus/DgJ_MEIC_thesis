@@ -21,12 +21,13 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces \textit {Worker startup time} distribution}}{56}{figure.caption.24}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Time breakdown analysis}}{56}{figure.caption.25}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Warm vs cold starts}}{57}{figure.caption.26}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Resource usage in GB-seconds}}{58}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Resource usage distribution (in GB-seconds)}}{58}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \textit {Makespan} vs Resource Usage comparison to WUKONG}}{59}{figure.caption.28}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusion}{59}{chapter.5}%
+\contentsline {xchapter}{Conclusion}{61}{chapter.5}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Structure of Workflows used for Evaluation}{65}{appendix.A}%
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Matrix Multiplication Workflow}}{66}{figure.caption.30}%
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Tree Reduction Workflow}}{67}{figure.caption.31}%
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Text Analysis Workflow}}{68}{figure.caption.32}%
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Image Transformation Workflow}}{69}{figure.caption.33}%
+\contentsline {xchapter}{Structure of Workflows used for Evaluation}{67}{appendix.A}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Matrix Multiplication Workflow}}{68}{figure.caption.31}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Tree Reduction Workflow}}{69}{figure.caption.32}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Text Analysis Workflow}}{70}{figure.caption.33}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Image Transformation Workflow}}{71}{figure.caption.34}%

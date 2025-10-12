@@ -4,4 +4,5 @@
 {\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.4}{\ignorespaces \textit {Worker startup time} distribution}}{\reset@font\mlffont 56}{figure.caption.24}}
 {\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.5}{\ignorespaces Time breakdown analysis}}{\reset@font\mlffont 56}{figure.caption.25}}
 {\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.6}{\ignorespaces Warm vs cold starts}}{\reset@font\mlffont 57}{figure.caption.26}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.7}{\ignorespaces Resource usage in GB-seconds}}{\reset@font\mlffont 58}{figure.caption.27}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.7}{\ignorespaces Resource usage distribution (in GB-seconds)}}{\reset@font\mlffont 58}{figure.caption.27}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.8}{\ignorespaces \textit {Makespan} vs Resource Usage comparison to WUKONG}}{\reset@font\mlffont 59}{figure.caption.28}}

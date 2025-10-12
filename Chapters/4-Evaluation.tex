@@ -184,14 +184,26 @@ The chart in Figure~\ref{fig:warm_vs_cold_starts} illustrates the impact of the 
 
 \subsection{Resource Usage}
 
-The chart in Figure~\ref{fig:resource_usage_gb_seconds} shows the resource usage in \textit{GB-seconds} (used by AWS Lambda to charge users~\footnote{\url{https://aws.amazon.com/lambda/pricing/}}) across all planners and workflows tested. The optimized version of WUKONG clearly uses fewer resources than the non-optimized version, which is attributable to its reduced worker count. Similarly, we believe the optimized version of \textbf{Uniform} uses more resources than its base version due to resource contention, which slows task execution and increases overall usage. In contrast, the \textbf{Non-Uniform} planner shows a substantial improvement: the optimized version consumes slightly more than half the resources of the non-optimized version and nearly matches the resources used by \textbf{WUKONG}, despite using workers up to four times more powerful (2GB memory versus up to 8GB per worker). This highlights the effectiveness of the \textit{pre-load} and \textit{pre-warm} optimizations.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{images/mine/eval/4_res_usage/resource usage gb seconds 2.png}
+    \caption{Resource usage distribution (in GB-seconds)}
+    \label{fig:resource_usage_gb_seconds}
+\end{figure}
+
+The chart in Figure~\ref{fig:resource_usage_gb_seconds} shows the resource usage distributions in \textit{GB-seconds} (used by AWS Lambda to charge users~\footnote{\url{https://aws.amazon.com/lambda/pricing/}}) across all planners. The optimized version of WUKONG clearly uses fewer resources than the non-optimized version, which is attributable to its reduced worker count. Once again, we believe that the reason for the optimized version of the \textbf{Uniform} planner to be using more resources than its base version is due to resource contention, which increases task execution time, consequently increasing overall resource usage. Despite this, if we compare the baseline \textbf{Uniform} planner implementation, it consumes \textbf{43.8\%} less resources than the optimized version of \textbf{WUKONG}.
+
+In contrast, the \textbf{Non-Uniform} planner shows a substantial improvement: the optimized version consumes slightly more than half the resources of the non-optimized version and nearly matches the resources used by \textbf{WUKONG}, despite using workers up to four times more powerful (2GB memory versus up to 8GB per worker). This highlights the effectiveness of the \textit{pre-load} and \textit{pre-warm} optimizations.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.1\textwidth]{images/mine/eval/4_res_usage/resource usage gb seconds.png}
-    \caption{Resource usage in GB-seconds}
-    \label{fig:resource_usage_gb_seconds}
+    \includegraphics[width=1.1\textwidth]{images/mine/eval/4_res_usage/us vs wukong makespan res usage.png}
+    \caption{\textit{Makespan} vs Resource Usage comparison to WUKONG}
+    \label{fig:makespan_resource_usage_tradeoff}
 \end{figure}
+
+Chart presented in Figure~\ref{fig:makespan_resource_usage_tradeoff} isolates the impact of the three baseline (non-optimized) algorithms, revealing a clear trade-off between execution speed and resource efficiency. A direct comparison between our planners shows that the \textbf{NonUniformPlanner} achieves the fastest makespan at 9.25s. However, this speed is costly; the \textbf{UniformPlanner}, while approximately 10\% slower with a makespan of 10.14s, presents a vastly more \textit{resource-frugal} profile. It consumes 18\% less CPU-seconds and an exceptional 290\% less GB-seconds than the NonUniformPlanner. When compared to the \textbf{WUKONGPlanner} baseline, our planners show significant advantages. WUKONG is the slowest by a considerable margin, with a makespan of 11.92s---nearly 29\% slower than the NonUniformPlanner. Furthermore, it is the most CPU-intensive, demanding approximately 69\% more CPU-seconds than the UniformPlanner. While WUKONG's memory usage is more moderate than that of the NonUniformPlanner, it is still over 108\% higher than the lean UniformPlanner, establishing the latter as the superior choice for balanced performance.
+
 
 \section{Discussion}
 TODO: summary of results analysis\\
