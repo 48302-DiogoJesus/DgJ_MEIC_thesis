@@ -62,7 +62,7 @@ result = a4.compute(
         planner_config=UniformPlanner.Config(
             sla=sla,
             worker_resource_configuration=TaskWorkerResourceConfiguration(memory_mb=1024),
-            optimizations=[PreLoadOptimization, TaskDupOptimization, PreWarmOptimization]
+            optimizations=[PreLoadOptimization, PreWarmOptimization]
         )
     )
 )
@@ -402,7 +402,7 @@ One of these validations ensures that \textit{all tasks assigned to the same wor
 
 \subsection{Optimizations}
 
-Aside from \texttt{worker\_id} and resource assignments, planners can also apply different \textbf{optimizations} to further improve the workflow execution. The optimizations a planner can use are selected by the user, as shown in Listing \ref{lst:setup_and_launch_workflow_execution}. We provide three optimizations: \textbf{pre-warm} and \textbf{pre-load}, but it is also possible to create new optimizations and define how workers should react to them. Now, we will describe the three base optimizations and how they are assigned to tasks:
+Aside from \texttt{worker\_id} and resource assignments, planners can also apply different \textbf{optimizations} to further improve the workflow execution. The optimizations a planner can use are selected by the user, as shown in Listing \ref{lst:setup_and_launch_workflow_execution}. We provide two optimizations: \textbf{pre-warm} and \textbf{pre-load}, but it is also possible to create new optimizations and define how workers should react to them. Now, we will describe the two base optimizations and how they are assigned to tasks:
 
 \begin{enumerate}
 \item\textbf{pre-warm}(worker\_config, delay\_s) [Pre-warming Workers]:
@@ -467,10 +467,11 @@ After a plan is created and validated, the workflow representation is serialized
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.05\textwidth]{images/mine/text_analysis_NonUniformPlanner-opt.png}
+    \includegraphics[height=\textheight, keepaspectratio]{images/mine/text_analysis_NonUniformPlanner-opt.png}
     \caption{Real Workflow Plan Visualization}
     \label{fig:workflow_plan_viz}
 \end{figure}
+
 
 Now, we will explain the process of submitting the workflow and initiating its execution. 
 
