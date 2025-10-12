@@ -1198,6 +1198,27 @@ INPUT .\images\mine\eval\2_metrics\worker stime dist.png
 INPUT .\images\mine\eval\2_metrics\worker stime dist.png
 INPUT .\images\mine\eval\2_metrics\worker stime dist.png
 INPUT .\images\mine\eval\2_metrics\worker stime dist.png
+INPUT .\images\mine\eval\3_opts\time breakdown.png
+INPUT .\images\mine\eval\3_opts\time breakdown.png
+INPUT .\images\mine\eval\3_opts\time breakdown.png
+INPUT .\images\mine\eval\3_opts\time breakdown.png
+INPUT .\images\mine\eval\3_opts\time breakdown.png
+INPUT .\images\mine\eval\3_opts\time breakdown.png
+INPUT .\images\mine\eval\3_opts\time breakdown.png
+INPUT .\images\mine\eval\3_opts\warm vs cold starts.png
+INPUT .\images\mine\eval\3_opts\warm vs cold starts.png
+INPUT .\images\mine\eval\3_opts\warm vs cold starts.png
+INPUT .\images\mine\eval\3_opts\warm vs cold starts.png
+INPUT .\images\mine\eval\3_opts\warm vs cold starts.png
+INPUT .\images\mine\eval\3_opts\warm vs cold starts.png
+INPUT .\images\mine\eval\3_opts\warm vs cold starts.png
+INPUT .\images\mine\eval\4_res_usage\resource usage gb seconds.png
+INPUT .\images\mine\eval\4_res_usage\resource usage gb seconds.png
+INPUT .\images\mine\eval\4_res_usage\resource usage gb seconds.png
+INPUT .\images\mine\eval\4_res_usage\resource usage gb seconds.png
+INPUT .\images\mine\eval\4_res_usage\resource usage gb seconds.png
+INPUT .\images\mine\eval\4_res_usage\resource usage gb seconds.png
+INPUT .\images\mine\eval\4_res_usage\resource usage gb seconds.png
 INPUT .\Chapters\5-Conclusion.tex
 INPUT .\Chapters\5-Conclusion.tex
 INPUT Chapters\5-Conclusion.tex

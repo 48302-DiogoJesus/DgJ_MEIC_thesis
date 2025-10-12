@@ -131,12 +131,12 @@ When examining \textbf{SLA fulfillment rates}, we find that they remained stable
 
 \subsection{Overall Performance}
 
-The box plot shown in Figure~\ref{fig:makespan_dist} compares the makespan distribution between planners. All versions of our planners performed slightly better than both versions of WUKONG's scheduling approach. We can see a clear improvement from the \textbf{Non-Uniform} to \textbf{Non-Uniform w/ optimizations}, but the same doesn't happen with the \textbf{Uniform} planner. This could be due to the Uniform planner using less resources per worker, leading to higher \textbf{resource contention} when \texttt{pre-loading} dependencies. This could also explain higher times waiting for dependencies, in the plot shown in Figure~\ref{fig:waiting_inputs_dist}.
+The box plot shown in Figure~\ref{fig:makespan_dist} compares the makespan distribution between planners. All versions of our planners performed slightly better than both versions of WUKONG's scheduling approach. We can see a clear improvement from the \textbf{Non-Uniform} to \textbf{Non-Uniform w/ optimizations}, but the same doesn't happen with the \textbf{Uniform} planner. This could be due to the Uniform planner using less resources per worker, leading to higher \textbf{resource contention} when \textit{pre-loading} dependencies. This could also explain higher times waiting for dependencies, in the plot shown in Figure~\ref{fig:waiting_inputs_dist}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/mine/eval/2_metrics/makespan dist.png}
-    \caption{\textit{Makespan} distribution between planners}
+    \caption{\textit{Makespan} distribution}
     \label{fig:makespan_dist}
 \end{figure}
 
@@ -145,7 +145,7 @@ In Figure~\ref{fig:waiting_inputs_dist}, we can also observe that \textit{pre-lo
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/mine/eval/2_metrics/waiting inputs dist.png}
-    \caption{\textit{Waiting for dependencies} distribution between planners}
+    \caption{\textit{Waiting for dependencies} distribution}
     \label{fig:waiting_inputs_dist}
 \end{figure}
 
@@ -154,15 +154,44 @@ The chart in Figure~\ref{fig:worker_stime_dist} compares the worker startup time
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/mine/eval/2_metrics/worker stime dist.png}
-    \caption{\textit{Worker startup time} distribution between planners}
+    \caption{\textit{Worker startup time} distribution}
     \label{fig:worker_stime_dist}
 \end{figure}
 
 \subsection{Optimizations}
-TODO: Time Breakdown Analysis + warm vs cold starts
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{images/mine/eval/3_opts/time breakdown.png}
+    \caption{Time breakdown analysis}
+    \label{fig:time_breakdown_analysis}
+\end{figure}
+
+The stacked bar chart in Figure~\ref{fig:time_breakdown_analysis} shows a time breakdown analysis between planners. It shows the median of how much time each planner spent on different tasks: waiting for workers to start, time downloading dependencies, task execution time, and time uploading results. Here, we can see that WUKONG has the highest time spent waiting for workers to start, as it launches more workers than our planners. The optimized version of WUKONG spends less time waiting for dependencies than the non-optimized version, showing that, for the tested workflows, it compensates to delay large task output uploads to try and execute downstream tasks locally. 
+
+WUKONG's execution time is slightly lower than our \textbf{Uniform} planner (\textasciitilde12.5s vs \textasciitilde20s) which shows the slowdown caused by resource contention, as \textbf{Uniform} can execute multiple tasks in parallel, whereas WUKONG workers execute only one task at a time. Despite using more capable workers, our \textbf{Non-Uniform} planner shows an execution time similar to \textbf{WUKONG}, a result that probably can also be attributed to resource contention.
+
+Similarly to Figure~\ref{fig:waiting_inputs_dist}, we can see the positive impact of \textit{pre-loading} on the \textbf{Non-Uniform} planner, as well as the positive impact of \textit{pre-warming} on both "optimized" versions of our planners, saving between \textbf{3 to 5 seconds}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{images/mine/eval/3_opts/warm vs cold starts.png}
+    \caption{Warm vs cold starts}
+    \label{fig:warm_vs_cold_starts}
+\end{figure}
+
+The chart in Figure~\ref{fig:warm_vs_cold_starts} illustrates the impact of the \textit{pre-warm} optimization, supporting the findings in Figure~\ref{fig:time_breakdown_analysis} regarding worker startup times. The optimized versions of our algorithms achieve, on average, \textbf{25\%} more warm starts compared to their respective base versions.
 
 \subsection{Resource Usage}
-TODO: 
+
+The chart in Figure~\ref{fig:resource_usage_gb_seconds} shows the resource usage in \textit{GB-seconds} (used by AWS Lambda to charge users~\footnote{\url{https://aws.amazon.com/lambda/pricing/}}) across all planners and workflows tested. The optimized version of WUKONG clearly uses fewer resources than the non-optimized version, which is attributable to its reduced worker count. Similarly, we believe the optimized version of \textbf{Uniform} uses more resources than its base version due to resource contention, which slows task execution and increases overall usage. In contrast, the \textbf{Non-Uniform} planner shows a substantial improvement: the optimized version consumes slightly more than half the resources of the non-optimized version and nearly matches the resources used by \textbf{WUKONG}, despite using workers up to four times more powerful (2GB memory versus up to 8GB per worker). This highlights the effectiveness of the \textit{pre-load} and \textit{pre-warm} optimizations.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{images/mine/eval/4_res_usage/resource usage gb seconds.png}
+    \caption{Resource usage in GB-seconds}
+    \label{fig:resource_usage_gb_seconds}
+\end{figure}
 
 \section{Discussion}
 TODO: summary of results analysis\\

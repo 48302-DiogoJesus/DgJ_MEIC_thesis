@@ -45,11 +45,11 @@
 \contentsline {subsection}{\numberline {4.4.1}Predictions Accuracy and SLA fulfillment}{53}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Overall Performance}{54}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Optimizations}{56}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Resource Usage}{56}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Discussion}{56}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Conclusion}{57}{chapter.5}%
+\contentsline {subsection}{\numberline {4.4.4}Resource Usage}{58}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Discussion}{58}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Conclusion}{59}{chapter.5}%
 \etoc@startlocaltoc {6}
-\contentsline {section}{\numberline {5.1}Achievements}{57}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Limitations and Future Work}{57}{section.5.2}%
-\contentsline {chapter}{Bibliography}{58}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Structure of Workflows used for Evaluation}{63}{appendix.A}%
+\contentsline {section}{\numberline {5.1}Achievements}{59}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Limitations and Future Work}{59}{section.5.2}%
+\contentsline {chapter}{Bibliography}{60}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Structure of Workflows used for Evaluation}{65}{appendix.A}%
