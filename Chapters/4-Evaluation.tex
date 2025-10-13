@@ -86,7 +86,7 @@ To evaluate our proposed solution, we deployed the FaaS emulator described in Se
 
 We tested four different workflows, three SLAs, six planners, and two optimization strategies. To limit the number of experimental combinations, the optimizations were not evaluated in isolation; instead, both \textit{pre-load} and \textit{pre-warm} optimizations were applied together. 
 
-The planners that used uniform worker resource configurations (\textit{Uniform}, \textit{Uniform w/ optimizations}, \textit{WUKONG}, and \textit{WUKONG w/ optimizations}) used 2GB memory and the vCPUs were calculated similarly to AWS Lambda, proportionally to the function's memory size~\footnote{\url{https://docs.aws.amazon.com/lambda/latest/dg/configuration-memory.html}} (\textit{1vCPU per 1,769 MB}).
+The planners that used uniform worker resource configurations (\textit{Uniform}, \textit{Uniform w/ optimizations}, \textit{WUKONG}, and \textit{WUKONG w/ optimizations}) used 2GB memory and the vCPUs were calculated similarly to AWS Lambda, proportionally to the function's memory size~\footnote{\url{https://docs.aws.amazon.com/lambda/latest/dg/configuration-memory.html}} (\textit{1 vCPU per 1,769 MB}).
 
 The workflows used for evaluating our solution were the following:
 
