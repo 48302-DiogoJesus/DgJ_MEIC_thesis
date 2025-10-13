@@ -107,11 +107,11 @@ To assess our research questions, we implemented three core planners: our propos
 Specifically, our \textbf{Uniform} and \textbf{Non-Uniform} planners were \textit{optimized} with our proposed \textit{pre-load} and \textit{pre-warm} optimizations. For comparison, the \textbf{WUKONG} planner was enhanced with its own native optimizations (\textit{Task Clustering} and \textit{Delayed I/O}, explained in Chapter~\ref{chap:rw}). The six evaluated variations were:
 \begin{itemize}
     \item \textbf{Uniform} (baseline)
-    \item \textbf{Optimized Uniform} (with Pre-Load and Pre-Warm)
+    \item \textbf{Optimized Uniform} (with \textit{Pre-Load} and \textit{Pre-Warm})
     \item \textbf{Non-Uniform} (baseline)
-    \item \textbf{Optimized Non-Uniform} (with Pre-Load and Pre-Warm)
+    \item \textbf{Optimized Non-Uniform} (with \textit{Pre-Load} and \textit{Pre-Warm})
     \item \textbf{WUKONG} (baseline)
-    \item \textbf{Optimized WUKONG} (with Task Clustering and Delayed I/O)
+    \item \textbf{Optimized WUKONG} (with \textit{Task Clustering} and \textit{Delayed I/O})
 \end{itemize}
 
 The experimental process was automated with a script that iterated through every combination of planner variation, SLA, and workflow. Each unique configuration was executed ten times to account for performance variability, resulting in 720 total experiments for analysis. Before starting a new workflow instance, this script waits for all FaaS gateway containers to become idle and then removed, causing the workers of the root nodes of the next workflow to experience cold starts. This ensures consistency in the experimental process.
@@ -123,7 +123,7 @@ This section presents the evaluation results of all proposed planners, including
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.05\textwidth]{images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png}
+    \includegraphics[width=1.1\textwidth]{images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png}
     \caption{Predictions Accuracy across all planners and SLA fulfillment rates}
     \label{fig:predictions_accuracy_by_sla_and_fullfilment}
 \end{figure}
@@ -175,7 +175,7 @@ The chart in Figure~\ref{fig:worker_stime_dist} compares the worker startup time
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.9\textwidth]{images/mine/eval/3_opts/time breakdown.png}
+    \includegraphics[width=0.7\textwidth]{images/mine/eval/3_opts/time breakdown.png}
     \caption{Time breakdown analysis}
     \label{fig:time_breakdown_analysis}
 \end{figure}
@@ -188,7 +188,7 @@ Similarly to Figure~\ref{fig:waiting_inputs_dist}, we can see the positive impac
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=1.1\textwidth]{images/mine/eval/3_opts/warm vs cold starts.png}
+    \includegraphics[width=1.12\textwidth]{images/mine/eval/3_opts/warm vs cold starts.png}
     \caption{Warm vs cold starts}
     \label{fig:warm_vs_cold_starts}
 \end{figure}
