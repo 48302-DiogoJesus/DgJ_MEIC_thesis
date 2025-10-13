@@ -144,7 +144,7 @@ When examining \textbf{SLA fulfillment rates}, we find that they remained stable
 
 \subsection{Overall Performance}
 
-The box plot shown in Figure~\ref{fig:makespan_dist} compares the makespan distribution between planners. All versions of our planners performed slightly better than both versions of the \textbf{WUKONG} planner when it comes to \textit{makespan}, with the non-optimized version of our \textbf{Uniform} planner performing \textbf{13.4\%} faster when compared with the optimized version of WUKONG. We can also see a clear improvement from the \textbf{Non-Uniform} to \textbf{Non-Uniform w/ optimizations} (with the best \textit{makespan} observed), but the same doesn't happen when comparing the \textbf{Uniform} planner against it's optimized version. This could be due to the Uniform planner using less resources per worker, leading to higher \textbf{resource contention} when \textit{pre-loading} dependencies. This could also explain higher times waiting for dependencies, in the plot shown in Figure~\ref{fig:waiting_inputs_dist}.
+The box plot shown in Figure~\ref{fig:makespan_dist} compares the makespan distribution between planners. All versions of our planners performed slightly better than both versions of the \textbf{WUKONG} planner when it comes to \textit{makespan}, with the non-optimized version of our \textbf{Uniform} planner performing \textbf{12.6\%} faster when compared with the optimized version of WUKONG. We can also see a clear improvement from the \textbf{Non-Uniform} to \textbf{Non-Uniform w/ optimizations} (with the best \textit{makespan} observed), but the same doesn't happen when comparing the \textbf{Uniform} planner against it's optimized version. This could be due to the Uniform planner using less resources per worker, leading to higher \textbf{resource contention} when \textit{pre-loading} dependencies. This could also explain higher times waiting for dependencies, in the plot shown in Figure~\ref{fig:waiting_inputs_dist}.
 
 \begin{figure}[htpb]
     \centering
@@ -184,7 +184,7 @@ The stacked bar chart in Figure~\ref{fig:time_breakdown_analysis} shows a time b
 
 WUKONG's execution time is slightly lower than our \textbf{Uniform} planner (\textasciitilde12.5s vs \textasciitilde20s) which shows the slowdown caused by resource contention, as \textbf{Uniform} can execute multiple tasks in parallel, whereas WUKONG workers execute only one task at a time. Despite using more capable workers, our \textbf{Non-Uniform} planner shows an execution time similar to \textbf{WUKONG}, a result that probably can also be attributed to resource contention.
 
-Similarly to Figure~\ref{fig:waiting_inputs_dist}, we can see the positive impact of \textit{pre-loading} on the \textbf{Non-Uniform} planner, as well as the positive impact of \textit{pre-warming} on both "optimized" versions of our planners, saving between \textbf{3 to 5 seconds}.
+Similarly to Figure~\ref{fig:waiting_inputs_dist}, we can see the positive impact of \textit{pre-loading} on the \textbf{Non-Uniform} planner, as well as the positive impact of \textit{pre-warming} on both "optimized" versions of our planners, saving between \textbf{2 to 6 seconds}.
 
 \begin{figure}[htpb]
     \centering
@@ -204,7 +204,7 @@ The chart in Figure~\ref{fig:warm_vs_cold_starts} illustrates the impact of the 
     \label{fig:resource_usage_gb_seconds}
 \end{figure}
 
-The chart in Figure~\ref{fig:resource_usage_gb_seconds} shows the resource usage distributions in \textit{GB-seconds} (used by AWS Lambda to charge users~\footnote{\url{https://aws.amazon.com/lambda/pricing/}}) across all planners. The optimized version of WUKONG clearly uses fewer resources than the non-optimized version, which is attributable to its reduced worker count. Once again, we believe that the reason for the optimized version of the \textbf{Uniform} planner to be using more resources than its base version is due to resource contention, which increases task execution time, consequently increasing overall resource usage. Despite this, if we compare the baseline \textbf{Uniform} planner implementation, it consumes \textbf{43.8\%} less resources than the optimized version of \textbf{WUKONG}.
+The chart in Figure~\ref{fig:resource_usage_gb_seconds} shows the resource usage distributions in \textit{GB-seconds} (used by AWS Lambda to charge users~\footnote{\url{https://aws.amazon.com/lambda/pricing/}}) across all planners. The optimized version of WUKONG clearly uses fewer resources than the non-optimized version, which is attributable to its reduced worker count. Once again, we believe that the reason for the optimized version of the \textbf{Uniform} planner to be using more resources than its base version is due to resource contention, which increases task execution time, consequently increasing overall resource usage. Despite this, if we compare the baseline \textbf{Uniform} planner implementation, it consumes \textbf{36\%} less resources than the optimized version of \textbf{WUKONG}.
 
 In contrast, the \textbf{Non-Uniform} planner shows a substantial improvement: the optimized version consumes slightly more than half the resources of the non-optimized version and nearly matches the resources used by \textbf{WUKONG}, despite using workers up to four times more powerful (2GB memory versus up to 8GB per worker). This highlights the effectiveness of the \textit{pre-load} and \textit{pre-warm} optimizations.
 
@@ -224,7 +224,7 @@ In contrast, the \textbf{Non-Uniform} planner shows a substantial improvement: t
 
 The charts presented in Figures~\ref{fig:makespan_comparison} and \ref{fig:resources_comparison} highlight the trade-off between workflow execution speed (makespan) and resource efficiency (GB-seconds), respectively, of the evaluated algorithms. Choosing the \textbf{Non-Uniform} planner over the \textbf{Uniform} planner yields an \textbf{8.8\%} performance gain (i.e., a shorter makespan), but this speed comes at a significant cost: a \textbf{290\%} increase in memory resource consumption (GB-seconds). Conversely, opting for the \textbf{Uniform} planner takes \textbf{9.6\%} longer, but reduces memory consumption by \textbf{74\%} compared to the \textbf{Non-Uniform}.
 
-The \textbf{WUKONG} planner represents a less favorable option in this comparison. It is \textbf{17.5\% slower} than the \textbf{Uniform} planner while also consuming \textbf{108\% more} memory resources, making the \textbf{Uniform} planner the most resource-efficient of the three.
+The \textbf{WUKONG} planner represents a less favorable option in this comparison. It is \textbf{14.9\% slower} than the \textbf{Uniform} planner while also consuming \textbf{108\% more} memory resources, making the \textbf{Uniform} planner the most resource-efficient of the three.
 
 The introduction of optimized planners dramatically alters the performance landscape. The optimized \textbf{Non-Uniform} planner emerges as the clear frontrunner in execution speed, achieving a median makespan of just 4.31s. This represents a \textbf{53\%} reduction in makespan and a \textbf{45\%} decrease in memory usage compared to its non-optimized version.
 
