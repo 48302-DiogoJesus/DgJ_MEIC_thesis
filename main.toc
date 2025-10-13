@@ -46,10 +46,10 @@
 \contentsline {subsection}{\numberline {4.4.2}Overall Performance}{54}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Optimizations}{56}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Resource Usage}{58}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Analysis}{60}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Conclusion}{61}{chapter.5}%
+\contentsline {section}{\numberline {4.5}Analysis}{62}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Conclusion}{63}{chapter.5}%
 \etoc@startlocaltoc {6}
-\contentsline {section}{\numberline {5.1}Achievements}{61}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Limitations and Future Work}{62}{section.5.2}%
-\contentsline {chapter}{Bibliography}{63}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Structure of Workflows used for Evaluation}{69}{appendix.A}%
+\contentsline {section}{\numberline {5.1}Achievements}{63}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Limitations and Future Work}{64}{section.5.2}%
+\contentsline {chapter}{Bibliography}{65}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Structure of Workflows used for Evaluation}{71}{appendix.A}%
