@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  13 OCT 2025 15:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  13 OCT 2025 15:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -859,4 +859,1319 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 220.
 Package hyperref Info: Option `breaklinks' set `true' on input line 220.
 Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 220.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 220.
- (C:\U
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/cleveref\cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `amsthm' support loaded on input line 3026.
+Package cleveref Info: `algorithmicx' support loaded on input line 3120.
+Package cleveref Info: `listings' support loaded on input line 3131.
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip89
+\enit@outerparindent=\dimen323
+\enit@toks=\toks61
+\enit@inbox=\box81
+\enit@count@id=\count373
+\enitdp@description=\count374
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/base\glossaries.sty
+Package: glossaries 2025/08/11 v4.8 (NLCT)
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/mfirstuc\mfirstuc.sty
+Package: mfirstuc 2025/04/03 v2.09 (NLCT)
+\@glsmfirst=\toks62
+\@glsmrest=\toks63
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/xfor\xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/tracklang\tracklang.sty
+Package: tracklang 2025/03/11 v1.6.6 (NLCT) Track Languages
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/generic/tracklang\tracklang.tex)
+Package tracklang Info: Tracking dialect `english' (language `english') on input line 264.
+Package tracklang Info: Tracking dialect `portuguese' (language `portuges') on input line 264.
+Package tracklang Info: Tracking dialect `english' (language `english') on input line 264.
+Package tracklang Info: Tracking dialect `portuguese' (language `portuges') on input line 264.
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/translator\translator.sty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries-english\glossaries-english.ldf
+File: glossaries-english.ldf 2014/11/23 v1.0
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries-portuges\glossaries-portuges.ldf
+File: glossaries-portuges.ldf 2014/11/23 v1.0
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries-portuges\glossaries-portuges-utf8.ldf)) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-base.sty
+Package: datatool-base 2025/04/25 v3.4.1 (NLCT)
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-l3fp.def
+File: datatool-l3fp.def 2025/04/25 v3.4.1 (NLCT)
+)
+\@dtl@toks=\toks64
+\@dtl@tmpcount=\count375
+\dtl@tmplength=\skip90
+\l__datatool_measure_box=\box82
+\dtl@sortresult=\count376
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-utf8.ldf
+File: datatool-utf8.ldf 2025/04/25 v3.4.1 (NLCT)
+)
+\@dtl@datatype=\count377
+\l__datatool_tmpa_int=\count378
+\l__datatool_tmpb_int=\count379
+\l__datatool_tmpc_int=\count380
+\l__datatool_tmpd_int=\count381
+\l__datatool_count_int=\count382
+\l__datatool_tmp_datatype_int=\count383
+\l__datatool_tmpa_dim=\dimen324
+\l__datatool_tmpb_dim=\dimen325
+\c_datatool_unknown_int=\count384
+\l__datatool_year_int=\count385
+\l__datatool_month_int=\count386
+\l__datatool_day_int=\count387
+\l__datatool_hour_int=\count388
+\l__datatool_minute_int=\count389
+\l__datatool_second_int=\count390
+\l__datatool_tzhour_int=\count391
+\l__datatool_tzminute_int=\count392
+\l__datatool_julian_int=\count393
+\l__datatool_local_julian_int=\count394
+\l__datatool_prefix_int=\count395
+\l__datatool_suffix_int=\count396
+\@dtl@foreach@level=\count397
+
+
+Package tracklang Warning: No `datatool' support for dialect `english'  on input line 9908.
+
+
+Package tracklang Warning: No `datatool' support for dialect `portuguese'  on input line 9908.
+
+\dtl@codeA=\count398
+\dtl@codeB=\count399
+)
+\gls@level=\count400
+\@gls@tmpb=\toks65
+\gls@tmplen=\skip91
+\l__glossaries_tmpa_dim=\dimen326
+\l__glossaries_tmpb_dim=\dimen327
+\glskeylisttok=\toks66
+\glslabeltok=\toks67
+\glsshorttok=\toks68
+\glslongtok=\toks69
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-hypernav.sty
+Package: glossary-hypernav 2025/08/11 v4.8 (NLCT)
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-list.sty
+Package: glossary-list 2025/08/11 v4.8 (NLCT)
+\glslistdottedwidth=\skip92
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-long.sty
+Package: glossary-long 2025/08/11 v4.8 (NLCT)
+\glsdescwidth=\skip93
+\glspagelistwidth=\skip94
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-super.sty
+Package: glossary-super 2025/08/11 v4.8 (NLCT)
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/supertabular\supertabular.sty
+Package: supertabular 2024/07/20 v4.2c the supertabular environment
+\c@tracingst=\count401
+\ST@wd=\dimen328
+\ST@rightskip=\skip95
+\ST@leftskip=\skip96
+\ST@parfillskip=\skip97
+\ST@pageleft=\dimen329
+\ST@headht=\dimen330
+\ST@tailht=\dimen331
+\ST@pagesofar=\dimen332
+\ST@pboxht=\dimen333
+\ST@rowht=\dimen334
+\ST@prevht=\dimen335
+\ST@toadd=\dimen336
+\ST@dimen=\dimen337
+\ST@pbox=\box83
+)) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-tree.sty
+Package: glossary-tree 2025/08/11 v4.8 (NLCT)
+\l__glossaries_tree_max_known_level_int=\count402
+\l__glossaries_tree_offset_dim=\dimen338
+\l__glossaries_tree_namewidth_dim=\dimen339
+\l__glossaries_tree_symbolwidth_dim=\dimen340
+\l__glossaries_tree_prenamesym_width_dim=\dimen341
+\l__glossaries_tree_presubnamesym_width_dim=\dimen342
+\l__glossaries_tree_namewidth_padding_dim=\dimen343
+\l__glossaries_tree_symbolwidth_padding_dim=\dimen344
+\l__glossaries_tree_namesymbolwidth_dim=\dimen345
+\l__glossaries_tree_namesymbolwidth_padding_dim=\dimen346
+\l__glossaries_tree_level_int=\count403
+\glstreeindent=\skip98
+))
+\glswrite=\write4
+\glo@main@file=\write5
+\openout5 = `main.glo'.
+
+Package glossaries Info: Writing glossary file main.glo on input line 271.
+ (Chapters/Glossary.tex) (cover-titlepage.sty) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip99
+\f@nch@offset@elh=\skip100
+\f@nch@offset@erh=\skip101
+\f@nch@offset@olh=\skip102
+\f@nch@offset@orh=\skip103
+\f@nch@offset@elf=\skip104
+\f@nch@offset@erf=\skip105
+\f@nch@offset@olf=\skip106
+\f@nch@offset@orf=\skip107
+\f@nch@height=\skip108
+\f@nch@footalignment=\skip109
+\f@nch@widthL=\skip110
+\f@nch@widthC=\skip111
+\f@nch@widthR=\skip112
+\@temptokenb=\toks70
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/etoc\etoc.sty
+Package: etoc 2023/10/29 v1.2d Completely customisable TOCs (JFB)
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count404
+\mult@box=\box84
+\multicol@leftmargin=\dimen347
+\c@unbalance=\count405
+\c@collectmore=\count406
+\doublecol@number=\count407
+\multicoltolerance=\count408
+\multicolpretolerance=\count409
+\full@width=\dimen348
+\page@free=\dimen349
+\premulticols=\dimen350
+\postmulticols=\dimen351
+\multicolsep=\skip113
+\multicolbaselineskip=\skip114
+\partial@page=\box85
+\last@line=\box86
+\mc@boxedresult=\box87
+\maxbalancingoverflow=\dimen352
+\mult@rightbox=\box88
+\mult@grightbox=\box89
+\mult@firstbox=\box90
+\mult@gfirstbox=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\c@minrows=\count410
+\c@columnbadness=\count411
+\c@finalcolumnbadness=\count412
+\last@try=\dimen353
+\multicolovershoot=\dimen354
+\multicolundershoot=\dimen355
+\mult@nat@firstbox=\box128
+\colbreak@box=\box129
+\mc@col@check@num=\count413
+)
+\Etoc@toctoks=\toks71
+\c@etoc@tocid=\count414
+\etoc@framed@titlebox=\box130
+\etoc@framed@contentsbox=\box131
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/minitoc\minitoc.sty
+Package: minitoc 2018/07/12 v62 Package minitoc
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/minitoc\mtcmess.sty
+Package: mtcmess 2006/03/14
+)
+Package minitoc Info: I0001
+(minitoc)             *** minitoc package, version 62 ***.
+\tf@mtc=\write6
+\mtcindent=\skip115
+\mtcskipamount=\skip116
+Package minitoc Info: I0005
+(minitoc)             compatible with hyperref.
+Package minitoc Info: I0023
+(minitoc)             part level macros available.
+Package minitoc Info: I0003
+(minitoc)             chapter level macros available.
+\mtc@toks=\toks72
+\mtc@strutbox=\box132
+\mtc@hstrutbox=\box133
+Package minitoc Info: I0002
+(minitoc)             Autoconfiguration of extensions.
+\openout6 = `main.mtc0'.
+
+\openout6 = `main.mtc'.
+
+ (main.mtc0)
+Package minitoc Info: I0012
+(minitoc)             Long extensions (Unix-like) will be used.
+Package minitoc Info: I0031
+(minitoc)             ==> this version is configured for UNIX-like 
+(minitoc)                 (long extensions) file names.
+\openout6 = `main.mtc'.
+
+\openout6 = `main.mtc0'.
+
+\c@mtc=\count415
+\c@minitocdepth=\count416
+\c@ptc=\count417
+\c@parttocdepth=\count418
+\ptcindent=\skip117
+Package minitoc Info: I0010
+(minitoc)             The english language is selected.
+(minitoc)              on input line 4910.
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/minitoc\english.mld
+File: english.mld 2006/01/13
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/minitoc\english.mld
+File: english.mld 2006/01/13
+))
+Package minitoc Info: I0010
+(minitoc)             The english language is selected.
+(minitoc)              on input line 362.
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/minitoc\english.mld
+File: english.mld 2006/01/13
+))
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'english'.
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count419
+\l__pdf_internal_box=\box134
+) (main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count420
+\scratchdimen=\dimen356
+\scratchbox=\box135
+\nofMPsegments=\count421
+\nofMParguments=\count422
+\everyMPshowfont=\toks73
+\MPscratchCnt=\count423
+\MPscratchDim=\dimen357
+\MPnumerator=\count424
+\makeMPintoPDFobject=\count425
+\everyMPtoPDFconversion=\toks74
+) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+)) (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/ucs\ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count426
+Package hyperref Info: Link coloring ON on input line 44.
+ (main.out) (main.out)
+\@outlinefile=\write7
+\openout7 = `main.out'.
+
+\Etoc@tf=\read5
+\c@minilofdepth=\count427
+\c@minilotdepth=\count428
+\c@partlofdepth=\count429
+\c@partlotdepth=\count430
+\c@sectlofdepth=\count431
+\c@sectlotdepth=\count432
+Package minitoc(hints) Info: I0049
+(minitoc(hints))             ==> You requested the hints option. 
+(minitoc(hints))             Some hints are eventually given below.
+ (Front_Cover.tex
+\c@Changes@addedCountMN=\count433
+\c@Changes@deletedCountMN=\count434
+\c@Changes@replacedCountMN=\count435
+\c@Changes@highlightCountMN=\count436
+\c@Changes@commentCountMN=\count437
+\c@Changes@addedCountJO=\count438
+\c@Changes@deletedCountJO=\count439
+\c@Changes@replacedCountJO=\count440
+\c@Changes@highlightCountJO=\count441
+\c@Changes@commentCountJO=\count442
+\c@Changes@addedCountPT=\count443
+\c@Changes@deletedCountPT=\count444
+\c@Changes@replacedCountPT=\count445
+\c@Changes@highlightCountPT=\count446
+\c@Changes@commentCountPT=\count447
+)
+TextBlockOrigin set to -5mm x 0mm
+<./Images/IST_A_RGB_POS.png, id=233, 509.905pt x 198.7425pt>
+File: ./Images/IST_A_RGB_POS.png Graphic file (type png)
+<use ./Images/IST_A_RGB_POS.png>
+Package pdftex.def Info: ./Images/IST_A_RGB_POS.png  used on input line 50.
+(pdftex.def)             Requested size: 142.26378pt x 55.4504pt.
+TextBlockOrigin set to 0pt x 0pt
+[1{C:/Users/dijes/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+
+\openout4 = `main.xdy'.
+
+ <./Images/IST_A_RGB_POS.png>]
+TextBlockOrigin set to 0pt x 0pt
+(Copyright.tex) [2
+
+
+
+] (Chapters/Acknowledgments.tex) [1] [2
+
+
+] (Chapters/EN-Abstract.tex) (Chapters/EN-KeyWords.tex) [3
+
+] [4
+
+
+] (Chapters/PT-Resumo.tex
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 8.
+
+Overfull \hbox (1.08301pt too wide) in paragraph at lines 8--9
+\T1/phv/m/n/10 orizado pela sua fa-cil-i-dade op-era-cional, es-cal-a-bil-i-dade au-tomática e mod-elo de preços gran-u-lar baseado
+ []
+
+) (Chapters/PT-PalavrasChave.tex) [5
+
+] [6
+
+
+]
+Package minitoc Info: I0024
+(minitoc)             PREPARING MINITOCS FROM main.toc on input line 98.
+Package minitoc Info: I0033
+(minitoc)             Writing main.mtc1.
+\openout6 = `main.mtc1'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mtc2.
+\openout6 = `main.mtc2'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mtc3.
+\openout6 = `main.mtc3'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mtc4.
+\openout6 = `main.mtc4'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mtc5.
+\openout6 = `main.mtc5'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mtc6.
+\openout6 = `main.mtc6'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mtc7.
+\openout6 = `main.mtc7'.
+
+Package minitoc Info: I0034
+(minitoc)             PREPARING MINILOFS FROM main.lof on input line 99.
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlf1.
+\openout6 = `main.mlf1'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlf2.
+\openout6 = `main.mlf2'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlf3.
+\openout6 = `main.mlf3'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlf4.
+\openout6 = `main.mlf4'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlf5.
+\openout6 = `main.mlf5'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlf6.
+\openout6 = `main.mlf6'.
+
+Package minitoc Info: I0037
+(minitoc)             PREPARING MINILOTS FROM main.lot on input line 102.
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlt1.
+\openout6 = `main.mlt1'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlt2.
+\openout6 = `main.mlt2'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlt3.
+\openout6 = `main.mlt3'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlt4.
+\openout6 = `main.mlt4'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlt5.
+\openout6 = `main.mlt5'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mlt6.
+\openout6 = `main.mlt6'.
+
+\tf@toc=\write8
+\openout8 = `main.toc'.
+
+Package cleveref Info: loaded `english' language definitions on input line 107.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 107.
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 107.
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [7
+
+] [8] (main.lof
+Package cleveref Info: loaded `english' language definitions on input line 1.
+)
+\tf@lof=\write9
+\openout9 = `main.lof'.
+
+ [9
+
+
+] [10
+
+] (main.loa)
+\tf@loa=\write10
+\openout10 = `main.loa'.
+
+ [11] [12
+
+] (main.lol)
+\tf@lol=\write11
+\openout11 = `main.lol'.
+
+ [13]
+No file main.gls.
+[14
+
+] (Chapters/1-Introduction.tex
+Chapter 1.
+LaTeX Font Info:    Trying to load font information for T1+pbk on input line 6.
+(C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pbk.fd
+File: t1pbk.fd 2001/06/04 font definitions for T1/pbk.
+)
+LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <10> not available
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 6.
+LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <130> not available
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 6.
+Package cleveref Info: loaded `english' language definitions on input line 9.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.14 
+      [1
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.29 
+      [2]) [3] [4
+
+] (Chapters/2-RelatedWork.tex
+Chapter 2.
+Package cleveref Info: loaded `english' language definitions on input line 9.
+[5
+
+]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 16.
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+) [6]
+<images/mine/serverless_arch.png, id=524, 885.90974pt x 585.387pt>
+File: images/mine/serverless_arch.png Graphic file (type png)
+<use images/mine/serverless_arch.png>
+Package pdftex.def Info: images/mine/serverless_arch.png  used on input line 24.
+(pdftex.def)             Requested size: 364.19664pt x 240.64441pt.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 35.
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1phv.fd
+File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
+) [7 <./images/mine/serverless_arch.png>] [8] [9]
+Overfull \hbox (5.67078pt too wide) in paragraph at lines 73--74
+[]\T1/phv/m/n/10 Faa$T (Function-as-a-Service Trans-par-ent Auto-scaling Cache) [[][]12[][]] tack-les the same is-sue as Palette,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10] [11] [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13] [14] [15] [16] [17]
+<images/mine/wukong2.0.png, id=680, 463.7325pt x 472.76625pt>
+File: images/mine/wukong2.0.png Graphic file (type png)
+<use images/mine/wukong2.0.png>
+Package pdftex.def Info: images/mine/wukong2.0.png  used on input line 159.
+(pdftex.def)             Requested size: 227.62204pt x 232.06146pt.
+ [18 <./images/mine/wukong2.0.png>] [19]) [20] (Chapters/3-Architecture.tex
+Chapter 3.
+Package cleveref Info: loaded `english' language definitions on input line 9.
+[21
+
+
+] (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 21.
+<Images/mine/dag_lang_example.png, id=718, 596.2275pt x 131.49126pt>
+File: Images/mine/dag_lang_example.png Graphic file (type png)
+<use Images/mine/dag_lang_example.png>
+Package pdftex.def Info: Images/mine/dag_lang_example.png  used on input line 43.
+(pdftex.def)             Requested size: 455.24408pt x 100.39986pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[22] [23 <./Images/mine/dag_lang_example.png>]
+<Images/mine/solution_distributedarchintegrated.png, id=767, 802.49812pt x 600.74437pt>
+File: Images/mine/solution_distributedarchintegrated.png Graphic file (type png)
+<use Images/mine/solution_distributedarchintegrated.png>
+Package pdftex.def Info: Images/mine/solution_distributedarchintegrated.png  used on input line 86.
+(pdftex.def)             Requested size: 455.24408pt x 340.79619pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24] [25 <./Images/mine/solution_distributedarchintegrated.png>]
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 117.
+ (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+) [26]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 137.
+
+Underfull \hbox (badness 1584) in paragraph at lines 191--192
+[]$\OML/cmm/m/it/9 samples[]with[]dist \OMS/cmsy/m/n/9   f\OT1/cmr/m/n/9 (\OMS/cmsy/m/n/9 j\OML/cmm/m/it/9 comparable[]o[]ef \OMS/cmsy/m/n/9 ^^@ \OML/cmm/m/it/9 reference[]value\OMS/cmsy/m/n/9 j\OML/cmm/m/it/9 ; value\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 j \OT1/cmr/m/n/9 (\OML/cmm/m/it/9 value; comparable[]o[]ef\OT1/cmr/m/n/9 ) \OMS/cmsy/m/n/9 2
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27] [28] [29]
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family phv in TS1 encoding.
+            Default family used instead on input line 229.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family phv in TS1 encoding.
+            Default family used instead on input line 229.
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family phv in TS1 encoding.
+            Default family used instead on input line 229.
+ [30]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.250     \State
+                 $assigned \gets \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.253     \ForAll
+                 {$n \in nodes$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.254         \If
+                 {$n \in assigned$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.255             \State
+                         \textbf{continue}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.256         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.258         \If
+                 {$n.upstream = \emptyset$} \Comment{root nodes}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.259             \State
+                         $roots \gets \{r \in nodes \mid r.upstream = \empty...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.260             \State
+                         \Call{AssignGroup}{$\textit{null}$, $roots$}
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 260.
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.261         \ElsIf
+                    {$|n.upstream| = 1$} \Comment{1$\to$1 or 1$\to$N}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.262             \State
+                         $u \gets n.upstream[0]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.263             \If
+                     {$|u.downstream| = 1$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.264                 \State
+                             \Call{AssignWorker}{$[n]$, $u.worker$} \Comment...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.265             \Else
+                        \Comment{1$\to$N}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.266                 \State
+                             $fanout \gets \{d \in u.downstream \mid d \noti...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.267                 \State
+                             \Call{AssignGroup}{$u.worker$, $fanout$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.268             \EndIf
+                        
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.269         \Else
+                    \Comment{N$\to$1 (assign to worker of upstream task with...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.270             \State
+                         $outputs \gets \{u.worker: predictions.output\_size...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.271             \State
+                         $worker\_w\_greatest\_acc\_output \gets \arg\max_{w...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.20}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.272             \State
+                         \Call{AssignWorker}{$[n]$, $best$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.273         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.274     \EndFor
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.278     \Function
+                   {AssignGroup}{$up\_worker$, $tasks$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.24}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.279         \If
+                 {$tasks = \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.281         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.26}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.283         \State
+                     $exec\_t \gets \{t: predictions.exec\_time(t) \mid t \i...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.284         \State
+                     $out\_sz \gets \{t: predictions.output\_size(t) \mid t ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.28}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.285         \State
+                     $median \gets \textsc{Median}(exec\_t.values())$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.29}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.286         \State
+                     $longs \gets \{t \in tasks \mid exec\_t[t] > median\}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.30}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.287         \State
+                     $shorts \gets \textsc{SortLargerOutputFirst}(\{t \in ta...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.31}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.290         \State
+                     \Comment{1) cluster short tasks with bigger outputs on ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.32}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.291         \If
+                 {$up\_worker \neq \textit{null} \land shorts \neq \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.33}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.292             \State
+                         $cluster \gets shorts[0:MAX\_CLUSTERING]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.34}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.293             \State
+                         \Call{AssignWorker}{$cluster$, $up\_worker$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.35}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.294             \State
+                         $shorts \gets shorts[MAX\_CLUSTERING:]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.36}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.295         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.37}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.298         \State
+                     \Comment{2) pair long tasks with remaining short tasks ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.38}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.299         \While
+                    {$longs \neq \emptyset \land shorts \neq \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.39}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.300             \State
+                         $cluster \gets [longs[0]] + shorts[0:MAX\_CLUSTERIN...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.40}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.301             \State
+                         $worker\_id \gets$ \Call{NewWorkerId}{}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.302             \State
+                         \Call{AssignWorker}{$cluster$, $worker\_id$}
+
+LaTeX Warning: Float too large for page by 96.16777pt on input line 325.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.339     \State
+                 $workers\_outside \gets \emptyset$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.342     \State
+                 \Comment{1) Identify workers outside the critical path}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.343     \ForAll
+                 {$n \in nodes$} \Comment{nodes are topologically sorted}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.344         \State
+                     $wid \gets n.worker\_id$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.345         \If
+                 {$n.id \notin critical\_path\_ids \land \forall cp \in dag....
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.346             \State
+                         $workers\_outside \gets workers\_outside \cup \{wid\}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.347         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.348     \EndFor
+                 
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.350     \State
+                 $nodes\_outside\_cp \gets \{n \in nodes \mid n.id \notin cr...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.353     \State
+                 \Comment{2) Attempt downgrade for each worker outside criti...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.354     \ForAll
+                 {$wid \in workers\_outside$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.355         \State
+                     $last\_acceptable_\_rc \gets \{n.id: n.config \mid n \i...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.358         \State
+                     \Comment{Iterate through weaker configurations (skip st...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.359         \For
+                  {$i \gets 1$ \textbf{to} $|configs| - 1$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.360             \State
+                         $trial \gets configs[i].\textsc{Clone}(wid)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.363             \State
+                         \Comment{Apply trial configuration to all nodes of ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.364             \ForAll
+                         {$n \in nodes\_outside\_cp$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.365                 \If
+                         {$n.worker\_id = wid$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.366                     \State
+                                 $n.config \gets trial$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.20}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.367                 \EndIf
+                            
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.368             \EndFor
+                         
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.371             \State
+                         \Comment{Recompute workflow timing with predictions}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.372             \State
+                         $cp\_time \gets$ \Call{SimulateCriticalPathTime}{$d...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.24}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.375             \If
+                     {$cp\_time = original\_cp\_time$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.376                 \State
+                             \Comment{Downgrade acceptable, record as last a...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.26}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.377                 \ForAll
+                             {$n \in nodes\_outside\_cp$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.378                     \If
+                             {$n.worker\_id = wid$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.28}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.379                         \State
+                                     $last\_acceptable\_rc[n.id] \gets n.con...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.29}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.380                     \EndIf
+                                
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.30}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.381                 \EndFor
+                             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.31}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.382             \Else
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.32}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.383                 \State
+                             \Comment{Downgrade increases critical path, rev...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.33}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.384                 \ForAll
+                             {$n \in nodes\_outside\_cp$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.34}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.385                     \If
+                             {$n.worker\_id = wid$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.35}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.386                         \State
+                                     $n.config \gets last\_acceptable\_rc[n....
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.36}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.387                     \EndIf
+                                
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.37}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.388                 \EndFor
+                             
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.38}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.389                 \State
+                             \textbf{break} \Comment{move to next worker}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.39}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.390             \EndIf
+                        
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.40}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.391         \EndFor
+                     
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.392     \EndFor
+                  [31] [32] [33] [34]
+<Images/mine/solution_workflowinstanceexample.png, id=911, 1017.8025pt x 548.80031pt>
+File: Images/mine/solution_workflowinstanceexample.png Graphic file (type png)
+<use Images/mine/solution_workflowinstanceexample.png>
+Package pdftex.def Info: Images/mine/solution_workflowinstanceexample.png  used on input line 429.
+(pdftex.def)             Requested size: 455.24408pt x 245.46727pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[35]
+Underfull \vbox (badness 7486) has occurred while \output is active []
+
+ [36 <./Images/mine/solution_workflowinstanceexample.png>]
+Underfull \vbox (badness 4673) has occurred while \output is active []
+
+ [37]
+<images/mine/text_analysis_NonUniformPlanner-opt.png, id=951, 2202.2275pt x 6610.6975pt>
+File: images/mine/text_analysis_NonUniformPlanner-opt.png Graphic file (type png)
+<use images/mine/text_analysis_NonUniformPlanner-opt.png>
+Package pdftex.def Info: images/mine/text_analysis_NonUniformPlanner-opt.png  used on input line 470.
+(pdftex.def)             Requested size: 212.30528pt x 637.34155pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]
+Overfull \vbox (21.0pt too high) has occurred while \output is active []
+
+ [39 <./images/mine/text_analysis_NonUniformPlanner-opt.png>]
+<images/mine/dag_image_text_analysis.png, id=963, 2474.24374pt x 2299.59125pt>
+File: images/mine/dag_image_text_analysis.png Graphic file (type png)
+<use images/mine/dag_image_text_analysis.png>
+Package pdftex.def Info: images/mine/dag_image_text_analysis.png  used on input line 489.
+(pdftex.def)             Requested size: 478.00766pt x 444.26047pt.
+
+Overfull \hbox (22.76358pt too wide) in paragraph at lines 489--490
+ [][] 
+ []
+
+[40] [41 <./images/mine/dag_image_text_analysis.png>]
+<images/mine/realtime dashboard.png, id=977, 1750.54pt x 662.475pt>
+File: images/mine/realtime dashboard.png Graphic file (type png)
+<use images/mine/realtime dashboard.png>
+Package pdftex.def Info: images/mine/realtime dashboard.png  used on input line 508.
+(pdftex.def)             Requested size: 500.77126pt x 189.50482pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 508--509
+ [][] 
+ []
+
+[42 <./images/mine/realtime dashboard.png>] [43] [44]
+<Images/mine/choreographed_execution_example.png, id=1007, 1263.97218pt x 372.64218pt>
+File: Images/mine/choreographed_execution_example.png Graphic file (type png)
+<use Images/mine/choreographed_execution_example.png>
+Package pdftex.def Info: Images/mine/choreographed_execution_example.png  used on input line 543.
+(pdftex.def)             Requested size: 455.24408pt x 134.21362pt.
+ [45 <./Images/mine/choreographed_execution_example.png>]) (Chapters/4-Evaluation.tex [46]
+Chapter 4.
+Package cleveref Info: loaded `english' language definitions on input line 8.
+[47
+
+] [48] [49] [50] [51] [52]
+<images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png, id=1090, 1585.925pt x 602.25pt>
+File: images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png Graphic file (type png)
+<use images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png>
+Package pdftex.def Info: images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png  used on input line 126.
+(pdftex.def)             Requested size: 478.00766pt x 181.52184pt.
+
+Overfull \hbox (22.76358pt too wide) in paragraph at lines 126--127
+ [][] 
+ []
+
+[53 <./images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png>]
+<images/mine/eval/2_metrics/makespan dist.png, id=1099, 784.9325pt x 501.875pt>
+File: images/mine/eval/2_metrics/makespan dist.png Graphic file (type png)
+<use images/mine/eval/2_metrics/makespan dist.png>
+Package pdftex.def Info: images/mine/eval/2_metrics/makespan dist.png  used on input line 151.
+(pdftex.def)             Requested size: 455.24408pt x 291.08003pt.
+<images/mine/eval/2_metrics/waiting inputs dist.png, id=1100, 784.9325pt x 501.875pt>
+File: images/mine/eval/2_metrics/waiting inputs dist.png Graphic file (type png)
+<use images/mine/eval/2_metrics/waiting inputs dist.png>
+Package pdftex.def Info: images/mine/eval/2_metrics/waiting inputs dist.png  used on input line 158.
+(pdftex.def)             Requested size: 455.24408pt x 291.08003pt.
+<images/mine/eval/2_metrics/worker stime dist.png, id=1102, 784.9325pt x 501.875pt>
+File: images/mine/eval/2_metrics/worker stime dist.png Graphic file (type png)
+<use images/mine/eval/2_metrics/worker stime dist.png>
+Package pdftex.def Info: images/mine/eval/2_metrics/worker stime dist.png  used on input line 167.
+(pdftex.def)             Requested size: 455.24408pt x 291.08003pt.
+ [54] [55 <./images/mine/eval/2_metrics/makespan dist.png> <./images/mine/eval/2_metrics/waiting inputs dist.png>]
+<images/mine/eval/3_opts/time breakdown.png, id=1114, 602.25pt x 501.875pt>
+File: images/mine/eval/3_opts/time breakdown.png Graphic file (type png)
+<use images/mine/eval/3_opts/time breakdown.png>
+Package pdftex.def Info: images/mine/eval/3_opts/time breakdown.png  used on input line 178.
+(pdftex.def)             Requested size: 409.71689pt x 341.44661pt.
+ [56 <./images/mine/eval/2_metrics/worker stime dist.png>] [57 <./images/mine/eval/3_opts/time breakdown.png>]
+<images/mine/eval/3_opts/warm vs cold starts.png, id=1128, 1287.81125pt x 652.4375pt>
+File: images/mine/eval/3_opts/warm vs cold starts.png Graphic file (type png)
+<use images/mine/eval/3_opts/warm vs cold starts.png>
+Package pdftex.def Info: images/mine/eval/3_opts/warm vs cold starts.png  used on input line 191.
+(pdftex.def)             Requested size: 500.77126pt x 253.70294pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 191--192
+ [][] 
+ []
+
+<images/mine/eval/4_res_usage/resource usage gb seconds 2.png, id=1131, 635.37375pt x 401.5pt>
+File: images/mine/eval/4_res_usage/resource usage gb seconds 2.png Graphic file (type png)
+<use images/mine/eval/4_res_usage/resource usage gb seconds 2.png>
+Package pdftex.def Info: images/mine/eval/4_res_usage/resource usage gb seconds 2.png  used on input line 202.
+(pdftex.def)             Requested size: 386.96024pt x 244.53479pt.
+<images/mine/eval/4_res_usage/makespan compare.png, id=1135, 652.4375pt x 652.4375pt>
+File: images/mine/eval/4_res_usage/makespan compare.png Graphic file (type png)
+<use images/mine/eval/4_res_usage/makespan compare.png>
+Package pdftex.def Info: images/mine/eval/4_res_usage/makespan compare.png  used on input line 213.
+(pdftex.def)             Requested size: 341.43306pt x 341.43971pt.
+[58 <./images/mine/eval/3_opts/warm vs cold starts.png>]
+<images/mine/eval/4_res_usage/resources compare.png, id=1142, 652.4375pt x 652.4375pt>
+File: images/mine/eval/4_res_usage/resources compare.png Graphic file (type png)
+<use images/mine/eval/4_res_usage/resources compare.png>
+Package pdftex.def Info: images/mine/eval/4_res_usage/resources compare.png  used on input line 220.
+(pdftex.def)             Requested size: 341.43306pt x 341.43971pt.
+
+Underfull \vbox (badness 2608) has occurred while \output is active []
+
+ [59 <./images/mine/eval/4_res_usage/resource usage gb seconds 2.png>] [60 <./images/mine/eval/4_res_usage/makespan compare.png>] [61 <./images/mine/eval/4_res_usage/resources compare.png>]) [62] (Chapters/5-Conclusion.tex
+Chapter 5.
+Package cleveref Info: loaded `english' language definitions on input line 9.
+[63
+
+
+] [64]) (main.bbl [65] [66
+
+] [67] [68]
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
+[]\T1/phv/m/n/10 A. Casal-boni, ``AWS Lambda Power Tun-ing,'' [][]$https : / / github . com / alexcasalboni /
+ []
+
+[69]) (Chapters/AppendixA.tex [70]
+Appendix A.
+<images/mine/dag_image_gemm.png, id=1250, 764.8575pt x 1143.27126pt>
+File: images/mine/dag_image_gemm.png Graphic file (type png)
+<use images/mine/dag_image_gemm.png>
+Package pdftex.def Info: images/mine/dag_image_gemm.png  used on input line 10.
+(pdftex.def)             Requested size: 455.24174pt x 541.75113pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/mine/dag_image_tree_reduction.png, id=1251, 904.37875pt x 2299.59125pt>
+File: images/mine/dag_image_tree_reduction.png Graphic file (type png)
+<use images/mine/dag_image_tree_reduction.png>
+Package pdftex.def Info: images/mine/dag_image_tree_reduction.png  used on input line 17.
+(pdftex.def)             Requested size: 455.238pt x 541.73741pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: images/mine/dag_image_text_analysis.png Graphic file (type png)
+<use images/mine/dag_image_text_analysis.png>
+Package pdftex.def Info: images/mine/dag_image_text_analysis.png  used on input line 24.
+(pdftex.def)             Requested size: 455.23618pt x 541.73741pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/mine/dag_image_image_transformer.png, id=1252, 1967.35pt x 2299.59125pt>
+File: images/mine/dag_image_image_transformer.png Graphic file (type png)
+<use images/mine/dag_image_image_transformer.png>
+Package pdftex.def Info: images/mine/dag_image_image_transformer.png  used on input line 31.
+(pdftex.def)             Requested size: 455.24277pt x 541.73741pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [71
+
+] [72 <./images/mine/dag_image_gemm.png>] [73 <./images/mine/dag_image_tree_reduction.png>] [74] [75 <./images/mine/dag_image_image_transformer.png>] [76
+
+]
+
+Package caption Warning: Unused \captionsetup[table] on input line 86.
+See the caption package documentation for explanation.
+
+\Changes@OutFile=\write12
+\openout12 = `main.soc'.
+
+\tf@loc=\write13
+\openout13 = `main.loc'.
+
+Package minitoc Info: I0009
+(minitoc)             Listing minitoc auxiliary files. 
+(minitoc)             Creating the main.maf file.
+\openout6 = `main.maf'.
+
+
+Package minitoc(hints) Warning: W0078
+(minitoc(hints))                You have used \dominitoc, 
+(minitoc(hints))                but not \minitoc.
+
+
+Package minitoc(hints) Warning: W0079
+(minitoc(hints))                You have used \dominilof, 
+(minitoc(hints))                but not \minilof.
+
+
+Package minitoc(hints) Warning: W0080
+(minitoc(hints))                You have used \dominilot, 
+(minitoc(hints))                but not \minilot.
+
+Package minitoc(hints) Info: I0053
+(minitoc(hints))             You have loaded the float package; 
+(minitoc(hints))             please be aware that the minitoc package 
+(minitoc(hints))             facilities can not be used for new types 
+(minitoc(hints))             of floats defined by the float package.
+
+Package minitoc(hints) Warning: W0024
+(minitoc(hints))                Some hints have been written 
+(minitoc(hints))                in the main.log file.
+
+[77] (main.aux
+Package cleveref Info: loaded `english' language definitions on input line 16.
+)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 66B9C54A06A273539CA65A5D849F3A42;9300.
+ ) 
+Here is how much of TeX's memory you used:
+ 45016 strings out of 474486
+ 880510 string characters out of 5743755
+ 2038542 words of memory out of 5000000
+ 66080 multiletter control sequences out of 15000+600000
+ 646812 words of font info for 118 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 90i,12n,96p,2565b,1512s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0800.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on main.pdf (93 pages, 3412691 bytes).
+PDF statistics:
+ 1552 PDF objects out of 1728 (max. 8388607)
+ 408 named destinations out of 1000 (max. 500000)
+ 579 words of extra memory for PDF output out of 10000 (max. 10000000)
+

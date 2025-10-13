@@ -1,2 +1,3 @@
 - ?? Fill "Chairperson" and "Member of the comittee" fields
+- validate numbers
 - acknowledgments
