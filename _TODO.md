@@ -1,4 +1,2 @@
-- Evaluation Analysis: it is worth to explore the trade-off between clustering multiple tasks on the same worker to avoid cold starts and data transfer times
-- GitHub link
 - ?? Fill "Chairperson" and "Member of the comittee" fields
 - acknowledgments
