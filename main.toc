@@ -30,10 +30,10 @@
 \contentsline {section}{\numberline {3.1}Workflow Definition Language}{22}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Architecture}{24}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Metadata Management}{26}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Static Workflow Planning}{29}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Workflow Simulation}{29}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Planning Algorithms}{29}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Optimizations}{33}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.4}Static Workflow Planning}{28}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Workflow Simulation}{28}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Planning Algorithms}{28}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Optimizations}{35}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}Client}{39}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Decentralized Workers}{42}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Evaluation}{47}{chapter.4}%
