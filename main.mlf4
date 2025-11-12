@@ -1,9 +1,9 @@
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.1}{\ignorespaces Predictions Accuracy across all planners and SLA fulfillment rates}}{\reset@font\mlffont 53}{figure.caption.20}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.2}{\ignorespaces \textit {Makespan} distribution}}{\reset@font\mlffont 55}{figure.caption.21}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.3}{\ignorespaces \textit {Waiting for dependencies} distribution}}{\reset@font\mlffont 55}{figure.caption.22}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.4}{\ignorespaces \textit {Worker startup time} distribution}}{\reset@font\mlffont 56}{figure.caption.23}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.5}{\ignorespaces Time breakdown analysis}}{\reset@font\mlffont 57}{figure.caption.24}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.6}{\ignorespaces Warm vs cold starts}}{\reset@font\mlffont 58}{figure.caption.25}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.7}{\ignorespaces Resource usage distribution (in GB-seconds)}}{\reset@font\mlffont 58}{figure.caption.26}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.8}{\ignorespaces \textit {Makespan} comparison}}{\reset@font\mlffont 59}{figure.caption.27}}
-{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.9}{\ignorespaces Resource usage comparison}}{\reset@font\mlffont 60}{figure.caption.28}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.1}{\ignorespaces Predictions Accuracy across all planners and SLA fulfillment rates}}{\reset@font\mlffont 51}{figure.caption.20}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.2}{\ignorespaces \textit {Makespan} distribution}}{\reset@font\mlffont 53}{figure.caption.21}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.3}{\ignorespaces \textit {Waiting for dependencies} distribution}}{\reset@font\mlffont 53}{figure.caption.22}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.4}{\ignorespaces \textit {Worker startup time} distribution}}{\reset@font\mlffont 54}{figure.caption.23}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.5}{\ignorespaces Time breakdown analysis}}{\reset@font\mlffont 55}{figure.caption.24}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.6}{\ignorespaces Warm vs cold starts}}{\reset@font\mlffont 56}{figure.caption.25}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.7}{\ignorespaces Resource usage distribution (in GB-seconds)}}{\reset@font\mlffont 56}{figure.caption.26}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.8}{\ignorespaces \textit {Makespan} comparison}}{\reset@font\mlffont 57}{figure.caption.27}}
+{\reset@font\mlffont\mtc@string\contentsline{figure}{\noexpand \leavevmode \numberline {4.9}{\ignorespaces Resource usage comparison}}{\reset@font\mlffont 58}{figure.caption.28}}

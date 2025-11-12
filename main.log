@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  12 NOV 2025 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  12 NOV 2025 16:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1947,30 +1947,27 @@ Underfull \vbox (badness 7486) has occurred while \output is active []
 Underfull \vbox (badness 4673) has occurred while \output is active []
 
  [37]
-<images/mine/text_analysis_NonUniformPlanner-opt.png, id=951, 2202.2275pt x 6610.6975pt>
+<images/mine/text_analysis_NonUniformPlanner-opt.png, id=951, 1651.67062pt x 1724.69344pt>
 File: images/mine/text_analysis_NonUniformPlanner-opt.png Graphic file (type png)
 <use images/mine/text_analysis_NonUniformPlanner-opt.png>
 Package pdftex.def Info: images/mine/text_analysis_NonUniformPlanner-opt.png  used on input line 470.
-(pdftex.def)             Requested size: 212.30528pt x 637.34155pt.
+(pdftex.def)             Requested size: 455.24408pt x 475.358pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2080) has occurred while \output is active []
 
- [38]
-Overfull \vbox (21.0pt too high) has occurred while \output is active []
-
- [39 <./images/mine/text_analysis_NonUniformPlanner-opt.png>]
-<images/mine/dag_image_text_analysis.png, id=963, 2474.24374pt x 2299.59125pt>
+ [38 <./images/mine/text_analysis_NonUniformPlanner-opt.png>]
+<images/mine/dag_image_text_analysis.png, id=958, 1855.68282pt x 639.13782pt>
 File: images/mine/dag_image_text_analysis.png Graphic file (type png)
 <use images/mine/dag_image_text_analysis.png>
 Package pdftex.def Info: images/mine/dag_image_text_analysis.png  used on input line 489.
-(pdftex.def)             Requested size: 478.00766pt x 444.26047pt.
+(pdftex.def)             Requested size: 478.00766pt x 164.63103pt.
 
 Overfull \hbox (22.76358pt too wide) in paragraph at lines 489--490
  [][] 
  []
 
-[40] [41 <./images/mine/dag_image_text_analysis.png>]
-<images/mine/realtime dashboard.png, id=977, 1750.54pt x 662.475pt>
+[39 <./images/mine/dag_image_text_analysis.png>]
+<images/mine/realtime dashboard.png, id=969, 1750.54pt x 662.475pt>
 File: images/mine/realtime dashboard.png Graphic file (type png)
 <use images/mine/realtime dashboard.png>
 Package pdftex.def Info: images/mine/realtime dashboard.png  used on input line 508.
@@ -1980,19 +1977,25 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 508--509
  [][] 
  []
 
-[42 <./images/mine/realtime dashboard.png>] [43] [44]
-<Images/mine/choreographed_execution_example.png, id=1007, 1263.97218pt x 372.64218pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40] [41 <./images/mine/realtime dashboard.png>] [42]
+<Images/mine/choreographed_execution_example.png, id=998, 1263.97218pt x 372.64218pt>
 File: Images/mine/choreographed_execution_example.png Graphic file (type png)
 <use Images/mine/choreographed_execution_example.png>
 Package pdftex.def Info: Images/mine/choreographed_execution_example.png  used on input line 543.
 (pdftex.def)             Requested size: 455.24408pt x 134.21362pt.
- [45 <./Images/mine/choreographed_execution_example.png>]) (Chapters/4-Evaluation.tex [46]
+
+Underfull \vbox (badness 7012) has occurred while \output is active []
+
+ [43]) (Chapters/4-Evaluation.tex [44 <./Images/mine/choreographed_execution_example.png>]
 Chapter 4.
 Package cleveref Info: loaded `english' language definitions on input line 8.
-[47
+[45
 
-] [48] [49] [50] [51] [52]
-<images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png, id=1090, 1585.925pt x 602.25pt>
+] [46] [47] [48] [49] [50]
+<images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png, id=1081, 1585.925pt x 602.25pt>
 File: images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png Graphic file (type png)
 <use images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png>
 Package pdftex.def Info: images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png  used on input line 126.
@@ -2002,30 +2005,30 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 126--127
  [][] 
  []
 
-[53 <./images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png>]
-<images/mine/eval/2_metrics/makespan dist.png, id=1099, 784.9325pt x 501.875pt>
+[51 <./images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png>]
+<images/mine/eval/2_metrics/makespan dist.png, id=1091, 784.9325pt x 501.875pt>
 File: images/mine/eval/2_metrics/makespan dist.png Graphic file (type png)
 <use images/mine/eval/2_metrics/makespan dist.png>
 Package pdftex.def Info: images/mine/eval/2_metrics/makespan dist.png  used on input line 151.
 (pdftex.def)             Requested size: 455.24408pt x 291.08003pt.
-<images/mine/eval/2_metrics/waiting inputs dist.png, id=1100, 784.9325pt x 501.875pt>
+<images/mine/eval/2_metrics/waiting inputs dist.png, id=1092, 784.9325pt x 501.875pt>
 File: images/mine/eval/2_metrics/waiting inputs dist.png Graphic file (type png)
 <use images/mine/eval/2_metrics/waiting inputs dist.png>
 Package pdftex.def Info: images/mine/eval/2_metrics/waiting inputs dist.png  used on input line 158.
 (pdftex.def)             Requested size: 455.24408pt x 291.08003pt.
-<images/mine/eval/2_metrics/worker stime dist.png, id=1102, 784.9325pt x 501.875pt>
+<images/mine/eval/2_metrics/worker stime dist.png, id=1094, 784.9325pt x 501.875pt>
 File: images/mine/eval/2_metrics/worker stime dist.png Graphic file (type png)
 <use images/mine/eval/2_metrics/worker stime dist.png>
 Package pdftex.def Info: images/mine/eval/2_metrics/worker stime dist.png  used on input line 167.
 (pdftex.def)             Requested size: 455.24408pt x 291.08003pt.
- [54] [55 <./images/mine/eval/2_metrics/makespan dist.png> <./images/mine/eval/2_metrics/waiting inputs dist.png>]
-<images/mine/eval/3_opts/time breakdown.png, id=1114, 602.25pt x 501.875pt>
+ [52] [53 <./images/mine/eval/2_metrics/makespan dist.png> <./images/mine/eval/2_metrics/waiting inputs dist.png>]
+<images/mine/eval/3_opts/time breakdown.png, id=1106, 602.25pt x 501.875pt>
 File: images/mine/eval/3_opts/time breakdown.png Graphic file (type png)
 <use images/mine/eval/3_opts/time breakdown.png>
 Package pdftex.def Info: images/mine/eval/3_opts/time breakdown.png  used on input line 178.
 (pdftex.def)             Requested size: 318.66946pt x 265.56363pt.
- [56 <./images/mine/eval/2_metrics/worker stime dist.png>]
-<images/mine/eval/3_opts/warm vs cold starts.png, id=1122, 1287.81125pt x 652.4375pt>
+ [54 <./images/mine/eval/2_metrics/worker stime dist.png>]
+<images/mine/eval/3_opts/warm vs cold starts.png, id=1114, 1287.81125pt x 652.4375pt>
 File: images/mine/eval/3_opts/warm vs cold starts.png Graphic file (type png)
 <use images/mine/eval/3_opts/warm vs cold starts.png>
 Package pdftex.def Info: images/mine/eval/3_opts/warm vs cold starts.png  used on input line 191.
@@ -2035,38 +2038,38 @@ Overfull \hbox (54.62706pt too wide) in paragraph at lines 191--192
  [][] 
  []
 
-<images/mine/eval/4_res_usage/resource usage gb seconds 2.png, id=1125, 635.37375pt x 401.5pt>
+<images/mine/eval/4_res_usage/resource usage gb seconds 2.png, id=1117, 635.37375pt x 401.5pt>
 File: images/mine/eval/4_res_usage/resource usage gb seconds 2.png Graphic file (type png)
 <use images/mine/eval/4_res_usage/resource usage gb seconds 2.png>
 Package pdftex.def Info: images/mine/eval/4_res_usage/resource usage gb seconds 2.png  used on input line 202.
 (pdftex.def)             Requested size: 386.96024pt x 244.53479pt.
-[57 <./images/mine/eval/3_opts/time breakdown.png>] [58 <./images/mine/eval/3_opts/warm vs cold starts.png> <./images/mine/eval/4_res_usage/resource usage gb seconds 2.png>]
-<images/mine/eval/4_res_usage/makespan compare.png, id=1142, 652.4375pt x 652.4375pt>
+[55 <./images/mine/eval/3_opts/time breakdown.png>] [56 <./images/mine/eval/3_opts/warm vs cold starts.png> <./images/mine/eval/4_res_usage/resource usage gb seconds 2.png>]
+<images/mine/eval/4_res_usage/makespan compare.png, id=1133, 652.4375pt x 652.4375pt>
 File: images/mine/eval/4_res_usage/makespan compare.png Graphic file (type png)
 <use images/mine/eval/4_res_usage/makespan compare.png>
 Package pdftex.def Info: images/mine/eval/4_res_usage/makespan compare.png  used on input line 213.
 (pdftex.def)             Requested size: 341.43306pt x 341.43971pt.
-<images/mine/eval/4_res_usage/resources compare.png, id=1143, 652.4375pt x 652.4375pt>
+<images/mine/eval/4_res_usage/resources compare.png, id=1134, 652.4375pt x 652.4375pt>
 File: images/mine/eval/4_res_usage/resources compare.png Graphic file (type png)
 <use images/mine/eval/4_res_usage/resources compare.png>
 Package pdftex.def Info: images/mine/eval/4_res_usage/resources compare.png  used on input line 220.
 (pdftex.def)             Requested size: 341.43306pt x 341.43971pt.
- [59 <./images/mine/eval/4_res_usage/makespan compare.png>] [60 <./images/mine/eval/4_res_usage/resources compare.png>] [61]) [62] (Chapters/5-Conclusion.tex
+ [57 <./images/mine/eval/4_res_usage/makespan compare.png>] [58 <./images/mine/eval/4_res_usage/resources compare.png>] [59]) [60] (Chapters/5-Conclusion.tex
 Chapter 5.
 Package cleveref Info: loaded `english' language definitions on input line 9.
-[63
+[61
 
 
-] [64]) (main.bbl [65] [66
+] [62]) (main.bbl [63] [64
 
-] [67] [68]
+] [65] [66]
 Underfull \hbox (badness 10000) in paragraph at lines 203--205
 []\T1/phv/m/n/10 A. Casal-boni, ``AWS Lambda Power Tun-ing,'' [][]$https : / / github . com / alexcasalboni /
  []
 
-[69]) (Chapters/AppendixA.tex [70]
+[67]) (Chapters/AppendixA.tex [68]
 Appendix A.
-<images/mine/dag_image_gemm.png, id=1250, 764.8575pt x 1143.27126pt>
+<images/mine/dag_image_gemm.png, id=1241, 764.8575pt x 1143.27126pt>
 File: images/mine/dag_image_gemm.png Graphic file (type png)
 <use images/mine/dag_image_gemm.png>
 Package pdftex.def Info: images/mine/dag_image_gemm.png  used on input line 10.
@@ -2074,34 +2077,42 @@ Package pdftex.def Info: images/mine/dag_image_gemm.png  used on input line 10.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/mine/dag_image_tree_reduction.png, id=1251, 904.37875pt x 2299.59125pt>
+<images/mine/dag_image_tree_reduction.png, id=1242, 678.28406pt x 748.29562pt>
 File: images/mine/dag_image_tree_reduction.png Graphic file (type png)
 <use images/mine/dag_image_tree_reduction.png>
 Package pdftex.def Info: images/mine/dag_image_tree_reduction.png  used on input line 17.
-(pdftex.def)             Requested size: 455.238pt x 541.73741pt.
+(pdftex.def)             Requested size: 455.23454pt x 541.77539pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: images/mine/dag_image_text_analysis.png Graphic file (type png)
 <use images/mine/dag_image_text_analysis.png>
 Package pdftex.def Info: images/mine/dag_image_text_analysis.png  used on input line 24.
-(pdftex.def)             Requested size: 455.23618pt x 541.73741pt.
+(pdftex.def)             Requested size: 500.7579pt x 223.06767pt.
+
+Overfull \hbox (45.51382pt too wide) in paragraph at lines 24--25
+ [][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/mine/dag_image_image_transformer.png, id=1252, 1967.35pt x 2299.59125pt>
+<images/mine/dag_image_image_transformer.png, id=1243, 1475.5125pt x 746.03719pt>
 File: images/mine/dag_image_image_transformer.png Graphic file (type png)
 <use images/mine/dag_image_image_transformer.png>
 Package pdftex.def Info: images/mine/dag_image_image_transformer.png  used on input line 31.
-(pdftex.def)             Requested size: 455.24277pt x 541.73741pt.
+(pdftex.def)             Requested size: 500.76704pt x 318.67238pt.
+
+Overfull \hbox (45.52296pt too wide) in paragraph at lines 31--32
+ [][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [71
+) [69
 
-] [72 <./images/mine/dag_image_gemm.png>] [73 <./images/mine/dag_image_tree_reduction.png>] [74] [75 <./images/mine/dag_image_image_transformer.png>] [76
-
-]
+] [70 <./images/mine/dag_image_gemm.png>] [71 <./images/mine/dag_image_tree_reduction.png>] [72 <./images/mine/dag_image_image_transformer.png>]
 
 Package caption Warning: Unused \captionsetup[table] on input line 86.
 See the caption package documentation for explanation.
@@ -2142,7 +2153,9 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the main.log file.
 
-[77] (main.aux
+[73
+
+] (main.aux
 Package cleveref Info: loaded `english' language definitions on input line 16.
 )
  ***********
@@ -2153,17 +2166,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 66B9C54A06A273539CA65A5D849F3A42;9300.
  ) 
 Here is how much of TeX's memory you used:
- 45016 strings out of 474486
- 880510 string characters out of 5743755
+ 45012 strings out of 474486
+ 880482 string characters out of 5743755
  2038542 words of memory out of 5000000
  66080 multiletter control sequences out of 15000+600000
  646812 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,12n,96p,2565b,1512s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0800.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (93 pages, 3414669 bytes).
+Output written on main.pdf (89 pages, 2637813 bytes).
 PDF statistics:
- 1552 PDF objects out of 1728 (max. 8388607)
- 408 named destinations out of 1000 (max. 500000)
+ 1535 PDF objects out of 1728 (max. 8388607)
+ 404 named destinations out of 1000 (max. 500000)
  579 words of extra memory for PDF output out of 10000 (max. 10000000)
 
