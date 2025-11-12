@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  12 NOV 2025 16:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.10)  12 NOV 2025 16:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1435,7 +1435,7 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 16
  (C:\Users\dijes\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [6]
-<images/mine/serverless_arch.png, id=524, 885.90974pt x 585.387pt>
+<images/mine/serverless_arch.png, id=526, 885.90974pt x 585.387pt>
 File: images/mine/serverless_arch.png Graphic file (type png)
 <use images/mine/serverless_arch.png>
 Package pdftex.def Info: images/mine/serverless_arch.png  used on input line 24.
@@ -1455,7 +1455,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13] [14] [15] [16] [17]
-<images/mine/wukong2.0.png, id=680, 463.7325pt x 472.76625pt>
+<images/mine/wukong2.0.png, id=682, 463.7325pt x 472.76625pt>
 File: images/mine/wukong2.0.png Graphic file (type png)
 <use images/mine/wukong2.0.png>
 Package pdftex.def Info: images/mine/wukong2.0.png  used on input line 159.
@@ -1470,7 +1470,7 @@ Package cleveref Info: loaded `english' language definitions on input line 9.
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 21.
-<Images/mine/dag_lang_example.png, id=718, 596.2275pt x 131.49126pt>
+<Images/mine/dag_lang_example.png, id=720, 596.2275pt x 131.49126pt>
 File: Images/mine/dag_lang_example.png Graphic file (type png)
 <use Images/mine/dag_lang_example.png>
 Package pdftex.def Info: Images/mine/dag_lang_example.png  used on input line 43.
@@ -1480,7 +1480,7 @@ Package pdftex.def Info: Images/mine/dag_lang_example.png  used on input line 43
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [22] [23 <./Images/mine/dag_lang_example.png>]
-<Images/mine/solution_distributedarchintegrated.png, id=767, 802.49812pt x 600.74437pt>
+<Images/mine/solution_distributedarchintegrated.png, id=769, 802.49812pt x 600.74437pt>
 File: Images/mine/solution_distributedarchintegrated.png Graphic file (type png)
 <use Images/mine/solution_distributedarchintegrated.png>
 Package pdftex.def Info: Images/mine/solution_distributedarchintegrated.png  used on input line 86.
@@ -1616,7 +1616,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.20}) 
 <to be read again> 
                    \relax 
 l.272             \State
-                         \Call{AssignWorker}{$[n]$, $best$}
+                         \Call{AssignWorker}{$[n]$, $worker\_w\_greatest\_ac...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1627,375 +1627,443 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22}) 
                    \relax 
 l.274     \EndFor
                  
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.278     \Function
-                   {AssignGroup}{$up\_worker$, $tasks$}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.24}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.279         \If
-                 {$tasks = \emptyset$}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.281         \EndIf
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.26}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.283         \State
-                     $exec\_t \gets \{t: predictions.exec\_time(t) \mid t \i...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.284         \State
-                     $out\_sz \gets \{t: predictions.output\_size(t) \mid t ...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.28}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.285         \State
-                     $median \gets \textsc{Median}(exec\_t.values())$
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.29}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.286         \State
-                     $longs \gets \{t \in tasks \mid exec\_t[t] > median\}$
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.30}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.287         \State
-                     $shorts \gets \textsc{SortLargerOutputFirst}(\{t \in ta...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.31}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.290         \State
-                     \Comment{1) cluster short tasks with bigger outputs on ...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.32}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.291         \If
-                 {$up\_worker \neq \textit{null} \land shorts \neq \emptyset$}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.33}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.292             \State
-                         $cluster \gets shorts[0:MAX\_CLUSTERING]$
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.34}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.293             \State
-                         \Call{AssignWorker}{$cluster$, $up\_worker$}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.35}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.294             \State
-                         $shorts \gets shorts[MAX\_CLUSTERING:]$
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.36}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.295         \EndIf
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.37}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.298         \State
-                     \Comment{2) pair long tasks with remaining short tasks ...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.38}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.299         \While
-                    {$longs \neq \emptyset \land shorts \neq \emptyset$}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.39}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.300             \State
-                         $cluster \gets [longs[0]] + shorts[0:MAX\_CLUSTERIN...
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.40}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.301             \State
-                         $worker\_id \gets$ \Call{NewWorkerId}{}
-pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.302             \State
-                         \Call{AssignWorker}{$cluster$, $worker\_id$}
-
-LaTeX Warning: Float too large for page by 96.16777pt on input line 325.
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.339     \State
+l.284     \Function
+                   {AssignGroup}{$up\_worker$, $tasks$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.285         \If
+                 {$tasks = \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.287         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.289         \State
+                     $exec\_t \gets \{t: predictions.exec\_time(t) \mid t \i...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.290         \State
+                     $out\_sz \gets \{t: predictions.output\_size(t) \mid t ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.291         \State
+                     $median \gets \textsc{Median}(exec\_t.values())$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.292         \State
+                     $longs \gets \{t \in tasks \mid exec\_t[t] > median\}$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.293         \State
+                     $shorts \gets \textsc{SortLargerOutputFirst}(\{t \in ta...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.296         \State
+                     \Comment{1) cluster short tasks with bigger outputs on ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.297         \If
+                 {$up\_worker \neq \textit{null} \land shorts \neq \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.298             \State
+                         $cluster \gets shorts[0:MAX\_CLUSTERING]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.299             \State
+                         \Call{AssignWorker}{$cluster$, $up\_worker$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.300             \State
+                         $shorts \gets shorts[MAX\_CLUSTERING:]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.301         \EndIf
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.304         \State
+                     \Comment{2) pair long tasks with remaining short tasks ...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.305         \While
+                    {$longs \neq \emptyset \land shorts \neq \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.306             \State
+                         $cluster \gets [longs[0]] + shorts[0:MAX\_CLUSTERIN...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.307             \State
+                         $worker\_id \gets$ \Call{NewWorkerId}{}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.308             \State
+                         \Call{AssignWorker}{$cluster$, $worker\_id$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.20}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.309             \State
+                         $longs \gets longs[1:]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.21}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.310             \State
+                         $shorts \gets shorts[MAX\_CLUSTERING-1:]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.311         \EndWhile
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.314         \State
+                     \Comment{3) group remaining short tasks}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.24}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.315         \While
+                    {$shorts \neq \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.316             \State
+                         $worker\_id \gets$ \Call{NewWorkerId}{}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.26}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.317             \State
+                         \Call{AssignWorker}{$shorts[0:MAX\_CLUSTERING]$, $w...
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.318             \State
+                         $shorts \gets shorts[MAX\_CLUSTERING:]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.28}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.319         \EndWhile
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.29}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.322         \State
+                     \Comment{4) group remaining longs (half-size)}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.30}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.323         \State
+                     $half \gets \max(1, \lfloor MAX\_CLUSTERING / 2 \rfloor)$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.31}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.324         \While
+                    {$longs \neq \emptyset$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.32}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.325             \State
+                         $worker\_id \gets$ \Call{NewWorkerId}{}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.33}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.326             \State
+                         \Call{AssignWorker}{$longs[0:half]$, $worker\_id$}
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.34}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.327             \State
+                         $longs \gets longs[half:]$
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.35}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.328         \EndWhile
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.36}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.329     \EndFunction
+                       [31] [32]
+pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.345     \State
                  $workers\_outside \gets \emptyset$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.342     \State
+l.348     \State
                  \Comment{1) Identify workers outside the critical path}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.343     \ForAll
+l.349     \ForAll
                  {$n \in nodes$} \Comment{nodes are topologically sorted}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.344         \State
+l.350         \State
                      $wid \gets n.worker\_id$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.345         \If
+l.351         \If
                  {$n.id \notin critical\_path\_ids \land \forall cp \in dag....
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.346             \State
+l.352             \State
                          $workers\_outside \gets workers\_outside \cup \{wid\}$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.347         \EndIf
+l.353         \EndIf
                     
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.348     \EndFor
+l.354     \EndFor
                  
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.350     \State
+l.356     \State
                  $nodes\_outside\_cp \gets \{n \in nodes \mid n.id \notin cr...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.353     \State
+l.359     \State
                  \Comment{2) Attempt downgrade for each worker outside criti...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.354     \ForAll
+l.360     \ForAll
                  {$wid \in workers\_outside$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.355         \State
+l.361         \State
                      $last\_acceptable_\_rc \gets \{n.id: n.config \mid n \i...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.358         \State
+l.364         \State
                      \Comment{Iterate through weaker configurations (skip st...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.359         \For
+l.365         \For
                   {$i \gets 1$ \textbf{to} $|configs| - 1$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.360             \State
+l.366             \State
                          $trial \gets configs[i].\textsc{Clone}(wid)$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.363             \State
+l.369             \State
                          \Comment{Apply trial configuration to all nodes of ...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.17}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.364             \ForAll
+l.370             \ForAll
                          {$n \in nodes\_outside\_cp$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.18}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.365                 \If
+l.371                 \If
                          {$n.worker\_id = wid$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.19}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.366                     \State
+l.372                     \State
                                  $n.config \gets trial$
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.20}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.367                 \EndIf
+l.373                 \EndIf
                             
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.21}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.368             \EndFor
+l.374             \EndFor
                          
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.22}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.371             \State
+l.377             \State
                          \Comment{Recompute workflow timing with predictions}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.23}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.372             \State
+l.378             \State
                          $cp\_time \gets$ \Call{SimulateCriticalPathTime}{$d...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.24}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.375             \If
+l.381             \If
                      {$cp\_time = original\_cp\_time$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.25}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.376                 \State
+l.382                 \State
                              \Comment{Downgrade acceptable, record as last a...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.26}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.377                 \ForAll
+l.383                 \ForAll
                              {$n \in nodes\_outside\_cp$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.27}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.378                     \If
+l.384                     \If
                              {$n.worker\_id = wid$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.28}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.379                         \State
+l.385                         \State
                                      $last\_acceptable\_rc[n.id] \gets n.con...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.29}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.380                     \EndIf
+l.386                     \EndIf
                                 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.30}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.381                 \EndFor
+l.387                 \EndFor
                              
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.31}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.382             \Else
+l.388             \Else
                        
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.32}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.383                 \State
+l.389                 \State
                              \Comment{Downgrade increases critical path, rev...
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.33}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.384                 \ForAll
+l.390                 \ForAll
                              {$n \in nodes\_outside\_cp$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.34}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.385                     \If
+l.391                     \If
                              {$n.worker\_id = wid$}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.35}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.386                         \State
+l.392                         \State
                                      $n.config \gets last\_acceptable\_rc[n....
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.36}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.387                     \EndIf
+l.393                     \EndIf
                                 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.37}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.388                 \EndFor
+l.394                 \EndFor
                              
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.38}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.389                 \State
+l.395                 \State
                              \textbf{break} \Comment{move to next worker}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.39}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.390             \EndIf
+l.396             \EndIf
                         
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.40}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.391         \EndFor
+l.397         \EndFor
                      
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.41}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.392     \EndFor
-                  [31] [32] [33] [34]
-<Images/mine/solution_workflowinstanceexample.png, id=911, 1017.8025pt x 548.80031pt>
+l.398     \EndFor
+                  [33] [34] [35]
+<Images/mine/solution_workflowinstanceexample.png, id=902, 1017.8025pt x 548.80031pt>
 File: Images/mine/solution_workflowinstanceexample.png Graphic file (type png)
 <use Images/mine/solution_workflowinstanceexample.png>
-Package pdftex.def Info: Images/mine/solution_workflowinstanceexample.png  used on input line 429.
+Package pdftex.def Info: Images/mine/solution_workflowinstanceexample.png  used on input line 435.
 (pdftex.def)             Requested size: 455.24408pt x 245.46727pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[35]
-Underfull \vbox (badness 7486) has occurred while \output is active []
-
  [36 <./Images/mine/solution_workflowinstanceexample.png>]
-Underfull \vbox (badness 4673) has occurred while \output is active []
+Underfull \vbox (badness 1661) has occurred while \output is active []
 
  [37]
-<images/mine/text_analysis_NonUniformPlanner-opt.png, id=951, 1651.67062pt x 1724.69344pt>
+<images/mine/text_analysis_NonUniformPlanner-opt.png, id=925, 1651.67062pt x 1724.69344pt>
 File: images/mine/text_analysis_NonUniformPlanner-opt.png Graphic file (type png)
 <use images/mine/text_analysis_NonUniformPlanner-opt.png>
-Package pdftex.def Info: images/mine/text_analysis_NonUniformPlanner-opt.png  used on input line 470.
+Package pdftex.def Info: images/mine/text_analysis_NonUniformPlanner-opt.png  used on input line 476.
 (pdftex.def)             Requested size: 455.24408pt x 475.358pt.
-
-Underfull \vbox (badness 2080) has occurred while \output is active []
-
- [38 <./images/mine/text_analysis_NonUniformPlanner-opt.png>]
-<images/mine/dag_image_text_analysis.png, id=958, 1855.68282pt x 639.13782pt>
-File: images/mine/dag_image_text_analysis.png Graphic file (type png)
-<use images/mine/dag_image_text_analysis.png>
-Package pdftex.def Info: images/mine/dag_image_text_analysis.png  used on input line 489.
-(pdftex.def)             Requested size: 478.00766pt x 164.63103pt.
-
-Overfull \hbox (22.76358pt too wide) in paragraph at lines 489--490
- [][] 
- []
-
-[39 <./images/mine/dag_image_text_analysis.png>]
-<images/mine/realtime dashboard.png, id=969, 1750.54pt x 662.475pt>
-File: images/mine/realtime dashboard.png Graphic file (type png)
-<use images/mine/realtime dashboard.png>
-Package pdftex.def Info: images/mine/realtime dashboard.png  used on input line 508.
-(pdftex.def)             Requested size: 500.77126pt x 189.50482pt.
-
-Overfull \hbox (45.52718pt too wide) in paragraph at lines 508--509
- [][] 
- []
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40] [41 <./images/mine/realtime dashboard.png>] [42]
-<Images/mine/choreographed_execution_example.png, id=998, 1263.97218pt x 372.64218pt>
+ [38] [39 <./images/mine/text_analysis_NonUniformPlanner-opt.png>]
+<images/mine/dag_image_text_analysis.png, id=949, 1855.68282pt x 639.13782pt>
+File: images/mine/dag_image_text_analysis.png Graphic file (type png)
+<use images/mine/dag_image_text_analysis.png>
+Package pdftex.def Info: images/mine/dag_image_text_analysis.png  used on input line 495.
+(pdftex.def)             Requested size: 478.00766pt x 164.63103pt.
+
+Overfull \hbox (22.76358pt too wide) in paragraph at lines 495--496
+ [][] 
+ []
+
+[40 <./images/mine/dag_image_text_analysis.png>]
+<images/mine/realtime dashboard.png, id=959, 1750.54pt x 662.475pt>
+File: images/mine/realtime dashboard.png Graphic file (type png)
+<use images/mine/realtime dashboard.png>
+Package pdftex.def Info: images/mine/realtime dashboard.png  used on input line 514.
+(pdftex.def)             Requested size: 500.77126pt x 189.50482pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 514--515
+ [][] 
+ []
+
+[41 <./images/mine/realtime dashboard.png>] [42] [43]
+<Images/mine/choreographed_execution_example.png, id=989, 1263.97218pt x 372.64218pt>
 File: Images/mine/choreographed_execution_example.png Graphic file (type png)
 <use Images/mine/choreographed_execution_example.png>
-Package pdftex.def Info: Images/mine/choreographed_execution_example.png  used on input line 543.
+Package pdftex.def Info: Images/mine/choreographed_execution_example.png  used on input line 549.
 (pdftex.def)             Requested size: 455.24408pt x 134.21362pt.
+ [44 <./Images/mine/choreographed_execution_example.png>]) (Chapters/4-Evaluation.tex [45] [46
 
-Underfull \vbox (badness 7012) has occurred while \output is active []
-
- [43]) (Chapters/4-Evaluation.tex [44 <./Images/mine/choreographed_execution_example.png>]
+]
 Chapter 4.
 Package cleveref Info: loaded `english' language definitions on input line 8.
-[45
-
-] [46] [47] [48] [49] [50]
-<images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png, id=1081, 1585.925pt x 602.25pt>
+[47] [48] [49] [50] [51] [52]
+<images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png, id=1076, 1585.925pt x 602.25pt>
 File: images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png Graphic file (type png)
 <use images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png>
 Package pdftex.def Info: images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png  used on input line 126.
@@ -2005,30 +2073,30 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 126--127
  [][] 
  []
 
-[51 <./images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png>]
-<images/mine/eval/2_metrics/makespan dist.png, id=1091, 784.9325pt x 501.875pt>
+[53 <./images/mine/eval/1_predictions/prediction_accuracy_by_sla_and_fullfilment.png>]
+<images/mine/eval/2_metrics/makespan dist.png, id=1085, 784.9325pt x 501.875pt>
 File: images/mine/eval/2_metrics/makespan dist.png Graphic file (type png)
 <use images/mine/eval/2_metrics/makespan dist.png>
 Package pdftex.def Info: images/mine/eval/2_metrics/makespan dist.png  used on input line 151.
 (pdftex.def)             Requested size: 455.24408pt x 291.08003pt.
-<images/mine/eval/2_metrics/waiting inputs dist.png, id=1092, 784.9325pt x 501.875pt>
+<images/mine/eval/2_metrics/waiting inputs dist.png, id=1086, 784.9325pt x 501.875pt>
 File: images/mine/eval/2_metrics/waiting inputs dist.png Graphic file (type png)
 <use images/mine/eval/2_metrics/waiting inputs dist.png>
 Package pdftex.def Info: images/mine/eval/2_metrics/waiting inputs dist.png  used on input line 158.
 (pdftex.def)             Requested size: 455.24408pt x 291.08003pt.
-<images/mine/eval/2_metrics/worker stime dist.png, id=1094, 784.9325pt x 501.875pt>
+<images/mine/eval/2_metrics/worker stime dist.png, id=1088, 784.9325pt x 501.875pt>
 File: images/mine/eval/2_metrics/worker stime dist.png Graphic file (type png)
 <use images/mine/eval/2_metrics/worker stime dist.png>
 Package pdftex.def Info: images/mine/eval/2_metrics/worker stime dist.png  used on input line 167.
 (pdftex.def)             Requested size: 455.24408pt x 291.08003pt.
- [52] [53 <./images/mine/eval/2_metrics/makespan dist.png> <./images/mine/eval/2_metrics/waiting inputs dist.png>]
-<images/mine/eval/3_opts/time breakdown.png, id=1106, 602.25pt x 501.875pt>
+ [54] [55 <./images/mine/eval/2_metrics/makespan dist.png> <./images/mine/eval/2_metrics/waiting inputs dist.png>]
+<images/mine/eval/3_opts/time breakdown.png, id=1100, 602.25pt x 501.875pt>
 File: images/mine/eval/3_opts/time breakdown.png Graphic file (type png)
 <use images/mine/eval/3_opts/time breakdown.png>
 Package pdftex.def Info: images/mine/eval/3_opts/time breakdown.png  used on input line 178.
 (pdftex.def)             Requested size: 318.66946pt x 265.56363pt.
- [54 <./images/mine/eval/2_metrics/worker stime dist.png>]
-<images/mine/eval/3_opts/warm vs cold starts.png, id=1114, 1287.81125pt x 652.4375pt>
+ [56 <./images/mine/eval/2_metrics/worker stime dist.png>]
+<images/mine/eval/3_opts/warm vs cold starts.png, id=1108, 1287.81125pt x 652.4375pt>
 File: images/mine/eval/3_opts/warm vs cold starts.png Graphic file (type png)
 <use images/mine/eval/3_opts/warm vs cold starts.png>
 Package pdftex.def Info: images/mine/eval/3_opts/warm vs cold starts.png  used on input line 191.
@@ -2038,38 +2106,38 @@ Overfull \hbox (54.62706pt too wide) in paragraph at lines 191--192
  [][] 
  []
 
-<images/mine/eval/4_res_usage/resource usage gb seconds 2.png, id=1117, 635.37375pt x 401.5pt>
+<images/mine/eval/4_res_usage/resource usage gb seconds 2.png, id=1111, 635.37375pt x 401.5pt>
 File: images/mine/eval/4_res_usage/resource usage gb seconds 2.png Graphic file (type png)
 <use images/mine/eval/4_res_usage/resource usage gb seconds 2.png>
 Package pdftex.def Info: images/mine/eval/4_res_usage/resource usage gb seconds 2.png  used on input line 202.
 (pdftex.def)             Requested size: 386.96024pt x 244.53479pt.
-[55 <./images/mine/eval/3_opts/time breakdown.png>] [56 <./images/mine/eval/3_opts/warm vs cold starts.png> <./images/mine/eval/4_res_usage/resource usage gb seconds 2.png>]
-<images/mine/eval/4_res_usage/makespan compare.png, id=1133, 652.4375pt x 652.4375pt>
+[57 <./images/mine/eval/3_opts/time breakdown.png>] [58 <./images/mine/eval/3_opts/warm vs cold starts.png> <./images/mine/eval/4_res_usage/resource usage gb seconds 2.png>]
+<images/mine/eval/4_res_usage/makespan compare.png, id=1128, 652.4375pt x 652.4375pt>
 File: images/mine/eval/4_res_usage/makespan compare.png Graphic file (type png)
 <use images/mine/eval/4_res_usage/makespan compare.png>
 Package pdftex.def Info: images/mine/eval/4_res_usage/makespan compare.png  used on input line 213.
 (pdftex.def)             Requested size: 341.43306pt x 341.43971pt.
-<images/mine/eval/4_res_usage/resources compare.png, id=1134, 652.4375pt x 652.4375pt>
+<images/mine/eval/4_res_usage/resources compare.png, id=1129, 652.4375pt x 652.4375pt>
 File: images/mine/eval/4_res_usage/resources compare.png Graphic file (type png)
 <use images/mine/eval/4_res_usage/resources compare.png>
 Package pdftex.def Info: images/mine/eval/4_res_usage/resources compare.png  used on input line 220.
 (pdftex.def)             Requested size: 341.43306pt x 341.43971pt.
- [57 <./images/mine/eval/4_res_usage/makespan compare.png>] [58 <./images/mine/eval/4_res_usage/resources compare.png>] [59]) [60] (Chapters/5-Conclusion.tex
+ [59 <./images/mine/eval/4_res_usage/makespan compare.png>] [60 <./images/mine/eval/4_res_usage/resources compare.png>] [61]) [62] (Chapters/5-Conclusion.tex
 Chapter 5.
 Package cleveref Info: loaded `english' language definitions on input line 9.
-[61
+[63
 
 
-] [62]) (main.bbl [63] [64
+] [64]) (main.bbl [65] [66
 
-] [65] [66]
+] [67] [68]
 Underfull \hbox (badness 10000) in paragraph at lines 203--205
 []\T1/phv/m/n/10 A. Casal-boni, ``AWS Lambda Power Tun-ing,'' [][]$https : / / github . com / alexcasalboni /
  []
 
-[67]) (Chapters/AppendixA.tex [68]
+[69]) (Chapters/AppendixA.tex [70]
 Appendix A.
-<images/mine/dag_image_gemm.png, id=1241, 764.8575pt x 1143.27126pt>
+<images/mine/dag_image_gemm.png, id=1236, 764.8575pt x 1143.27126pt>
 File: images/mine/dag_image_gemm.png Graphic file (type png)
 <use images/mine/dag_image_gemm.png>
 Package pdftex.def Info: images/mine/dag_image_gemm.png  used on input line 10.
@@ -2077,7 +2145,7 @@ Package pdftex.def Info: images/mine/dag_image_gemm.png  used on input line 10.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/mine/dag_image_tree_reduction.png, id=1242, 678.28406pt x 748.29562pt>
+<images/mine/dag_image_tree_reduction.png, id=1237, 678.28406pt x 748.29562pt>
 File: images/mine/dag_image_tree_reduction.png Graphic file (type png)
 <use images/mine/dag_image_tree_reduction.png>
 Package pdftex.def Info: images/mine/dag_image_tree_reduction.png  used on input line 17.
@@ -2097,7 +2165,7 @@ Overfull \hbox (45.51382pt too wide) in paragraph at lines 24--25
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/mine/dag_image_image_transformer.png, id=1243, 1475.5125pt x 746.03719pt>
+<images/mine/dag_image_image_transformer.png, id=1238, 1475.5125pt x 746.03719pt>
 File: images/mine/dag_image_image_transformer.png Graphic file (type png)
 <use images/mine/dag_image_image_transformer.png>
 Package pdftex.def Info: images/mine/dag_image_image_transformer.png  used on input line 31.
@@ -2110,9 +2178,9 @@ Overfull \hbox (45.52296pt too wide) in paragraph at lines 31--32
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [69
+) [71
 
-] [70 <./images/mine/dag_image_gemm.png>] [71 <./images/mine/dag_image_tree_reduction.png>] [72 <./images/mine/dag_image_image_transformer.png>]
+] [72 <./images/mine/dag_image_gemm.png>] [73 <./images/mine/dag_image_tree_reduction.png>] [74 <./images/mine/dag_image_image_transformer.png>]
 
 Package caption Warning: Unused \captionsetup[table] on input line 86.
 See the caption package documentation for explanation.
@@ -2153,7 +2221,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the main.log file.
 
-[73
+[75
 
 ] (main.aux
 Package cleveref Info: loaded `english' language definitions on input line 16.
@@ -2166,17 +2234,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 66B9C54A06A273539CA65A5D849F3A42;9300.
  ) 
 Here is how much of TeX's memory you used:
- 45012 strings out of 474486
- 880482 string characters out of 5743755
- 2038542 words of memory out of 5000000
- 66080 multiletter control sequences out of 15000+600000
+ 45000 strings out of 474486
+ 880361 string characters out of 5743755
+ 1999542 words of memory out of 5000000
+ 66082 multiletter control sequences out of 15000+600000
  646812 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,12n,96p,2565b,1512s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,96p,2565b,2290s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0800.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\dijes\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0800.pk><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/dijes/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on main.pdf (89 pages, 2637830 bytes).
+Output written on main.pdf (91 pages, 2638123 bytes).
 PDF statistics:
- 1535 PDF objects out of 1728 (max. 8388607)
- 404 named destinations out of 1000 (max. 500000)
+ 1526 PDF objects out of 1728 (max. 8388607)
+ 390 named destinations out of 1000 (max. 500000)
  579 words of extra memory for PDF output out of 10000 (max. 10000000)
 

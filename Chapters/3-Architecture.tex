@@ -228,17 +228,17 @@ Algorithm~\ref{alg:worker_assignment} presents the worker assignment procedure u
 
 In this algorithm, root nodes (those without upstream dependencies), are grouped together for assignment (lines 7-8). For simple linear dependencies (1→1 relationships), the downstream task inherits the same worker as its upstream task, allowing direct data reuse without intermediate storage (lines 11-12). When a node fans out to multiple downstream tasks (1→N), those downstream tasks are clustered together and assigned as a group (lines 14-15). Conversely, for fan-in patterns (N→1), the algorithm assigns the downstream node to the worker responsible for producing the largest upstream output (lines 18-20), maximizing data locality by placing the consumer task where the majority of input data already resides.
 
-The \textsc{AssignGroup} function (lines 23-58) is responsible for clustering tasks into execution groups and assigning them to workers. After retrieving the predicted execution times and output sizes for each task (lines 26-27), the algorithm classifies tasks as either \textit{long} or \textit{short} depending on whether their predicted execution time is above or below the median (lines 26-30). This categorization allows the planner to balance worker load.
+The \textsc{AssignGroup} function, presented in Algorithm~\ref{alg:assign_group}, is responsible for clustering tasks into execution groups and assigning them to workers. After retrieving the predicted execution times and output sizes for each task (lines 4-5), the algorithm classifies tasks as either \textit{long} or \textit{short} depending on whether their predicted execution time is above or below the median (lines 7-8). This categorization allows the planner to balance worker load.
 
 The function proceeds in four stages:
 \begin{enumerate}
-    \item \textbf{Local clustering (lines 32-36):} If an upstream worker is available, a subset of \textit{short} tasks with larger output sizes (up to a predefined maximum cluster size) is assigned to the same worker. This promotes \textit{data locality}, reducing data transfer costs by executing tasks near their data sources;
+    \item \textbf{Local clustering (lines 10-14):} If an upstream worker is available, a subset of \textit{short} tasks with larger output sizes (up to a predefined maximum cluster size) is assigned to the same worker. This promotes \textit{data locality}, reducing data transfer costs by executing tasks near their data sources;
     
-    \item \textbf{Balanced pairing (lines 38-44):} The algorithm pairs each remaining \textit{long} task with a few \textit{short} ones, creating mixed groups, distributing workload more evenly;
+    \item \textbf{Balanced pairing (lines 16-22):} The algorithm pairs each remaining \textit{long} task with a few \textit{short} ones, creating mixed groups, distributing workload more evenly;
     
-    \item \textbf{Grouping remaining short tasks (lines 46-50):} Any remaining unassigned \textit{short} tasks are grouped together and allocated to new workers, up to the maximum cluster size;
+    \item \textbf{Grouping remaining short tasks (lines 24-28):} Any remaining unassigned \textit{short} tasks are grouped together and allocated to new workers, up to the maximum cluster size;
     
-    \item \textbf{Grouping remaining long tasks (lines 52-57):} This final phase is only reached when there are more long tasks than short ones, meaning some long tasks could not be paired in the previous phase. In such cases, the remaining long tasks are grouped into smaller clusters (half the normal cluster size) to try reducing resource contention.
+    \item \textbf{Grouping remaining long tasks (lines 30-35):} This final phase is only reached when there are more long tasks than short ones, meaning some long tasks could not be paired in the previous phase. In such cases, the remaining long tasks are grouped into smaller clusters (half the normal cluster size) to try reducing resource contention.
 \end{enumerate}
 
 \begin{algorithm}
@@ -269,12 +269,18 @@ The function proceeds in four stages:
         \Else \Comment{N$\to$1 (assign to worker of upstream task with the largest total output)}
             \State $outputs \gets \{u.worker: predictions.output\_size(u) \mid u \in n.upstream\}$
             \State $worker\_w\_greatest\_acc\_output \gets \arg\max_{w \in outputs} outputs[w]$
-            \State \Call{AssignWorker}{$[n]$, $best$}
+            \State \Call{AssignWorker}{$[n]$, $worker\_w\_greatest\_acc\_output$}
         \EndIf
     \EndFor
-    
-    \Statex
-    
+    \end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}
+    \caption{AssignGroup Procedure}
+    \label{alg:assign_group}
+    \small
+    \begin{algorithmic}[1]
     \Function{AssignGroup}{$up\_worker$, $tasks$}
         \If{$tasks = \emptyset$}
             \Return
@@ -321,7 +327,7 @@ The function proceeds in four stages:
             \State $longs \gets longs[half:]$
         \EndWhile
     \EndFunction
-\end{algorithmic}
+    \end{algorithmic}
 \end{algorithm}
 
 After this, the \textbf{Non-Uniform} planner runs an additional algorithm, shown in Algorithm \ref{alg:resource_downgrading}, that attempts to downgrade resources of workers \textit{outside the critical path} as much as possible without introducing a new critical path, by iteratively simulating the effect of downgrading resources of workers \textit{outside the critical path} with different configurations.

@@ -33,23 +33,23 @@
 \contentsline {section}{\numberline {3.4}Static Workflow Planning}{29}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Workflow Simulation}{29}{subsection.3.4.1}%
 \contentsline {subsection}{\numberline {3.4.2}Planning Algorithms}{29}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Optimizations}{34}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.3}Optimizations}{33}{subsection.3.4.3}%
 \contentsline {section}{\numberline {3.5}Client}{39}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Decentralized Workers}{41}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Evaluation}{45}{chapter.4}%
+\contentsline {section}{\numberline {3.6}Decentralized Workers}{42}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Evaluation}{47}{chapter.4}%
 \etoc@startlocaltoc {5}
-\contentsline {section}{\numberline {4.1}Emulating FaaS environment}{45}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Research Questions}{47}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Experimental Setup}{49}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Results}{51}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Predictions Accuracy and SLA fulfillment}{51}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Overall Performance}{52}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Optimizations}{54}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Resource Usage}{55}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Analysis}{59}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Conclusion}{61}{chapter.5}%
+\contentsline {section}{\numberline {4.1}Emulating FaaS environment}{47}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Research Questions}{49}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Experimental Setup}{51}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Results}{53}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Predictions Accuracy and SLA fulfillment}{53}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Overall Performance}{54}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Optimizations}{56}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Resource Usage}{57}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Analysis}{61}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Conclusion}{63}{chapter.5}%
 \etoc@startlocaltoc {6}
-\contentsline {section}{\numberline {5.1}Achievements}{61}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Limitations and Future Work}{62}{section.5.2}%
-\contentsline {chapter}{Bibliography}{63}{section.5.2}%
-\contentsline {chapter}{\numberline {A}Structure of Workflows used for Evaluation}{69}{appendix.A}%
+\contentsline {section}{\numberline {5.1}Achievements}{63}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Limitations and Future Work}{64}{section.5.2}%
+\contentsline {chapter}{Bibliography}{65}{section.5.2}%
+\contentsline {chapter}{\numberline {A}Structure of Workflows used for Evaluation}{71}{appendix.A}%
