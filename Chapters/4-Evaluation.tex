@@ -233,7 +233,7 @@ A new trade-off becomes evident among the optimized planners. While the \textbf{
 The optimization had mixed results for the other planners. The optimized \textbf{WUKONG} planner saw a modest \textbf{2.7\%} improvement in makespan and a significant \textbf{25\%} reduction in memory usage. However, it remains a less efficient choice, as it is both slower and more memory-intensive than the \textbf{Uniform} planner.
 
 \section{Analysis}
-In summary, our results demonstrate that our proposed planners, with their task allocation strategies, achieve better performance than both versions of the \textbf{WUKONG} planner, with the optimizations significantly enhancing both performance and resource usage.
+In summary, our results demonstrate that our proposed planners, by managing the trade-off between data locality and resource contention, achieved better performance than both versions of the \textbf{WUKONG} planner, with the optimizations significantly enhancing both performance and resource usage.
 
 The \textbf{Non-Uniform} planner consistently delivers the shortest \textit{makespan}, particularly in its optimized form, which achieves over \textbf{50\%} faster execution while reducing resource consumption by \textbf{45\%} compared to its base version. The \textbf{Uniform} planner, while slightly slower, remains the most resource-efficient, achieving the lowest median \textit{GB-seconds} usage among all tested approaches, while keeping workflow execution times lower than both \textbf{WUKONG} implementations (non-optimized and optimized).
 
