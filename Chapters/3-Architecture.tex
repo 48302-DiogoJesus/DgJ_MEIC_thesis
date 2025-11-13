@@ -51,7 +51,7 @@ Calling \texttt{task\_a(10)} generates a corresponding task representation, \tex
 
 In serverless workflows, a common pattern is to pass storage references (e.g., cloud object storage URLs) as arguments to tasks. This behavior is not currently supported by our workflow language, as the proposed optimization and prediction mechanisms rely on analyzing the actual data produced and consumed by functions rather than indirect references. In future iterations, this limitation could be addressed through \textbf{code instrumentation}, wherein storage access APIs are intercepted to record metrics such as the volume of data transferred and the corresponding I/O latency.
 
-To ensure portability and eliminate the need to register each user-defined function in the cloud provider’s function registry, the task’s executable code is directly embedded within its representation as a Python \texttt{Callable}. Later, the \texttt{DAGTaskNode} is serialized, using \texttt{cloudpickle}~\footnote{\url{https://github.com/cloudpipe/cloudpickle}}, allowing it to be transmitted to storage, and retrieved by workers for execution.
+To ensure portability and eliminate the need to register each user-defined function in the cloud provider's function registry, the task's executable code is directly embedded within its representation as a Python \texttt{Callable}. Later, the \texttt{DAGTaskNode} is serialized, using \texttt{cloudpickle}~\footnote{\url{https://github.com/cloudpipe/cloudpickle}}, allowing it to be transmitted to storage, and retrieved by workers for execution.
 
 
 \begin{lstlisting}[language=Python, basicstyle=\ttfamily\footnotesize, columns=fullflexible, breaklines=true, caption=Setting up and launching workflow execution, label=lst:setup_and_launch_workflow_execution]
